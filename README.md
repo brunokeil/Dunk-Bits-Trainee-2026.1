@@ -1,6 +1,6 @@
 # **Trainee 2026.1**
 
-# **Nome do seu blog**
+# **Dunk Bit's**
 
 ## **Projeto Trainee, Code Jr, 2026.1**
 
@@ -17,16 +17,16 @@
 ## Equipe
 
 #### Desenvolvedores:
-* [Trainee 1](coloque o link do github)
-* [Trainee 2](coloque o link do github)
-* [Trainee 3](coloque o link do github)
-* [Trainee 4](coloque o link do github)
+* [João Pedro](https://github.com/jopegl)
+* [Murilo Agostinho](https://github.com/xNyctar)
+* [Matheus](https://github.com/matt-macarte)
+* [Davi](https://github.com/ilySinon)
 
 #### Scrum Master:
-* [Nome do Scrum](coloque o link do github).
+* [Bruno Keil](https://github.com/brunokeil).
 
 #### Links Úteis:
-* [Trello do Projeto]()
+* [Trello do Projeto](https://trello.com/b/BmwkVDu4/261-dunkbits)
 
 ---
 
