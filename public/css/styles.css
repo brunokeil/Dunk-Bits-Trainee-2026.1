@@ -25,7 +25,7 @@
 }
 
 
-*, *::before, *::after{
+*, *::before, *::after {
     box-sizing: content-box;
     color: var(--color-dark-text);
 }
