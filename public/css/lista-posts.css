@@ -1,0 +1,94 @@
+ @import "./styles.css";
+
+ /*----- Lista-De-Posts ----*/
+
+
+body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+  padding: 0px;
+  margin: 0px;
+  background-image: var(--linear-orange-gradient2);
+}
+
+section{
+  display: flex;
+  height: 10rem;
+  padding: 0;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: stretch;
+}
+
+#secao-barra{
+    padding: 0 1.5rem;
+    justify-content: space-between;
+    padding-left: 2rem;
+    gap: 20px;
+}
+
+#search {
+  display: flex;
+  align-items: center;
+  background-color: var(--white-100);
+  width:  100%;
+  max-width: 45em;
+  height: 4em;
+  border-radius: 2em;
+  color: var(--white-100);
+    padding: 0 1.5em;
+    gap: 0.2rem;
+}
+
+#search-text{
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: var(--black-100);
+    font-family: var(--font-quicksand);
+}
+
+#search-text::placeholder{
+font-size: 3vh;
+font-family: var(--font-quicksand);
+color: var(--black-100);
+}
+
+
+#botao-filtro{
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--linear-orange-gradient2);
+  border: none;
+}
+
+#botao-filtro .material-symbols-outlined {
+    font-size: 3.5rem;  
+    color: var(--black-100);
+}
+
+#secao-titulo{
+}
+
+.secao-titulo::after, .secao-titulo::before{
+    content: '';
+    background: var(--black-100);
+    height: 5px;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+
+.material-symbols-outlined {
+  display: flex; 
+  line-height: 1; 
+  vertical-align: middle;
+}
+/*----- Lista de Posts ---- */
