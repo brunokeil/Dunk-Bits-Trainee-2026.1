@@ -1,7 +1,10 @@
- @import "./styles.css";
+@import "./styles.css";
 
- /*----- Lista-De-Posts ----*/
+/*----- Lista-De-Posts ----*/
 
+* {
+  border: solid 1px blue;
+}
 
 body {
   display: flex;
@@ -14,52 +17,48 @@ body {
   background-image: var(--linear-orange-gradient2);
 }
 
-section{
+section {
   display: flex;
   height: 10rem;
-  padding: 0;
+  padding: 0 1.5rem;
   justify-content: flex-start;
   align-items: center;
   align-self: stretch;
 }
 
-#secao-barra{
-    padding: 0 1.5rem;
-    justify-content: space-between;
-    padding-left: 2rem;
-    gap: 20px;
+#secao-barra {
+  justify-content: space-between;
 }
 
 #search {
   display: flex;
   align-items: center;
   background-color: var(--white-100);
-  width:  100%;
+  width: 100%;
   max-width: 45em;
   height: 4em;
   border-radius: 2em;
   color: var(--white-100);
-    padding: 0 1.5em;
-    gap: 0.2rem;
+  padding: 0 1.5em;
+  gap: 0.2rem;
 }
 
-#search-text{
-    flex: 1;
-    border: none;
-    outline: none;
-    font-size: 1rem;
-    color: var(--black-100);
-    font-family: var(--font-quicksand);
+#search-text {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: var(--black-100);
+  font-family: var(--font-quicksand);
 }
 
-#search-text::placeholder{
-font-size: 3vh;
-font-family: var(--font-quicksand);
-color: var(--black-100);
+#search-text::placeholder {
+  font-size: 1.2rem;
+  font-family: var(--font-quicksand);
+  color: var(--black-100);
 }
 
-
-#botao-filtro{
+#botao-filtro {
   cursor: pointer;
   padding: 0;
   display: flex;
@@ -70,25 +69,28 @@ color: var(--black-100);
 }
 
 #botao-filtro .material-symbols-outlined {
-    font-size: 3.5rem;  
-    color: var(--black-100);
-}
-
-#secao-titulo{
-}
-
-.secao-titulo::after, .secao-titulo::before{
-    content: '';
-    background: var(--black-100);
-    height: 5px;
-    width: 100%;
-    bottom: 0;
-    position: absolute;
+  font-size: 3.5rem;
+  color: var(--black-100);
 }
 
 .material-symbols-outlined {
-  display: flex; 
-  line-height: 1; 
+  display: flex;
+  line-height: 1;
   vertical-align: middle;
 }
+
+
+#container-titulo {
+  border-top: solid 0.2rem var(--black-100);
+  border-bottom: solid 0.2rem var(--black-100);
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#secao-titulo h1 {
+  font-size: 6rem;
+  color: var(--pearl-grey-100);
+}
+
 /*----- Lista de Posts ---- */
