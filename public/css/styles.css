@@ -41,6 +41,7 @@
     --linear-red-gradient: linear-gradient(-150deg, #830000 34%, #b43c00 87%);
 
   --linear-orange-gradient1: linear-gradient(25deg, #ff6600, #ff8534,#ff6600,#ff7c25, #ff9d5c, #ff7c25);
+  /*--linear-orange-gradient1: linear-gradient(45deg, #ff6600, #ff8534,#ff6600,#ff8432, #ff9d5c);*/
   --linear-orange-gradient2: linear-gradient(46deg, #fea163, #fea163);
 
   --font-bebas-neue: "Bebas Neue", sans-serif;
