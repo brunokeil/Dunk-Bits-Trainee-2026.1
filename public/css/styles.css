@@ -1,51 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&display=swap");
+
 :root {
-    --white-100: #FFFFFF;
-    --white-25: #FFFFFF40;
-    --offwhite-100: #F5EEE9;
+  --white-100: #ffffff;
+  --white-50: #ffffff80;
+  --white-25: #ffffff40;
+  --offwhite-100: #f5eee9;
 
-    --orange-100: #FF6600;
-    --dark-orange-100: #D35400;
+  --orange-100: #ff6600;
+  --dark-orange-100: #d35400;
 
-    --blue-100: #0066CC;
-    --dark-blue-100: #000080;
-    
-    --grey-100: #333333;
-    --dark-grey-100: #1E1A18;
-    --pearl-grey-100: #050517;
-    --black-100: #000000;
+  --blue-100: #0066cc;
+  --dark-blue-100: #000080;
 
-    --color-light-text: var(--white-100);
-    --color-dark-text: var(--black-100);
+  --grey-100: #333333;
+  --dark-grey-100: #1e1a18;
+  --pearl-grey-100: #050517;
+  --pearl-grey-50: #05051780;
+  --black-100: #000000;
 
-    --linear-orange-gradient1: linear-gradient(45deg,#FF6600,#FFC299,#FF6600);
-    --linear-orange-gradient2: linear-gradient(46deg, #FEA163,#FEA163);
+  --color-light-text: var(--white-100);
+  --color-dark-text: var(--black-100);
 
-    --font-bebas-neue: "Bebas Neue", sans-serif;
-    --font-quicksand: "Quicksand", sans-serif;
+  --linear-orange-gradient1: linear-gradient(45deg, #ff6600, #ff8534,#ff6600,#ff8432, #ff9d5c);
+  --linear-orange-gradient2: linear-gradient(46deg, #fea163, #fea163);
+
+  --font-bebas-neue: "Bebas Neue", sans-serif;
+  --font-quicksand: "Quicksand", sans-serif;
 }
 
-
-*, *::before, *::after {
-    box-sizing: content-box;
-    color: var(--color-dark-text);
+*,
+*::before,
+*::after {
+  box-sizing: content-box;
+  color: var(--color-dark-text);
+  padding: 0px;
+  margin: 0px;
 }
 
-h1, h2, h3 {
-    font-family: var(--font-bebas-neue);
+h1,
+h2,
+h3 {
+  font-family: var(--font-bebas-neue);
 }
 
-h4, h5, h6, p {
-    font-family: var(--font-quicksand);
+h4,
+h5,
+h6,
+p {
+  font-family: var(--font-quicksand);
 }
-
-h1 {
-    font-size: 3rem;
-}
-
-h2 {
-    font-size: 2rem;
-}
-
-
 
 /*----- FIM ROOT -----*/
