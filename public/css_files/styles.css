@@ -46,6 +46,20 @@ h2 {
     font-size: 2rem;
 }
 
+.imagem-post {
+    display: flex;
+    justify-content: flex-start; /*coloquei pra começar na esquerda*/
+}
+
+.imagem-post-obj {
+    width: 300px;
+    height: auto;
+}
+
+.conteudo {
+    display: flex;
+}
+
 
 
 /*----- FIM ROOT -----*/
