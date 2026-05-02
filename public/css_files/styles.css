@@ -27,7 +27,7 @@
 
 *, *::before, *::after{
     box-sizing: content-box;
-    color: var(--color-dark-text);
+    /*color: var(--color-dark-text);*/
 }
 
 h1, h2, h3 {
@@ -58,7 +58,29 @@ h2 {
 
 .conteudo {
     display: flex;
+    color: white;
 }
+
+.texto-do-conteudo-do-post {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: var(--pearl-grey-100);
+}
+
+.sessao-de-comentarios {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+
+
+
+
 
 
 
