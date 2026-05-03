@@ -3,7 +3,7 @@
 /*----- Lista-De-Posts ----*/
 
 * {
-  border: solid 1px blue;
+  box-sizing: border-box;
 }
 
 body {
@@ -11,15 +11,18 @@ body {
   width: 100%;
   flex-direction: column;
   align-items: center;
-  gap: 0px;
-  padding: 0px;
+  gap: 10px;
+  padding: 10px 0;
   margin: 0px;
-  background-image: var(--linear-orange-gradient2);
+  background-image: var(--linear-orange-gradient1);
+  background-attachment: fixed; 
+  background-size: cover;
+  
 }
 
 section {
   display: flex;
-  height: 10rem;
+  height: auto;
   padding: 0 1.5rem;
   justify-content: flex-start;
   align-items: center;
@@ -89,8 +92,48 @@ section {
 }
 
 #secao-titulo h1 {
-  font-size: 6rem;
+  font-size: 3.5rem;
   color: var(--pearl-grey-100);
 }
+
+#container-posts {
+  display: grid;
+  grid-template-columns: repeat(3, 350px); 
+  column-gap: 40px;
+  justify-content: center;
+  justify-items: center;
+  row-gap: 50px;    
+  justify-content: center;
+  width: 100%;
+  padding: 40px 10px;
+}
+
+@media (max-width: 1150px) {
+  #container-posts {
+    grid-template-columns: repeat(2, 350px);
+  }
+}
+
+@media (max-width: 740px) {
+  #container-posts {
+    grid-template-columns: repeat(1, 350px);
+  }
+}
+
+.card {
+  width: 350px;
+  height: 375px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--pearl-grey-100); 
+  background-image: url(../assets/Dinosaur.png);
+  background-repeat: no-repeat;
+ background-size: 100% auto;
+  background-position: bottom center;
+  border-radius: 16px;
+  box-shadow: 6px 5px 4px 0 rgba(88, 46, 5, 0.29);
+}
+
 
 /*----- Lista de Posts ---- */
