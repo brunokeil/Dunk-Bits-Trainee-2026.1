@@ -55,7 +55,7 @@ h2 {
 }
 
 .imagem-post-obj {
-    width: 300px;
+    width: 400px;
     height: auto;
     max-width: 400px; /* define limite max da img */
     min-width: 200px; /* define limite min da img */
@@ -78,6 +78,8 @@ h2 {
 body {
     background-color: var(--pearl-grey-100);
     display: flex;
+    padding: 0 40px;
+    margin: 0 auto;
 }
 
 .sessao-de-comentarios {
@@ -86,6 +88,7 @@ body {
     flex-direction: column;
     color: white;
     padding: 20px;
+    gap: 40px;
 }
 
 .botoes-de-compartilhar {
@@ -102,6 +105,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    
 
 
 }
@@ -109,7 +113,32 @@ body {
 #botao-de-enviar {
     display: flex;
     width: 50px;
+    height: 50px;
 }
+
+#input-comentario {
+    width: 700px;       
+
+    background: transparent; /* fundo transparente */
+    border: 2px solid var(--blue-100); /* borda */
+  
+    color: var(--blue-100);
+    padding: 10px;     
+    outline: none;     
+    border-radius: 35px; 
+}
+
+.img-prof-picture {
+    display: flex;
+    width: 40px;
+    border-radius: 100%;
+}
+
+.user-infos {
+    display: flex;
+    gap: 20px;
+}
+
 
 
 
