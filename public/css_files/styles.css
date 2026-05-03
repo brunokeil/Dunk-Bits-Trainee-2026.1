@@ -46,6 +46,9 @@ h2 {
     font-size: 2rem;
 }
 
+
+/*----- FIM ROOT -----*/
+
 .imagem-post {
     display: flex;
     justify-content: flex-start; /*coloquei pra começar na esquerda*/
@@ -54,20 +57,27 @@ h2 {
 .imagem-post-obj {
     width: 300px;
     height: auto;
+    max-width: 400px; /* define limite max da img */
+    min-width: 200px; /* define limite min da img */
+    height: auto;
+    
 }
 
 .conteudo {
     display: flex;
     color: white;
+    padding: 20px;
 }
 
 .texto-do-conteudo-do-post {
     display: flex;
     flex-direction: column;
+    padding-left: 20px;
 }
 
 body {
     background-color: var(--pearl-grey-100);
+    display: flex;
 }
 
 .sessao-de-comentarios {
@@ -75,6 +85,30 @@ body {
     justify-content: center;
     flex-direction: column;
     color: white;
+    padding: 20px;
+}
+
+.botoes-de-compartilhar {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.compartilhar-post {
+    display: flex;
+    width: 50px;
+}
+
+.caixa-de-comentarios {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+
+}
+
+#botao-de-enviar {
+    display: flex;
+    width: 50px;
 }
 
 
@@ -84,4 +118,3 @@ body {
 
 
 
-/*----- FIM ROOT -----*/
