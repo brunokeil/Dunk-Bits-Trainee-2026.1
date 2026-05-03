@@ -97,11 +97,10 @@ section {
 #container-posts {
   display: grid;
   grid-template-columns: repeat(3, 350px);
-  column-gap: 40px;
   justify-content: center;
   justify-items: center;
   row-gap: 50px;
-  justify-content: center;
+  column-gap: 40px;
   width: 100%;
   padding: 40px 10px;
 }
@@ -133,7 +132,6 @@ section {
   box-shadow: 6px 5px 4px 0 rgba(88, 46, 5, 0.29);
 }
 
-
 #container-paginacao{
   display: flex;
   justify-content: center; 
@@ -143,30 +141,37 @@ section {
 
 #paginacao{
   display: flex;
-  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-.pontos {
-  display: flex;
-  gap: 10px; 
+#paginacao button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.ponto {
-  cursor: pointer;
+#pontos {
+    display: flex;
+    gap: 5px; 
+}
+
+.ponto .material-symbols-outlined{
+    font-size: 1rem;
+    color: var(--black-100);
+}
+
+#pontos .ponto.ativo{
   color: var(--black-100);
-  font-size: 1.2rem;
-  opacity: 0.6;
 }
 
-  .ponto.ativo{
-    opacity: 1;
-    
+.seta .material-symbols-outlined {
+    font-size: 2rem;
+    color: var(--pearl-grey-100);
 }
-
-.seta{
-  cursor: pointer;
-  color: var(--black-100);
-  font-size: 0.5rem;
-}
-
 /*----- Lista de Posts ---- */
