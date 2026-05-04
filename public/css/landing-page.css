@@ -1,17 +1,26 @@
 @import "./styles.css";
 
-/* * {
-    border: 1px solid blue;
-} */
+* {
+    /* color: var(--white-100); */
+    /* border: 1px solid cyan; */
+}
+
+html {
+    height: min-content;
+}
 
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    gap: 250px;
-    padding-bottom: 160px;
+    width: 100%;
+    gap: 50%;
+    /* padding-bottom: 20%; */
     background-image: var(--linear-orange-gradient1);
+    /* background-color: var(--orange-100); */
+    overflow-x: hidden;
+    padding-bottom: 8%;
 }
 
 section {
@@ -21,7 +30,7 @@ section {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: clamp(1.5rem, 10vw, 5rem);
 }
 
 button {
@@ -35,6 +44,7 @@ button {
     border: 0;
 }
 
+
 #btn-posts {
     background-color: var(--orange-100);
     color: var(--white-100);
@@ -44,18 +54,63 @@ button {
     background-color: var(--white-25);
 }
 
-/* ------------------- */
+/* -------IMAGENS--------- */
+
+
+body::after {
+    content: '';
+    width: 100%;
+    height: 1045px;
+    position: absolute;
+    background-image: url("/public/assets/cesta-fundo-logo.png");
+    background-size: clamp(10px, 100%, 100%);
+    background-repeat: no-repeat;
+    top: 0;
+}
+
+/* #bg-mask {
+    position: relative;
+    aspect-ratio: initial;
+
+    height: initial;
+    width: clamp(100%,100%,500%);
+    top: 0;
+    left: 0;
+    top: -980px;
+    z-index: -1;
+} */
+
+
+/* --------HERO-SECTION---------- */
+
 
 #hero-section {
-    height: 90vh;
+    width: 100%;
+    height: fit-content;
+    
     align-items: baseline;
     gap: 8px;
-    justify-content: center;
-    position: relative;
+
+    padding-top: 10%;
+    padding-left: 20%;
+    padding-bottom: 20%;
+
+    background-image: url('/public/assets/mask-bg-landing-wide.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#hero-section #text {
+    z-index: 1;
 }
 
 #hero-section > #text > h1 {
-    font-size: 7rem;
+    font-size: min(8rem, 20rem);
+}
+
+#hero-section * {
+    color: var(--white-100);
 }
 
 #call-to-action {
@@ -71,11 +126,21 @@ button {
     justify-content: space-around;
     gap: 40px;
     /* background-color: var(--white-50); */
-    padding: 40px 0 60px 0;
-    box-shadow: 0 0 20px var(--pearl-grey-50);
+    padding: 200px 0 60px 0;
+    
+    box-shadow: 0px 20px 20px var(--pearl-grey-50);
+
+    background-image: url('/public/assets/cesta-fundo-landing.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-clip: border-box;
+    
+
+    margin: 0 0 10% 0;
 }
 
-#posts > h1::before {
+
+#posts > h1::after {
     content: '';
     width: inherit;
     height: inherit;
@@ -146,12 +211,20 @@ button {
 /* -------------------- */
 
 #about {
-    
+    /* flex-wrap: wrap; */
     flex-direction: row;
     padding: 0 200px 0px 200px;
     gap: 30px;
     align-items: start;
     height: fit-content;
+}
+
+#about #text {
+    width: 50ch;
+}
+
+#text > h1 {
+    color: var(--white-100);
 }
 
 #about > img {
