@@ -1,66 +1,11 @@
 @import "./styles.css";
 
-
-.telaLogin,
-.telaFooter,
-.telaNavbar {
+.telaFooter {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-.headerNavbar {
-    width: 100%; 
-    height: 148px;
-    background-color: var(--grey-100);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
-    box-sizing: border-box;
-}
-
-.Logo5{
-    width: 100px;
-    height: 108px;
-    object-fit: contain;
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.menu a{
-    color: var(--color-light-text);
-    text-decoration: none;
-    font-family: var(--font-quicksand);
-    font-size: 32px;
-    font-weight: 500;
-}
-
-.buttonLogin{
-    background-color: var(--dark-orange-100);
-    padding: 10px 25px;
-    border-radius: 50px;
-    transition: 0.3s;
-}
-
-.buttonLogin:hover{
-    background-color: var(--orange-100); 
-}
-
-.hamburguer {
-    display: none;
-    color: var(--color-light-text);
-    font-size: 40px;
-    cursor: pointer;
-}
-
-.menuMobile {
-    display: none; 
-}
 
 .rodape {
     background-color: var(--grey-100);
@@ -70,35 +15,43 @@
     margin-top: auto;
 }
 
+
 .acima {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.acima h3{
+.acima h3 {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 15px;
 }
 
-.redes{
+
+.redes {
     display: flex;
     gap: 15px;
     font-size: 32px;
     cursor: pointer;
 }
 
-.redes ion-icon:hover{
+.redes ion-icon:hover {
     color: var(--dark-orange-100);
     transition: 0.3s;
 }
 
-.contato{
+.contato {
     text-align: right;
 }
 
-.info-contato p{
+.Logo5 {
+    width: 100px;
+    height: 108px;
+    object-fit: contain;
+}
+
+.infoContato p {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -108,7 +61,8 @@
     font-weight: 400;
 }
 
-.linha{
+
+.linha {
     border: none;
     height: 1px;
     background-color: var(--white-100);
@@ -116,25 +70,27 @@
     margin: 40px 0;
 }
 
+
 .abaixo {
     display: flex;
     justify-content: space-between;
 }
 
-.abaixo p{
+.abaixo p {
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.abaixo p:hover{
+.abaixo p:hover {
     color: var(--dark-orange-100);
 }
 
+
 .textoMissaoHover,
 .textoVisaoHover,
-.textoValoresHover{
+.textoValoresHover {
     display: none;
     color: var(--dark-orange-100);
     font-size: 16px;
@@ -144,27 +100,31 @@
     margin: 0 auto;
 }
 
+
 .rodape:has(.buttonMissao:hover, .buttonVisao:hover, .buttonValores:hover) .Logo5 {
     display: none;
 }
+
 
 .rodape:has(.buttonMissao:hover) .textoMissaoHover { display: block; }
 .rodape:has(.buttonVisao:hover) .textoVisaoHover { display: block; }
 .rodape:has(.buttonValores:hover) .textoValoresHover { display: block; }
 
-@media (max-width: 768px) {
-    .headerNavbar {
-        height: 80px;
-        padding: 0 20px;
-    }
 
+@media (max-width: 768px) {
+    .rodape {
+        padding: 40px 20px;
+    }
+    
     .Logo5 {
         width: 60px;
         height: 65px;
     }
 
-    .menu {
-        display: none; 
+    .acima {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
     }
 
     .logo {
@@ -176,16 +136,6 @@
 
     .redes {
         justify-content: center;
-    }
-
-    .rodape {
-        padding: 40px 20px;
-    }
-
-    .acima {
-        flex-direction: column;
-        gap: 40px;
-        text-align: center;
     }
 
     .contato {
@@ -207,197 +157,4 @@
     .textoValoresHover {
         font-size: 14px;
     }
-
-    .loginContainer {
-        width: 90%;
-        padding: 40px 20px;
-    }
-    
-    .hamburguer {
-        display: block; 
-    }
-
-    .menuMobile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: var(--grey-100);
-        z-index: 1000;
-        transform: translateX(100%);
-        transition: transform 0.4s ease-in-out; 
-    }
-
-    .menuMobile.aberto {
-        transform: translateX(0);
-    }
-
-    .logoMobile {
-        width: 100px;
-        margin-bottom: 20px;
-    }
-
-    .menuMobile a {
-        color: var(--color-light-text);
-        text-decoration: none;
-        font-size: 24px;
-        font-weight: 500;
-        font-family: var(--font-quicksand);
-    }
-
-    .menuMobile .buttonLogin {
-        background-color: var(--dark-orange-100);
-        padding: 10px 40px;
-        border-radius: 50px;
-    }
-
-    .buttonFecharMenu {
-        position: absolute;
-        bottom: 50px;
-        color: var(--color-light-text);
-        font-size: 50px;
-        cursor: pointer;
-    }
-    
-    .loginContainer {
-        width: 90%;          
-        padding: 40px 20px; 
-    }
-
-    .buttonFechar {
-        top: 15px;
-        right: 15px;
-    }
-
-}
-
-.telaLogin {
-    background-image: url('../../../public/assets/backgroundlogin.png'); 
-    background-size: cover;
-    background-position: center;
-    background-color: var(--dark-grey-100);
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.loginContainer {
-    background: rgba(255, 255, 255, 0.15); 
-    backdrop-filter: blur(15px);           
-    -webkit-backdrop-filter: blur(15px);   
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    padding: 60px 40px;
-    width: 400px;
-    text-align: center;
-    position: relative; 
-    box-sizing: border-box;
-}
-
-.buttonFechar {
-    position: absolute;
-    top: 20px;
-    left: 20px; 
-    color: var(--color-light-text);
-    font-size: 45px; 
-    transition: 0.3s;
-    text-decoration: none;
-}
-
-.buttonFechar {
-        top: 15px;
-        left: 15px;
-    }
-
-.loginContainer h2 {
-    color: var(--color-light-text);
-    margin-bottom: 40px;
-}
-
-
-.inputBox {
-    position: relative;
-    margin-bottom: 25px;
-}
-
-.inputBox input {
-    width: 100%;
-    height: 50px; 
-    padding: 0 50px 0 20px;
-    background: transparent;
-    border: 1px solid var(--white-100);
-    border-radius: 30px;
-    color: var(--color-light-text);
-    font-size: 14px;
-    font-family: var(--font-quicksand);
-    outline: none;
-    box-sizing: border-box; 
-    transition: 0.3s;
-}
-
-.inputBox input:focus {
-    border-color: var(--dark-orange-100);
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.inputBox input::placeholder {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.inputBox ion-icon {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%); 
-    color: var(--color-light-text);
-    font-size: 20px;
-}
-
-.opcoesLogin {
-    text-align: right;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    padding-right: 15px;
-}
-
-.esqueciSenha {
-    color: var(--color-light-text);
-    text-decoration: none;
-    font-size: 14px;
-    font-family: var(--font-quicksand); 
-    transition: 0.3s;
-}
-
-.esqueciSenha:hover {
-    color: var(--dark-orange-100);
-    text-decoration: underline;
-}
-
-
-.buttonEntrar {
-    background-color: var(--dark-orange-100);
-    color: var(--color-light-text);
-    border: none;
-    padding: 15px 0;
-    font-size: 18px;
-    font-weight: 700;
-    font-family: var(--font-quicksand);
-    cursor: pointer;
-    transition: 0.3s;
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 20px;
-}
-
-.buttonEntrar:hover {
-    background-color: var(--orange-100);
 }
