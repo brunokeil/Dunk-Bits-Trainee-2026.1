@@ -25,19 +25,37 @@ body {
 
     padding: 40px;
 
+    align-items: center;
+
 }
+
+.titulo-texto {
+    font-weight: bold;
+}
+.titulo {
+    display: flex;
+    justify-content: center;
+}
+
 
 h1,h2,h3,h4,p {
     color: white;
-    margin: 0;
+    
+}
+
+.input-de-busca input {
+    border: none;
+    outline: none;
+    width: 80%
 }
 
 .componentes {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     gap: 25px;
+
+    width: 80%;
     
     
 
@@ -50,17 +68,20 @@ h1,h2,h3,h4,p {
 
 .interacoes {
     display: flex;
+    justify-content: space-between;
+    
 }
 
 .header-tabela,
 .linha-tabela {
     display: grid;
 
+
     grid-template-columns:
         0.5fr
         1fr
         2fr
-        2fr;
+        1fr;
 
     align-items: center;
 
@@ -68,6 +89,10 @@ h1,h2,h3,h4,p {
 
     padding: 15px 20px;
     justify-items: center;
+}
+
+.tabela * {
+    margin: 0;
 }
 
 .header-tabela {
@@ -83,9 +108,10 @@ h1,h2,h3,h4,p {
 
 
 .botao-criar-usuario {
-    background-color: orange;
+    background-color: #FF6600;
     border-radius: 100px;
     display: flex;
+    align-items: center;
         
     
 }
@@ -99,6 +125,11 @@ h1,h2,h3,h4,p {
 
 .input-de-busca {
     background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+    border-radius: 20px;
 
 }
 
