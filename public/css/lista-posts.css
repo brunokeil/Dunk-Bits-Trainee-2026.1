@@ -14,7 +14,7 @@ body {
   gap: 10px;
   padding: 10px 0;
   margin: 0px;
-  background-image: var(--linear-orange-gradient1);
+  background-image: var(--linear-orange-gradient3);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -42,7 +42,8 @@ section {
   border-radius: 2em;
   color: var(--white-100);
   padding: 0 1.5em;
-  gap: 0.2rem;
+  gap: 0.5rem;
+  position: relative;
 }
 
 #search-text {
@@ -52,6 +53,7 @@ section {
   font-size: 1rem;
   color: var(--black-100);
   font-family: var(--font-quicksand);
+  padding-right: 30px;
 }
 
 #search-text::placeholder {
@@ -60,14 +62,32 @@ section {
   color: var(--black-100);
 }
 
+.divisor-vertical {
+  font-family: var(--font-quicksand);
+  font-size: 1.8rem;
+  color: var(--black-100);
+  margin-right: 35px; 
+}
+
+#icone-busca {
+  position: absolute; 
+  height: 4.5em; 
+  width: auto;
+  right: -45px;
+  top: -5px;    
+  z-index: 10;
+}
+
 #botao-filtro {
   cursor: pointer;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--linear-orange-gradient2);
+  background-color: var(--linear-orange-gradient3);
   border: none;
+  margin-left: 15px;
+  flex-shrink: 0;
 }
 
 #botao-filtro .material-symbols-outlined {
@@ -82,16 +102,16 @@ section {
 }
 
 #container-titulo {
-  border-top: solid 0.2rem var(--black-100);
-  border-bottom: solid 0.2rem var(--black-100);
-  height: 100%;
+  border-top: solid 0.4rem var(--black-100);
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 0 40px;
+  align-items: center;
 }
 
 #secao-titulo h1 {
-  font-size: 3.5rem;
+  font-size: 6rem;
   color: var(--pearl-grey-100);
+  font-style: var(--font-quicksand);
 }
 
 #container-posts {
@@ -100,7 +120,7 @@ section {
   justify-content: center;
   justify-items: center;
   row-gap: 50px;
-  column-gap: 40px;
+  column-gap: 60px;
   width: 100%;
   padding: 40px 10px;
 }
@@ -118,7 +138,8 @@ section {
 }
 
 .card {
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   height: 375px;
   display: flex;
   flex-direction: column;
@@ -131,6 +152,7 @@ section {
   border-radius: 16px;
   box-shadow: 6px 5px 4px 0 rgba(88, 46, 5, 0.29);
 }
+
 
 #container-paginacao{
   display: flex;
@@ -174,4 +196,5 @@ section {
     font-size: 2rem;
     color: var(--pearl-grey-100);
 }
+
 /*----- Lista de Posts ---- */

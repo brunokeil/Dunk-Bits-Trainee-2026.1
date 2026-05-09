@@ -22,7 +22,7 @@
 
   --linear-orange-gradient1: linear-gradient(45deg, #ff6600, #ffc299, #ff6600);
   --linear-orange-gradient2: linear-gradient(46deg, #fea163, #fea163);
-
+  --linear-orange-gradient3: linear-gradient(224deg, #FEA163 31.27%, #D35400 55.9%);
   --font-bebas-neue: "Bebas Neue", sans-serif;
   --font-quicksand: "Quicksand", sans-serif;
 }
