@@ -1,0 +1,117 @@
+@import "./styles.css";
+
+body {
+    background-image: url("/public/assets/fundo-admin-posts.png");
+}
+
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.painel {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 7%;
+
+    width: 60%;
+    max-width: 1152px;
+    height: auto;
+
+    border: 1px solid white;
+
+}
+
+h1,h2,h3,h4,p {
+    color: white;
+}
+
+.componentes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    
+
+}
+
+.interacoes {
+    display: flex;
+}
+
+.tabela {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+}
+
+.header-tabela {
+    display: flex;
+    flex-direction: row;
+    background-color: gray;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+}
+
+.botao-criar-usuario {
+    background-color: orange;
+    border-radius: 100px;
+    display: flex;
+        
+    
+}
+
+
+
+.linha-tabela {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #ffffff;
+    
+
+    
+    
+}
+
+.infos-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+}
+
+.infos-1 {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.infos-2 {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.input-de-busca {
+    background-color: white;
+
+}
+
+.acoes {
+    display: flex;
+    align-items: center;
+
+}
+.icone-acao {
+    width: 25px;
+    height: 25px;
+}
+
