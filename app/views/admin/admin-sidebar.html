@@ -1,38 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dunk Bit's Sidebar</title>
-    <link rel="icon" href="/public/assets/Logo_dunkbits.png"/>
+    <link rel="icon" href="/public/assets/Logo_dunkbits.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="/public/css/sidebar.css" />
   </head>
   <body>
-    <div id="up">
-      <section id="header">
-        <button id="return-btn"><img id="setinha" src="/public/assets/ArrowLeft.svg"/></button>
-        <div id="user-space">
-          <img id="user-icon" src="/public/assets/PersonCircle.svg"/>
-          <div id="user-text">
-            <p id="user-name">Lorem Ipsum</p>
-            <p id="cargo">Adm</p>
+    <aside class="sidebar" id="sidebar">
+      <div class="top-sidebar">
+        <div class="top-top-sidebar">
+          <button id="close-btn">
+            <img id="setinha" src="/public/assets/ArrowLeft.svg" />
+          </button>
+          <div class="user-space-sidebar">
+            <img id="user-icon" src="/public/assets/PersonCircle.svg" />
+            <div>
+              <p id="user-name">Lorem Ipsum</p>
+              <p id="cargo">Adm</p>
+            </div>
           </div>
         </div>
-      </section>
-      <section id="admin">
-        <p>Admin</p>
-        <div id="admin-buttons">
-          <button id="dashboard-btn">> Acessar Dashboard</button>
-          <button id="adm-posts-btn">> Gerenciar Posts</button>
-          <button id="adm-users-btn">> Gerenciar Usuários</button>
+        <div class="admin-sidebar">
+          <p>Admin</p>
+          <nav class="content-sidebar">
+            <ul>
+              <li>
+                <span class="item-sidebar">> Voltar à Página Inicial</span>
+              </li>
+              <li>
+                <span class="item-sidebar">> Acessar Dashboard</span>
+              </li>
+              <li>
+                <span class="item-sidebar">> Gerenciar Posts</span>
+              </li>
+              <li>
+                <span class="item-sidebar">> Gerenciar Usuários</span>
+              </li>
+            </ul>
+          </nav>
         </div>
-      </section>
-    </div>
-    <section id="logout">
-      <button id="logout-btn">Sair</button>
-    </section>
+      </div>
+      <div class="logout-sidebar">
+        <button type="button" id="logout-btn">Sair</button>
+      </div>
+    </aside>
+    <h1> teste 1 3</h1>
   </body>
-  </html>
-  
+</html>
