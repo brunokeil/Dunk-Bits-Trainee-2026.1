@@ -1,0 +1,39 @@
+@import "./styles.css";
+
+body {
+    background-image: url("/public/assets/fundo-admin-posts.png");
+}
+
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.painel {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.15);
+
+    width: 60%;
+    max-width: 1152px;
+    height: auto;
+    
+
+
+
+}
+
+h1,h2,h3,h4,p {
+    color: white;
+}
+
+.componentes {
+    display: flex;
+    flex-direction: column;
+}
+
+.interacoes {
+    display: flex;
+}
