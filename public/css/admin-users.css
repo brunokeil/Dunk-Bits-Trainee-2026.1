@@ -1,7 +1,7 @@
 @import "./styles.css";
 
 body {
-    background-image: url("/public/assets/fundo-admin-posts.png");
+    background-image: url("/public/assets/fundo-admin-users.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -140,6 +140,7 @@ h1,h2,h3,h4,p {
 .acoes {
     display: flex;
     align-items: center;
+    gap: 10px;
 
 }
 .icone-acao {
@@ -173,5 +174,7 @@ h1,h2,h3,h4,p {
 .carrossel button img {
     width: w0px;
 }
+
+
 
 
