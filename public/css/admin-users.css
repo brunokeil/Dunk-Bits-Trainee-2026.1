@@ -402,21 +402,23 @@ ion-icon:hover{
 }
 
 @media (max-width: 840px) {
-.email {
-    display: none;
-}
 
-  .header-tabela,
+.header-tabela,
   .linha-tabela {
+    min-width: 700px; 
+    
     grid-template-columns:
       0.5fr
       1fr
+      2fr
       1fr;
   }
+    .tabela {
+    overflow-x: auto;
+    width: 100%;
+  }
 
-.retic {
-    display: flex;
-}
+
 
 .painel {
     width: 80%;
@@ -434,34 +436,39 @@ ion-icon:hover{
 @media (max-width: 600px) {
     .painel {
     width: 98%;
-}
- .componentes {
-        width: 95%;
-    }
-    .titulo-texto {
     
-    font-size: 20px;
-
-}
-.icone-acao {
-        width: 18px;
-        height: 18px;
     }
-.texto-criar-usuario {
-    display: none;
-}
 
-.input-de-busca {
-    background-color: white;
 
-    width: 60%;
-    justify-content: space-between;
 
-}
+    .componentes {
+            width: 95%;
+            
+        }
+    .painel {
+            height: 90vh;
+            justify-content: center;
+        }
 
-.input-de-busca input {
-    width: 50%;
-}
+    .icone-acao {
+            width: 18px;
+            height: 18px;
+        }
+    .texto-criar-usuario {
+        display: none;
+    }
+
+    .input-de-busca {
+        background-color: white;
+
+        width: 60%;
+        justify-content: space-between;
+
+    }
+
+    .input-de-busca input {
+        width: 50%;
+    }
 
 }
 
