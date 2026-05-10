@@ -26,7 +26,8 @@ body {
 
     border: 1px solid white;
 
-    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     align-items: center;
 
@@ -34,7 +35,7 @@ body {
 
 .titulo-texto {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
 }
 .titulo {
     display: flex;
@@ -57,7 +58,7 @@ h1,h2,h3,h4,p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 25px;
+    gap: 15px;
 
     width: 80%;
     
@@ -68,6 +69,7 @@ h1,h2,h3,h4,p {
 .tabela {
     display: flex;
     flex-direction: column;
+    padding-bottom: 30px;
 }
 
 .interacoes {
@@ -145,4 +147,21 @@ h1,h2,h3,h4,p {
     width: 25px;
     height: 25px;
 }
+
+.carrossel {
+    display: flex;
+}
+
+.seta-esquerda {
+     border: none;
+    outline: none;
+    background: transparent;
+}
+
+.seta-direita {
+     border: none;
+    outline: none;
+    background: transparent;
+}
+
 
