@@ -2,6 +2,9 @@
 
 body {
     background-image: url("/public/assets/fundo-admin-posts.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .conteudo {
@@ -23,7 +26,7 @@ body {
 
     border: 1px solid white;
 
-    padding: 40px;
+    padding: 30px;
 
     align-items: center;
 
@@ -31,6 +34,7 @@ body {
 
 .titulo-texto {
     font-weight: bold;
+    font-size: 20px;
 }
 .titulo {
     display: flex;
@@ -46,7 +50,7 @@ h1,h2,h3,h4,p {
 .input-de-busca input {
     border: none;
     outline: none;
-    width: 80%
+    background: transparent;
 }
 
 .componentes {
@@ -118,11 +122,6 @@ h1,h2,h3,h4,p {
 
 
 
-
-
-
-
-
 .input-de-busca {
     background-color: white;
     display: flex;
@@ -130,6 +129,9 @@ h1,h2,h3,h4,p {
     align-items: center;
     height: 40px;
     border-radius: 20px;
+    padding-inline: 10px;
+    width: 400px;
+    justify-content: space-between;
 
 }
 
