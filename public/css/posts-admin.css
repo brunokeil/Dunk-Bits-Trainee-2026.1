@@ -26,7 +26,7 @@
 
 
 *, *::before, *::after{
-    box-sizing: content-box;
+    box-sizing: border-box;
     color: var(--color-dark-text);
 }
 
@@ -47,5 +47,314 @@ h2 {
 }
 
 
+/* ----- FIM ROOT ----- */
 
-/*----- FIM ROOT -----*/
+#BodyTabelaPostsADM{
+    background-image: linear-gradient(rgba(0, 0, 128, 0.5), rgba(0, 0, 128, 0.5)), url("../assets/backgroundTabelaPostsADM.png");
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;    
+    background-size: cover;
+    background-position: center;
+}
+
+#TituloDePostsADM{
+    color: var(--white-100);
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-quicksand);
+    font-optical-sizing: auto;
+    font-weight: 1000;
+    font-size: 2.5rem;
+}
+
+#PesquisaECriarPostADM{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 2vh auto;
+    box-sizing: border-box;
+    padding: 0 4vw;
+}   
+
+.containerTabelaPostsAdmin {
+    margin: auto;
+    width: 80%;
+    overflow-x:auto;
+    background-color: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    padding-bottom: 8vh;
+    border-radius: 15px;
+    border: 1px solid var(--white-100);
+}
+
+table{
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    table-layout: fixed;
+    box-sizing: border-box;
+    padding: 0 8vh;
+}
+
+th, td{
+    text-align: center;
+    padding: 1.5vh;
+    color: var(--white-100);
+    font-family: var(--font-quicksand);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+td{
+    border-bottom: 1px solid var(--white-100);
+    position: relative;
+}
+
+#IdTabelaPostsADM,
+#TítuloTabelaPostsADM,
+#AutorTabelaPostsADM,
+#DataTabelaPostsADM,
+#AçõesTabelaPostsADM{
+    background-color: var(--white-25);
+}
+
+#IdTabelaPostsADM{
+    border-top-left-radius: 10px;
+}
+
+#AçõesTabelaPostsADM{
+    border-top-right-radius: 10px;
+}
+
+
+#IdTabelaPostsADM,
+#TítuloTabelaPostsADM,
+#AutorTabelaPostsADM,
+#DataTabelaPostsADM{
+    width: 18%;
+}
+
+#AçõesTabelaPostsADM{
+    width: 28%;
+}
+
+#CaixaDePesquisa{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5vh;
+    padding-right: 16px;
+    width: 20%;
+    border-radius: 16px;
+}
+
+#PesquisaPostsTabelaADM{
+    width: 100%;
+    height: 24px;
+    padding: 0.8vh;
+    border-radius: 16px;
+    border: none;
+    font-family: var(--font-quicksand);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#btnCriarPostADM{
+    background-color: var(--orange-100);
+    color: var(--white-100);
+    border: none;
+    padding: 0.8vh 2vh;
+    border-radius: 16px;
+    font-family: var(--font-quicksand);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+#btnCriarPostADM:hover{
+    background-color: var(--dark-orange-100);
+}
+
+.btnVisuPostADM,
+.btnEditPostADM,
+.btnDeletePostADM{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+}
+
+.trespontos{
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        transition: 0.3s ease;
+        color: var(--white-100);
+        display: none;
+    }
+
+
+ion-icon{
+    color: var(--white-100);
+}
+
+ion-icon:hover{
+    color: var(--white-25);
+}
+
+ion-icon[name="search-outline"]{
+    color: var(--black-100)
+}
+
+.dropdownMenuPosts{
+    display: none;
+    position: absolute;
+    top: 52px;
+    right: 10px;
+    background-color: var(--white-100);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.dropdownMenuPosts.aparecer{
+    display: block;
+}
+
+.dropdownMenuPosts ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdownMenuPosts li a{
+    display: block;
+    padding: 10px 20px;
+    color: var(--black-100);
+    text-decoration: none;
+    font-family: var(--font-quicksand);
+}
+
+.dropdownMenuPosts li a:hover{
+    background-color: var(--offwhite-100);
+    border-radius: 8px;
+}
+
+.modalContainer{
+    width: 320px;
+    height: fit-content;
+    background-color: var(--white-100);
+    border-radius: 12px;
+    padding: 25px;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border-top: 6px solid var(--orange-100);
+    position: fixed;
+    top: 40%;
+    left: 40%;
+}
+
+
+
+.modalContainer input{
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--grey-100);
+    outline: none;
+    font-size: 14px;
+    font-family: var(--font-quicksand);
+    transition: 0.3s ease;
+}
+
+.modalContainer input:focus{
+    border-color: var(--orange-100);
+    box-shadow: 0 0 5px var(--orange-100);
+}
+
+.modalActions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.modalActions button{
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    font-family: var(--font-quicksand);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btnCancelar{
+    background-color: var(--grey-100);
+}
+
+.btnSalvar{
+    background-color: var(--blue-100);
+    color: var(--white-100);
+}
+
+.modalActions  button:hover{
+    opacity: 0.8;
+}
+
+@media (max-width: 852px) {
+    #BodyTabelaPostsADM{
+        min-height: 100vh;
+    }
+
+    table{
+        min-width: 700px;
+        overflow-x: auto;
+    }
+
+    #TituloDePostsADM{
+        min-width: 700px;
+        color: var(--white-100);
+        display: flex;
+        justify-content: center;
+        font-family: var(--font-quicksand);
+        font-optical-sizing: auto;
+        font-weight: 1000;
+        font-size: 2.5rem;
+    }
+
+
+    
+    #PesquisaECriarPostADM{
+        min-width: 700px;   
+        padding: 0 76px;
+    }   
+
+    #CaixaDePesquisa{
+        width: 40%;
+    }
+
+    .btnVisuPostADM,
+    .btnEditPostADM,
+    .btnDeletePostADM{
+        display: none;
+    }
+    .trespontos{
+        display: inline-block;
+    }
+
+}
+

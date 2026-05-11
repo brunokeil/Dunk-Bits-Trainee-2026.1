@@ -1,0 +1,214 @@
+<!-- FLUMINENSE -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Posts</title>
+    <link rel="stylesheet" href="../../../public/css/posts-admin.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+    </style>
+</head>
+<body id="BodyTabelaPostsADM">
+    
+    <div class="containerTabelaPostsAdmin">
+        <div><h2  id="TituloDePostsADM">TABELA DE POSTS</h2></div>
+        <div id="PesquisaECriarPostADM">
+            <div id="CaixaDePesquisa">
+                <input type="text" placeholder="Pesquisar por Post" id="PesquisaPostsTabelaADM">
+                <ion-icon name="search-outline"></ion-icon>
+            </div>
+            <button id="btnCriarPostADM">Criar Post</button>
+        </div>
+
+        <table>
+            <thead id="IndicesTabelaPostADM">
+                <tr>
+                    <th id="IdTabelaPostsADM">ID</th>
+                    <th id="TítuloTabelaPostsADM">Título</th>
+                    <th id="AutorTabelaPostsADM">Autor</th>
+                    <th id="DataTabelaPostsADM">Data</th>
+                    <th id="AçõesTabelaPostsADM">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Primeira Publicação</td>
+                    <td>Arthur Morgan</td>
+                    <td>01/01/2023</td>
+                    <td>
+                        <div class="botõesdeação">
+                            <button class="btnVisuPostADM" onclick="abrirModal('modalVisualizar')"><ion-icon name="eye-outline"></ion-icon></button>
+                            <button class="btnEditPostADM" onclick="abrirModal('modalEditar')"><ion-icon name="pencil-outline"></ion-icon></button>
+                            <button class="btnDeletePostADM" onclick="abrirModal('modalExcluir')"><ion-icon name="trash-bin-outline"></ion-icon></button>
+                        </div>
+
+                        <div class="containerMenuPostsAcoes">
+
+                            <button class="trespontos">
+                                <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
+                            </button>
+
+                            <div class="dropdownMenuPosts">
+                                <ul>
+                                    <li><a onclick="abrirModal('modalVisualizar')">Visualizar</a></li>
+                                    <li><a onclick="abrirModal('modalEditar')">Editar</a></li>
+                                    <li><a onclick="abrirModal('modalExcluir')">Excluir</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Segunda Publicação</td>
+                    <td>A Train</td>
+                    <td>02/01/2023</td>
+                    <td>
+                        <div class="botõesdeação">
+                            <button class="btnVisuPostADM" onclick="abrirModal('modalVisualizar')"><ion-icon name="eye-outline"></ion-icon></button>
+                            <button class="btnEditPostADM" onclick="abrirModal('modalEditar')"><ion-icon name="pencil-outline"></ion-icon></button>
+                            <button class="btnDeletePostADM" onclick="abrirModal('modalExcluir')"><ion-icon name="trash-bin-outline"></ion-icon></button>
+                        </div>
+
+                        <div class="containerMenuPostsAcoes">
+
+                            <button class="trespontos">
+                                <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
+                            </button>
+                                
+                            <div class="dropdownMenuPosts">
+                                <ul>
+                                    <li><a onclick="abrirModal('modalVisualizar')">Visualizar</a></li>
+                                    <li><a onclick="abrirModal('modalEditar')">Editar</a></li>
+                                    <li><a onclick="abrirModal('modalExcluir')">Excluir</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Terceira Publicação</td>
+                    <td>Maelle</td>
+                    <td>03/01/2023</td>
+                    <td>
+                        <div class="botõesdeação">
+                            <button class="btnVisuPostADM" onclick="abrirModal('modalVisualizar')"><ion-icon name="eye-outline"></ion-icon></button>
+                            <button class="btnEditPostADM" onclick="abrirModal('modalEditar')"><ion-icon name="pencil-outline"></ion-icon></button>
+                            <button class="btnDeletePostADM" onclick="abrirModal('modalExcluir')"><ion-icon name="trash-bin-outline"></ion-icon></button>
+                        </div>
+
+                        <div class="containerMenuPostsAcoes">
+
+                            <button class="trespontos">
+                                <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
+                            </button>
+                                
+                            <div class="dropdownMenuPosts">
+                                <ul>
+                                    <li><a onclick="abrirModal('modalVisualizar')">Visualizar</a></li>
+                                    <li><a onclick="abrirModal('modalEditar')">Editar</a></li>
+                                    <li><a onclick="abrirModal('modalExcluir')">Excluir</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Quarta Publicação</td>
+                    <td>Bob esponja</td>
+                    <td>04/01/2023</td>
+                    <td>
+                        <div class="botõesdeação">
+                            <button class="btnVisuPostADM" onclick="abrirModal('modalVisualizar')"><ion-icon name="eye-outline"></ion-icon></button>
+                            <button class="btnEditPostADM" onclick="abrirModal('modalEditar')"><ion-icon name="pencil-outline"></ion-icon></button>
+                            <button class="btnDeletePostADM" onclick="abrirModal('modalExcluir')"><ion-icon name="trash-bin-outline"></ion-icon></button>
+                        </div>
+
+                        <div class="containerMenuPostsAcoes">
+
+                            <button class="trespontos">
+                                <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
+                            </button>
+                                
+                            <div class="dropdownMenuPosts">
+                                <ul>
+                                    <li><a onclick="abrirModal('modalVisualizar')">Visualizar</a></li>
+                                    <li><a onclick="abrirModal('modalEditar')">Editar</a></li>
+                                    <li><a onclick="abrirModal('modalExcluir')">Excluir</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Quinta Publicação</td>
+                    <td>Superman</td>
+                    <td>05/01/2023</td>
+                    <td>
+                        <div class="botõesdeação">
+                            <button class="btnVisuPostADM" onclick="abrirModal('modalVisualizar')"><ion-icon name="eye-outline"></ion-icon></button>
+                            <button class="btnEditPostADM" onclick="abrirModal('modalEditar')"><ion-icon name="pencil-outline"></ion-icon></button>
+                            <button class="btnDeletePostADM" onclick="abrirModal('modalExcluir')"><ion-icon name="trash-bin-outline"></ion-icon></button>
+                        </div>
+
+                        <div class="containerMenuPostsAcoes">
+
+                            <button class="trespontos">
+                                <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
+                            </button>
+                                
+                            <div class="dropdownMenuPosts">
+                                <ul>
+                                    <li><a onclick="abrirModal('modalVisualizar')">Visualizar</a></li>
+                                    <li><a onclick="abrirModal('modalEditar')">Editar</a></li>
+                                    <li><a onclick="abrirModal('modalExcluir')">Excluir</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>  
+    </div>
+
+    <div class="modalContainer" id="modalVisualizar">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <div class="modalActions">
+            <button class="btnCancelarModal" onclick="fecharModal('modalVisualizar')">Cancelar</button>
+            <button class="btnSalvarModal">Salvar</button>
+        </div>
+    </div>
+    
+    <div class="modalContainer" id="modalEditar">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <div class="modalActions">
+            <button class="btnCancelarModal" onclick="fecharModal('modalEditar')">Cancelar</button>
+            <button class="btnSalvarModal">Salvar</button>
+        </div>
+    </div>
+    
+    <div class="modalContainer" id="modalExcluir">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <div class="modalActions">
+            <button class="btnCancelarModal" onclick="fecharModal('modalExcluir')">Cancelar</button>
+            <button class="btnSalvarModal">Salvar</button>
+        </div>
+    </div>
+    <script src="../../../public/js/posts-admin.js"></script>
+</body>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>
