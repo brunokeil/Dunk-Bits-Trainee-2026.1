@@ -9,10 +9,14 @@
 
 .rodape {
     background-color: var(--grey-100);
-    color: var(--color-light-text);
+    color: var(--white-100) !important;
     padding: 40px 60px;
     font-family: var(--font-quicksand);
     margin-top: auto;
+}
+
+.rodape p, .rodape h3{
+    color: var(--white-100) !important;
 }
 
 
@@ -34,6 +38,10 @@
     gap: 15px;
     font-size: 32px;
     cursor: pointer;
+}
+
+.redes ion-icon{
+    color: var(--white-100);
 }
 
 .redes ion-icon:hover {
