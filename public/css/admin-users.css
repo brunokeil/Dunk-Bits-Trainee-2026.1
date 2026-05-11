@@ -428,7 +428,6 @@ ion-icon:hover{
         width: 35%;
         justify-content: center;
         padding: 10px 0;
-        height: 25px;
     }
 
 }
@@ -437,6 +436,10 @@ ion-icon:hover{
     .painel {
     width: 98%;
     
+    }
+
+    .botao-criar-usuario {
+        width:50px
     }
 
 
@@ -448,6 +451,7 @@ ion-icon:hover{
     .painel {
             height: 90vh;
             justify-content: center;
+
         }
 
     .icone-acao {
@@ -463,6 +467,7 @@ ion-icon:hover{
 
         width: 60%;
         justify-content: space-between;
+        height: 80%
 
     }
 
