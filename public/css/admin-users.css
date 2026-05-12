@@ -187,6 +187,7 @@ h1,h2,h3,h4,p {
     justify-content: center;
     align-items: center;
     padding-top: 20px;
+    
 
 }
 
@@ -200,6 +201,16 @@ h1,h2,h3,h4,p {
      border: none;
     outline: none;
     background: transparent;
+    transform: scaleX(-1);
+
+}
+
+
+.paginacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
 }
 
 
@@ -207,10 +218,19 @@ h1,h2,h3,h4,p {
     width: 20px;
 }
 .carrossel button img {
-    width: w0px;
+    width: 20px;
+}
+.resumo {
+    display: none;
 }
 
-@media (max-width: 840px) {
+.visao-pag {
+    margin: 0;
+
+}
+
+
+@media (max-width: 920px) {
 
 .header-tabela,
   .linha-tabela {
@@ -226,7 +246,13 @@ h1,h2,h3,h4,p {
     overflow-x: auto;
     width: 100%;
   }
+  .icone-acao {
+    display: none;
+  }
 
+  .resumo {
+    display: flex;
+  }
 
 
 .painel {
@@ -237,6 +263,9 @@ h1,h2,h3,h4,p {
         width: 35%;
         justify-content: center;
         padding: 10px 0;
+    }
+        .texto-criar-usuario {
+        display: none;
     }
 
 }
@@ -267,9 +296,7 @@ h1,h2,h3,h4,p {
             width: 18px;
             height: 18px;
         }
-    .texto-criar-usuario {
-        display: none;
-    }
+
 
     .input-de-busca {
         background-color: white;
@@ -285,7 +312,6 @@ h1,h2,h3,h4,p {
     }
 
 }
-
 
 
 
