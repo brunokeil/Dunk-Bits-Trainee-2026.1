@@ -1,6 +1,7 @@
-const imgs = document.querySelectorAll(".ponto");
+//const imgs = document.querySelectorAll(".ponto");
 const botaoEsq = document.querySelector(".seta-esquerda");
-const botaoDir = document.querySelector(".seta-direita")
+const botaoDir = document.querySelector(".seta-direita");
+const pag = document.querySelector(".visao-pag");
 
 let linhas = document.querySelectorAll(".linha-tabela")
 
@@ -40,22 +41,29 @@ function atualizarUsuarios(pag){
 
 function mudarPaginacaoDir(){
     atual = (atual + 1) % 3;
+    pag.textContent = atual + 1
+
+    /*
     imgs[atual].src = "/public/assets/ponto-ativo.png";
     imgs[anterior].src = "/public/assets/ponto-inativo.png";
     anterior = atual;
+    */
 
 }
 
 function mudarPaginacaoEsq(){
     if (atual == 0){
-        atual = 2;
+        atual = 3;
     } else {
         atual = atual - 1;
     }
 
-    imgs[atual].src = "/public/assets/ponto-ativo.png";
-    imgs[anterior].src = "/public/assets/ponto-inativo.png";
-    anterior = atual;
+    //imgs[atual].src = "/public/assets/ponto-ativo.png";
+    //imgs[anterior].src = "/public/assets/ponto-inativo.png";
+
+    pag.textContent = atual + 1
+
+    //anterior = atual;
 }
 
 botaoEsq.addEventListener("click",()=> {
