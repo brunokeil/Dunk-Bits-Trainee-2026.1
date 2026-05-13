@@ -15,7 +15,7 @@ body {
   width: 100%;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 70px;
   padding: 10px 0;
   margin: 0px;
   background-attachment: fixed;
@@ -27,7 +27,7 @@ body::before {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(1.5px);
   z-index: -1;
 }
 
@@ -55,13 +55,12 @@ section {
   align-items: center;
   border: none;
   cursor: pointer;
-  color: var(--white-100);
-  font-size: 1.5rem;
-  font-style: var(--font-bebas-neue);
-  font-weight: bold;
+color: var(--white-100);
+  font-size: 2rem;
+  font-family: var(--font-bebas-neue);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
-  letter-spacing: -1px;
 }
+
 
 #logout .material-symbols-outlined {
   color: var(--white-100);
@@ -74,4 +73,28 @@ section {
   display: flex;
   line-height: 1;
   vertical-align: middle;
+}
+
+
+#locomocao{
+    width: fit-content;
+  height: fit-content;
+  margin: auto;
+  background-color: var(--fundo-landing-embacado);
+  border: 2px solid var(--fundo-dashboard);
+  backdrop-filter: blur(11.699999809265137px);
+}
+
+#lista-usuarios, #tabela-posts{
+     background-color: var(--dark-orange-100);
+  color: var(--white-100);
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+ font-size: 2rem;
+  padding: 10px;
+font-family: var(--font-bebas-neue);
+  width: 100%;
+align-self: stretch;
+  border: 1px solid var(--orange-100);
 }
