@@ -1,22 +1,26 @@
 @import "./styles.css";
 
+:root {
+  --fundo-embacado: rgba(253, 154, 89, 0.2);
+  --linear-dashboard: linear-gradient(211, 84, 0, 0.58);
+}
+
 * {
-  outline: 1px solid blue;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
 body {
-  background-image: url(../assets/design-de-banner-de-basquete-com-espaco-de-copia-para-uso-promocional_1235831-50101.avif);
+  background-image: url(../assets/Sports\ Basketball\ Backplane\ Background\,\ Movement\,\ Backplane\,\ Flat\ Background\ Image\ And\ Wallpaper\ for\ Free\ Download.jfif);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   width: 100%;
   flex-direction: column;
   align-items: center;
-  gap: 70px;
-  padding: 10px 0;
+  gap: 50px;
+  padding: 10% 15%;
   margin: 0px;
   background-attachment: fixed;
   position: relative;
@@ -27,24 +31,53 @@ body::before {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(1.5px);
+  backdrop-filter: blur(0.5px);
   z-index: -1;
 }
 
-section {
+#locomocao {
   display: flex;
-  height: auto;
-  padding: 0 1.5rem;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  align-self: stretch;
+  flex-direction: column;
+  width: 95%;
+  padding: 20px 10px 120px 10px;
+  border-radius: 45px;
+  gap: 50px;
+  border: 2px solid var(--linear-dashboard);
+  backdrop-filter: blur(11.5px);
+  background: var(--fundo-embacado);
 }
 
-#secao-navbar {
+#navbar {
   display: flex;
-  justify-content: flex-end;
+  height: 99px;
+  padding: 10px 20px;
   width: 100%;
-  padding: 20px 30px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+#seta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 2px solid var(--orange-100);
+  background-color: var(--dark-orange-100);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+#seta .material-symbols-outlined {
+  color: var(--white-100);
+  font-size: 2.5rem;
+  margin-right: -5px;
 }
 
 #logout {
@@ -55,16 +88,17 @@ section {
   align-items: center;
   border: none;
   cursor: pointer;
-color: var(--white-100);
-  font-size: 2rem;
+  color: var(--white-100);
+  font-size: 2.5rem;
   font-family: var(--font-bebas-neue);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
+  white-space: nowrap;
+  gap: 10px;
 }
-
 
 #logout .material-symbols-outlined {
   color: var(--white-100);
-  font-size: 2rem;
+  font-size: 2.5rem;
   justify-content: center;
   letter-spacing: 1px;
 }
@@ -75,26 +109,78 @@ color: var(--white-100);
   vertical-align: middle;
 }
 
-
-#locomocao{
-    width: fit-content;
-  height: fit-content;
-  margin: auto;
-  background-color: var(--fundo-landing-embacado);
-  border: 2px solid var(--fundo-dashboard);
-  backdrop-filter: blur(11.699999809265137px);
+#dashboard {
+  display: flex;
+  padding-bottom: 20px;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
 }
 
-#lista-usuarios, #tabela-posts{
-     background-color: var(--dark-orange-100);
+#titulo {
+  font-family: var(--font-bebas-neue);
+  font-size: 8rem;
+  display: block;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: var(--dark-orange-100);
+  -webkit-text-stroke: 0.2px var(--white-100);
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+#navegacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+}
+
+#lista-usuarios,
+#tabela-posts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--dark-orange-100);
   color: var(--white-100);
   border-radius: 20px;
   cursor: pointer;
   border: none;
- font-size: 2rem;
+  font-size: 2.8rem;
   padding: 10px;
-font-family: var(--font-bebas-neue);
-  width: 100%;
-align-self: stretch;
-  border: 1px solid var(--orange-100);
+  font-family: var(--font-bebas-neue);
+  width: 60%;
+  max-width: 800px;
+  border: 2px solid var(--orange-100);
+  flex-wrap: wrap;
+}
+
+#lista-usuarios .material-symbols-outlined,
+#tabela-posts .material-symbols-outlined {
+  color: var(--white-100);
+  font-size: 3rem;
+}
+
+#logout:hover,
+#lista-usuarios:hover,
+#tabela-posts:hover {
+  color: var(--dark-orange-100);
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+#seta:hover {
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+#logout:hover .material-symbols-outlined,
+#lista-usuarios:hover .material-symbols-outlined,
+#tabela-posts:hover .material-symbols-outlined,
+#seta:hover .material-symbols-outlined {
+  color: var(--dark-orange-100);
+  transition: all 0.3 ease;
 }
