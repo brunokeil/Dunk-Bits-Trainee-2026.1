@@ -1,0 +1,68 @@
+@import "./styles.css";
+
+* {
+  outline: 1px solid blue;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../assets/design-de-banner-de-basquete-com-espaco-de-copia-para-uso-promocional_1235831-50101.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  margin: 0px;
+  background-attachment: fixed;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(3px);
+  z-index: -1;
+}
+
+#secao-navbar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 20px 30px;
+}
+
+#logout {
+  border-radius: 50px;
+  background-color: var(--dark-orange-100);
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  color: var(--white-100);
+  font-size: 1.5rem;
+  font-style: var(--font-bebas-neue);
+  font-weight: bold;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
+  letter-spacing: -1px;
+}
+
+#logout .material-symbols-outlined {
+  color: var(--white-100);
+  font-size: 2rem;
+  justify-content: center;
+  letter-spacing: 1px;
+}
+
+.material-symbols-outlined {
+  display: flex;
+  line-height: 1;
+  vertical-align: middle;
+}
