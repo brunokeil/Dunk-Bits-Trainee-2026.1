@@ -17,6 +17,8 @@
   --pearl-grey-100: #050517;
   --black-100: #000000;
   --fundo-landing: #FF781D;
+   --fundo-landing-embacado: rgba(253, 154, 89, 0.2);
+  --fundo-dashboard: rgba(211, 84, 0, 0.58);
 
   --color-light-text: var(--white-100);
   --color-dark-text: var(--black-100);
