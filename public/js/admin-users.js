@@ -2,6 +2,7 @@
 const botaoEsq = document.querySelector(".seta-esquerda");
 const botaoDir = document.querySelector(".seta-direita");
 const pag = document.querySelector(".visao-pag");
+const btnOpts = document.querySelectorAll(".resumo")
 
 let linhas = document.querySelectorAll(".linha-tabela")
 
@@ -77,3 +78,19 @@ botaoDir.addEventListener("click",()=> {
     mudarPaginacaoDir()
     atualizarUsuarios(atual)
 })
+
+btnOpts.forEach((botao) => {
+    botao.addEventListener('click', () => {
+        const caixa = botao.parentElement;
+        const menu = caixa.querySelector(".dropdownMenuPosts");
+        menu.classList.toggle("ativo");
+    })
+})
+
+
+
+
+function abrirModal(idModal) {
+    
+
+}
