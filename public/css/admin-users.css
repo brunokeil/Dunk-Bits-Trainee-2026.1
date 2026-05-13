@@ -116,6 +116,40 @@ h1,h2,h3,h4,p {
     justify-items: center;
 }
 
+.dropdownMenuPosts{
+    display: none;
+    position: absolute;
+    top: 52px;
+    right: 10px;
+    background-color: var(--white-100);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.dropdownMenuPosts.ativo{
+    display: block;
+}
+
+.dropdownMenuPosts ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdownMenuPosts li a{
+    display: block;
+    padding: 10px 20px;
+    color: var(--black-100);
+    text-decoration: none;
+    font-family: var(--font-quicksand);
+}
+
+.dropdownMenuPosts li a:hover{
+    background-color: var(--offwhite-100);
+    border-radius: 8px;
+}
+
 .tabela * {
     margin: 0;
 }
@@ -164,6 +198,7 @@ h1,h2,h3,h4,p {
     display: flex;
     align-items: center;
     gap: 10px;
+    position: relative;
  
 
 
@@ -229,6 +264,10 @@ h1,h2,h3,h4,p {
 
 }
 
+  .dropdownMenuPosts {
+     display: none;   
+    }
+
 
 @media (max-width: 920px) {
 
@@ -259,6 +298,8 @@ h1,h2,h3,h4,p {
     width: 80%;
 }
 
+
+
  .botao-criar-usuario {
         width: 35%;
         justify-content: center;
@@ -267,6 +308,8 @@ h1,h2,h3,h4,p {
         .texto-criar-usuario {
         display: none;
     }
+
+
 
 }
 
@@ -280,6 +323,7 @@ h1,h2,h3,h4,p {
         width:50px
     }
 
+   
 
 
     .componentes {
@@ -310,6 +354,8 @@ h1,h2,h3,h4,p {
     .input-de-busca input {
         width: 50%;
     }
+
+  
 
 }
 
