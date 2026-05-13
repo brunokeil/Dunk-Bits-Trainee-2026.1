@@ -31,6 +31,15 @@ body::before {
   z-index: -1;
 }
 
+section {
+  display: flex;
+  height: auto;
+  padding: 0 1.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: stretch;
+}
+
 #secao-navbar {
   display: flex;
   justify-content: flex-end;
