@@ -299,6 +299,10 @@ ion-icon:hover{
 
 }
 
+  .dropdownMenuPosts {
+     display: none;   
+    }
+
 
 
 .dropdownMenuPosts {
@@ -436,6 +440,8 @@ ion-icon:hover{
     width: 80%;
 }
 
+
+
  .botao-criar-usuario {
         width: 35%;
         justify-content: center;
@@ -444,6 +450,8 @@ ion-icon:hover{
         .texto-criar-usuario {
         display: none;
     }
+
+
 
 }
 
@@ -457,6 +465,7 @@ ion-icon:hover{
         width:50px
     }
 
+   
 
 
     .componentes {
@@ -487,6 +496,8 @@ ion-icon:hover{
     .input-de-busca input {
         width: 50%;
     }
+
+  
 
 }
 
