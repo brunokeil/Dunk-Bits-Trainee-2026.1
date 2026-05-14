@@ -161,7 +161,6 @@ section {
 
 #container-titulo {
   border-top: solid 0.4rem var(--black-100);
-  padding-top: 20px;
   padding: 0 40px;
   align-items: center;
 }
