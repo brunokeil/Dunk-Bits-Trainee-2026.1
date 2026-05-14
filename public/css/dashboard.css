@@ -19,7 +19,6 @@ body {
   width: 100%;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
   padding: 10% 15%;
   margin: 0px;
   background-attachment: fixed;
@@ -43,7 +42,7 @@ body::before {
   width: 95%;
   padding: 20px 10px 120px 10px;
   border-radius: 45px;
-  gap: 50px;
+  gap: 30px;
   border: 2px solid var(--linear-dashboard);
   backdrop-filter: blur(11.5px);
   background: var(--fundo-embacado);
@@ -51,7 +50,7 @@ body::before {
 
 #navbar {
   display: flex;
-  height: 99px;
+  height: auto;
   padding: 10px 20px;
   width: 100%;
   justify-content: space-between;
@@ -111,7 +110,7 @@ body::before {
 
 #dashboard {
   display: flex;
-  padding-bottom: 20px;
+  padding-bottom: 80px;
   flex-direction: column;
   align-items: center;
   align-self: stretch;
@@ -128,6 +127,7 @@ body::before {
   -webkit-text-stroke: 0.2px var(--white-100);
   letter-spacing: 1px;
   text-align: center;
+  margin-top: 0;
 }
 
 #navegacao {
