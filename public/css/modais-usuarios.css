@@ -1,0 +1,17 @@
+@import "./styles.css";
+
+.modal {
+    background-color: bisque;
+    width: 20%;
+    height: fit-content;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+
+}
+
+.acoes {
+    display: flex;
+    align-items: center;
+}
