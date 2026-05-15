@@ -11,15 +11,26 @@ const createUser = document.getElementById("createUser");
 const deleteUser = document.getElementById("deleteUser");
 const viewUser = document.getElementById("viewUser");
 const editUser = document.getElementById("editUser");
-const cancel = document.getElementById("btnCancel");
+
+//close view
+const closeView = document.getElementById("closeUserView")
+
+//close create
+
+//close delete
+
+//close edit
+
 
 createUser.addEventListener("click", ()=> {
-    abrirModal("criar");
+    abrirModal("create");
 })
 
-cancel.addEventListener("click", ()=> {
-    fecharModal("criar");
+closeView.addEventListener("click", ()=> {
+    fecharModal("create");
 })
+
+
 
 
 
