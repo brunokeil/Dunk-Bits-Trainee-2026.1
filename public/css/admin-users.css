@@ -299,7 +299,9 @@ ion-icon:hover{
 
 }
 
-  .dropdownMenuPosts {
+
+
+.dropdownMenuPosts {
      display: none;   
     }
 
@@ -438,6 +440,17 @@ ion-icon:hover{
 
 .painel {
     width: 80%;
+    overflow: visible;
+}
+
+.trespontos {
+    display: flex;
+}
+
+.btnVisuPostADM,
+.btnEditPostADM,
+.btnDeletePostADM {
+    display: none;
 }
 
 
@@ -477,12 +490,6 @@ ion-icon:hover{
             justify-content: center;
 
         }
-
-    .icone-acao {
-            width: 18px;
-            height: 18px;
-        }
-
 
     .input-de-busca {
         background-color: white;

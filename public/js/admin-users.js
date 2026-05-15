@@ -27,7 +27,7 @@ const usuarios = [
 ];
 
 
-let linhas = document.querySelectorAll(".linha-tabela")
+let linhas = document.querySelectorAll(".row-tabela")
 
 const usuarios = [
   { id: 1, username: "joaosilva", email: "joao@gmail.com" },
