@@ -66,12 +66,18 @@ h1,h2,h3,h4,p {
     
 
 }
+.tabela-container {
+    width: 100%;
+    overflow-x: auto;
+}
 
-.tabela {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 30px;
-  
+table {
+    width: 100%;
+    min-width: 500px;
+
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
 }
 
 .interacoes {
@@ -81,40 +87,12 @@ h1,h2,h3,h4,p {
     
 }
 
-.email {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  max-width: 100%;
-}
-
-.username {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    max-width: 100%;
-}
 
 
 
-.header-tabela,
-.linha-tabela {
-    display: grid;
 
 
-    grid-template-columns:
-        0.5fr
-        1fr
-        2fr
-        1fr;
 
-    align-items: center;
-
-    gap: 20px;
-
-    padding: 15px 20px;
-    justify-items: center;
-}
 
 .dropdownMenuPosts{
     display: none;
@@ -125,6 +103,39 @@ h1,h2,h3,h4,p {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 1;
+}
+
+
+table{
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    table-layout: fixed;
+    box-sizing: border-box;
+
+}
+
+th, td{
+    text-align: center;
+    padding: 1.5vh;
+    color: var(--white-100);
+    font-family: var(--font-quicksand);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.info-email {
+    overflow: hidden;
+}
+
+td{
+    border-bottom: 1px solid var(--white-100);
+    position: relative;
 }
 
 .dropdownMenuPosts.ativo{
@@ -150,20 +161,8 @@ h1,h2,h3,h4,p {
     border-radius: 8px;
 }
 
-.tabela * {
-    margin: 0;
-}
 
-.header-tabela {
-    background-color: gray;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    height: 30px;
-}
 
-.linha-tabela {
-    border-bottom: 1px solid white;
-}
 
 
 .botao-criar-usuario {
@@ -176,6 +175,37 @@ h1,h2,h3,h4,p {
     
 }
 
+.header-tabela th{
+    background-color: #FFFFFF40;
+}
+
+.trespontos{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+    color: var(--white-100);
+    display: none;
+}
+
+ion-icon{
+    color: var(--white-100);
+}
+
+ion-icon:hover{
+    color: var(--white-25);
+}
+
+.btnVisuPostADM,
+.btnEditPostADM,
+.btnDeletePostADM{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+}
 
 
 .input-de-busca {
@@ -198,7 +228,7 @@ h1,h2,h3,h4,p {
     display: flex;
     align-items: center;
     gap: 10px;
-    position: relative;
+    justify-content: center;
  
 
 
@@ -210,11 +240,16 @@ h1,h2,h3,h4,p {
     background-color: #FF6600;
 }
 
-
+/*
 .icone-acao {
     width: 25px;
     height: 25px;
     transition: background-color 0.3s ease;
+}
+    */
+
+.trespontos {
+    display: none;
 }
 
 .carrossel {
@@ -264,7 +299,9 @@ h1,h2,h3,h4,p {
 
 }
 
-  .dropdownMenuPosts {
+
+
+.dropdownMenuPosts {
      display: none;   
     }
 
@@ -296,6 +333,17 @@ h1,h2,h3,h4,p {
 
 .painel {
     width: 80%;
+    overflow: visible;
+}
+
+.trespontos {
+    display: flex;
+}
+
+.btnVisuPostADM,
+.btnEditPostADM,
+.btnDeletePostADM {
+    display: none;
 }
 
 
@@ -335,12 +383,6 @@ h1,h2,h3,h4,p {
             justify-content: center;
 
         }
-
-    .icone-acao {
-            width: 18px;
-            height: 18px;
-        }
-
 
     .input-de-busca {
         background-color: white;

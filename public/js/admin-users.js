@@ -2,9 +2,9 @@
 const botaoEsq = document.querySelector(".seta-esquerda");
 const botaoDir = document.querySelector(".seta-direita");
 const pag = document.querySelector(".visao-pag");
-const btnOpts = document.querySelectorAll(".resumo")
+const btnOpts = document.querySelectorAll(".trespontos")
 
-let linhas = document.querySelectorAll(".linha-tabela")
+let linhas = document.querySelectorAll(".row-tabela")
 
 const usuarios = [
   { id: 1, username: "joaosilva", email: "joao@gmail.com" },
@@ -32,7 +32,7 @@ let anterior = atual
 
 function atualizarUsuarios(pag){
     linhas.forEach((item, index) => {
-        let infos = item.querySelectorAll(".info-tabela");
+        let infos = item.querySelectorAll("td");
         let u = usuarios[(pag) * 5 + index];
         infos[0].textContent = u.id;
         infos[1].textContent = u.username;
@@ -81,8 +81,10 @@ botaoDir.addEventListener("click",()=> {
 
 btnOpts.forEach((botao) => {
     botao.addEventListener('click', () => {
-        const caixa = botao.parentElement;
-        const menu = caixa.querySelector(".dropdownMenuPosts");
+        const container = botao.parentElement;
+        const menu = container.querySelector(".dropdownMenuPosts");
+        console.log(container);
+        console.log(menu);
         menu.classList.toggle("ativo");
     })
 })
