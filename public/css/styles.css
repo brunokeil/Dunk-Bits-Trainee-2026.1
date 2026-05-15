@@ -3,10 +3,10 @@
 
 
 :root {
-  --white-100: #ffffff;
-  --white-50: #ffffff80;
-  --white-25: #ffffff40;
-  --offwhite-100: #f5eee9;
+    --white-100: #FFFFFF;
+    --white-50: #FFFFFF80;
+    --white-25: #FFFFFF40;
+    --offwhite-100: #F5EEE9;
 
   --orange-100: #ff6600;
   --dark-orange-100: #d35400;
@@ -20,8 +20,9 @@
   --pearl-grey-50: #05051780;
   --black-100: #000000;
 
-  --color-light-text: var(--white-100);
-  --color-dark-text: var(--black-100);
+    --linear-orange-gradient1: linear-gradient(45deg,#FF6600,#FFC299,#FF6600);
+    --linear-orange-gradient2: linear-gradient(46deg, #FEA163,#FEA163);
+    --linear-grey-50: linear-gradient(27deg, #FFFFFF80 42%, #BBBBBB80 87%);
 
   --linear-orange-gradient1: linear-gradient(25deg, #ff6600, #ff8534,#ff6600,#ff7c25, #ff9d5c, #ff7c25);
   --linear-orange-gradient2: linear-gradient(46deg, #fea163, #fea163);
