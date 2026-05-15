@@ -17,12 +17,12 @@
       </div>
     </div>
 
-    <div class="modalViewUser">
+    <div class="modalUser" id="viewModal">
       <span id="header">
         <h1>PERFIL DE USUÁRIO</h1>
         <button id="closeUserView">X</button>
       </span>
-      <div id="userProfilePicture"><img src="link"></div>
+      <div id="userProfilePicture"><img src="link" /></div>
       <div class="userView" id="userInfo">
         <span id="userName">Lorem Ypsum Bits Jr</span>
         <span id="userMail">lorinhoYupii-jrbeats@exemplão.com.br</span>
@@ -30,16 +30,52 @@
       </div>
     </div>
 
-    <!-- <div class="modalCreateUser">
-        <div class="modalInputs" id="new">
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-        </div>
-        <div class="modalButtons" id="bottom">
-            <button>Criar Usuário</button>
-            <button>Cancelar</button>
-        </div>
-    </div> -->
+    <div class="modalUser" id="createModal">
+      <span id="header">
+        <h1>CRIAR USUÁRIO</h1>
+        <button id="closeCreateView">X</button>
+      </span>
+      <div id="userProfilePicture"><img src="link" /></div>
+      <div class="userView">
+        <input type="text" class="usernameInput" placeholder="Username" />
+        <input type="text" class="emailInput" placeholder="E-mail" />
+        <input type="password" class="passwordInput" placeholder="Senha" />
+      </div>
+      <div class="userButtons">
+        <button>CRIAR</button>
+      </div>
+    </div>
+
+    <div class="modalUser" id="editModal">
+      <span id="header">
+        <h1>EDITAR USUÁRIO</h1>
+        <button id="closeEditView">X</button>
+      </span>
+      <div id="userProfilePicture"><img src="link" /></div>
+      <div class="userView">
+        <input
+          type="text"
+          class="usernameInput"
+          placeholder="Username"
+          value="joaosilva"
+        />
+        <input
+          type="text"
+          class="emailInput"
+          placeholder="E-mail"
+          value="joaosilva@gmail.com"
+        />
+        <input
+          type="password"
+          class="passwordInput"
+          placeholder="Senha"
+          value="senha"
+        />
+      </div>
+      <div class="userButtons">
+        <button>SALVAR ALTERAÇÕES</button>
+      </div>
+    </div>
+    <script src="/public/js/modais-usuarios.js"></script>
   </body>
 </html>

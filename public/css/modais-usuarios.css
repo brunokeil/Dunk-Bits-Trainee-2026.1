@@ -53,10 +53,10 @@ body > div {
 }
 
 
-/* ----------- modal vizualisar user ------------- */
+/* ----------- modal visualizar user ------------- */
 
 /* modal geral */
-.modalViewUser {
+.modalUser {
     box-sizing: content-box;
 
     background: var(--linear-grey-50);
@@ -64,6 +64,7 @@ body > div {
     
     padding: 5%;
     
+
     
     display: flex;
     flex-direction: column;
@@ -71,16 +72,19 @@ body > div {
     gap: 20px;
     
 }
+#viewModal {
+    display: none;
+}
 
 /* parte superior */
-.modalViewUser #header {
+.modalUser #header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
-.modalViewUser #header > button{
+.modalUser #header > button{
     background: 0;
 }
 
@@ -122,6 +126,25 @@ body > div {
     
     min-width: 100%;
     width: fit-content; 
+}
+
+#createModal {
+    display: none;
+}
+
+.usernameInput, 
+.emailInput,
+.passwordInput {
+    color:black;
+    background-color: var(--white-50);
+    border-radius: 8px;
+    padding: 4%;
+
+    text-wrap: nowrap;
+    
+    min-width: 100%;
+    width: fit-content; 
+    
 }
 
 
