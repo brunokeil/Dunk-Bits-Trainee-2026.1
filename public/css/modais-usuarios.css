@@ -128,7 +128,7 @@ body > div {
     width: fit-content; 
 }
 
-#createModal {
+#createModal, #editModal {
     display: none;
 }
 
