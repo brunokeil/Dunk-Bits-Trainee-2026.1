@@ -141,9 +141,12 @@ body > div {
     padding: 4%;
 
     text-wrap: nowrap;
+
+    outline: none;
+    border: none;
     
-    min-width: 100%;
-    width: fit-content; 
+    
+
     
 }
 
