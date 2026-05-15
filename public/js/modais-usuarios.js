@@ -6,4 +6,4 @@ function fecharModal(idModal) {
     document.getElementById(idModal).style.display = "none";
 }
 
-const create = document.getElementById("#create")
+const create = document.getElementById("#create");
