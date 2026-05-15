@@ -20,36 +20,51 @@ const closeView = document.getElementById("closeUserView")
 //close create
 const closeCreate = document.getElementById("closeCreateView")
 
-//close delete
+//close edit
 const closeEdit = document.getElementById("closeEditView")
 
-//close edit
+//close delete
+
+let aberto = null
 
 
 
 viewUser.addEventListener("click", ()=> {
     abrirModal("viewModal");
+    if(aberto != null)
+        fecharModal(aberto)
+    aberto = "viewModal"
+    
 })
 
 closeView.addEventListener("click", ()=> {
     fecharModal("viewModal");
+    aberto = null
 })
 
 createUser.addEventListener("click", () => {
     abrirModal("createModal");
+    if(aberto != null)
+        fecharModal(aberto)
+    aberto = "createModal"
 })
 
 closeCreate.addEventListener("click", ()=> {
     fecharModal("createModal");
+    aberto = null
 })
 
 editUser.addEventListener("click", () => {
     abrirModal("editModal");
+    if(aberto != null)
+        fecharModal(aberto)
+    aberto = "editModal"
 
 })
 
 closeEdit.addEventListener("click", () => {
     fecharModal("editModal");
+    aberto = null
 })
 
 
