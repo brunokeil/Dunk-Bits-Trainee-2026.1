@@ -1,29 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modal</title>
-    <link rel="stylesheet" href="/public/css/modais-usuarios.css">
-</head>
-<body>
-    <button id = "view">Visualizar</button>
-    <button id = "create">Criar</button>
-    <button id = "edit">Editar</button>
-    <button id = "delete">Excluir</button>
+    <link rel="stylesheet" href="/public/css/modais-usuarios.css" />
+  </head>
+  <body>
+    <div class="userExample">
+      <h3>Lorem Ypsum Bits JR</h3>
+      <div class="modalButtons" id="modalHead">
+        <button id="viewUser">Visualizar</button>
+        <button id="newUser">Criar</button>
+        <button id="editUser">Editar</button>
+        <button id="deleteUser">Excluir</button>
+      </div>
+    </div>
 
-    <div class="modal" id = "criar">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <div class = "acoes">
-            <button>
-                Criar Usuário
-            </button>
-            <button>
-                Cancelar
-            </button>
+    <div class="modalViewUser">
+      <span>o PERFIL</span>
+      <div id="userProfilePicture"></div>
+      <div class="userInfo" id="userView">
+        <span id="userName"></span>
+        <span id="userMail"></span>
+        <span id="userPassword"></span>
+      </div>
     </div>
-    </div>
-</body>
+
+    <!-- <div class="modalCreateUser">
+        <div class="modalInputs" id="new">
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+        </div>
+        <div class="modalButtons" id="bottom">
+            <button>Criar Usuário</button>
+            <button>Cancelar</button>
+        </div>
+    </div> -->
+  </body>
 </html>
