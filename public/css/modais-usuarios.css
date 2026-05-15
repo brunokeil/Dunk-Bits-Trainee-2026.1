@@ -1,29 +1,6 @@
 @import "./styles.css";
 
-.modalInputs {
-    background-color: bisque;
-    min-width: 100px;
-    max-width: 80%;
-    height: fit-content;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    /* position: absolute; */
-
-}
-
-
-.userExample {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--blue-100);
-    width: fit-content;
-    border-radius: 10px;
-    padding: 5px;
-}
-.userExample * {
-    color: var(--white-100);
-}
+/* ------- geral (mudar dps) --------- */
 
 button {
     background-color: var(--orange-100);
@@ -32,13 +9,26 @@ button {
     border-radius: 5px;
 }
 
+button:hover {
+    filter: drop-shadow(0 0 4px var(--pearl-grey-100));
+    /* border: 2px solid var(--white-100); */
+    transition: filter 300ms ease-out;
+    cursor: pointer;
+}
+
 body {
+    background: var(--pearl-grey-100);
+    /* background-repeat: no-repeat; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 90vh;
+    min-height: 100vh;
     justify-content: center;
     gap: 20px;
+}
+
+body * {
+    color: var(--white-100);
 }
 
 body > div {
@@ -46,3 +36,92 @@ body > div {
     flex-direction: column;
     align-items: center;
 }
+
+/* ---------------- exemplo -------------------- */
+
+.userExample {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blue-100);
+    width: fit-content;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 16px;
+}
+.userExample * {
+    color: var(--white-100);
+}
+
+
+/* ----------- modal vizualisar user ------------- */
+
+/* modal geral */
+.modalViewUser {
+    box-sizing: content-box;
+
+    background: var(--linear-grey-50);
+    border-radius: 20px;
+    
+    padding: 5%;
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+/* parte superior */
+.modalViewUser #header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.modalViewUser #header > button{
+    background: 0;
+}
+
+
+/* foto de perfil */
+#userProfilePicture {
+    min-width: 200px;
+    min-height: auto;
+    aspect-ratio: 0.9;
+    background: var(--white-25);
+    
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* dados user */
+.userView {
+    /* box-sizing: border-box; */
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 100%;
+    width: fit-content;
+    border: 1px solid red;
+    gap: 10px;
+}
+
+.userView > span {
+    background-color: var(--white-50);
+    border-radius: 8px;
+    padding: 4%;
+
+    text-wrap: nowrap;
+    
+    min-width: 100%;
+    width: fit-content; 
+}
+
+
