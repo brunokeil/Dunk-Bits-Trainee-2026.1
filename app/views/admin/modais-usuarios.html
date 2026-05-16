@@ -16,63 +16,65 @@
         <button id="deleteUser">Excluir</button>
       </div>
     </div>
-
+    
+    <div class="modal-container close">
+      
     <div class="modalUser" id="viewModal">
       <span id="header">
         <h1>PERFIL DE USUÁRIO</h1>
-        <button id="closeUserView">X</button>
+        <button class="closeModalBtn">X</button>
       </span>
       <div id="userProfilePicture"><img src="link" /></div>
-      <div class="userView" id="userInfo">
-        <div class="userView">
+        <div class="userInfo">
           <input
             type="text"
             class="usernameInput"
             placeholder="Username"
             value="joaosilva"
-            readonly
+            disabled
           />
           <input
             type="text"
             class="emailInput"
             placeholder="E-mail"
             value="joaosilva@gmail.com"
-            readonly
+            disabled
           />
           <input
             type="password"
             class="passwordInput"
             placeholder="Senha"
             value="senha"
-            readonly
+            disabled
+            
           />
         </div>
-      </div>
     </div>
 
     <div class="modalUser" id="createModal">
       <span id="header">
         <h1>CRIAR USUÁRIO</h1>
-        <button id="closeCreateView">X</button>
+        <button class="closeModalBtn">X</button>
       </span>
       <div id="userProfilePicture"><img src="link" /></div>
-      <div class="userView">
+      <div class="userInfo">
         <input type="text" class="usernameInput" placeholder="Username" />
         <input type="text" class="emailInput" placeholder="E-mail" />
         <input type="password" class="passwordInput" placeholder="Senha" />
       </div>
-      <div class="userButtons">
+      <div class="footerButtons">
+        <button class="closeModalBtn cancelBtn">CANCELAR</button>
         <button>CRIAR</button>
       </div>
     </div>
-
+    
     <div class="modalUser" id="editModal">
       <span id="header">
         <h1>EDITAR USUÁRIO</h1>
-        <button id="closeEditView">X</button>
+        <button class="closeModalBtn">X</button>
       </span>
       <div id="userProfilePicture"><img src="link" /></div>
-      <div class="userView">
+      <div class="userInfo">
         <input
           type="text"
           class="usernameInput"
@@ -92,10 +94,30 @@
           value="senha"
         />
       </div>
-      <div class="userButtons">
+      <div class="footerButtons">
+        <button class="closeModalBtn cancelBtn">CANCELAR</button>
         <button>SALVAR ALTERAÇÕES</button>
       </div>
     </div>
-    <script src="/public/js/modais-usuarios.js"></script>
-  </body>
+    
+
+    <div class="modalUser" id="deleteModal">
+      <span>
+        <h1>Excluir usuário?</h1>
+      </span>
+      <p>
+        Tem certeza que deseja excluir este usuário? <br /> <br/>
+        Essa ação é <em>irreversível</em> e todos os dados relacionados à conta serão <em>
+          removidos
+          permanentemente
+        </em>.
+      </p>
+      <div class="footerButtons">
+        <button class="closeModalBtn cancelBtn">CANCELAR</button>
+        <button>EXCLUIR</button>
+      </div>
+    </div>
+    </body>
+  </div>
+  <script src="/public/js/modais-usuarios.js"></script>
 </html>
