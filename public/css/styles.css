@@ -1,45 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&display=swap");
 
 :root {
-    --white-100: #FFFFFF;
-    --white-80: #FFFFFFCC;
-    --white-50: #FFFFFF80;
-    --white-25: #FFFFFF40;
-    --offwhite-100: #F5EEE9;
+    --white-100: #ffffff;
+    --white-80: #ffffffcc;
+    --white-50: #ffffff80;
+    --white-25: #ffffff40;
+    --offwhite-100: #f5eee9;
 
-    --orange-100: #FF6600;
-    --dark-orange-100: #D35400;
-    --light-orange-100: #FF954F;
+    --orange-100: #ff6600;
+    --dark-orange-100: #d35400;
+    --light-orange-100: #ff954f;
 
-    --blue-100: #0066CC;
+    --blue-100: #0066cc;
     --dark-blue-100: #000080;
-    
+
     --grey-100: #333333;
-    --dark-grey-100: #1E1A18;
+    --dark-grey-100: #1e1a18;
     --pearl-grey-100: #050517;
     --black-100: #000000;
 
     --color-light-text: var(--white-100);
     --color-dark-text: var(--black-100);
 
-    --linear-orange-gradient1: linear-gradient(45deg,#FF6600,#FFC299,#FF6600);
-    --linear-orange-gradient2: linear-gradient(46deg, #FEA163,#FEA163);
-    --linear-grey-100: linear-gradient(-117deg, #FFFFFF 42%, #BBBBBB 87%);
-    --linear-grey-50: linear-gradient(-117deg, #FFFFFF80 42%, #BBBBBB80 87%);
-    --linear-grey-25: linear-gradient(-117deg, #FFFFFF40 42%, #BBBBBB40 87%);
+    --linear-orange-gradient1: linear-gradient(
+        45deg,
+        #ff6600,
+        #ffc299,
+        #ff6600
+    );
+    --linear-orange-gradient2: linear-gradient(46deg, #fea163, #fea163);
+    --linear-grey-100: linear-gradient(-117deg, #ffffff 42%, #bbbbbb 87%);
+    --linear-grey-50: linear-gradient(-117deg, #ffffff80 42%, #bbbbbb80 87%);
+    --linear-grey-25: linear-gradient(-117deg, #ffffff40 42%, #bbbbbb40 87%);
 
     --linear-blue-80: linear-gradient(45deg, #11113acc, #0e0e2dcc);
 
-    --linear-red-gradient: linear-gradient(-150deg, #830000 34%, #B43C00 87%);
+    --linear-red-gradient: linear-gradient(-150deg, #830000 34%, #b43c00 87%);
 
     --font-bebas-neue: "Bebas Neue", sans-serif;
     --font-quicksand: "Quicksand", sans-serif;
 }
 
-
-*, *::before, *::after{
+*,
+*::before,
+*::after {
     box-sizing: content-box;
     color: var(--color-dark-text);
     font-family: var(--font-quicksand);
@@ -47,14 +51,17 @@
     margin: 0;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--font-bebas-neue);
 }
 
-h4, h5, h6, p {
+h4,
+h5,
+h6,
+p {
     font-family: var(--font-quicksand);
 }
-
-
 
 /*----- FIM ROOT -----*/
