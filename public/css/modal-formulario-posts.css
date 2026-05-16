@@ -273,3 +273,27 @@ white-space: nowrap;
 margin: 0.2em;
 }
 
+img[alt="adicionar-post"]{
+  height: 3em;
+}
+
+#modal-criar-imagem{
+     display: flex;
+     gap: 10px;
+     padding: 10px;
+     align-items: flex-start;
+     width: 100%;
+}
+
+#modal-image-placeholder{
+   display: flex;
+width: 12em;
+height: 15em;
+padding: 10px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 15px;
+background: var(--linear-grey-50);
+}
+
