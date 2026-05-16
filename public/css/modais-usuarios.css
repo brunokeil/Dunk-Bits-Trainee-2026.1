@@ -2,8 +2,6 @@
 
 /* ------- geral (mudar dps) --------- */
 
-
-
 body {
     background: var(--pearl-grey-100);
     /* background-repeat: no-repeat; */
@@ -110,9 +108,9 @@ input:disabled {
 
     border-radius: 8px;
     padding: 4%;
-    
+
     text-wrap: nowrap;
-    
+
     outline: none;
     border: none;
     transition: background 120ms ease;
@@ -125,9 +123,8 @@ input:disabled {
 }
 
 .userInfo > *:focus {
-    cursor:text;
+    cursor: text;
 }
-
 
 /* -------- modal container paizao ------------- */
 
@@ -238,7 +235,5 @@ input:disabled {
     /* font-size: 30px; */
     transition: all 120ms ease-out;
 }
-
-
 
 /* --------------------- */
