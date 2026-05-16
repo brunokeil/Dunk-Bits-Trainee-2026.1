@@ -240,9 +240,6 @@ i:hover{
   color: var(--white-25);
 }
 
-*{
-    outline: 1px solid blue;
-}
 #modal-criar-post{
  width: fit-content;
  height: fit-content;
@@ -341,6 +338,7 @@ img[alt="pasta-imagem"]{
     background-color: var(--light-grey);
     border-radius: 8px;
     padding: 10px;
+    align-items: center;
 }
 
 .campo-input.descricao {
@@ -373,15 +371,18 @@ img[alt="pasta-imagem"]{
 #modal-criar-info-titulo::placeholder {
     color: var(--white-50);
     font-size: 1.5em;
+    letter-spacing: -1px;
     font-family: var(--font-bebas-neue);
 }
 
 #modal-criar-info-descricao::placeholder {
     color: var(--white-50);
+    font-size: 1.2em;
     font-family: var(--font-quicksand);
 }
 
 #modal-criar-info-autor {
+    font-size: 1.2em;
     text-decoration: underline;
 }
 
@@ -391,11 +392,11 @@ img[alt="pasta-imagem"]{
 }
 
 .campo-input ion-icon{
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 .campo-input.titulo ion-icon{
-    font-size: 1.5em;
+    font-size: 1.7em;
 }
 
 #modal-criar-botoes{
