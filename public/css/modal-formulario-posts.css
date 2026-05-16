@@ -323,6 +323,7 @@ img[alt="pasta-imagem"]{
 }
 
 #modal-criar-data h3{
+   margin: 0;
   font-size: 1em;
   color: var(--white-50);
 }
