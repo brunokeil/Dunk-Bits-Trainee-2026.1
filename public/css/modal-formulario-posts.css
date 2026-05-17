@@ -3,7 +3,7 @@
   --white-25: #ffffff40;
   --offwhite-100: #f5eee9;
   --white-50: #ffffff80;
-  --light-grey:#B4B4B4;
+  --light-grey: #b4b4b4;
 
   --orange-100: #ff6600;
   --dark-orange-100: #d35400;
@@ -21,8 +21,8 @@
 
   --linear-orange-gradient1: linear-gradient(45deg, #ff6600, #ffc299, #ff6600);
   --linear-orange-gradient2: linear-gradient(46deg, #fea163, #fea163);
-  --linear-grey-50: linear-gradient(200deg, rgba(255, 255, 255, 0.50) 44.22%, rgba(187, 187, 187, 0.50) 80.67%);
-   
+  --linear-grey-50: linear-gradient(200deg, rgba(255, 255, 255, 0.80) 44.22%, rgba(187, 187, 187, 0.8) 80.67%);
+
 
   --font-bebas-neue: "Bebas Neue", sans-serif;
   --font-quicksand: "Quicksand", sans-serif;
@@ -58,205 +58,208 @@ h2 {
 
 /* ----- FIM ROOT ----- */
 
-#containerTabelaPostsToda{
-    width: 100%;
-    overflow-x: auto;
+#containerTabelaPostsToda {
+  width: 100%;
+  overflow-x: auto;
 }
 
-#BodyModalFormularioPosts{
-    background-image: linear-gradient(rgba(0, 0, 128, 0.5), rgba(0, 0, 128, 0.5)), url("../assets/backgroundTabelaPostsADM.png");
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    justify-content: center;    
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+#BodyModalFormularioPosts {
+  background-image:
+    linear-gradient(rgba(0, 0, 128, 0.5), rgba(0, 0, 128, 0.5)),
+    url("../assets/backgroundTabelaPostsADM.png");
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#TituloDePostsADM{
-    color: var(--white-100);
-    display: flex;
-    justify-content: center;
-    font-family: var(--font-quicksand);
-    font-optical-sizing: auto;
-    font-weight: 1000;
-    font-size: 2.5rem;
+#TituloDePostsADM {
+  color: var(--white-100);
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-quicksand);
+  font-optical-sizing: auto;
+  font-weight: 1000;
+  font-size: 2.5rem;
 }
 
-#PesquisaECriarPostADM{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 2vh auto;
-    box-sizing: border-box;
-    padding: 0 4vw;
-}   
+#PesquisaECriarPostADM {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 2vh auto;
+  box-sizing: border-box;
+  padding: 0 4vw;
+}
 
 .containerTabelaPostsAdmin {
-    margin: auto;
-    width: 80%;
-    background-color: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(10px);
-    padding-bottom: 8vh;
-    border-radius: 16px;
-    border: 1px solid var(--white-100);
+  margin: auto;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  padding-bottom: 8vh;
+  border-radius: 16px;
+  border: 1px solid var(--white-100);
 }
 
-table{
-    border-collapse: separate;
-    border-spacing: 0;
-    width: 100%;
-    margin: 0 auto;
-    table-layout: fixed;
-    box-sizing: border-box;
-    padding: 0 8vh;
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: 0 auto;
+  table-layout: fixed;
+  box-sizing: border-box;
+  padding: 0 8vh;
 }
 
-th, td{
-    text-align: center;
-    padding: 1.5vh;
-    color: var(--white-100);
-    font-family: var(--font-quicksand);
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    box-sizing: border-box;
+th,
+td {
+  text-align: center;
+  padding: 1.5vh;
+  color: var(--white-100);
+  font-family: var(--font-quicksand);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
 }
 
-td{
-    border-bottom: 1px solid var(--white-100);
-    position: relative;
+td {
+  border-bottom: 1px solid var(--white-100);
+  position: relative;
 }
 
 #IdTabelaPostsADM,
 #TítuloTabelaPostsADM,
 #AutorTabelaPostsADM,
 #DataTabelaPostsADM,
-#AçõesTabelaPostsADM{
-    background-color: var(--white-25);
+#AçõesTabelaPostsADM {
+  background-color: var(--white-25);
 }
 
-#IdTabelaPostsADM{
-    border-top-left-radius: 10px;
+#IdTabelaPostsADM {
+  border-top-left-radius: 10px;
 }
 
-#AçõesTabelaPostsADM{
-    border-top-right-radius: 10px;
+#AçõesTabelaPostsADM {
+  border-top-right-radius: 10px;
 }
-
 
 #IdTabelaPostsADM,
 #TítuloTabelaPostsADM,
 #AutorTabelaPostsADM,
-#DataTabelaPostsADM{
-    width: 18%;
+#DataTabelaPostsADM {
+  width: 18%;
 }
 
-#AçõesTabelaPostsADM{
-    width: 28%;
+#AçõesTabelaPostsADM {
+  width: 28%;
 }
 
-#CaixaDePesquisa{
-    background-color: white;
-    display: flex;
-    align-items: center;
-    gap: 0.5vh;
-    padding-right: 16px;
-    width: 20%;
-    border-radius: 16px;
+#CaixaDePesquisa {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5vh;
+  padding-right: 16px;
+  width: 20%;
+  border-radius: 16px;
 }
 
-#PesquisaPostsTabelaADM{
-    width: 100%;
-    height: 24px;
-    padding: 0.8vh;
-    border-radius: 16px;
-    border: none;
-    font-family: var(--font-quicksand);
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+#PesquisaPostsTabelaADM {
+  width: 100%;
+  height: 24px;
+  padding: 0.8vh;
+  border-radius: 16px;
+  border: none;
+  font-family: var(--font-quicksand);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
-#btnCriarPostADM{
-    background-color: var(--orange-100);
-    color: var(--white-100);
-    border: none;
-    padding: 0.8vh 2vh;
-    border-radius: 16px;
-    font-family: var(--font-quicksand);
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    cursor: pointer;
-    font-size: 20px;
-    transition: 0.3s ease;
+#btnCriarPostADM {
+  background-color: var(--orange-100);
+  color: var(--white-100);
+  border: none;
+  padding: 0.8vh 2vh;
+  border-radius: 16px;
+  font-family: var(--font-quicksand);
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.3s ease;
 }
 
-#btnCriarPostADM:hover{
-    background-color: var(--dark-orange-100);
+#btnCriarPostADM:hover {
+  background-color: var(--dark-orange-100);
 }
 
 .btnVisuPostADM,
 .btnEditPostADM,
-.btnDeletePostADM{
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    transition: 0.3s ease;
+.btnDeletePostADM {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: 0.3s ease;
 }
 
-.trespontos{
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: 1.5rem;
-        transition: 0.3s ease;
-        color: var(--white-100);
-        display: none;
-    }
-
-
-ion-icon{
-    color: var(--white-100);
+.trespontos {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: 0.3s ease;
+  color: var(--white-100);
+  display: none;
 }
 
-ion-icon:hover{
-    color: var(--white-25);
-}
-
-ion-icon[name="search-outline"]{
-    color: var(--black-100)
-}
-
-/* Estilização do Modal */
-
-i{
+ion-icon {
   color: var(--white-100);
 }
-i:hover{
+
+ion-icon:hover {
   color: var(--white-25);
 }
 
-#modal-criar-post{
- width: fit-content;
- height: fit-content;
- background: var(--linear-grey-50);
- border-radius: 32px;
- display: inline-flex;
- padding: 20px 50px;
- flex-direction: column;
- /* position: absolute; */
-  /* top: 45%; */
- left: 25%;
- gap: 26px;
- align-items: center;
+ion-icon[name="search-outline"] {
+  color: var(--black-100);
 }
 
-#modal-criar-titulo{
-  display:flex;
+i {
+  color: var(--white-100);
+}
+i:hover {
+  color: var(--white-25);
+}
+/* Estilização do Modal */
+
+#modal-criar-post {
+  width: fit-content;
+  height: fit-content;
+  background: var(--linear-grey-50);
+  border-radius: 32px;
+  display: none;
+  padding: 20px 50px;
+  flex-direction: column;
+  left: 25%;
+  gap: 26px;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
+
+#modal-criar-titulo {
+  display: flex;
   align-items: center;
   padding: 0 10px;
   justify-content: flex-start;
@@ -264,176 +267,184 @@ i:hover{
   text-align: center;
 }
 
-#modal-criar-titulo h3{
-font-family: var(--font-bebas-neue);
-font-size: 1.9em;
-color: var(--white-100);
-letter-spacing: -2;
-white-space: nowrap;
-margin: 0.2em;
+#modal-criar-titulo h3 {
+  font-family: var(--font-bebas-neue);
+  font-size: 1.9em;
+  color: var(--white-100);
+  letter-spacing: -2;
+  white-space: nowrap;
+  margin: 0.2em;
 }
 
-img[alt="adicionar-post"]{
+img[alt="adicionar-post"] {
   height: 3em;
 }
 
 #modal-criar-imagem {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 16em;
-    padding: 10px;
-    gap: 10px;
-    border-radius: 15px;
-    border: 6px dashed var(--light-grey);
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 16em;
+  padding: 10px;
+  gap: 10px;
+  border-radius: 15px;
+  border: 6px dashed var(--light-grey);
+  cursor: pointer;
 }
 
-
-#modal-criar-imagem h3{
- color: var(--light-grey);
- font-size: 1em;
- max-width: 9em;
- text-align: center;
- font-family: var(--font-quicksand);
+#modal-criar-imagem h3 {
+  color: var(--light-grey);
+  font-size: 1em;
+  max-width: 9em;
+  text-align: center;
+  font-family: var(--font-quicksand);
 }
 
-img[alt="pasta-imagem"]{
- width: 4em;
+img[alt="pasta-imagem"] {
+  width: 4em;
 }
 
-
-#modal-criar-data{
-      display: flex;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      justify-content: end;
+#modal-criar-data {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  justify-content: end;
 }
 
-#modal-criar-data h3{
-   margin: 0;
+#modal-criar-data h3 {
+  margin: 0;
   font-size: 1em;
   color: var(--white-50);
 }
 
-#modal-criar-info{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    gap: 5px;
+#modal-criar-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  gap: 5px;
 }
 
 .campo-input {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
 }
 
 .campo-input.titulo {
-    background-color: var(--light-grey);
-    border-radius: 8px;
-    padding: 10px;
-    align-items: center;
+  background-color: var(--light-grey);
+  border-radius: 8px;
+  padding: 10px;
+  align-items: center;
 }
 
 .campo-input.descricao {
-    background-color: var(--light-grey);
-    border-radius: 8px;
-    padding: 10px;
-    height: 9em;
-    align-items: flex-start;
+  background-color: var(--light-grey);
+  border-radius: 8px;
+  padding: 10px;
+  height: 9em;
+  align-items: flex-start;
 }
 
 .campo-input.autor {
-    padding: 10px;
+  padding: 10px;
 }
 
 #modal-criar-info-titulo,
 #modal-criar-info-descricao,
 #modal-criar-info-autor {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    width: 100%;
-    color: var(--white-100);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: var(--white-100);
 }
 
-#modal-criar-info-titulo{
-    height: 2em;
+#modal-criar-info-titulo {
+  height: 2em;
 }
-
 
 #modal-criar-info-titulo::placeholder {
-    color: var(--white-50);
-    font-size: 1.5em;
-    letter-spacing: -1px;
-    font-family: var(--font-bebas-neue);
+  color: var(--white-50);
+  font-size: 1.5em;
+  letter-spacing: -1px;
+  font-family: var(--font-bebas-neue);
 }
 
 #modal-criar-info-descricao::placeholder {
-    color: var(--white-50);
-    font-size: 1.2em;
-    font-family: var(--font-quicksand);
+  color: var(--white-50);
+  font-size: 1.2em;
+  font-family: var(--font-quicksand);
 }
 
 #modal-criar-info-autor {
-    font-size: 1.2em;
-    text-decoration: underline;
+  font-size: 1.2em;
+  text-decoration: underline;
 }
 
 #modal-criar-info-autor::placeholder {
-    color: var(--white-50);
-    font-family: var(--font-quicksand);
+  color: var(--white-50);
+  font-family: var(--font-quicksand);
 }
 
-.campo-input ion-icon{
-    font-size: 1.2em;
+.campo-input ion-icon {
+  font-size: 1.2em;
 }
 
-.campo-input.titulo ion-icon{
-    font-size: 1.7em;
+.campo-input.titulo ion-icon {
+  font-size: 1.7em;
 }
 
-#modal-criar-botoes{
-    padding: 10px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
+#modal-criar-botoes {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
 }
 
-#modal-criar-botoes button{
-     display: flex;
-     border: none;
-     cursor: pointer;
-     flex-direction: end;
+#modal-criar-botoes button {
+  display: flex;
+  border: none;
+  cursor: pointer;
+  flex-direction: end;
 }
 
-#btn-modal-criar-cancelar{
- background-color: transparent;
+#btn-modal-criar-cancelar {
+  background-color: transparent;
 }
 
-#btn-modal-criar-cancelar h3{
-    color: var(--orange-100);
-    font-family: var(--font-quicksand);
-    text-decoration: underline;
-     font-size: 1em;
+#btn-modal-criar-cancelar h3 {
+  color: var(--orange-100);
+  font-family: var(--font-quicksand);
+  text-decoration: underline;
+  font-size: 1em;
 }
 
-#btn-modal-criar-confirmar{
-    border-radius: 25px;
-background: var(--dark-blue-100);
-box-shadow: -3px 4px 4px 0 rgba(0, 0, 0, 0.25);
+#btn-modal-criar-confirmar {
+  border-radius: 25px;
+  background: var(--dark-blue-100);
+  box-shadow: -3px 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-#btn-modal-criar-confirmar h3{
-    font-family: var(--font-quicksand);
-    color: var(--white-100);
-    font-size: 1em;
+#btn-modal-criar-confirmar h3 {
+  font-family: var(--font-quicksand);
+  color: var(--white-100);
+  font-size: 1em;
+}
+#tela {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--black-100);
+  opacity: 0.7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
 }

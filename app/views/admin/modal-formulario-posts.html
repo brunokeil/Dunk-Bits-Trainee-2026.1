@@ -12,46 +12,9 @@
 </head>
 
 <body id="BodyModalFormularioPosts">
-  <div id="tela">
-    <div class="containerTabelaPostsAdmin">
-      <div>
-        <h2 id="TituloDePostsADM">TABELA DE POSTS</h2>
-      </div>
-      <div id="PesquisaECriarPostADM">
-        <div id="CaixaDePesquisa">
-          <input type="text" placeholder="Pesquisar por Post" id="PesquisaPostsTabelaADM">
-          <ion-icon name="search-outline"></ion-icon>
-        </div>
-        <button id="btnCriarPostADM">Criar Post</button>
-      </div>
+  <div id="tela"></div>
 
-      <div id="containerTabelaPostsToda">
-        <table>
-          <thead id="IndicesTabelaPostADM">
-            <tr>
-              <th id="IdTabelaPostsADM">ID</th>
-              <th id="TítuloTabelaPostsADM">Título</th>
-              <th id="AutorTabelaPostsADM">Autor</th>
-              <th id="DataTabelaPostsADM">Data</th>
-              <th id="AçõesTabelaPostsADM">Ações</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Primeira Publicação</td>
-              <td>Arthur Morgan</td>
-              <td>01/01/2023</td>
-              <td>
-                <div class="botõesdeação">
-                  <button class="btnVisuPostADM"><ion-icon name="eye-outline"></ion-icon></button>
-                  <button class="btnEditPostADM"><ion-icon name="pencil-outline"></ion-icon></button>
-                  <button class="btnDeletePostADM"><ion-icon name="trash-bin-outline"></ion-icon></button>
-                </div>
-              </td>
-            </tr>
-      </div>
-      <!-- Modal! -->
+  <!-- Modal! -->
       <div id="modal-criar-post">
         <div id="modal-criar-titulo">
           <img src="../../../public/assets/icon.svg" alt="adicionar-post">
@@ -80,12 +43,51 @@
           </div>
         </div>
         <div id="modal-criar-botoes">
-          <button id="btn-modal-criar-cancelar"><h3>CANCELAR</h3></button>
-          <button id="btn-modal-criar-confirmar"><h3>CONFIRMAR</h3></button>
+          <button id="btn-modal-criar-cancelar" onclick="fecharModal('modal-criar-post')"><h3>CANCELAR</h3></button>
+          <button id="btn-modal-criar-confirmar" onclick="fecharModal('modal-criar-post')"><h3>CONFIRMAR</h3></button>
         </div>
       </div>
+    <!-- Modal <-->
+
+    <div class="containerTabelaPostsAdmin">
+      <div>
+        <h2 id="TituloDePostsADM">TABELA DE POSTS</h2>
+      </div>
+      <div id="PesquisaECriarPostADM">
+        <div id="CaixaDePesquisa">
+          <input type="text" placeholder="Pesquisar por Post" id="PesquisaPostsTabelaADM">
+          <ion-icon name="search-outline"></ion-icon>
+        </div>
+        <button id="btnCriarPostADM" onclick="abrirModal('modal-criar-post')">Criar Post</button>
+      </div>
+
+      <div id="containerTabelaPostsToda">
+        <table>
+          <thead id="IndicesTabelaPostADM">
+            <tr>
+              <th id="IdTabelaPostsADM">ID</th>
+              <th id="TítuloTabelaPostsADM">Título</th>
+              <th id="AutorTabelaPostsADM">Autor</th>
+              <th id="DataTabelaPostsADM">Data</th>
+              <th id="AçõesTabelaPostsADM">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Primeira Publicação</td>
+              <td>Arthur Morgan</td>
+              <td>01/01/2023</td>
+              <td>
+                <div class="botõesdeação">
+                  <button class="btnVisuPostADM"><ion-icon name="eye-outline"></ion-icon></button>
+                  <button class="btnEditPostADM"><ion-icon name="pencil-outline"></ion-icon></button>
+                  <button class="btnDeletePostADM"><ion-icon name="trash-bin-outline"></ion-icon></button>
+                </div>
+              </td>
+            </tr>
+      </div>
     </div>
-  </div>
 
   <script src="../../../public/js/modal-formulario-posts.js"></script>
 </body>
