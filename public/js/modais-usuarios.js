@@ -1,5 +1,29 @@
 console.log("JS CARREGADO COM SUCESSO");
 
+// função de alterar imagem
+const profPics = document.querySelectorAll(".userProfilePicture");
+
+function alterarImagem(){
+    profPics.forEach((profPic) => {
+        const img = profPic.querySelector("img");
+        const input = profPic.querySelector("input");
+
+        img.addEventListener("click", () => {
+            input.click();
+        })
+
+        input.addEventListener("change", () => {
+            const arquivo = input.files[0];
+
+            if (arquivo) {
+                const imageURL = URL.createObjectURL(arquivo);
+
+                img.src = imageURL;
+            }
+        });
+    })
+}
+
 // func de abrir/fechar modal
 function toggleModal(idModal) {
     const modal = document.getElementById(idModal);
@@ -83,3 +107,4 @@ function setAllEventListeners() {
 }
 
 setAllEventListeners();
+alterarImagem();
