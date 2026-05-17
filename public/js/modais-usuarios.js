@@ -43,6 +43,8 @@ function setAllEventListeners() {
     const createUser = document.getElementById("newUser");
     const editUser = document.getElementById("editUser");
     const deleteUser = document.getElementById("deleteUser");
+    const discardUser = document.getElementById("discardUser");
+    const errorUser = document.getElementById("errorUser");
 
     viewUser.addEventListener("click", () => {
         toggleModal("viewModal");
@@ -59,6 +61,14 @@ function setAllEventListeners() {
     deleteUser.addEventListener("click", () => {
         toggleModal("deleteModal");
     });
+
+    discardUser.addEventListener("click", ()=> {
+        toggleModal("discardModal");
+});
+    errorUser.addEventListener("click", ()=> {
+        toggleModal("errorModal");
+    })
+
 
     // cada ".closeModalBtn" vai receber o "toggleModal"
     const closeBtn = document.querySelectorAll(".closeModalBtn");
