@@ -21,8 +21,16 @@
 
   --linear-orange-gradient1: linear-gradient(45deg, #ff6600, #ffc299, #ff6600);
   --linear-orange-gradient2: linear-gradient(46deg, #fea163, #fea163);
-  --linear-grey-50: linear-gradient(200deg, rgba(255, 255, 255, 0.80) 44.22%, rgba(187, 187, 187, 0.8) 80.67%);
-
+  --linear-grey-50: linear-gradient(
+    200deg,
+    rgba(255, 255, 255, 0.8) 44.22%,
+    rgba(187, 187, 187, 0.8) 80.67%
+  );
+  --linear-red: linear-gradient(
+    200deg,
+    rgba(131, 0, 0, 0.5) 37.75%,
+    rgba(180, 60, 0, 0.5) 80.67%
+  );
 
   --font-bebas-neue: "Bebas Neue", sans-serif;
   --font-quicksand: "Quicksand", sans-serif;
@@ -437,6 +445,7 @@ img[alt="pasta-imagem"] {
   color: var(--white-100);
   font-size: 1em;
 }
+
 #tela {
   width: 100vw;
   height: 100vh;
@@ -447,4 +456,81 @@ img[alt="pasta-imagem"] {
   left: 0;
   z-index: 10;
   display: none;
+}
+
+#modal-excluir-post {
+  width: fit-content;
+  height: fit-content;
+  background: var(--linear-red);
+  border-radius: 20px;
+  display: none;
+  padding: 20px 50px;
+  flex-direction: column;
+  left: 25%;
+  gap: 10px;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
+
+#modal-excluir-titulo {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: flex-start;
+  width: 100%;
+  text-align: center;
+}
+
+#modal-excluir-titulo ion-icon {
+  font-size: 2em;
+  color: var(--dark-orange-100);
+}
+
+#modal-excluir-titulo h3 {
+  font-family: var(--font-bebas-neue);
+  font-size: 2em;
+  color: var(--white-100);
+  letter-spacing: -2;
+  white-space: nowrap;
+  margin: 0.2em;
+}
+
+#modal-excluir-descricao h4 {
+  font-family: var(--font-quicksand);
+  font-size: 1em;
+  color: var(--white-100);
+  width: 80%;
+}
+
+#modal-excluir-botoes {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+#modal-excluir-botoes button {
+  display: flex;
+  border: none;
+  cursor: pointer;
+  flex-direction: end;
+  border-radius: 15px;
+  color: var(--white-100);
+  font-family: var(--font-quicksand);
+  font-size: 1.2em;
+}
+
+#btn-modal-excluir-cancelar{
+  background: transparent;
+  text-decoration: underline;
+}
+
+#btn-modal-excluir-confirmar{
+ background-color: var(--dark-orange-100);
 }
