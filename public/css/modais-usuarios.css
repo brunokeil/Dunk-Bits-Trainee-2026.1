@@ -122,7 +122,16 @@ input:disabled {
     
 }
 
+.inputGroup > *:hover {
+    background: var(--white-25);
+    transition: background 120ms ease;
+    cursor: pointer;
+}
 
+.inputGroup > *:focus {
+    background: var(--white-25);
+    cursor: text;
+}
 
 
 /* -------- modal container paizao ------------- */
