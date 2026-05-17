@@ -459,7 +459,7 @@ img[alt="pasta-imagem"] {
 }
 
 #modal-excluir-post {
-  width: fit-content;
+  width: 25vw;
   height: fit-content;
   background: var(--linear-red);
   border-radius: 20px;
@@ -503,7 +503,7 @@ img[alt="pasta-imagem"] {
   font-family: var(--font-quicksand);
   font-size: 1em;
   color: var(--white-100);
-  width: 80%;
+  width: 100%;
 }
 
 #modal-excluir-botoes {
