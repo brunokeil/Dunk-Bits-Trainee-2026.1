@@ -4,121 +4,255 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modal</title>
+
     <link rel="stylesheet" href="/public/css/modais-usuarios.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
-  
+
   <body>
     <div class="userExample">
       <h2>Lorem Ypsum Bits JR</h2>
+
       <div class="modalButtons" id="modalHead">
         <button id="viewUser">Visualizar</button>
         <button id="newUser">Criar</button>
         <button id="editUser">Editar</button>
         <button id="deleteUser">Excluir</button>
+        <button id="discardUser">Descartar</button>
+        <button id="errorUser">Erro</button>
       </div>
     </div>
-    
+
     <div class="modal-container close">
+      <div class="modalUser" id="viewModal">
+        <span id="header">
+          <h1>PERFIL DE USUÁRIO</h1>
+          <button class="closeModalBtn">X</button>
+        </span>
 
-    <div class="modalUser" id="viewModal">
-      <span id="header">
-        <h1>PERFIL DE USUÁRIO</h1>
-        <button class="closeModalBtn">X</button>
-      </span>
-      <div id="userProfilePicture"><img src="link" /></div>
-        <div class="userInfo">
-          <input
-            type="text"
-            class="usernameInput"
-            placeholder="Username"
-            value="joaosilva"
-            disabled
-          />
-          <input
-            type="text"
-            class="emailInput"
-            placeholder="E-mail"
-            value="joaosilva@gmail.com"
-            disabled
-          />
-          <input
-            type="password"
-            class="passwordInput"
-            placeholder="Senha"
-            value="senha"
-            disabled
-            
-          />
+        <div id="userProfilePicture">
+          <img src="link" />
         </div>
+
+        <div class="userInfo">
+          <div class="inputGroup">
+            <ion-icon name="person"></ion-icon>
+
+            <input
+              type="text"
+              class="usernameInput"
+              placeholder="Username"
+              value="joaosilva"
+              disabled
+            />
+          </div>
+
+          <div class="inputGroup">
+            <ion-icon name="mail"></ion-icon>
+
+            <input
+              type="text"
+              class="emailInput"
+              placeholder="E-mail"
+              value="joaosilva@gmail.com"
+              disabled
+            />
+          </div>
+
+          <div class="inputGroup">
+            <ion-icon name="lock-closed"></ion-icon>
+
+            <input
+              type="password"
+              class="passwordInput"
+              placeholder="Senha"
+              value="senha"
+              disabled
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="modalUser" id="createModal">
+        <span id="header">
+          <h1>CRIAR USUÁRIO</h1>
+          <button class="closeModalBtn">X</button>
+        </span>
+
+        <div id="userProfilePicture">
+          <img src="link" />
+        </div>
+
+        <div class="userInfo">
+          <div class="inputGroup">
+            <ion-icon name="person"></ion-icon>
+
+            <input type="text" class="usernameInput" placeholder="Username" />
+          </div>
+
+          <div class="inputGroup">
+            <ion-icon name="mail"></ion-icon>
+
+            <input type="text" class="emailInput" placeholder="E-mail" />
+          </div>
+
+          <div class="inputGroup">
+            <ion-icon name="lock-closed"></ion-icon>
+
+            <input type="password" class="passwordInput" placeholder="Senha" />
+          </div>
+          <div class="inputGroup">
+            <ion-icon name="lock-closed"></ion-icon>
+
+            <input
+              type="password"
+              class="passwordInput"
+              placeholder="Confirme a Senha"
+            />
+          </div>
+        </div>
+
+        <div class="footerButtons">
+          <button class="closeModalBtn cancelBtn">CANCELAR</button>
+          <button>CRIAR</button>
+        </div>
+      </div>
+
+      <div class="modalUser" id="editModal">
+        <span id="header">
+          <h1>EDITAR USUÁRIO</h1>
+          <button class="closeModalBtn">X</button>
+        </span>
+
+        <div id="userProfilePicture">
+          <img src="link" />
+        </div>
+
+        <div class="userInfo">
+          <div class="inputGroup">
+            <ion-icon name="person"></ion-icon>
+
+            <input
+              type="text"
+              class="usernameInput"
+              placeholder="Username"
+              value="joaosilva"
+            />
+          </div>
+
+          <div class="inputGroup">
+            <ion-icon name="mail"></ion-icon>
+
+            <input
+              type="text"
+              class="emailInput"
+              placeholder="E-mail"
+              value="joaosilva@gmail.com"
+            />
+          </div>
+
+          <div class="inputGroup">
+            <ion-icon name="lock-closed"></ion-icon>
+
+            <input
+              type="password"
+              class="passwordInput"
+              placeholder="Senha"
+              value="senha"
+            />
+          </div>
+          <div class="inputGroup">
+            <ion-icon name="lock-closed"></ion-icon>
+
+            <input
+              type="password"
+              class="passwordInput"
+              placeholder="Confirme a senha"
+              value="senha"
+            />
+          </div>
+        </div>
+
+        <div class="footerButtons">
+          <button class="closeModalBtn cancelBtn">CANCELAR</button>
+          <button>SALVAR ALTERAÇÕES</button>
+        </div>
+      </div>
+
+      <div class="modalUser" id="discardModal">
+        <div class="warningHeader">
+          <ion-icon name="warning"></ion-icon>
+
+          <span>
+            <h1>Descartar?</h1>
+          </span>
+        </div>
+
+        <p>
+          Tem certeza que deseja cancelar?
+          <br />
+          <br />
+
+          Essa ação é <em>irreversível</em> e todos os dados preenchidos serão
+          descartados.
+        </p>
+
+        <div class="footerButtons">
+          <button class="closeModalBtn cancelBtn">CANCELAR</button>
+          <button>EXCLUIR</button>
+        </div>
+      </div>
+
+      <div class="modalUser" id="deleteModal">
+        <div class="warningHeader">
+          <ion-icon name="warning"></ion-icon>
+
+          <span>
+            <h1>Excluir usuário?</h1>
+          </span>
+        </div>
+
+        <p>
+          Tem certeza que deseja excluir este usuário?
+          <br />
+          <br />
+
+          Essa ação é <em>irreversível</em> e todos os dados relacionados à
+          conta serão <em>removidos permanentemente</em>.
+        </p>
+
+        <div class="footerButtons">
+          <button class="closeModalBtn cancelBtn">CANCELAR</button>
+          <button>EXCLUIR</button>
+        </div>
+      </div>
+
+      <div class="modalUser" id="errorModal">
+        <div class="warningHeader">
+          <ion-icon name="warning"></ion-icon>
+
+          <span>
+            <h1>Erro</h1>
+          </span>
+        </div>
+
+        <p>Erro 404: erro de rede</p>
+        <div class="footerButtons">
+          <button class="closeModalBtn cancelBtn">CANCELAR</button>
+          <button>EXCLUIR</button>
+        </div>
+      </div>
     </div>
 
-    <div class="modalUser" id="createModal">
-      <span id="header">
-        <h1>CRIAR USUÁRIO</h1>
-        <button class="closeModalBtn">X</button>
-      </span>
-      <div id="userProfilePicture"><img src="link" /></div>
-      <div class="userInfo">
-        <input type="text" class="usernameInput" placeholder="Username" />
-        <input type="text" class="emailInput" placeholder="E-mail" />
-        <input type="password" class="passwordInput" placeholder="Senha" />
-      </div>
-      <div class="footerButtons">
-        <button class="closeModalBtn cancelBtn">CANCELAR</button>
-        <button>CRIAR</button>
-      </div>
-    </div>
-    
-    <div class="modalUser" id="editModal">
-      <span id="header">
-        <h1>EDITAR USUÁRIO</h1>
-        <button class="closeModalBtn">X</button>
-      </span>
-      <div id="userProfilePicture"><img src="link" /></div>
-      <div class="userInfo">
-        <input
-          type="text"
-          class="usernameInput"
-          placeholder="Username"
-          value="joaosilva"
-        />
-        <input
-          type="text"
-          class="emailInput"
-          placeholder="E-mail"
-          value="joaosilva@gmail.com"
-        />
-        <input
-          type="password"
-          class="passwordInput"
-          placeholder="Senha"
-          value="senha"
-        />
-      </div>
-      <div class="footerButtons">
-        <button class="closeModalBtn cancelBtn">CANCELAR</button>
-        <button>SALVAR ALTERAÇÕES</button>
-      </div>
-    </div>
-    
-
-    <div class="modalUser" id="deleteModal">
-      <span>
-        <h1>Excluir usuário?</h1>
-      </span>
-      <p>
-        Tem certeza que deseja excluir este usuário? <br /> <br/>
-        Essa ação é <em>irreversível</em> e todos os dados relacionados à conta serão <em>
-          removidos
-          permanentemente
-        </em>.
-      </p>
-      <div class="footerButtons">
-        <button class="closeModalBtn cancelBtn">CANCELAR</button>
-        <button>EXCLUIR</button>
-      </div>
-    </div>
-    </body>
-  </div>
-  <script src="/public/js/modais-usuarios.js"></script>
+    <script src="/public/js/modais-usuarios.js"></script>
+  </body>
 </html>

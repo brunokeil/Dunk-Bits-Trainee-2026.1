@@ -85,11 +85,16 @@ button:hover {
     color: var(--white-100);
 }
 
-#deleteModal .cancelBtn {
+#deleteModal .cancelBtn,
+#discardModal .cancelBtn,
+#errorModal .cancelBtn {
     color: var(--light-orange-100);
     background-color: none;
 }
-#deleteModal .cancelBtn:hover {
+
+#deleteModal .cancelBtn:hover,
+#discardModal .cancelBtn:hover,
+#errorModal .cancelBtn:hover {
     color: var(--white-100);
 }
 
@@ -99,7 +104,7 @@ input:disabled {
     cursor: text !important;
 }
 
-.userInfo > * {
+.inputGroup input{
     color: var(--white-100);
     font-weight: 600;
     font-size: medium;
@@ -114,17 +119,11 @@ input:disabled {
     outline: none;
     border: none;
     transition: background 120ms ease;
+    
 }
 
-.userInfo > *:hover {
-    background: var(--white-25);
-    transition: background 120ms ease;
-    cursor: pointer;
-}
 
-.userInfo > *:focus {
-    cursor: text;
-}
+
 
 /* -------- modal container paizao ------------- */
 
@@ -204,9 +203,11 @@ input:disabled {
     gap: 10px;
 }
 
-/* especificamente "delete" */
+/* delete, discard e error*/
 
-#deleteModal {
+#deleteModal,
+#discardModal,
+#errorModal {
     text-wrap: wrap;
     max-width: 45ch;
     background: var(--linear-red-gradient);
@@ -214,21 +215,36 @@ input:disabled {
     gap: 2rem;
     font-weight: 600;
 }
-#deleteModal em {
+
+#deleteModal em,
+#discardModal em,
+#errorModal em {
     text-decoration: underline;
     font-style: normal;
 }
-#deleteModal .footerButtons {
+
+#deleteModal .footerButtons,
+#discardModal .footerButtons,
+#errorModal .footerButtons {
     align-self: end;
 }
-#deleteModal .footerButtons > * {
+
+#deleteModal .footerButtons > *,
+#discardModal .footerButtons > *,
+#errorModal .footerButtons > * {
     transition: all 120ms ease;
 }
-#deleteModal .footerButtons :first-child {
+
+#deleteModal .footerButtons :first-child,
+#discardModal .footerButtons :first-child,
+#errorModal .footerButtons :first-child {
     background: 0;
     text-decoration: underline;
 }
-#deleteModal .footerButtons :last-child:hover {
+
+#deleteModal .footerButtons :last-child:hover,
+#discardModal .footerButtons :last-child:hover,
+#errorModal .footerButtons :last-child:hover {
     filter: drop-shadow(0 0 0px black);
     color: red;
     background-color: var(--white-100);
@@ -236,4 +252,31 @@ input:disabled {
     transition: all 120ms ease-out;
 }
 
+
+
 /* --------------------- */
+
+
+.inputGroup {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.inputGroup input::placeholder {
+    color: rgba(255, 255, 255, 0.472);
+}
+
+.warningHeader {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.warningHeader ion-icon {
+    font-size: 64px;
+    color: var(--orange-100);
+    
+}
