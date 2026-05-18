@@ -1,3 +1,4 @@
+/* Função da Paginação */
 const pontos = document.querySelectorAll(".ponto");
 const setaEsquerda = document.querySelector(".seta-esquerda");
 const setaDireita = document.querySelector(".seta-direita");
@@ -58,3 +59,13 @@ setaEsquerda.addEventListener("click", () => {
 });
 
 atualizarPagina(0);
+
+/* Função do Filtro */
+document.addEventListener("DOMContentLoaded", () => {
+  const botaoFiltro = document.getElementById("botao-filtro");
+  const menuFiltros = document.getElementById("filtros-opcoes");
+
+  botaoFiltro.addEventListener("click", () => {
+    menuFiltros.classList.toggle("active");
+  });
+});
