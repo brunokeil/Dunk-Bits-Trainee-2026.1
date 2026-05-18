@@ -1,10 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&display=swap");
 
+
+/* -- DICA: 
+    se quiser:
+    - opacidade 80%: add "CC" no final do hex
+    - opacidade 50%: add "80" no final do hex
+    - opacidade 25%: add "40" no final do hex
+
+*/
 :root {
+    /* CORES BASICAS E OPACIDADES */
     --white-100: #ffffff;
     --white-80: #ffffffcc;
     --white-50: #ffffff80;
     --white-25: #ffffff40;
+    --white-15: #ffffff0F;
+    --white-10: #ffffff0A;
 
     --offwhite-100: #f5eee9;
 
@@ -16,8 +27,15 @@
     --dark-blue-100: #000080;
 
     --grey-100: #333333;
+    --grey-50: #33333380;
+
     --dark-grey-100: #1e1a18;
+    --dark-grey-50: #1e1a1880;
+
     --pearl-grey-100: #050517;
+    --pearl-grey-80: #050517CC;
+    --pearl-grey-50: #05051780;
+
     --black-100: #000000;
 
     --linear-orange-gradient1: linear-gradient(
@@ -49,7 +67,7 @@
         #ff8432,
         #ff9d5c
     );
-    
+
     --bg-landing-page: linear-gradient(
         25deg,
         #ff6600,
@@ -59,6 +77,7 @@
         #ff9d5c,
         #ff7c25
     );
+    --bg-lista-posts: linear-gradient(224deg, #fea163 31.27%, #d35400 55.9%);
 
     --linear-grey-100: linear-gradient(-117deg, #ffffff 42%, #bbbbbb 87%);
     --linear-grey-50: linear-gradient(-117deg, #ffffff80 42%, #bbbbbb80 87%);
