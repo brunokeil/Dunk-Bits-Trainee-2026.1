@@ -196,7 +196,7 @@ button:hover {
 }
 
 .userProfilePicture:hover {
-    background-color: rgba(255, 255, 255, 0.283);
+    background-color: var(--white-25);
 }
 
 .imgProfPic {
@@ -282,7 +282,7 @@ button:hover {
 }
 
 .inputGroup input::placeholder {
-    color: rgba(255, 255, 255, 0.472);
+    color: var(--white-50);
 }
 
 .warningHeader {

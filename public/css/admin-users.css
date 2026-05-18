@@ -1,7 +1,7 @@
 @import "./styles.css";
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 128, 0.5), rgba(0, 0, 128, 0.5)), url("../assets/backgroundTabelaPostsADM.png");
+    background-image: linear-gradient(rgba(0, 0, 128, 0.5), rgba(0, 0, 128, 0.5)), url("../assets/bg_images/bg_table_users.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
