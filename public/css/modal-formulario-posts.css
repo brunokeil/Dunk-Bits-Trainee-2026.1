@@ -249,15 +249,16 @@ i:hover {
 /* Estilização do Modal */
 
 #modal-criar-post {
-  width: fit-content;
-  height: fit-content;
+  max-width: 450px;
+  max-height: 95vh;
+  overflow-y: auto;
   background: var(--linear-grey-50);
   border-radius: 32px;
   display: none;
-  padding: 20px 50px;
+  padding: 3vh 40px;
   flex-direction: column;
   left: 25%;
-  gap: 26px;
+  gap: 1.5vh;
   align-items: center;
   position: fixed;
   top: 50%;
@@ -354,7 +355,7 @@ img[alt="pasta-imagem"] {
   background-color: var(--light-grey);
   border-radius: 8px;
   padding: 10px;
-  height: 9em;
+  height: 6em;
   align-items: flex-start;
 }
 
