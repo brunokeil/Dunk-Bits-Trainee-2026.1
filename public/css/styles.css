@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&display=swap");
+
+:root {
+  --white-100: #ffffff;
+  --white-50: #ffffff80;
+  --white-25: #ffffff40;
+  --offwhite-100: #f5eee9;
+
+  --orange-100: #ff6600;
+  --dark-orange-100: #d35400;
+
+  --blue-100: #0066cc;
+  --dark-blue-100: #000080;
+
+  --grey-100: #333333;
+  --dark-grey-100: #1e1a18;
+  --pearl-grey-100: #050517;
+  --pearl-grey-50: #05051780;
+  --black-100: #000000;
+
+  --color-light-text: var(--white-100);
+  --color-dark-text: var(--black-100);
+
+  --linear-orange-gradient1: linear-gradient(25deg, #ff6600, #ff8534,#ff6600,#ff7c25, #ff9d5c, #ff7c25);
+  --linear-orange-gradient2: linear-gradient(46deg, #fea163, #fea163);
+
+  --font-bebas-neue: "Bebas Neue", sans-serif;
+  --font-quicksand: "Quicksand", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: content-box;
+  color: var(--color-dark-text);
+  padding: 0px;
+  margin: 0px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-bebas-neue);
+}
+
+h4,
+h5,
+h6,
+p {
+  font-family: var(--font-quicksand);
+}
+
+/*----- FIM ROOT -----*/
