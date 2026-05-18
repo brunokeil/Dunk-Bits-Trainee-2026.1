@@ -85,24 +85,17 @@ button:hover {
     color: var(--white-100);
 }
 
-#deleteModal .cancelBtn,
-#discardModal .cancelBtn,
-#errorModal .cancelBtn {
+ .cancelBtn {
     color: var(--light-orange-100);
     background-color: none;
 }
 
-#deleteModal .cancelBtn:hover,
-#discardModal .cancelBtn:hover,
-#errorModal .cancelBtn:hover {
+.cancelBtn:hover {
     color: var(--white-100);
 }
 
 /* ----------- input styling ------------- */
 
-input:disabled {
-    cursor: text !important;
-}
 
 .inputGroup input{
     color: var(--white-100);
@@ -121,18 +114,20 @@ input:disabled {
     transition: background 120ms ease;
     
 }
-
 .inputGroup > *:hover {
-    background: var(--white-25);
-    transition: background 120ms ease;
     cursor: pointer;
 }
 
-.inputGroup > *:focus {
+.inputGroup:hover {
     background: var(--white-25);
-    cursor: text;
+    transition: background 120ms ease;
+    cursor: pointer;
+    border-radius: 8px;
 }
 
+.inputGroup > *:focus {
+    cursor: text;
+}
 
 /* -------- modal container paizao ------------- */
 
@@ -251,28 +246,19 @@ input:disabled {
     font-style: normal;
 }
 
-#deleteModal .footerButtons,
-#discardModal .footerButtons,
-#errorModal .footerButtons {
+.footerButtons {
     align-self: end;
 }
 
-#deleteModal .footerButtons > *,
-#discardModal .footerButtons > *,
-#errorModal .footerButtons > * {
+.footerButtons > * {
     transition: all 120ms ease;
 }
 
-#deleteModal .footerButtons :first-child,
-#discardModal .footerButtons :first-child,
-#errorModal .footerButtons :first-child {
+.footerButtons :first-child {
     background: 0;
     text-decoration: underline;
 }
-
-#deleteModal .footerButtons :last-child:hover,
-#discardModal .footerButtons :last-child:hover,
-#errorModal .footerButtons :last-child:hover {
+ .footerButtons :last-child:hover {
     filter: drop-shadow(0 0 0px black);
     color: red;
     background-color: var(--white-100);
@@ -290,6 +276,7 @@ input:disabled {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-inline: 5px;
     
 }
 
