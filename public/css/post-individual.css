@@ -3,6 +3,7 @@
 .imagem-post {
     display: flex;
     justify-content: flex-start; /*coloquei pra começar na esquerda*/
+  
 
 }
 
@@ -13,8 +14,23 @@
     height: auto;
 
     border-radius: 20px;
+  
     
 }
+
+
+.metadados {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.metadados > span {
+    font-family: var(--font-quicksand);
+    font-size: 15px;
+}
+
+
 
 p {
     text-align: justify;
@@ -36,6 +52,7 @@ p {
     padding-left: 20px;
     flex: 1 1 300px;
     text-align: justify;
+    gap: 10px;
 }
 
 body {
