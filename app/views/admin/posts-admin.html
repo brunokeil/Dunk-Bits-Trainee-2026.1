@@ -244,34 +244,89 @@
                 </tbody>
             </table>
         </div>
-        <div class="paginacaoContainer">
-            <button id="btnAnterior" class="btnPaginacao">Anterior</button>
-            <span id="infoPagina">Página 1</span>
-            <button id="btnProximo" class="btnPaginacao">Próximo</button>
-        </div> 
-    </div>
+        <div id="novaPaginacao">
+            <button id="btnVoltarPagina" class="btnSetaPaginacao">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </button>
+            <span id="numeroPaginaAtual">1</span>
+            <button id="btnAvancarPagina" class="btnSetaPaginacao">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
+            </div>
 
-    <div class="modalContainer" id="modalVisualizar">
-        <input type="text">
-        <input type="text">
-        <input type="text">
+    
+
+    <div id="modalVisualizar">
+        <div id="containerVisualizarPosts">
+            <div id="iconeTituloVisualisarPosts">
+                <ion-icon name="eye-outline" id="olhoVisualizarPost"></ion-icon>
+                <h1 id="títuloVisualizarPosts">VISUALIZAÇÃO DE POST</h1>
+            </div>
+            <div id="containerCapaPost">
+                <div id="capaPost">
+                    <img src="#" alt="Imagem Post">
+                </div>
+            </div>
+            <div id="camposVisualizarPost">
+                <div id="postTítulo">
+                    <p>TÍTULO POST</p>
+                </div>
+                <div id="postDescrição">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+            </div>
+        </div>
         <div class="modalActions">
-            <button class="btnCancelarModal" onclick="fecharModal('modalVisualizar')">Cancelar</button>
-            <button class="btnSalvarModal">Salvar</button>
+            <button class="btnCancelarModal" onclick="fecharModal('modalVisualizar')">Sair</button>
         </div>
     </div>
-    
-    <div class="modalContainer" id="modalEditar">
-        <input type="text">
-        <input type="text">
-        <input type="text">
+
+
+    <div id="modalEditar">
+        <div id="containerEditarPosts">
+            <div id="iconeTituloEditarPosts">
+                <ion-icon name="pencil-outline" id="lapisEditarPosts"></ion-icon> 
+                <h1 id="títuloEditarPosts">EDITAR POSTS</h1>
+            </div>
+            <div id="containerImagens">
+                <h3 id="textoAlterarImagem">alterar imagem do post</h3>
+                <div id="imagemAtualFutura">
+                    <div id="imagemAtual">
+                        <img src="#" alt="Imagem Post">
+                    </div>
+                    <div id="alterarImagemPost">
+                        <input type="file" id="arquivoImagemPost" accept="image/*">
+                        <label for="arquivoImagem" id="caixaNovaImagem">
+                            <div id="íconeNovaImagem">
+                                <ion-icon name="image-outline"></ion-icon>
+                            </div>  
+                            <p id="textoArrasteImagem">Arraste sua imagem aqui ou escolha um novo arquivo</p>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div id="camposAlterarPost">
+                <div id="alterarTítulo">
+                    <ion-icon name="create-outline" id="iconeAlterarTituloPost"></ion-icon>
+                    <input type="text" placeholder="ALTERAR TÍULO" id="textoAlterarTituloPost">
+                </div>
+                <div id="alterarDescrição">
+                    <ion-icon name="newspaper-outline" id="iconeAlterarDescriçaoPost"></ion-icon>
+                    <input type="text" placeholder="ALTERAR DESCRIÇÃO" id="textoAlterarDescriçaoPost">
+                </div>
+                <div id="confirmarSenha">
+                    <ion-icon name="person-outline"  id="iconeConfirmarSenhaPost"></ion-icon>
+                    <input type="text" id="textoConfirmarSenhaPost" placeholder="SENHA ATUAL">
+                </div>
+            </div>
+        </div>
         <div class="modalActions">
             <button class="btnCancelarModal" onclick="fecharModal('modalEditar')">Cancelar</button>
             <button class="btnSalvarModal">Salvar</button>
         </div>
     </div>
     
-    <div class="modalContainer" id="modalExcluir">
+    <div id="modalExcluir">
         <input type="text">
         <input type="text">
         <input type="text">

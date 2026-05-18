@@ -1,26 +1,52 @@
-const linhas = document.querySelectorAll('tbody tr');
-const totalPaginas = Math.ceil(linhas.length / 5);
-let pagina = 1;
+var linhasDaTabela = document.querySelectorAll("tbody tr");
+var totalDePaginas = Math.ceil(linhasDaTabela.length / 5);
+var paginaAtual = 1;
 
-function atualizarTabela() {
-    linhas.forEach((linha, i) => {
-        linha.style.display = (i >= (pagina - 1) * 5 && i < pagina * 5) ? '' : 'none';
-    });
+function atualizarPagina() {
+    var inicio = (paginaAtual - 1) * 5;
+    var fim = paginaAtual * 5;
 
-    document.getElementById('infoPagina').innerText = `Página ${pagina} de ${totalPaginas}`;
-    document.getElementById('btnAnterior').disabled = pagina === 1;
-    document.getElementById('btnProximo').disabled = pagina === totalPaginas;
+    for (var i = 0; i < linhasDaTabela.length; i = i + 1) {
+        if (i >= inicio && i < fim) {
+            linhasDaTabela[i].style.display = "";
+        } else {
+            linhasDaTabela[i].style.display = "none";
+        }
+    }
+
+    document.getElementById("numeroPaginaAtual").innerText = paginaAtual;
+
+    if (paginaAtual == 1) {
+        document.getElementById("btnVoltarPagina").disabled = true;
+    } else {
+        document.getElementById("btnVoltarPagina").disabled = false;
+    }
+
+    if (paginaAtual == totalDePaginas || totalDePaginas == 0) {
+        document.getElementById("btnAvancarPagina").disabled = true;
+    } else {
+        document.getElementById("btnAvancarPagina").disabled = false;
+    }
 }
 
-document.getElementById('btnAnterior').addEventListener('click', () => {
-    if (pagina > 1) { pagina--; atualizarTabela(); }
-});
+function voltar() {
+    if (paginaAtual > 1) {
+        paginaAtual = paginaAtual - 1;
+        atualizarPagina();
+    }
+}
 
-document.getElementById('btnProximo').addEventListener('click', () => {
-    if (pagina < totalPaginas) { pagina++; atualizarTabela(); }
-});
+function avancar() {
+    if (paginaAtual < totalDePaginas) {
+        paginaAtual = paginaAtual + 1;
+        atualizarPagina();
+    }
+}
 
-atualizarTabela();
+document.getElementById("btnVoltarPagina").onclick = voltar;
+document.getElementById("btnAvancarPagina").onclick = avancar;
+
+atualizarPagina();
 
 function fecharModal(idModal){
     const modal = document.getElementById(idModal);
