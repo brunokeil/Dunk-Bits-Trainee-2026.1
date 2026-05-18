@@ -1,0 +1,513 @@
+@import "./styles.css";
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 128, 0.5), rgba(0, 0, 128, 0.5)), url("../assets/backgroundTabelaPostsADM.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.painel {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 2%;
+
+    width: 80%;
+    height: auto;
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid white;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    align-items: center;
+
+}
+
+.titulo-texto {
+    font-weight: bold;
+    font-size: 30px;
+}
+.titulo {
+    display: flex;
+    justify-content: center;
+}
+
+
+h1,h2,h3,h4,p {
+    color: white;
+    
+}
+
+.input-de-busca input {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.componentes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+
+    width: 80%;
+    
+    
+
+}
+.tabela-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 500px;
+
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+.interacoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+
+
+
+
+
+
+.dropdownMenuPosts{
+    display: none;
+    position: absolute;
+    top: 52px;
+    right: 10px;
+    background-color: var(--white-100);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+
+table{
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    table-layout: fixed;
+    box-sizing: border-box;
+
+}
+
+th, td{
+    text-align: center;
+    padding: 1.5vh;
+    color: var(--white-100);
+    font-family: var(--font-quicksand);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.info-email {
+    overflow: hidden;
+}
+
+td{
+    border-bottom: 1px solid var(--white-100);
+    position: relative;
+}
+
+.dropdownMenuPosts.ativo{
+    display: block;
+}
+
+.dropdownMenuPosts ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdownMenuPosts li a{
+    display: block;
+    padding: 10px 20px;
+    color: var(--black-100);
+    text-decoration: none;
+    font-family: var(--font-quicksand);
+}
+
+.dropdownMenuPosts li a:hover{
+    background-color: var(--offwhite-100);
+    border-radius: 8px;
+}
+
+
+
+
+
+.botao-criar-usuario {
+    background-color: #FF6600;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+
+        
+    
+}
+
+.header-tabela th{
+    background-color: #FFFFFF40;
+}
+
+.trespontos{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+    color: var(--white-100);
+    display: none;
+}
+
+ion-icon{
+    color: var(--white-100);
+}
+
+ion-icon:hover{
+    color: var(--white-25);
+}
+
+.btnVisuPostADM,
+.btnEditPostADM,
+.btnDeletePostADM{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+}
+
+
+.input-de-busca {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 20px;
+    padding-inline: 10px;
+    width: 400px;
+    height: 40px;
+    
+    justify-content: space-between;
+
+  
+
+}
+
+.acoes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+ 
+
+
+}
+
+
+
+.icone-acao:hover {
+    background-color: #FF6600;
+}
+
+/*
+.icone-acao {
+    width: 25px;
+    height: 25px;
+    transition: background-color 0.3s ease;
+}
+    */
+
+.trespontos {
+    display: none;
+}
+
+.carrossel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    
+
+}
+
+.seta-esquerda {
+     border: none;
+    outline: none;
+    background: transparent;
+}
+
+.seta-direita {
+     border: none;
+    outline: none;
+    background: transparent;
+    transform: scaleX(-1);
+
+}
+
+
+.paginacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+}
+
+
+.carrossel .paginacao img {
+    width: 20px;
+}
+.carrossel button img {
+    width: 20px;
+}
+.resumo {
+    display: none;
+}
+
+.visao-pag {
+    margin: 0;
+
+}
+
+
+
+.dropdownMenuPosts {
+     display: none;   
+    }
+
+
+
+.dropdownMenuPosts {
+     display: none;   
+    }
+
+
+@media (max-width: 920px) {
+
+.header-tabela,
+  .linha-tabela {
+    min-width: 700px; 
+    
+    grid-template-columns:
+      0.5fr
+      1fr
+      2fr
+      1fr;
+  }
+    .tabela {
+    overflow-x: auto;
+    width: 100%;
+  }
+  .icone-acao {
+    display: none;
+  }
+
+  .resumo {
+    display: flex;
+  }
+
+
+.painel {
+    width: 80%;
+    overflow: visible;
+}
+
+.trespontos {
+    display: flex;
+}
+
+.btnVisuPostADM,
+.btnEditPostADM,
+.btnDeletePostADM {
+    display: none;
+}
+
+
+
+ .botao-criar-usuario {
+        width: 35%;
+        justify-content: center;
+        padding: 10px 0;
+    }
+        .texto-criar-usuario {
+        display: none;
+    }
+
+
+
+}
+
+@media (max-width: 600px) {
+    .painel {
+    width: 98%;
+    
+    }
+
+    .botao-criar-usuario {
+        width:50px
+    }
+
+   
+
+
+    .componentes {
+            width: 95%;
+            
+        }
+    .painel {
+            height: 90vh;
+            justify-content: center;
+
+        }
+
+    .input-de-busca {
+        background-color: white;
+
+        width: 60%;
+        justify-content: space-between;
+        height: 80%
+
+    }
+
+    .input-de-busca input {
+        width: 50%;
+    }
+
+  
+
+}
+
+.visao-pag {
+    margin: 0;
+
+}
+
+
+@media (max-width: 920px) {
+
+.header-tabela,
+  .linha-tabela {
+    min-width: 700px; 
+    
+    grid-template-columns:
+      0.5fr
+      1fr
+      2fr
+      1fr;
+  }
+    .tabela {
+    overflow-x: auto;
+    width: 100%;
+  }
+  .icone-acao {
+    display: none;
+  }
+
+  .resumo {
+    display: flex;
+  }
+
+
+.painel {
+    width: 80%;
+    overflow: visible;
+}
+
+.trespontos {
+    display: flex;
+}
+
+.btnVisuPostADM,
+.btnEditPostADM,
+.btnDeletePostADM {
+    display: none;
+}
+
+
+
+ .botao-criar-usuario {
+        width: 35%;
+        justify-content: center;
+        padding: 10px 0;
+    }
+        .texto-criar-usuario {
+        display: none;
+    }
+
+
+
+}
+
+@media (max-width: 600px) {
+    .painel {
+    width: 98%;
+    
+    }
+
+    .botao-criar-usuario {
+        width:50px
+    }
+
+   
+
+
+    .componentes {
+            width: 95%;
+            
+        }
+    .painel {
+            height: 90vh;
+            justify-content: center;
+
+        }
+
+    .input-de-busca {
+        background-color: white;
+
+        width: 60%;
+        justify-content: space-between;
+        height: 80%
+
+    }
+
+    .input-de-busca input {
+        width: 50%;
+    }
+
+  
+
+}
+
+
+
+
