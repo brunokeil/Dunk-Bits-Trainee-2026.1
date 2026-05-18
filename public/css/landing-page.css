@@ -19,7 +19,7 @@ body {
     width: 100%;
     gap: 50%;
     /* padding-bottom: 20%; */
-    background-image: var(--linear-orange-gradient1);
+    background-image: var(--bg-landing-page);
     /* background-color: var(--orange-100); */
     overflow-x: hidden;
     padding-bottom: 8%;
@@ -32,7 +32,6 @@ section {
     align-items: center;
     /* border: 1px solid white; */
 }
-
 
 button {
     display: flex;
@@ -77,23 +76,21 @@ h1 {
     /* Remove background-color: wheat; */
 }
 
-
 /* --------HERO-SECTION---------- */
-
 
 #hero-section {
     width: 100%;
     box-sizing: border-box;
     /* height: fit-content; */
-    
+
     align-items: baseline;
     gap: 20px;
 
     padding: 10% 20% 40% 10%;
 
-    background-image: url('/public/assets/mask-bg-landing-wide.webp');
+    background-image: url("/public/assets/landing-page-images/mask-bg-landing-wide.webp");
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     background-position: center;
 }
 
@@ -113,16 +110,15 @@ h1 {
     gap: 2%;
 }
 
-
 /* ---------POSTS-PREVIEW--------- */
 
 #posts {
     width: 100%;
     justify-content: space-around;
     gap: 40px;
-    
+
     padding: 20px 0 60px 0;
-    
+
     box-shadow: 0px 20px 20px var(--pearl-grey-50);
 
     margin: 10% 0 10% 0;
@@ -137,7 +133,7 @@ h1 {
     width: 100%;
     display: flex;
     flex-direction: row;
-    
+
     gap: 20px;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -160,28 +156,27 @@ h1 {
     width: inherit;
 }
 
-
 #card::after {
-    content: 'omg hiiiiiiiiiiiiii';
-    
+    content: "omg hiiiiiiiiiiiiii";
+
     position: absolute;
     box-sizing: border-box;
 
     color: white;
-    
-    background-color: #05051780;
-    
+
+    background-color: var(--pearl-grey-50);
+
     z-index: 1;
 
     width: 100%;
     height: 100%;
-    
+
     cursor: pointer;
 
     top: 100%;
     left: 0;
     bottom: 0px;
-    
+
     border-radius: inherit;
     transition: 1s ease-in-out;
 }
@@ -191,7 +186,6 @@ h1 {
     transition: 1s ease-in-out;
 }
 
-
 /* ----------QUEM-SOMOS---------- */
 
 #about {
@@ -199,15 +193,15 @@ h1 {
     flex-wrap: wrap;
 
     padding: 0 200px;
-    
+
     gap: 30px;
-    
+
     /* align-items: start; */
     justify-content: center;
 
     height: fit-content;
     width: 100%;
-    
+
     /* border: 1px solid palegreen; */
 }
 
@@ -226,12 +220,9 @@ h1 {
     margin: 30px 0 30px 0;
 }
 
-
-
 /* =============media============== */
 
-
-@media screen and (max-width:760px) {    
+@media screen and (max-width: 760px) {
     #bg-basket {
         width: 40%;
         top: 22%;
@@ -245,7 +236,7 @@ h1 {
     #hero-section {
         padding-bottom: 60%;
     }
-    
+
     #about #text {
         display: flex;
         flex-direction: column;
@@ -257,10 +248,9 @@ h1 {
     #about img {
         width: 450px;
     }
-
 }
 
-@media screen and (max-width:460px) {
+@media screen and (max-width: 460px) {
     #bg-basket {
         width: 80%;
         top: 22%;
@@ -276,15 +266,10 @@ h1 {
         justify-content: center;
     }
     #about #text {
-        
         justify-content: center;
         width: 80%;
-        
     }
     #about h1 {
         text-align: center;
-
     }
-
-
 }
