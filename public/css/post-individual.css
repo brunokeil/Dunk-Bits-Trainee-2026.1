@@ -22,6 +22,7 @@
 .metadados {
     display: flex;
     flex-direction: column;
+    padding-bottom: 10px;
 
 }
 
@@ -52,7 +53,6 @@ p {
     padding-left: 20px;
     flex: 1 1 300px;
     text-align: justify;
-    gap: 10px;
 }
 
 body {
