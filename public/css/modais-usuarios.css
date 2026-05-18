@@ -146,6 +146,7 @@ button:hover {
     justify-content: center;
 
     overflow: hidden;
+    backdrop-filter: blur(15px);
 }
 
 /* ----------------- modal view padrão ----------------- */
@@ -295,3 +296,9 @@ button:hover {
     color: var(--orange-100);
     
 }
+
+
+/* ion-icon {
+    width: 2rem;
+    height: fit-content;
+} */
