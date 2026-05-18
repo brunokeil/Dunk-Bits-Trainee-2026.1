@@ -375,11 +375,11 @@ img[alt="pasta-imagem"] {
 
 #modal-criar-info-titulo {
   height: 2em;
+  font-size: 1.2em;
 }
 
 #modal-criar-info-titulo::placeholder {
   color: var(--white-50);
-  font-size: 1.5em;
   letter-spacing: -1px;
   font-family: var(--font-bebas-neue);
 }
