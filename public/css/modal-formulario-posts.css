@@ -1,70 +1,4 @@
-:root {
-  --white-100: #ffffff;
-  --white-25: #ffffff40;
-  --offwhite-100: #f5eee9;
-  --white-50: #ffffff80;
-  --light-grey: #b4b4b4;
-
-  --orange-100: #ff6600;
-  --dark-orange-100: #d35400;
-
-  --blue-100: #0066cc;
-  --dark-blue-100: #000080;
-
-  --grey-100: #333333;
-  --dark-grey-100: #1e1a18;
-  --pearl-grey-100: #050517;
-  --black-100: #000000;
-
-  --color-light-text: var(--white-100);
-  --color-dark-text: var(--black-100);
-
-  --linear-orange-gradient1: linear-gradient(45deg, #ff6600, #ffc299, #ff6600);
-  --linear-orange-gradient2: linear-gradient(46deg, #fea163, #fea163);
-  --linear-grey-50: linear-gradient(
-    200deg,
-    rgba(255, 255, 255, 0.8) 44.22%,
-    rgba(187, 187, 187, 0.8) 80.67%
-  );
-  --linear-red: linear-gradient(
-    200deg,
-    rgba(131, 0, 0, 0.5) 37.75%,
-    rgba(180, 60, 0, 0.5) 80.67%
-  );
-
-  --font-bebas-neue: "Bebas Neue", sans-serif;
-  --font-quicksand: "Quicksand", sans-serif;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  color: var(--color-dark-text);
-}
-
-h1,
-h2,
-h3 {
-  font-family: var(--font-bebas-neue);
-}
-
-h4,
-h5,
-h6,
-p {
-  font-family: var(--font-quicksand);
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-/* ----- FIM ROOT ----- */
+@import url(./styles.css);
 
 #containerTabelaPostsToda {
   width: 100%;
@@ -246,13 +180,13 @@ i {
 i:hover {
   color: var(--white-25);
 }
-/* Estilização do Modal */
+/* ----------------- Estilização do Modal ----------------- */
 
 #modal-criar-post {
   max-width: 450px;
   max-height: 95vh;
   overflow-y: auto;
-  background: var(--linear-grey-50);
+  background: var(--bg-modal);
   border-radius: 32px;
   display: none;
   padding: 3vh 40px;
@@ -462,7 +396,7 @@ img[alt="pasta-imagem"] {
 #modal-excluir-post {
   width: 25vw;
   height: fit-content;
-  background: var(--linear-red);
+  background: var(--linear-red-gradient);
   border-radius: 20px;
   display: none;
   padding: 20px 50px;
