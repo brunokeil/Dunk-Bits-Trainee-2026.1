@@ -91,7 +91,7 @@ body::before {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
   white-space: nowrap;
   font-size: clamp(0.9rem, 2.2vw, 1.8rem);
-  gap: 5px;
+  gap: 2px;
 }
 
 #logout .material-symbols-outlined {
