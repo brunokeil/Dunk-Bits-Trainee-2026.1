@@ -9,6 +9,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* outline: 1px solid blue; */
 }
 
 body {
@@ -64,12 +65,11 @@ body::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12px;
+  padding: 10px;
   border-radius: 20px;
   border: 2px solid var(--orange-100);
   background-color: var(--dark-orange-100);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
-  font-size: 2rem;
   cursor: pointer;
 }
 
@@ -78,27 +78,28 @@ body::before {
 }
 
 #logout {
+  display: flex;
   border-radius: 50px;
   background-color: var(--dark-orange-100);
   padding: 10px;
   justify-content: center;
   align-items: center;
-  border: none;
+  border: 2px solid var(--orange-100);
   cursor: pointer;
   color: var(--white-100);
-  font-size: clamp(1rem, 4vw, 2.5rem);
   font-family: var(--font-bebas-neue);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
   white-space: nowrap;
-  gap: 10px;
+  font-size: clamp(0.9rem, 2.2vw, 1.8rem);
+  gap: 5px;
 }
 
 #logout .material-symbols-outlined {
   color: var(--white-100);
-  font-size: 2.5rem;
   justify-content: center;
   letter-spacing: 1px;
 }
+
 
 .material-symbols-outlined {
   display: flex;
@@ -164,7 +165,7 @@ body::before {
 
 #seta .material-symbols-outlined,
 #logout .material-symbols-outlined {
- font-size: clamp(1.5rem, 4vw, 2.5rem);
+ font-size: clamp(1.2rem, 3.2vw, 2.2rem);
 }
 
 #logout:hover,
@@ -185,5 +186,5 @@ body::before {
 #tabela-posts:hover .material-symbols-outlined,
 #seta:hover .material-symbols-outlined {
   color: var(--dark-orange-100);
-  transition: all 0.3 ease;
+  transition: all 0.3s ease;
 }
