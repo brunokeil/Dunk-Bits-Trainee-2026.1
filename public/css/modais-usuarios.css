@@ -162,7 +162,7 @@ button:hover {
 
     padding: 2rem;
 
-    background: var(--linear-grey-50);
+    background: var(--bg-modal);
 
     border-radius: 16px;
 }
