@@ -12,7 +12,7 @@
 }
 
 body {
-  background-image: url(../assets/BasketBall-Background.jpg);
+  background-image: url(../assets/bg_images/BasketBall-Background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
