@@ -182,6 +182,8 @@ i:hover {
 }
 /* ----------------- Estilização do Modal ----------------- */
 
+
+/* ----------------- Modal de Criar Post ----------------- */
 #modal-criar-post {
   max-width: 450px;
   max-height: 95vh;
@@ -381,6 +383,7 @@ img[alt="pasta-imagem"] {
   font-size: 1em;
 }
 
+/* ----------------- Tela ----------------- */
 #tela {
   width: 100vw;
   height: 100vh;
@@ -392,7 +395,7 @@ img[alt="pasta-imagem"] {
   z-index: 10;
   display: none;
 }
-
+/* ----------------- Modal de Excluir Post ----------------- */
 #modal-excluir-post {
   width: 25vw;
   height: fit-content;
@@ -459,6 +462,7 @@ img[alt="pasta-imagem"] {
   color: var(--white-100);
   font-family: var(--font-quicksand);
   font-size: 1.2em;
+  padding: 0 10px;
 }
 
 #btn-modal-excluir-cancelar{
