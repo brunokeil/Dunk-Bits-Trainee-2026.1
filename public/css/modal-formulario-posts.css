@@ -8,7 +8,7 @@
 #BodyModalFormularioPosts {
   background-image:
     linear-gradient(rgba(0, 0, 128, 0.5), rgba(0, 0, 128, 0.5)),
-    url("../assets/backgroundTabelaPostsADM.png");
+    url("../assets/bg_images/bg_table_posts.png");
   display: flex;
   min-height: 100vh;
   flex-direction: column;
