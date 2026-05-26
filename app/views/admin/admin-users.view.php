@@ -67,15 +67,15 @@
                   <td>
                     <div class="botoesdeacao">
                       <button class="btnVisuPostADM">
-                        <ion-icon name="eye-outline"></ion-icon>
+                        <ion-icon name="eye-outline"></ion-icon><?= $u->id?> 
                       </button>
 
                       <button class="btnEditPostADM">
-                        <ion-icon name="pencil-outline"></ion-icon>
+                        <ion-icon name="pencil-outline"></ion-icon><?= $u->id?>
                       </button>
 
                       <button class="btnDeletePostADM">
-                        <ion-icon name="trash-bin-outline"></ion-icon>
+                        <ion-icon name="trash-bin-outline"></ion-icon><?= $u->id?>
                       </button>
                     </div>
 
