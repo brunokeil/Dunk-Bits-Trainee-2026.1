@@ -10,6 +10,8 @@ class UsuariosController
 
     public function index()
     {
-        return view('admin/admin-users');
+        $usuarios = App::get("database")->selectAll('users');
+
+        return view('admin/admin-users', ['usuarios' => $usuarios]);
     }
 }
