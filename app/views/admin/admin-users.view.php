@@ -5,6 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/public/css/admin-users.css" />
+  <link rel="stylesheet" href="/public/css/modais-usuarios.css" />
+
+
   <link rel="sc" />
   <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300;400;500;700&display=swap"
@@ -38,7 +41,7 @@
             </div>
           </div>
 
-          <button class="botao-criar-usuario">
+          <button class="botao-criar-usuario" id="createUser">
             <ion-icon name="add" class="add-user"></ion-icon>
             <p class="texto-criar-usuario">CRIAR USUÁRIO</p>
           </button>
@@ -59,23 +62,33 @@
               <?php
               foreach ($usuarios as $u):
               ?>
-                <tr class="row-tabela">
+                <tr class="row-tabela" id="<?php echo $u->id; ?>">
                   <td><?php echo $u->id; ?></td>
                   <td><?php echo $u->name; ?></td>
                   <td class="info-email"><?php echo $u->email; ?></td>
 
                   <td>
                     <div class="botoesdeacao">
-                      <button class="btnVisuPostADM">
-                        <ion-icon name="eye-outline"></ion-icon><?= $u->id?> 
+                      <button class="view-user"
+                        data-id="<?php echo $u->id; ?>"
+                        data-name="<?php echo $u->name; ?>"
+                        data-email="<?php echo $u->email; ?>
+                        data-senha=" <?php echo $u->password ?>">
+
+                        <ion-icon name="eye-outline"></ion-icon>
                       </button>
 
-                      <button class="btnEditPostADM">
-                        <ion-icon name="pencil-outline"></ion-icon><?= $u->id?>
+                      <button class="edit-user"
+                        data-id="<?php echo $u->id; ?>"
+                        data-name="<?php echo $u->name; ?>"
+                        data-email="<?php echo $u->email; ?>"
+                        data-senha="<?php echo $u->password ?>">
+
+                        <ion-icon name="pencil-outline"></ion-icon>
                       </button>
 
-                      <button class="btnDeletePostADM">
-                        <ion-icon name="trash-bin-outline"></ion-icon><?= $u->id?>
+                      <button class="delete-user">
+                        <ion-icon name="trash-bin-outline"></ion-icon>
                       </button>
                     </div>
 
@@ -116,18 +129,25 @@
         </button>
       </div>
     </div>
+    <div class="modal-container close">
+      <?php
+
+      require("app/views/admin/modais/modal-view-usuario.php");
+      require("app/views/admin/modais/modal-editar-usuario.php");
+      require("app/views/admin/modais/modal-deletar-usuario.php");
+
+      require("app/views/admin/modais/modal-criar-usuario.php");
+      ?>
+
+
+    </div>
   </div>
 
-  <?php
-  foreach ($usuarios as $u):
-    //MUDAR ISSO DEPOIS, ISSSO ESTA MUITO ERRADO (mas no tutorial estava assim)
-    require("/home/jope/Code/codejr/trainee/Dunk-Bits-Trainee-2026.1/app/views/admin/modais/modal-view-usuario.php");
-    require("/home/jope/Code/codejr/trainee/Dunk-Bits-Trainee-2026.1/app/views/admin/modais/modal-editar-usuario.php");
-    require("/home/jope/Code/codejr/trainee/Dunk-Bits-Trainee-2026.1/app/views/admin/modais/modal-deletar-usuario.php");
-  endforeach
-  ?>
+
+
 
   <script src="/public/js/admin-users.js"></script>
+  <script src="/public/js/modais-usuarios.js"></script>
 
 
 </body>

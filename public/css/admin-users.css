@@ -164,6 +164,7 @@ td{
 
 .botoesdeacao {
     display: flex;
+    justify-content: center;
 }
 
 
@@ -202,9 +203,7 @@ ion-icon:hover{
     color: var(--white-25);
 }
 
-.btnVisuPostADM,
-.btnEditPostADM,
-.btnDeletePostADM{
+.view-user, .edit-user, .delete-user{
     background: none;
     border: none;
     cursor: pointer;
@@ -266,6 +265,7 @@ ion-icon:hover{
 
 }
 
+
 .seta-esquerda {
      border: none;
     outline: none;
@@ -315,6 +315,10 @@ ion-icon:hover{
      display: none;   
     }
 
+.questionAdm {
+    color: white;
+}
+
 
 @media (max-width: 920px) {
 
@@ -350,9 +354,7 @@ ion-icon:hover{
     display: flex;
 }
 
-.btnVisuPostADM,
-.btnEditPostADM,
-.btnDeletePostADM {
+.view-user, .edit-user, .delete-user {
     display: none;
 }
 
@@ -451,9 +453,7 @@ ion-icon:hover{
     display: flex;
 }
 
-.btnVisuPostADM,
-.btnEditPostADM,
-.btnDeletePostADM {
+.view-user, .edit-user, .delete-user {
     display: none;
 }
 

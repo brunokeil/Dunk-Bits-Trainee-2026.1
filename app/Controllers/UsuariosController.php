@@ -14,4 +14,17 @@ class UsuariosController
 
         return view('admin/admin-users', ['usuarios' => $usuarios]);
     }
+
+    public function store()
+    {
+        $parameters = [
+            'name' => $_POST['name'],
+            'email' => $_POST['email'],
+            'password' => $_POST['password'],
+            'is_admin' => isset($_POST['is_admin']) ? 1 : 0
+        ];
+
+        App::get("database")->insert('users', $parameters);
+        header('Location: /admin-users');
+    }
 }
