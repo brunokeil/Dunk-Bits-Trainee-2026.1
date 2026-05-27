@@ -63,8 +63,8 @@
               foreach ($usuarios as $u):
               ?>
                 <tr class="row-tabela" id="<?php echo $u->id; ?>">
-                  <td><?php echo $u->id; ?></td>
-                  <td><?php echo $u->name; ?></td>
+                  <td class="info-id"><?php echo $u->id; ?></td>
+                  <td class="info-name"><?php echo $u->name; ?></td>
                   <td class="info-email"><?php echo $u->email; ?></td>
 
                   <td>
