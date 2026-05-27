@@ -3,6 +3,9 @@
         <h1>EDITAR USUÁRIO</h1>
         <button class="closeModalBtn terciaryBtn">X</button>
     </span>
+   <form action="admin-users/edit" method="post">
+
+   <input type="hidden" id="edit-id" name="id"  />
 
     <div class="userProfilePicture">
         <img src="/public/assets/placeholder/blank-prof-pic.png" class="imgProfPic" />
@@ -17,8 +20,8 @@
                 type="text"
                 class="usernameInput"
                 placeholder="Username"
-                value="joaosilva"
-                id="edit-username" />
+                id="edit-username" 
+                name="name" />
         </div>
 
         <div class="inputGroup">
@@ -28,8 +31,8 @@
                 type="text"
                 class="emailInput"
                 placeholder="E-mail"
-                value="joaosilva@gmail.com"
-                id="edit-email" />
+                id="edit-email"
+                name="email" />
         </div>
 
         <div class="inputGroup">
@@ -39,14 +42,15 @@
                 type="password"
                 class="passwordInput"
                 placeholder="Senha"
-                value="senha"
-                id="edit-senha" />
+                id="edit-senha"
+                name="password" />
         </div>
 
     </div>
 
     <div class="footerButtons">
-        <button class="closeModalBtn cancelBtn">CANCELAR</button>
-        <button class="primaryBtn">SALVAR ALTERAÇÕES</button>
+        <button type="button" class="closeModalBtn cancelBtn">CANCELAR</button>
+        <button type="submit" class="primaryBtn">SALVAR ALTERAÇÕES</button>
     </div>
+  </form>
 </div>

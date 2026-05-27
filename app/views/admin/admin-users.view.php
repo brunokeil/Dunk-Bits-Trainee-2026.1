@@ -72,7 +72,7 @@
                       <button class="view-user"
                         data-id="<?php echo $u->id; ?>"
                         data-name="<?php echo $u->name; ?>"
-                        data-email="<?php echo $u->email; ?>
+                        data-email="<?php echo $u->email; ?>"
                         data-senha=" <?php echo $u->password ?>">
 
                         <ion-icon name="eye-outline"></ion-icon>
