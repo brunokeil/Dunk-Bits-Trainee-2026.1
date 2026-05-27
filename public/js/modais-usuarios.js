@@ -97,7 +97,7 @@ function setAllEventListeners() {
 
     editUser.forEach((btn) => {
         btn.addEventListener("click", () => {
-            
+
             document.getElementById("edit-id").value = btn.dataset.id;
 
             document.getElementById("edit-username").value = btn.dataset.name;
@@ -112,6 +112,9 @@ function setAllEventListeners() {
 
     deleteUser.forEach((btn) => {
         btn.addEventListener("click", () => {
+            
+            document.getElementById("delete-id").value = btn.dataset.id;
+
             toggleModal("deleteModal");
         });
     });

@@ -45,6 +45,7 @@ class UsuariosController
         App::get("database")->insert('users', $parameters);
         header('Location: /admin-users');
     }
+
     public function edit()
     {
          $parameters = [
@@ -56,5 +57,13 @@ class UsuariosController
 
         App::get("database")->update('users', $id, $parameters);
         header('Location: /admin-users');
+    }
+
+    public function delete()
+    {
+         $id = $_POST['id']; 
+
+         App::get('database')->delete('users', $id);
+         header('Location: /admin-users');
     }
 }

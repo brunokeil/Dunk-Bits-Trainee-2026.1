@@ -3,8 +3,8 @@
         <h1>EDITAR USUÁRIO</h1>
         <button class="closeModalBtn terciaryBtn">X</button>
     </span>
-   <form action="admin-users/edit" method="post">
 
+   <form action="admin-users/edit" method="post">
    <input type="hidden" id="edit-id" name="id"  />
 
     <div class="userProfilePicture">

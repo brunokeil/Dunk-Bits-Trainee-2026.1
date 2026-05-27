@@ -87,7 +87,9 @@
                         <ion-icon name="pencil-outline"></ion-icon>
                       </button>
 
-                      <button class="delete-user">
+                      <button class="delete-user" 
+                      data-id="<?php echo $u->id; ?>"> 
+          
                         <ion-icon name="trash-bin-outline"></ion-icon>
                       </button>
                     </div>

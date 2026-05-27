@@ -69,6 +69,22 @@ class QueryBuilder
         }
     }
 
+    public function delete($table, $id)
+    {
+        $sql = sprintf('DELETE FROM %s WHERE %s',
+        $table,
+    'id = :id'
+    );
+       try {
+            $stmt = $this->pdo->prepare($sql);
+           $stmt->execute(['id' => $id]);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+
+    }
+
 
     public function countAll($table)
     {
