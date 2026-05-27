@@ -82,7 +82,7 @@ button:hover {
 
 .cancelBtn {
     background: none;
-    color: var(--light-orange-100);
+    color: var(--white-100);
     text-decoration: underline;
 }
 .cancelBtn:hover {
@@ -90,17 +90,13 @@ button:hover {
     color: var(--white-100);
 }
 
- .cancelBtn {
-    color: var(--light-orange-100);
-    background-color: none;
-}
-
-.cancelBtn:hover {
-    color: var(--white-100);
-}
 
 /* ----------- input styling ------------- */
 
+.inputGroup {
+    border: 1px solid white;
+    border-radius: 8px;
+}
 
 .inputGroup input{
     color: var(--white-100);
@@ -109,8 +105,7 @@ button:hover {
 
     background: none;
 
-    border-radius: 8px;
-    padding: 4%;
+    padding: 0.6rem 1rem;
 
     text-wrap: nowrap;
 
