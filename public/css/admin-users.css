@@ -270,12 +270,16 @@ ion-icon:hover{
      border: none;
     outline: none;
     background: transparent;
+    display: flex;
+    align-items: center;
 }
 
 .seta-direita {
      border: none;
     outline: none;
     background: transparent;
+    display: flex;
+    align-items: center;
 
 }
 
@@ -285,6 +289,7 @@ ion-icon:hover{
     align-items: center;
     justify-content: center;
     min-width: 40px;
+    
 }
 
 

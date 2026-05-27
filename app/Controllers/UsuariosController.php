@@ -10,9 +10,27 @@ class UsuariosController
 
     public function index()
     {
-        $usuarios = App::get("database")->selectAll('users');
 
-        return view('admin/admin-users', ['usuarios' => $usuarios]);
+        $database = App::get("database");
+        $limit = 5;
+        $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+
+        if ($currentPage < 1) {
+            $currentPage = 1;
+        }
+
+        $offset = ($currentPage - 1) * $limit;
+
+        $totalUsuarios = $database->countAll('users');
+        $totalPages = ceil($totalUsuarios / $limit);
+
+        $usuarios = $database->paginate('users', $limit, $offset);
+
+        return view('admin/admin-users', [
+            'usuarios' => $usuarios,
+            'currentPage' => $currentPage,
+            'totalPages' => $totalPages
+        ]);
     }
 
     public function store()

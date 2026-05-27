@@ -115,19 +115,11 @@
         </div>
       </div>
 
-      <div class="carrossel">
-        <button class="seta-esquerda">
-          <ion-icon name="chevron-back-outline"></ion-icon>
-        </button>
+      <?php
 
-        <div class="paginacao">
-          <p class="visao-pag">1</p>
-        </div>
+      require("app/views/admin/pagination.view.php");
 
-        <button class="seta-direita">
-          <ion-icon name="chevron-forward-outline"></ion-icon>
-        </button>
-      </div>
+      ?>
     </div>
     <div class="modal-container close">
       <?php
