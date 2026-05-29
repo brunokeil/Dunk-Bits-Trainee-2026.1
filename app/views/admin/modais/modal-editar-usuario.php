@@ -21,6 +21,7 @@
                 class="usernameInput"
                 placeholder="Username"
                 id="edit-username" 
+                value=" "
                 name="name" />
         </div>
 
@@ -32,6 +33,7 @@
                 class="emailInput"
                 placeholder="E-mail"
                 id="edit-email"
+                value=" "
                 name="email" />
         </div>
 
@@ -43,6 +45,7 @@
                 class="passwordInput"
                 placeholder="Senha"
                 id="edit-senha"
+                value=" "
                 name="password" />
         </div>
 
