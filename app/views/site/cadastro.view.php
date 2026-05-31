@@ -5,7 +5,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>LOGIN</title>
+		<title>CADASTRO</title>
 
 		<link rel="stylesheet" href="../../../public/css/login.css" />
 	</head>
@@ -16,7 +16,7 @@
 				<ion-icon name="close-outline"></ion-icon>
 			</a>
 
-			<h2>LOGIN</h2>
+			<h2>CADASTRO</h2>
 
 			<form action="#">
 				<div class="inputBox">
@@ -28,8 +28,9 @@
 					<input type="password" placeholder="SENHA" />
 				</div>
 
+				
 
-				<button type="submit" class="buttonEntrar">LOGIN</button>
+				<button type="submit" class="buttonEntrar">CRIAR</button>
 			</form>
 		</main>
 
