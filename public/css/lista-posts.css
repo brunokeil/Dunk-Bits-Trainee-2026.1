@@ -45,6 +45,10 @@ section {
   position: relative;
 }
 
+#search ion-icon {
+  font-size: 1.3em;
+}
+
 #search-text {
   flex: 1;
   border: none;
@@ -84,7 +88,7 @@ section {
   margin-left: 15px;
 }
 
-#botao-filtro .material-symbols-outlined {
+#botao-filtro ion-icon {
   font-size: 3.5rem;
   color: var(--black-100);
 }
@@ -149,7 +153,7 @@ section {
   }
 }
 
-.material-symbols-outlined {
+ion-icon {
   display: flex;
   line-height: 1;
   vertical-align: middle;
@@ -301,7 +305,7 @@ section {
   gap: 5px;
 }
 
-.ponto .material-symbols-outlined {
+.ponto ion-icon {
   font-size: 1rem;
   color: var(--black-100);
 }
@@ -310,7 +314,7 @@ section {
   color: var(--black-100);
 }
 
-.seta .material-symbols-outlined {
+.seta ion-icon {
   font-size: 2rem;
   color: var(--pearl-grey-100);
 }
