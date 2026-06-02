@@ -73,7 +73,7 @@ body::before {
   cursor: pointer;
 }
 
-#seta .material-symbols-outlined {
+#seta ion-icon {
   color: var(--white-100);
 }
 
@@ -94,14 +94,14 @@ body::before {
   gap: 2px;
 }
 
-#logout .material-symbols-outlined {
+#logout ion-icon {
   color: var(--white-100);
   justify-content: center;
   letter-spacing: 1px;
 }
 
 
-.material-symbols-outlined {
+ion-icon {
   display: flex;
   line-height: 1;
   vertical-align: middle;
@@ -157,14 +157,17 @@ body::before {
   flex-wrap: wrap;
 }
 
-#lista-usuarios .material-symbols-outlined,
-#tabela-posts .material-symbols-outlined {
+#lista-usuarios ion-icon,
+#tabela-posts ion-icon {
   color: var(--white-100);
   font-size: clamp(1.8rem, 5vw, 3rem);
 }
+#tabela-posts ion-icon {
+  margin-left: -20px;
+}
 
-#seta .material-symbols-outlined,
-#logout .material-symbols-outlined {
+#seta ion-icon,
+#logout ion-icon {
  font-size: clamp(1.2rem, 3.2vw, 2.2rem);
 }
 
@@ -181,10 +184,10 @@ body::before {
   transition: all 0.3s ease;
 }
 
-#logout:hover .material-symbols-outlined,
-#lista-usuarios:hover .material-symbols-outlined,
-#tabela-posts:hover .material-symbols-outlined,
-#seta:hover .material-symbols-outlined {
+#logout:hover ion-icon,
+#lista-usuarios:hover ion-icon,
+#tabela-posts:hover ion-icon,
+#seta:hover ion-icon {
   color: var(--dark-orange-100);
   transition: all 0.3s ease;
 }
