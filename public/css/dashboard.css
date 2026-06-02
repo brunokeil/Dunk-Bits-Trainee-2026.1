@@ -5,21 +5,21 @@
   --linear-dashboard: linear-gradient(211, 84, 0, 0.58);
 }
 
-*  {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
 body {
-  background-image: url(../assets/BasketBall-Background.jpg);
+  background-image: url(../assets/bg_images/BasketBall-Background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   width: 100%;
   flex-direction: column;
   align-items: center;
-  padding: 10% 15%;
+  padding: 5% 15%;
   margin: 0px;
   background-attachment: fixed;
   position: relative;
@@ -40,7 +40,7 @@ body::before {
   align-items: center;
   flex-direction: column;
   width: 95%;
-  padding: 20px 10px 120px 10px;
+  padding: 20px 10px 40px 10px;
   border-radius: 45px;
   gap: 30px;
   border: 2px solid var(--linear-dashboard);
@@ -64,19 +64,17 @@ body::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 15px;
+  padding: 12px;
   border-radius: 20px;
   border: 2px solid var(--orange-100);
   background-color: var(--dark-orange-100);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
-  font-size: 2.5rem;
+  font-size: 2rem;
   cursor: pointer;
 }
 
 #seta .material-symbols-outlined {
   color: var(--white-100);
-  font-size: 2.5rem;
-  margin-right: -5px;
 }
 
 #logout {
@@ -88,7 +86,7 @@ body::before {
   border: none;
   cursor: pointer;
   color: var(--white-100);
-  font-size: 2.5rem;
+  font-size: clamp(1rem, 4vw, 2.5rem);
   font-family: var(--font-bebas-neue);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
   white-space: nowrap;
@@ -110,7 +108,7 @@ body::before {
 
 #dashboard {
   display: flex;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
   flex-direction: column;
   align-items: center;
   align-self: stretch;
@@ -118,7 +116,7 @@ body::before {
 
 #titulo {
   font-family: var(--font-bebas-neue);
-  font-size: 8rem;
+  font-size: clamp(3.5rem, 8vw, 8rem);
   display: block;
   width: 100%;
   word-wrap: break-word;
@@ -134,7 +132,7 @@ body::before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 60px;
+  gap: 20px;
   width: 100%;
 }
 
@@ -149,10 +147,10 @@ body::before {
   border-radius: 20px;
   cursor: pointer;
   border: none;
-  font-size: 2.8rem;
+  font-size: clamp(1.2rem, 4vw, 2.8rem);
   padding: 10px;
   font-family: var(--font-bebas-neue);
-  width: 60%;
+  width: 70%;
   max-width: 800px;
   border: 2px solid var(--orange-100);
   flex-wrap: wrap;
@@ -161,7 +159,12 @@ body::before {
 #lista-usuarios .material-symbols-outlined,
 #tabela-posts .material-symbols-outlined {
   color: var(--white-100);
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+#seta .material-symbols-outlined,
+#logout .material-symbols-outlined {
+ font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
 #logout:hover,

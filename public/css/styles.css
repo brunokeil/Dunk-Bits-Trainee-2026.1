@@ -34,6 +34,7 @@
 	--pearl-grey-100: #050517;
 	--pearl-grey-80: #050517cc;
 	--pearl-grey-50: #05051780;
+	--light-grey: #b4b4b4;
 
 	--black-100: #000000;
 
@@ -92,6 +93,10 @@
 
     --bg-table-posts: linear-gradient(rgba(0, 0, 128, 0.5), rgba(0, 0, 128, 0.5)), url("../assets/bg_images/bg_table_posts.png");
 
+	--bg-modal: linear-gradient(-117deg, #ffffff80 42%, #bbbbbb80 87%);
+	--bg-error: linear-gradient(-150deg, #830000 34%, #b43c00 87%);
+	--bg-success: linear-gradient(45deg, #11113acc, #0e0e2dcc);
+
 	/* VARIAVEIS PARA TEXTOS */
 	--color-light-text: var(--white-100);
 	--color-dark-text: var(--black-100);
@@ -124,3 +129,54 @@ p {
 }
 
 /*----- FIM ROOT -----*/
+
+
+
+/* ---- BOTOES GERAIS ---- */
+
+button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.4rem 0.7rem;
+
+	border: 0;
+	border-radius: 0.8rem;
+
+	font-weight: 600;
+	color: var(--white-100);
+	font-size: medium;
+	transition: all 120ms ease-in-out;
+}
+
+button:hover {
+	cursor: pointer;
+	transition: all 120ms ease-out;
+}
+
+.primaryBtn {
+	color: var(--white-100);
+	background: var(--orange-100);
+}
+.primaryBtn:hover {
+	color: var(--orange-100);
+	background: var(--white-100);
+}
+
+.secondaryBtn {
+	color: var(--white-100);
+	background: var(--white-50);
+}
+.secondaryBtn:hover {
+	background: var(--white-80);
+}
+
+.terciaryBtn {
+	color: var(--white-100);
+	background: none;
+}
+.terciaryBtn:hover {
+	background: var(--white-25);
+}
+
+/* ------------------------------------- */
