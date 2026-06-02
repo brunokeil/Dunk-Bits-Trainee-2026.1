@@ -99,6 +99,11 @@ td{
     width: 28%;
 }
 
+.botõesdeação{
+    display: flex;
+    justify-content: center;
+}
+
 #CaixaDePesquisa{
     background-color: white;
     display: flex;
@@ -121,20 +126,20 @@ td{
     font-style: normal;
 }
 
-#btnCriarPostADM{
-    background-color: var(--orange-100);
-    color: var(--white-100);
-    border: none;
-    padding: 0.8vh 2vh;
-    border-radius: 16px;
-    font-family: var(--font-quicksand);
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    cursor: pointer;
-    font-size: 20px;
-    transition: 0.3s ease;
-}
+    #btnCriarPostADM{
+        background-color: var(--orange-100);
+        color: var(--white-100);
+        border: none;
+        padding: 0.8vh 2vh;
+        border-radius: 16px;
+        font-family: var(--font-quicksand);
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        cursor: pointer;
+        font-size: 20px;
+        transition: 0.3s ease;
+    }
 
 #btnCriarPostADM:hover{
     background-color: var(--dark-orange-100);
@@ -248,10 +253,10 @@ ion-icon[name="search-outline"]{
 }
 
 #títuloEditarPosts{
-    font-family: var(--font-quicksand);
+    font-family: var(--font-bebas-neue);
     color: var(--white-100);
     font-weight: 500;
-    font-size: 4rem;
+    font-size: 2.5rem;
 }
 
 #lapisEditarPosts{
