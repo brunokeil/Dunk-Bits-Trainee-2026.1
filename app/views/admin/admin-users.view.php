@@ -30,16 +30,20 @@
         </div>
 
         <div class="interacoes">
-          <div class="input-de-busca">
-            <input
-              class="elemento-input"
-              type="text"
-              placeholder="Pesquisar" />
+          <form method="GET" action="/admin-users">
+            <div class="input-de-busca">
+              <input
+                class="elemento-input"
+                type="text"
+                name="search"
+                placeholder="Pesquisar"
+                value="<?= $searchText ?? '' ?>" />
 
-            <div class="botao-lupa">
-              <img src="/public/assets/lupa.png" />
+              <button type="submit" class="botao-lupa">
+                <ion-icon class="pesquisar-botao" name="search-outline"></ion-icon>
+              </button>
             </div>
-          </div>
+          </form>
 
           <button class="botao-criar-usuario" id="createUser">
             <ion-icon name="add" class="add-user"></ion-icon>
@@ -87,9 +91,9 @@
                         <ion-icon name="pencil-outline"></ion-icon>
                       </button>
 
-                      <button class="delete-user" 
-                      data-id="<?php echo $u->id; ?>"> 
-          
+                      <button class="delete-user"
+                        data-id="<?php echo $u->id; ?>">
+
                         <ion-icon name="trash-bin-outline"></ion-icon>
                       </button>
                     </div>

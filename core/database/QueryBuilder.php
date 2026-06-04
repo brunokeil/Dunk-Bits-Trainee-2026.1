@@ -47,16 +47,16 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
-    
+
     public function update($table, $id, $parameters)
     {
         $sql = sprintf(
             'UPDATE %s SET %s WHERE id = %s',
-            $table, 
-            implode(', ', array_map(function($param) {
-            return $param . ' = :' . $param;
-        }, array_keys($parameters))),
-        $id
+            $table,
+            implode(', ', array_map(function ($param) {
+                return $param . ' = :' . $param;
+            }, array_keys($parameters))),
+            $id
         );
 
         try {
@@ -71,27 +71,33 @@ class QueryBuilder
 
     public function delete($table, $id)
     {
-        $sql = sprintf('DELETE FROM %s WHERE %s',
-        $table,
-    'id = :id'
-    );
-       try {
+        $sql = sprintf(
+            'DELETE FROM %s WHERE %s',
+            $table,
+            'id = :id'
+        );
+        try {
             $stmt = $this->pdo->prepare($sql);
-           $stmt->execute(['id' => $id]);
-
+            $stmt->execute(['id' => $id]);
         } catch (Exception $e) {
             die($e->getMessage());
         }
-
     }
 
 
-    public function countAll($table)
+    public function countAll($table, $searchText, $searchColumn)
     {
         $sql = "SELECT COUNT(*) AS total FROM {$table}";
+        $parameters = [];
+
+        if ($searchColumn && $searchText) {
+            $sql .= " where $searchColumn[0] like :searchText or $searchColumn[1] like :searchText";
+            $parameters['searchText'] = '%' . $searchText . '%';
+        }
+
         try {
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
+            $stmt->execute($parameters);
 
             return $stmt->fetch(PDO::FETCH_ASSOC)['total'];
         } catch (Exception $e) {
@@ -99,13 +105,24 @@ class QueryBuilder
         }
     }
 
-    public function paginate($table, $limit, $offset)
+    public function paginate($table, $limit, $offset, $searchText, $searchColumn)
     {
-        $sql = "SELECT * FROM {$table} LIMIT {$limit} OFFSET {$offset}";
+        $parameters = [];
+
+        $whereSql = '';
+
+
+        if ($searchColumn && $searchText) {
+            $whereSql = "where $searchColumn[0] like :searchText or $searchColumn[1] like :searchText";
+            $parameters['searchText'] = '%' . $searchText . '%';
+        }
+
+
+        $sql = "SELECT * FROM {$table} {$whereSql} LIMIT {$limit} OFFSET {$offset}";
 
         try {
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
+            $stmt->execute($parameters);
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
         } catch (Exception $e) {

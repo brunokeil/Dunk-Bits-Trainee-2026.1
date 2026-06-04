@@ -12,6 +12,10 @@ class UsuariosController
     {
 
         $database = App::get("database");
+
+        $searchText = $_GET['search'] ? $_GET['search'] : '';
+        $searchColumn = $searchText !== '' ? ['name', 'email'] : null;
+
         $limit = 5;
         $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
@@ -21,15 +25,16 @@ class UsuariosController
 
         $offset = ($currentPage - 1) * $limit;
 
-        $totalUsuarios = $database->countAll('users');
+        $totalUsuarios = $database->countAll('users', $searchText, $searchColumn);
         $totalPages = ceil($totalUsuarios / $limit);
 
-        $usuarios = $database->paginate('users', $limit, $offset);
+        $usuarios = $database->paginate('users', $limit, $offset, $searchText, $searchColumn);
 
         return view('admin/admin-users', [
             'usuarios' => $usuarios,
             'currentPage' => $currentPage,
-            'totalPages' => $totalPages
+            'totalPages' => $totalPages,
+            'searchText' => $searchText
         ]);
     }
 
@@ -48,12 +53,12 @@ class UsuariosController
 
     public function edit()
     {
-         $parameters = [
+        $parameters = [
             'name' => $_POST['name'],
             'email' => $_POST['email'],
             'password' => $_POST['password'],
         ];
-          $id = $_POST['id'];
+        $id = $_POST['id'];
 
         App::get("database")->update('users', $id, $parameters);
         header('Location: /admin-users');
@@ -61,9 +66,9 @@ class UsuariosController
 
     public function delete()
     {
-         $id = $_POST['id']; 
+        $id = $_POST['id'];
 
-         App::get('database')->delete('users', $id);
-         header('Location: /admin-users');
+        App::get('database')->delete('users', $id);
+        header('Location: /admin-users');
     }
 }

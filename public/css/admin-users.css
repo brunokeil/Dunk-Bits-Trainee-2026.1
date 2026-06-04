@@ -283,6 +283,13 @@ ion-icon:hover{
 
 }
 
+button .pesquisar-botao {
+    color: black;
+
+    background-color: transparent;
+
+}
+
 
 .paginacao {
     display: flex;
@@ -322,6 +329,11 @@ ion-icon:hover{
 
 .questionAdm {
     color: white;
+}
+
+.botao-lupa {
+    background-color: transparent;
+
 }
 
 
@@ -373,7 +385,6 @@ ion-icon:hover{
         .texto-criar-usuario {
         display: none;
     }
-
 
 
 }
