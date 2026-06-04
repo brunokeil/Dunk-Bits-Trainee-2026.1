@@ -246,6 +246,8 @@ ion-icon[name="search-outline"]{
 }
 
 #iconeTituloEditarPosts{
+    width: 100%;
+    font-family: var(--font-bebas-neue);;
     color: var(--white-100);
     display: flex;
     align-items: center;
@@ -257,6 +259,7 @@ ion-icon[name="search-outline"]{
     color: var(--white-100);
     font-weight: 500;
     font-size: 2.5rem;
+    
 }
 
 #lapisEditarPosts{
@@ -383,7 +386,7 @@ ion-icon[name="search-outline"]{
 
 #modalVisualizar{
     width: 60%;
-    background: rgb(150, 150, 150);
+    background: rgb(5, 5, 23);
     display: none;
     flex-direction: column;
     align-items: center;
@@ -404,29 +407,55 @@ ion-icon[name="search-outline"]{
 }
 
 #iconeTituloVisualisarPosts{
+    width: 100%;
     display: flex;
-    align-items: center;
+    align-items: left;
     gap: 12px;
+    padding-left: 180px;
 }
-
-#olhoVisualizarPost{
-    font-size: 4rem;
-    color: var(--white-100);
-}   
 
 #títuloVisualizarPosts{
-    font-family: var(--font-quicksand);
+    font-family: var(--font-bebas-neue);
     color: var(--white-100);
     font-weight: 500;
-    font-size: 3.2rem;
+    font-size: 4rem;
+    padding-top: 12px;
 }
 
-#containerCapaPost{
+#containerInfoPosts{
     display: flex;
+    width: 80%;
+    gap: 36px;
+}
+
+#containerCapaAutorDataPost{
+    display: flex;
+    flex-direction: column;
     width: 36%; 
     height: 20%;
     align-items: center;
     justify-content: center;
+}
+
+#autorDataPosts{
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+#autorPost{
+    font-family: var(--font-quicksand);
+    color: var(--white-100);
+}
+
+#dataPost{
+    font-family: var(--font-quicksand);
+    color: var(--white-100);
+}
+
+#AutorPost{
+    display: flex;
 }
 
 #capaPost{
@@ -449,17 +478,31 @@ ion-icon[name="search-outline"]{
     text-align: center;
 }
 
+#visualizarTitulo{
+    width: 100%;
+    display: flex;
+    align-items: left;
+}
+
+#visualizarDescricao{
+    width: 100%;
+    display: flex;
+    align-items: left;
+}
+
 #postTítulo {
-    font-family: var(--font-quicksand);
+    font-family: var(--font-bebas-neue);
     font-size: 24px;
     font-weight: bold;
     color: var(--white-100);
+    display: flex;
 }
 
 #postDescrição{
     font-family: var(--font-quicksand);
     font-size: 16px;
     color: var(--white-100);
+    text-align: left;
 }
 
 
