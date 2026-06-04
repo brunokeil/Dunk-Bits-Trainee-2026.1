@@ -21,7 +21,6 @@
 			<form action="#">
 				<div class="inputBox">
 					<input type="text" placeholder="USERNAME" />
-					<ion-icon name="person"></ion-icon>
 				</div>
 
 				<div class="inputBox">
