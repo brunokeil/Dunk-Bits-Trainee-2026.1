@@ -84,6 +84,10 @@ function setAllEventListeners() {
     viewUser.forEach((btn) => {
     btn.addEventListener("click", () => {
 
+        console.log(btn.dataset.profpic)
+
+        document.querySelector(".imgProfPic").src ="/" + btn.dataset.profpic;
+
         document.getElementById("view-username").value =btn.dataset.name;
 
         document.getElementById("view-email").value =btn.dataset.email;
@@ -97,6 +101,10 @@ function setAllEventListeners() {
 
     editUser.forEach((btn) => {
         btn.addEventListener("click", () => {
+
+            console.log(btn.dataset.profpic)
+
+            document.querySelector(".imgProfPic").src = "/" + btn.dataset.profpic;
 
             document.getElementById("edit-id").value = btn.dataset.id;
 

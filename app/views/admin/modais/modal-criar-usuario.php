@@ -4,13 +4,13 @@
     <button class="closeModalBtn terciaryBtn">X</button>
   </span>
 
-  <form action="admin-users/create" method="post">
+  <form action="admin-users/create" method="post" enctype="multipart/form-data">
 
     <div class="userProfilePicture">
       <img
         src="/public/assets/placeholder/blank-prof-pic.png "
         class="imgProfPic" />
-      <input type="file" class="profileInput" accept="image/*" hidden />
+      <input type="file" name="imagem" class="profileInput" accept="image/*" hidden />
     </div>
 
     <div class="userInfo">

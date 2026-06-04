@@ -66,6 +66,7 @@
               <?php
               foreach ($usuarios as $u):
               ?>
+
                 <tr class="row-tabela" id="<?php echo $u->id; ?>">
                   <td class="info-id"><?php echo $u->id; ?></td>
                   <td class="info-name"><?php echo $u->name; ?></td>
@@ -74,7 +75,8 @@
                   <td>
                     <div class="botoesdeacao">
                       <button class="view-user"
-                        data-id="<?php echo $u->id; ?>"
+                        data-profpic="<?php echo $u->profile_image; ?>"
+                        data-id=" <?php echo $u->id; ?>"
                         data-name="<?php echo $u->name; ?>"
                         data-email="<?php echo $u->email; ?>"
                         data-senha=" <?php echo $u->password ?>">
@@ -83,6 +85,7 @@
                       </button>
 
                       <button class="edit-user"
+                        data-profPic="<?php echo $u->profile_image; ?>"
                         data-id="<?php echo $u->id; ?>"
                         data-name="<?php echo $u->name; ?>"
                         data-email="<?php echo $u->email; ?>"
