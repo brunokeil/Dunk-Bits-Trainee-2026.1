@@ -18,14 +18,17 @@
 
 			<h2>LOGIN</h2>
 
-			<form action="#">
+			<form action="/login" method="POST">
 				<div class="inputBox">
-					<input type="text" placeholder="USERNAME" />
-					<ion-icon name="person"></ion-icon>
+                    <label>
+					    <input name="username" type="text" placeholder="USERNAME" />
+                    </label>
 				</div>
 
 				<div class="inputBox">
-					<input type="password" placeholder="SENHA" />
+                    <label>
+					    <input name="senha" type="password" placeholder="SENHA" />
+                    </label>
 				</div>
 
 				<button type="submit" class="buttonEntrar">LOGIN</button>

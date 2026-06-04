@@ -5,10 +5,10 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-class LoginController
+class LoginControllerGET
 {
 
-    public function index()
+    public function LoginView()
     {
         return view('site/login');
     }
