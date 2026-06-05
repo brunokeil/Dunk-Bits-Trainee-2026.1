@@ -1,4 +1,3 @@
-<!-- FLUMINENSE -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,7 +12,7 @@
 <body id="BodyTabelaPostsADM">
     
     <div class="containerTabelaPostsAdmin">
-        <div><h2  id="TituloDePostsADM">TABELA DE POSTS</h2></div>
+        <div><h2 id="TituloDePostsADM">TABELA DE POSTS</h2></div>
         <div id="PesquisaECriarPostADM">
             <div id="CaixaDePesquisa">
                 <input type="text" placeholder="Pesquisar por Post" id="PesquisaPostsTabelaADM">
@@ -27,10 +26,10 @@
                 <thead id="IndicesTabelaPostADM">
                     <tr>
                         <th id="IdTabelaPostsADM">ID</th>
-                        <th id="TítuloTabelaPostsADM">Título</th>
+                        <th id="TituloTabelaPostsADM">Título</th>
                         <th id="AutorTabelaPostsADM">Autor</th>
                         <th id="DataTabelaPostsADM">Data</th>
-                        <th id="AçõesTabelaPostsADM">Ações</th>
+                        <th id="AcoesTabelaPostsADM">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -40,7 +39,7 @@
                         <td>Arthur Morgan</td>
                         <td>01/01/2023</td>
                         <td>
-                            <div class="botõesdeação">
+                            <div class="botoesdeacao">
                                 <button class="btnVisuPostADM" onclick="abrirModal('modalVisualizar')"><ion-icon name="eye-outline"></ion-icon></button>
                                 <button class="btnEditPostADM" onclick="abrirModal('modalEditar')"><ion-icon name="pencil-outline"></ion-icon></button>
                                 <button class="btnDeletePostADM" onclick="abrirModal('modalExcluir')"><ion-icon name="trash-bin-outline"></ion-icon></button>
@@ -65,7 +64,7 @@
                         <td>A Train</td>
                         <td>02/01/2023</td>
                         <td>
-                            <div class="botõesdeação">
+                            <div class="botoesdeacao">
                                 <button class="btnVisuPostADM" onclick="abrirModal('modalVisualizar')"><ion-icon name="eye-outline"></ion-icon></button>
                                 <button class="btnEditPostADM" onclick="abrirModal('modalEditar')"><ion-icon name="pencil-outline"></ion-icon></button>
                                 <button class="btnDeletePostADM" onclick="abrirModal('modalExcluir')"><ion-icon name="trash-bin-outline"></ion-icon></button>
@@ -91,7 +90,7 @@
                         <td>Maelle</td>
                         <td>03/01/2023</td>
                         <td>
-                            <div class="botõesdeação">
+                            <div class="botoesdeacao">
                                 <button class="btnVisuPostADM" onclick="abrirModal('modalVisualizar')"><ion-icon name="eye-outline"></ion-icon></button>
                                 <button class="btnEditPostADM" onclick="abrirModal('modalEditar')"><ion-icon name="pencil-outline"></ion-icon></button>
                                 <button class="btnDeletePostADM" onclick="abrirModal('modalExcluir')"><ion-icon name="trash-bin-outline"></ion-icon></button>
@@ -117,7 +116,7 @@
                         <td>Bob esponja</td>
                         <td>04/01/2023</td>
                         <td>
-                            <div class="botõesdeação">
+                            <div class="botoesdeacao">
                                 <button class="btnVisuPostADM" onclick="abrirModal('modalVisualizar')"><ion-icon name="eye-outline"></ion-icon></button>
                                 <button class="btnEditPostADM" onclick="abrirModal('modalEditar')"><ion-icon name="pencil-outline"></ion-icon></button>
                                 <button class="btnDeletePostADM" onclick="abrirModal('modalExcluir')"><ion-icon name="trash-bin-outline"></ion-icon></button>
@@ -143,7 +142,7 @@
                         <td>Superman</td>
                         <td>05/01/2023</td>
                         <td>
-                            <div class="botõesdeação">
+                            <div class="botoesdeacao">
                                 <button class="btnVisuPostADM" onclick="abrirModal('modalVisualizar')"><ion-icon name="eye-outline"></ion-icon></button>
                                 <button class="btnEditPostADM" onclick="abrirModal('modalEditar')"><ion-icon name="pencil-outline"></ion-icon></button>
                                 <button class="btnDeletePostADM" onclick="abrirModal('modalExcluir')"><ion-icon name="trash-bin-outline"></ion-icon></button>
@@ -169,7 +168,7 @@
                         <td>Superman</td>
                         <td>05/01/2023</td>
                         <td>
-                            <div class="botõesdeação">
+                            <div class="botoesdeacao">
                                 <button class="btnVisuPostADM" onclick="abrirModal('modalVisualizar')"><ion-icon name="eye-outline"></ion-icon></button>
                                 <button class="btnEditPostADM" onclick="abrirModal('modalEditar')"><ion-icon name="pencil-outline"></ion-icon></button>
                                 <button class="btnDeletePostADM" onclick="abrirModal('modalExcluir')"><ion-icon name="trash-bin-outline"></ion-icon></button>
@@ -195,7 +194,7 @@
                         <td>Superman</td>
                         <td>05/01/2023</td>
                         <td>
-                            <div class="botõesdeação">
+                            <div class="botoesdeacao">
                                 <button class="btnVisuPostADM" onclick="abrirModal('modalVisualizar')"><ion-icon name="eye-outline"></ion-icon></button>
                                 <button class="btnEditPostADM" onclick="abrirModal('modalEditar')"><ion-icon name="pencil-outline"></ion-icon></button>
                                 <button class="btnDeletePostADM" onclick="abrirModal('modalExcluir')"><ion-icon name="trash-bin-outline"></ion-icon></button>
@@ -221,7 +220,33 @@
                         <td>Superman</td>
                         <td>05/01/2023</td>
                         <td>
-                            <div class="botõesdeação">
+                            <div class="botoesdeacao">
+                                <button class="btnVisuPostADM" onclick="abrirModal('modalVisualizar')"><ion-icon name="eye-outline"></ion-icon></button>
+                                <button class="btnEditPostADM" onclick="abrirModal('modalEditar')"><ion-icon name="pencil-outline"></ion-icon></button>
+                                <button class="btnDeletePostADM" onclick="abrirModal('modalExcluir')"><ion-icon name="trash-bin-outline"></ion-icon></button>
+                            </div>
+                            <div class="containerMenuPostsAcoes">
+                                <button class="trespontos">
+                                    <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
+                                </button>
+            
+                                <div class="dropdownMenuPosts">
+                                    <ul>
+                                        <li><a onclick="abrirModal('modalVisualizar')">Visualizar</a></li>
+                                        <li><a onclick="abrirModal('modalEditar')">Editar</a></li>
+                                        <li><a onclick="abrirModal('modalExcluir')">Excluir</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Quinta Publicação</td>
+                        <td>Superman</td>
+                        <td>05/01/2023</td>
+                        <td>
+                            <div class="botoesdeacao">
                                 <button class="btnVisuPostADM" onclick="abrirModal('modalVisualizar')"><ion-icon name="eye-outline"></ion-icon></button>
                                 <button class="btnEditPostADM" onclick="abrirModal('modalEditar')"><ion-icon name="pencil-outline"></ion-icon></button>
                                 <button class="btnDeletePostADM" onclick="abrirModal('modalExcluir')"><ion-icon name="trash-bin-outline"></ion-icon></button>
@@ -252,14 +277,13 @@
             <button id="btnAvancarPagina" class="btnSetaPaginacao">
                 <ion-icon name="chevron-forward-outline"></ion-icon>
             </button>
-            </div>
-
-    
+        </div>
+    </div>
 
     <div id="modalVisualizar">
         <div id="containerVisualizarPosts">
             <div id="iconeTituloVisualisarPosts">
-                <h1 id="títuloVisualizarPosts">POST</h1>
+                <h1 id="tituloVisualizarPosts">POST</h1>
             </div>
             <div id="containerInfoPosts">
                 <div id="containerCapaAutorDataPost">
@@ -267,19 +291,19 @@
                         <img src="#" alt="Imagem Post">
                     </div>
                     <div id="autorDataPosts">
-                        <h5 id="dataPost">01/01/0001</h5>
                         <div id="AutorPost">
                             <ion-icon name="person-circle-outline"></ion-icon>
                             <h5 id="autorPost">Autor do Post</h5>
                         </div>
+                        <h5 id="dataPost">01/01/0001</h5>
                     </div>
                 </div>
                 <div id="camposVisualizarPost">
                     <div id="visualizarTitulo">
-                        <h3 id="postTítulo">TÍTULO POST</h3>
+                        <h3 id="postTitulo">TÍTULO POST</h3>
                     </div>
                     <div id="visualizarDescricao">
-                        <h4 id="postDescrição">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h4>
+                        <h4 id="postDescricao">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h4>
                     </div>
                 </div>
             </div>
@@ -289,40 +313,33 @@
         </div>
     </div>
 
-
     <div id="modalEditar">
         <div id="containerEditarPosts">
             <div id="iconeTituloEditarPosts">
-                <h1 id="títuloEditarPosts">EDITAR POSTS</h1>
+                <h1 id="tituloEditarPosts">EDITAR POSTS</h1>
             </div>
-            <div id="containerImagens">
-                <h3 id="textoAlterarImagem">alterar imagem do post</h3>
-                <div id="imagemAtualFutura">
-                    <div id="imagemAtual">
-                        <img src="#" alt="Imagem Post">
-                    </div>
-                    <div id="alterarImagemPost">
-                        <input type="file" id="arquivoImagemPost" accept="image/*">
-                        <label for="arquivoImagem" id="caixaNovaImagem">
-                            <div id="íconeNovaImagem">
-                                <ion-icon name="image-outline"></ion-icon>
-                            </div>  
-                            <p id="textoArrasteImagem">Arraste sua imagem aqui ou escolha um novo arquivo</p>
-                        </label>
-                    </div>
+            <div id="containerImagemDescricao">
+                <div id="alterarImagemPost">
+                    <input type="file" id="arquivoImagemPost" accept="image/*">
+                    <label for="arquivoImagemPost" id="caixaNovaImagem">
+                        <div id="iconeNovaImagem">
+                            <ion-icon name="image-outline"></ion-icon>
+                        </div>  
+                        <p id="textoArrasteImagem">Arraste sua imagem ou clique aqui e escolha um novo arquivo</p>
+                    </label>
+                </div>
+                <div id="alterarDescricao">
+                    <textarea name="descricao" placeholder="DESCRIÇÃO" id="textoAlterarDescricaoPost"></textarea>
+                    <label for="textoAlterarDescricaoPost" id="labelAlterarDescricaoPost"></label>
                 </div>
             </div>
             <div id="camposAlterarPost">
-                <div id="alterarTítulo">
+                <div id="alterarTitulo">
                     <ion-icon name="create-outline" id="iconeAlterarTituloPost"></ion-icon>
                     <input type="text" placeholder="TÍULO" id="textoAlterarTituloPost">
                 </div>
-                <div id="alterarDescrição">
-                    <ion-icon name="newspaper-outline" id="iconeAlterarDescriçaoPost"></ion-icon>
-                    <input type="text" placeholder="DESCRIÇÃO" id="textoAlterarDescriçaoPost">
-                </div>
                 <div id="confirmarSenha">
-                    <ion-icon name="person-outline"  id="iconeConfirmarSenhaPost"></ion-icon>
+                    <ion-icon name="lock-closed-outline" id="iconeConfirmarSenhaPost"></ion-icon>
                     <input type="text" id="textoConfirmarSenhaPost" placeholder="SENHA ATUAL">
                 </div>
             </div>

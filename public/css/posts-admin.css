@@ -72,10 +72,10 @@ td{
 }
 
 #IdTabelaPostsADM,
-#TítuloTabelaPostsADM,
+#TituloTabelaPostsADM,
 #AutorTabelaPostsADM,
 #DataTabelaPostsADM,
-#AçõesTabelaPostsADM{
+#AcoesTabelaPostsADM{
     background-color: var(--white-25);
 }
 
@@ -83,23 +83,22 @@ td{
     border-top-left-radius: 10px;
 }
 
-#AçõesTabelaPostsADM{
+#AcoesTabelaPostsADM{
     border-top-right-radius: 10px;
 }
 
-
 #IdTabelaPostsADM,
-#TítuloTabelaPostsADM,
+#TituloTabelaPostsADM,
 #AutorTabelaPostsADM,
 #DataTabelaPostsADM{
     width: 18%;
 }
 
-#AçõesTabelaPostsADM{
+#AcoesTabelaPostsADM{
     width: 28%;
 }
 
-.botõesdeação{
+.botoesdeacao{
     display: flex;
     justify-content: center;
 }
@@ -126,20 +125,20 @@ td{
     font-style: normal;
 }
 
-    #btnCriarPostADM{
-        background-color: var(--orange-100);
-        color: var(--white-100);
-        border: none;
-        padding: 0.8vh 2vh;
-        border-radius: 16px;
-        font-family: var(--font-quicksand);
-        font-optical-sizing: auto;
-        font-weight: 600;
-        font-style: normal;
-        cursor: pointer;
-        font-size: 20px;
-        transition: 0.3s ease;
-    }
+#btnCriarPostADM{
+    background-color: var(--orange-100);
+    color: var(--white-100);
+    border: none;
+    padding: 0.8vh 2vh;
+    border-radius: 16px;
+    font-family: var(--font-quicksand);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s ease;
+}
 
 #btnCriarPostADM:hover{
     background-color: var(--dark-orange-100);
@@ -156,26 +155,37 @@ td{
 }
 
 .trespontos{
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: 1.5rem;
-        transition: 0.3s ease;
-        color: var(--white-100);
-        display: none;
-    }
-
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+    color: var(--white-100);
+    display: none;
+}
 
 ion-icon{
     color: var(--white-100);
 }
 
-ion-icon:hover{
+ion-icon[name="eye-outline"]:hover{
     color: var(--white-25);
 }
 
+ion-icon[name="pencil-outline"]:hover{
+    color: var(--white-25);
+}
+
+ion-icon[name="trash-bin-outline"]:hover{
+    color: var(--white-25);
+}
+
+ion-icon[name="image-outline"]{
+    font-size: 24px;
+}
+
 ion-icon[name="search-outline"]{
-    color: var(--black-100)
+    color: var(--black-100);
 }
 
 .dropdownMenuPosts{
@@ -218,14 +228,11 @@ ion-icon[name="search-outline"]{
     display: none;
 }
 
-
-
-
-
 #modalEditar{
-    width: 800px;
-    max-width: 90vw;
-    background: rgb(150, 150, 150);
+    width: 60vw;
+    height: 80vh;
+    box-sizing: border-box;
+    background-image: linear-gradient(to left, rgb(238, 166, 0), rgb(239, 100, 0));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -247,19 +254,20 @@ ion-icon[name="search-outline"]{
 
 #iconeTituloEditarPosts{
     width: 100%;
-    font-family: var(--font-bebas-neue);;
+    font-family: var(--font-bebas-neue);
     color: var(--white-100);
     display: flex;
     align-items: center;
-    gap: 16px;
+    justify-content: center;
+    padding-top: 16px;
+    gap: 24px;
 }
 
-#títuloEditarPosts{
+#tituloEditarPosts{
     font-family: var(--font-bebas-neue);
     color: var(--white-100);
     font-weight: 500;
-    font-size: 2.5rem;
-    
+    font-size: 3rem;
 }
 
 #lapisEditarPosts{
@@ -274,7 +282,6 @@ ion-icon[name="search-outline"]{
     padding: 0;
     margin: 0;
 }
-
 
 #imagemAtualFutura {
     display: flex;
@@ -295,16 +302,15 @@ ion-icon[name="search-outline"]{
     display: none;
 }
 
-#alterarImagemPost {
+#containerImagemDescricao{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(130, 130, 130);
-    width: 360px;
-    height: 360px;
-    border-radius: 16px;
-    border: dashed 4px rgb(100, 100, 100);
-    box-sizing: border-box;
+    gap: 48px;
+}
+
+#alterarImagemPost:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: dashed 4px rgb(230, 230, 230);
+    color: rgb(230, 230,230);
 }
 
 #caixaNovaImagem{
@@ -313,49 +319,78 @@ ion-icon[name="search-outline"]{
     align-items: center;
 }
 
-#textoArrasteImagem{
+#textoArrasteImagem,
+#AlterarTextoDescricao{
     font-family: var(--font-quicksand);
     color: var(--white-100);
     text-align: center;
 }
 
-#alterarTítulo{
+#alterarTitulo{
     display: flex;
     align-items: center;
-    padding-top: 40px;
     gap: 4px;
 }
 
-#textoAlterarTituloPost{
+#textoAlterarTituloPost,
+#textoConfirmarSenhaPost{
+    width: 100%;
+    height: 36px;
+    background-color: rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
     font-family: var(--font-quicksand);
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--white-100);
     border: none;
-    border-radius: 16px;
-    color: var(--black-100);
+    padding: 12px;
+    resize: none;
+    box-sizing: border-box;
 }
 
 #iconeAlterarTituloPost{
     font-size: 36px;
 }
 
-#alterarDescrição{
+#alterarImagemPost {
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding-top: 16px;
-    gap: 4px;
-}
-
-#textoAlterarDescriçaoPost{
-    font-family: var(--font-quicksand);
-    font-size: 2rem;
-    color: var(--white-100);
-    border: none;
+    background-color: none;
+    width: 70%;
+    height: 85%;
     border-radius: 16px;
-    color: var(--black-100);
+    border: dashed 4px rgb(255, 255, 255);
+    box-sizing: border-box;
 }
 
-#iconeAlterarDescriçaoPost{
+#alterarDescricao{
+    width: 70%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#textoAlterarDescricaoPost{
+    display: flex;
+    width: 100%;
+    height: 44vh;
+    background-color: rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    padding: 12px;
+    font-family: var(--font-quicksand);
+    font-size: 1rem;
+    color: var(--white-100);
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#iconeAlterarDescricaoPost{
     font-size: 36px;
 }
 
@@ -366,23 +401,9 @@ ion-icon[name="search-outline"]{
     gap: 4px;
 }
 
-#textoConfirmarSenhaPost{
-    font-family: var(--font-quicksand);
-    font-size: 2rem;
-    color: var(--white-100);
-    border: none;
-    border-radius: 16px;
-    color: var(--black-100);
-}
-
 #iconeConfirmarSenhaPost{
     font-size: 36px;
 }
-
-
-
-
-
 
 #modalVisualizar{
     width: 60%;
@@ -414,7 +435,7 @@ ion-icon[name="search-outline"]{
     padding-left: 180px;
 }
 
-#títuloVisualizarPosts{
+#tituloVisualizarPosts{
     font-family: var(--font-bebas-neue);
     color: var(--white-100);
     font-weight: 500;
@@ -441,17 +462,20 @@ ion-icon[name="search-outline"]{
     width: 100%;
     display: flex;
     gap: 12px;
+    padding-top: 12px;
     justify-content: space-between;
 }
 
 #autorPost{
     font-family: var(--font-quicksand);
     color: var(--white-100);
+    font-size: 16px;
 }
 
 #dataPost{
     font-family: var(--font-quicksand);
     color: var(--white-100);
+    font-size: 16px;
 }
 
 #AutorPost{
@@ -461,7 +485,7 @@ ion-icon[name="search-outline"]{
 #capaPost{
     width: 300px;
     height: 300px;
-    background-color: rgb(180,180,180);
+    background-color: rgb(20,20, 92);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -478,6 +502,12 @@ ion-icon[name="search-outline"]{
     text-align: center;
 }
 
+#camposAlterarPost{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+}
+
 #visualizarTitulo{
     width: 100%;
     display: flex;
@@ -490,7 +520,7 @@ ion-icon[name="search-outline"]{
     align-items: left;
 }
 
-#postTítulo {
+#postTitulo {
     font-family: var(--font-bebas-neue);
     font-size: 24px;
     font-weight: bold;
@@ -498,15 +528,12 @@ ion-icon[name="search-outline"]{
     display: flex;
 }
 
-#postDescrição{
+#postDescricao{
     font-family: var(--font-quicksand);
     font-size: 16px;
     color: var(--white-100);
     text-align: left;
 }
-
-
-
 
 #novaPaginacao {
     display: flex;
@@ -546,16 +573,9 @@ ion-icon[name="search-outline"]{
     text-align: center;
 }
 
-
-
-
-
-
-
 .btnCancelarModal{
-    background: none;
-    color: var(--orange-100);
-    text-decoration: underline;
+    background-color: var(--dark-blue-100);
+    color: var(--white-100);
     font-family: var(--font-quicksand);
     font-size: 28px;
 }
@@ -566,7 +586,6 @@ ion-icon[name="search-outline"]{
     font-family: var(--font-quicksand);
     font-size: 28px;
 }
-
 
 .modalActions {
     width: 100%;
@@ -653,7 +672,6 @@ ion-icon[name="search-outline"]{
         width: 50%;
     }
 
-
     .btnVisuPostADM,
     .btnEditPostADM,
     .btnDeletePostADM{
@@ -671,21 +689,24 @@ ion-icon[name="search-outline"]{
         padding: 20px 10px;
     }
 
-    #títuloEditarPosts,
-    #títuloVisualizarPosts{
+    #tituloEditarPosts,
+    #tituloVisualizarPosts{
         font-size: 2rem;
     }
+    
     #lapisEditarPosts,
     #olhoVisualizarPost,
     #iconeAlterarTituloPost,
-    #iconeAlterarDescriçaoPost,
+    #iconeAlterarDescricaoPost,
     #iconeConfirmarSenhaPost{
         font-size: 2.2rem;
     }
+    
     #imagemAtualFutura{
         flex-direction: column;
         gap: 20px;
     }
+    
     #imagemAtual,
     #alterarImagemPost,
     #capaPost {
@@ -695,18 +716,16 @@ ion-icon[name="search-outline"]{
         max-height: 300px;
     }
 
-    #alterarTítulo,
-    #alterarDescrição,
+    #alterarTitulo,
     #confirmarSenha {
         flex-direction: row;
         justify-content: center;
         align-items: center;
         width: 100%;
         gap: 10px;
-    }
+    }       
 
     #textoAlterarTituloPost,
-    #textoAlterarDescriçaoPost,
     #textoConfirmarSenhaPost {
         width: 80%;
         font-size: 1.5rem;
@@ -720,7 +739,4 @@ ion-icon[name="search-outline"]{
     .btnSalvarModal {
         font-size: 20px;
     }
-
-
 }
-
