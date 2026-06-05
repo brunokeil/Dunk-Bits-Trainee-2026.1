@@ -350,7 +350,7 @@ i:hover {
   color: var(--white-100);
   font-family: var(--font-quicksand);
   text-decoration: underline;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 #btn-modal-criar-confirmar {
@@ -362,7 +362,7 @@ i:hover {
 #btn-modal-criar-confirmar h3 {
   font-family: var(--font-quicksand);
   color: var(--white-100);
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 /* ----------------- Tela ----------------- */
@@ -454,7 +454,7 @@ i:hover {
   border-radius: 15px;
   color: var(--white-100);
   font-family: var(--font-quicksand);
-  font-size: 1.2em;
+  font-size: 1em;
   padding: 5px 10px;
 }
 
