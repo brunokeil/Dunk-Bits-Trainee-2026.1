@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Posts</title>
+  <link rel="stylesheet" href="../../../public/css/lista-posts.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+  <section id="secao-barra">
+
+    <div id="search">
+      <form method="GET" action="/lista-posts" id="form-search">
+        <label for="search-text">
+          <span class="material-symbols-outlined">search</span>
+        </label>
+
+
+        <input type="text" id="search-text" placeholder="SEARCH" value="<?= $searchText ?? '' ?>" name="search" />
+      </form>
+      <span class="divisor-vertical">|</span>
+      <img src="../../../public/assets/icons/basketball_on_fire.png" alt="Logo Basketball" id="icone-busca">
+    </div>
+    <div id="grupo-filtro">
+      <div id="filtros-opcoes">
+        <button class="botao-filtro-item">Melhores Avaliados</button>
+        <button class="botao-filtro-item">Populares</button>
+        <button class="botao-filtro-item">Tecnologia</button>
+      </div>
+
+      <button id="botao-filtro">
+        <span class="material-symbols-outlined">filter_alt</span>
+      </button>
+    </div>
+  </section>
+
+  <section id="container-titulo">
+    <div id="secao-titulo">
+      <h1 id="posts-recentes">POSTS RECENTES</h1>
+    </div>
+  </section>
+
+  <section id="container-posts">
+    <?php foreach ($posts as $p):  ?>
+      <div class="card">
+        <div class="card-footer">
+          <h2 class="card-titulo-fixo"><?php echo $p->title; ?></h2>
+        </div>
+
+        <div class="card-overlay">
+          <h2 class="card-titulo-overlay"><?php echo $p->title; ?></h2>
+          <p class="card-autor"><?php echo $p->author->name; ?></p>
+          <p class="card-descricao"><?php echo $p->content; ?></p>
+        </div>
+      </div>
+    <?php endforeach ?>
+
+  </section>
+
+  <?php require("app/views/site/pagination-posts-site.view.php") ?>
+
+  <script src="../../../public/js/lista-posts.js"></script>
+</body>
+
+</html>
