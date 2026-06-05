@@ -183,13 +183,12 @@ i:hover {
 /* ----------------- Estilização do Modal ----------------- */
 
 /* ----------------- Modal de Criar Post ----------------- */
-
 /* ------------------------- Corpo do Modal ------------------------- */
 #modal-criar-post {
   box-sizing: border-box;
   width: 90%;
   max-width: 400px;
-  max-height: 90vh;
+  height: fit-content;
   background:
     radial-gradient(
       136.68% 167.85% at 140.67% 11.14%,
@@ -377,7 +376,8 @@ i:hover {
 }
 /* ----------------- Modal de Excluir Post ----------------- */
 #modal-excluir-post {
-  width: 25vw;
+  width: 90%;
+  max-width: 400px;
   height: fit-content;
   background: var(--linear-red-gradient);
   border-radius: 25px;
@@ -391,9 +391,15 @@ i:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 20;
-  
 }
 
+@media (max-width: 480px) {
+  #modal-excluir-post {
+  width: 70%;
+  }
+}
+
+/* ----------------- Header do Modal de Excluir Post ----------------- */
 #modal-excluir-titulo {
   display: flex;
   align-items: center;
@@ -415,7 +421,7 @@ i:hover {
   white-space: nowrap;
   margin: 0.2em;
 }
-
+/* ----------------- Descrição do Modal de Excluir Post ----------------- */
 #modal-excluir-descricao h4 {
   font-family: var(--font-quicksand);
   font-size: 1em;
@@ -427,7 +433,7 @@ i:hover {
 #modal-excluir-descricao h4:first-child {
   margin-bottom: 20px;
 }
-
+/* ----------------- Botões do Modal de Excluir Post ----------------- */
 #modal-excluir-botoes {
   padding: 10px;
   display: flex;
