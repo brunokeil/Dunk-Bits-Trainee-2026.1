@@ -1,742 +1,746 @@
 @import "./styles.css";
 
-#containerTabelaPostsToda{
-    width: 100%;
-    overflow-x: auto;
+#containerTabelaPostsToda {
+  width: 100%;
+  overflow-x: auto;
 }
 
-#BodyTabelaPostsADM{
-    background-image: var(--bg-table-posts);
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+#BodyTabelaPostsADM {
+  background-image: var(--bg-table-posts);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#TituloDePostsADM{
-    color: var(--white-100);
-    display: flex;
-    justify-content: center;
-    font-family: var(--font-quicksand);
-    font-optical-sizing: auto;
-    font-weight: 1000;
-    font-size: 2.5rem;
+#TituloDePostsADM {
+  color: var(--white-100);
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-quicksand);
+  font-optical-sizing: auto;
+  font-weight: 1000;
+  font-size: 2.5rem;
 }
 
-#PesquisaECriarPostADM{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 2vh auto;
-    box-sizing: border-box;
-    padding: 0 4vw;
-}   
+#PesquisaECriarPostADM {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 2vh auto;
+  box-sizing: border-box;
+  padding: 0 4vw;
+}
 
 .containerTabelaPostsAdmin {
-    margin: auto;
-    width: 80%;
-    background-color: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(10px);
-    padding-bottom: 8vh;
-    border-radius: 16px;
-    border: 1px solid var(--white-100);
+  margin: auto;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  padding-bottom: 8vh;
+  border-radius: 16px;
+  border: 1px solid var(--white-100);
 }
 
-table{
-    border-collapse: separate;
-    border-spacing: 0;
-    width: 100%;
-    margin: 0 auto;
-    table-layout: fixed;
-    box-sizing: border-box;
-    padding: 0 8vh;
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: 0 auto;
+  table-layout: fixed;
+  box-sizing: border-box;
+  padding: 0 8vh;
 }
 
-th, td{
-    text-align: center;
-    padding: 1.5vh;
-    color: var(--white-100);
-    font-family: var(--font-quicksand);
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    box-sizing: border-box;
+th,
+td {
+  text-align: center;
+  padding: 1.5vh;
+  color: var(--white-100);
+  font-family: var(--font-quicksand);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
 }
 
-td{
-    border-bottom: 1px solid var(--white-100);
-    position: relative;
+td {
+  border-bottom: 1px solid var(--white-100);
+  position: relative;
 }
 
 #IdTabelaPostsADM,
 #TituloTabelaPostsADM,
 #AutorTabelaPostsADM,
 #DataTabelaPostsADM,
-#AcoesTabelaPostsADM{
-    background-color: var(--white-25);
+#AcoesTabelaPostsADM {
+  background-color: var(--white-25);
 }
 
-#IdTabelaPostsADM{
-    border-top-left-radius: 10px;
+#IdTabelaPostsADM {
+  border-top-left-radius: 10px;
 }
 
-#AcoesTabelaPostsADM{
-    border-top-right-radius: 10px;
+#AcoesTabelaPostsADM {
+  border-top-right-radius: 10px;
 }
 
 #IdTabelaPostsADM,
 #TituloTabelaPostsADM,
 #AutorTabelaPostsADM,
-#DataTabelaPostsADM{
-    width: 18%;
+#DataTabelaPostsADM {
+  width: 18%;
 }
 
-#AcoesTabelaPostsADM{
-    width: 28%;
+#AcoesTabelaPostsADM {
+  width: 28%;
 }
 
-.botoesdeacao{
-    display: flex;
-    justify-content: center;
+.botoesdeacao {
+  display: flex;
+  justify-content: center;
 }
 
-#CaixaDePesquisa{
-    background-color: white;
-    display: flex;
-    align-items: center;
-    gap: 0.5vh;
-    padding-right: 16px;
-    width: 20%;
-    border-radius: 16px;
+#CaixaDePesquisa {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5vh;
+  padding-right: 16px;
+  width: 20%;
+  border-radius: 16px;
 }
 
-#PesquisaPostsTabelaADM{
-    width: 100%;
-    height: 24px;
-    padding: 0.8vh;
-    border-radius: 16px;
-    border: none;
-    font-family: var(--font-quicksand);
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+#PesquisaPostsTabelaADM {
+  width: 100%;
+  height: 24px;
+  padding: 0.8vh;
+  border-radius: 16px;
+  border: none;
+  font-family: var(--font-quicksand);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
-#btnCriarPostADM{
-    background-color: var(--orange-100);
-    color: var(--white-100);
-    border: none;
-    padding: 0.8vh 2vh;
-    border-radius: 16px;
-    font-family: var(--font-quicksand);
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    cursor: pointer;
-    font-size: 20px;
-    transition: 0.3s ease;
+#btnCriarPostADM {
+  background-color: var(--orange-100);
+  color: var(--white-100);
+  border: none;
+  padding: 0.8vh 2vh;
+  border-radius: 16px;
+  font-family: var(--font-quicksand);
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.3s ease;
 }
 
-#btnCriarPostADM:hover{
-    background-color: var(--dark-orange-100);
+#btnCriarPostADM:hover {
+  background-color: var(--dark-orange-100);
 }
 
 .btnVisuPostADM,
 .btnEditPostADM,
-.btnDeletePostADM{
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 2rem;
-    transition: 0.3s ease;
+.btnDeletePostADM {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: 0.3s ease;
 }
 
-.trespontos{
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    transition: 0.3s ease;
-    color: var(--white-100);
-    display: none;
+.trespontos {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: 0.3s ease;
+  color: var(--white-100);
+  display: none;
 }
 
-ion-icon{
-    color: var(--white-100);
+ion-icon {
+  color: var(--white-100);
 }
 
-ion-icon[name="eye-outline"]:hover{
-    color: var(--white-25);
+ion-icon[name="eye-outline"]:hover {
+  color: var(--white-25);
 }
 
-ion-icon[name="pencil-outline"]:hover{
-    color: var(--white-25);
+ion-icon[name="pencil-outline"]:hover {
+  color: var(--white-25);
 }
 
-ion-icon[name="trash-bin-outline"]:hover{
-    color: var(--white-25);
+ion-icon[name="trash-bin-outline"]:hover {
+  color: var(--white-25);
 }
 
-ion-icon[name="image-outline"]{
-    font-size: 24px;
+ion-icon[name="image-outline"] {
+  font-size: 24px;
 }
 
-ion-icon[name="search-outline"]{
-    color: var(--black-100);
+ion-icon[name="search-outline"] {
+  color: var(--black-100);
 }
 
-.dropdownMenuPosts{
-    display: none;
-    position: absolute;
-    top: 52px;
-    right: 10px;
-    background-color: var(--white-100);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    z-index: 1;
+.dropdownMenuPosts {
+  display: none;
+  position: absolute;
+  top: 52px;
+  right: 10px;
+  background-color: var(--white-100);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
 
-.dropdownMenuPosts.aparecer{
-    display: block;
+.dropdownMenuPosts.aparecer {
+  display: block;
 }
 
-.dropdownMenuPosts ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.dropdownMenuPosts ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.dropdownMenuPosts li a{
-    display: block;
-    padding: 10px 20px;
-    color: var(--black-100);
-    text-decoration: none;
-    font-family: var(--font-quicksand);
+.dropdownMenuPosts li a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--black-100);
+  text-decoration: none;
+  font-family: var(--font-quicksand);
 }
 
-.dropdownMenuPosts li a:hover{
-    background-color: var(--offwhite-100);
-    border-radius: 8px;
+.dropdownMenuPosts li a:hover {
+  background-color: var(--offwhite-100);
+  border-radius: 8px;
 }
 
 #modalVisualizar,
 #modalExcluir,
-#modalEditar{
-    display: none;
+#modalEditar {
+  display: none;
 }
 
-#modalEditar{
-    width: 60vw;
-    height: 80vh;
-    box-sizing: border-box;
-    background-image: linear-gradient(to left, rgb(238, 166, 0), rgb(239, 100, 0));
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 16px;
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
+#modalEditar {
+  width: 60vw;
+  height: 80vh;
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    to left,
+    rgb(238, 166, 0),
+    rgb(239, 100, 0)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
 }
 
-#containerEditarPosts{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#containerEditarPosts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#iconeTituloEditarPosts{
-    width: 100%;
-    font-family: var(--font-bebas-neue);
-    color: var(--white-100);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 16px;
-    gap: 24px;
+#iconeTituloEditarPosts {
+  width: 100%;
+  font-family: var(--font-bebas-neue);
+  color: var(--white-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 16px;
+  gap: 24px;
 }
 
-#tituloEditarPosts{
-    font-family: var(--font-bebas-neue);
-    color: var(--white-100);
-    font-weight: 500;
-    font-size: 3rem;
+#tituloEditarPosts {
+  font-family: var(--font-bebas-neue);
+  color: var(--white-100);
+  font-weight: 500;
+  font-size: 3rem;
 }
 
-#lapisEditarPosts{
-    font-size: 48px;
+#lapisEditarPosts {
+  font-size: 48px;
 }
 
-#textoAlterarImagem{
-    font-family: var(--font-quicksand);
-    font-size: 20px;
-    color: var(--white-100);
-    gap: 0;
-    padding: 0;
-    margin: 0;
+#textoAlterarImagem {
+  font-family: var(--font-quicksand);
+  font-size: 20px;
+  color: var(--white-100);
+  gap: 0;
+  padding: 0;
+  margin: 0;
 }
 
 #imagemAtualFutura {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
 }
 
 #imagemAtual {
-    background-color: rgb(180, 180, 180);
-    width: 360px;
-    height: 360px;
-    border-radius: 16px;
+  background-color: rgb(180, 180, 180);
+  width: 360px;
+  height: 360px;
+  border-radius: 16px;
 }
 
-#arquivoImagemPost{
-    display: none;
+#arquivoImagemPost {
+  display: none;
 }
 
-#containerImagemDescricao{
-    display: flex;
-    gap: 48px;
+#containerImagemDescricao {
+  display: flex;
+  gap: 48px;
 }
 
 #alterarImagemPost:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: dashed 4px rgb(230, 230, 230);
-    color: rgb(230, 230,230);
+  background-color: rgba(255, 255, 255, 0.2);
+  border: dashed 4px rgb(230, 230, 230);
+  color: rgb(230, 230, 230);
 }
 
-#caixaNovaImagem{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#caixaNovaImagem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #textoArrasteImagem,
-#AlterarTextoDescricao{
-    font-family: var(--font-quicksand);
-    color: var(--white-100);
-    text-align: center;
+#AlterarTextoDescricao {
+  font-family: var(--font-quicksand);
+  color: var(--white-100);
+  text-align: center;
 }
 
-#alterarTitulo{
-    display: flex;
-    align-items: center;
-    gap: 4px;
+#alterarTitulo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 #textoAlterarTituloPost,
-#textoConfirmarSenhaPost{
-    width: 100%;
-    height: 36px;
-    background-color: rgba(0, 0, 0, 0.15);
-    border: 2px solid rgba(0, 0, 0, 0.3);
-    border-radius: 16px;
-    font-family: var(--font-quicksand);
-    font-size: 1.5rem;
-    color: var(--white-100);
-    border: none;
-    padding: 12px;
-    resize: none;
-    box-sizing: border-box;
+#textoConfirmarSenhaPost {
+  width: 100%;
+  height: 36px;
+  background-color: rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  font-family: var(--font-quicksand);
+  font-size: 1.5rem;
+  color: var(--white-100);
+  border: none;
+  padding: 12px;
+  resize: none;
+  box-sizing: border-box;
 }
 
-#iconeAlterarTituloPost{
-    font-size: 36px;
+#iconeAlterarTituloPost {
+  font-size: 36px;
 }
 
 #alterarImagemPost {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: none;
-    width: 70%;
-    height: 85%;
-    border-radius: 16px;
-    border: dashed 4px rgb(255, 255, 255);
-    box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: none;
+  width: 70%;
+  height: 85%;
+  border-radius: 16px;
+  border: dashed 4px rgb(255, 255, 255);
+  box-sizing: border-box;
 }
 
-#alterarDescricao{
-    width: 70%;
-    height: 85%;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    box-sizing: border-box;
+#alterarDescricao {
+  width: 70%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-#textoAlterarDescricaoPost{
-    display: flex;
-    width: 100%;
-    height: 44vh;
-    background-color: rgba(0, 0, 0, 0.15);
-    border: 2px solid rgba(0, 0, 0, 0.3);
-    border-radius: 16px;
-    padding: 12px;
-    font-family: var(--font-quicksand);
-    font-size: 1rem;
-    color: var(--white-100);
-    resize: none;
-    outline: none;
-    box-sizing: border-box;
+#textoAlterarDescricaoPost {
+  display: flex;
+  width: 100%;
+  height: 44vh;
+  background-color: rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  padding: 12px;
+  font-family: var(--font-quicksand);
+  font-size: 1rem;
+  color: var(--white-100);
+  resize: none;
+  outline: none;
+  box-sizing: border-box;
 }
 
-#iconeAlterarDescricaoPost{
-    font-size: 36px;
+#iconeAlterarDescricaoPost {
+  font-size: 36px;
 }
 
-#confirmarSenha{
-    display: flex;
-    align-items: center;
-    padding-top: 16px;
-    gap: 4px;
+#confirmarSenha {
+  display: flex;
+  align-items: center;
+  padding-top: 16px;
+  gap: 4px;
 }
 
-#iconeConfirmarSenhaPost{
-    font-size: 36px;
+#iconeConfirmarSenhaPost {
+  font-size: 36px;
 }
 
-#modalVisualizar{
-    width: 60%;
-    background: rgb(5, 5, 23);
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 16px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding-bottom: 20px;
+#modalVisualizar {
+  width: 60%;
+  background: rgb(5, 5, 23);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 20px;
 }
 
-#containerVisualizarPosts{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
+#containerVisualizarPosts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
 }
 
-#iconeTituloVisualisarPosts{
-    width: 100%;
-    display: flex;
-    align-items: left;
-    gap: 12px;
-    padding-left: 180px;
+#iconeTituloVisualisarPosts {
+  width: 100%;
+  display: flex;
+  align-items: left;
+  gap: 12px;
+  padding-left: 180px;
 }
 
-#tituloVisualizarPosts{
-    font-family: var(--font-bebas-neue);
-    color: var(--white-100);
-    font-weight: 500;
-    font-size: 4rem;
-    padding-top: 12px;
+#tituloVisualizarPosts {
+  font-family: var(--font-bebas-neue);
+  color: var(--white-100);
+  font-weight: 500;
+  font-size: 4rem;
+  padding-top: 12px;
 }
 
-#containerInfoPosts{
-    display: flex;
-    width: 80%;
-    gap: 36px;
+#containerInfoPosts {
+  display: flex;
+  width: 80%;
+  gap: 36px;
 }
 
-#containerCapaAutorDataPost{
-    display: flex;
-    flex-direction: column;
-    width: 36%; 
-    height: 20%;
-    align-items: center;
-    justify-content: center;
+#containerCapaAutorDataPost {
+  display: flex;
+  flex-direction: column;
+  width: 36%;
+  height: 20%;
+  align-items: center;
+  justify-content: center;
 }
 
-#autorDataPosts{
-    width: 100%;
-    display: flex;
-    gap: 12px;
-    padding-top: 12px;
-    justify-content: space-between;
+#autorDataPosts {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  padding-top: 12px;
+  justify-content: space-between;
 }
 
-#autorPost{
-    font-family: var(--font-quicksand);
-    color: var(--white-100);
-    font-size: 16px;
+#autorPost {
+  font-family: var(--font-quicksand);
+  color: var(--white-100);
+  font-size: 16px;
 }
 
-#dataPost{
-    font-family: var(--font-quicksand);
-    color: var(--white-100);
-    font-size: 16px;
+#dataPost {
+  font-family: var(--font-quicksand);
+  color: var(--white-100);
+  font-size: 16px;
 }
 
-#AutorPost{
-    display: flex;
+#AutorPost {
+  display: flex;
 }
 
-#capaPost{
-    width: 300px;
-    height: 300px;
-    background-color: rgb(20,20, 92);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 16px;
-    overflow: hidden;
+#capaPost {
+  width: 300px;
+  height: 300px;
+  background-color: rgb(20, 20, 92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
-#camposVisualizarPost{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-    text-align: center;
+#camposVisualizarPost {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  text-align: center;
 }
 
-#camposAlterarPost{
-    width: 30vw;
-    display: flex;
-    flex-direction: column;
+#camposAlterarPost {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
 }
 
-#visualizarTitulo{
-    width: 100%;
-    display: flex;
-    align-items: left;
+#visualizarTitulo {
+  width: 100%;
+  display: flex;
+  align-items: left;
 }
 
-#visualizarDescricao{
-    width: 100%;
-    display: flex;
-    align-items: left;
+#visualizarDescricao {
+  width: 100%;
+  display: flex;
+  align-items: left;
 }
 
 #postTitulo {
-    font-family: var(--font-bebas-neue);
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--white-100);
-    display: flex;
+  font-family: var(--font-bebas-neue);
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--white-100);
+  display: flex;
 }
 
-#postDescricao{
-    font-family: var(--font-quicksand);
-    font-size: 16px;
-    color: var(--white-100);
-    text-align: left;
+#postDescricao {
+  font-family: var(--font-quicksand);
+  font-size: 16px;
+  color: var(--white-100);
+  text-align: left;
 }
 
 #novaPaginacao {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 30px;
 }
 
 .btnSetaPaginacao {
-    background: none;
-    border: none;
-    color: var(--white-100);
-    font-size: 2rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s ease;
+  background: none;
+  border: none;
+  color: var(--white-100);
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
 }
 
 .btnSetaPaginacao:hover {
-    color: var(--orange-100);
+  color: var(--orange-100);
 }
 
 .btnSetaPaginacao:disabled {
-    color: var(--grey-100);
-    cursor: not-allowed;
+  color: var(--grey-100);
+  cursor: not-allowed;
 }
 
 #numeroPaginaAtual {
-    color: var(--white-100);
-    font-family: var(--font-quicksand);
-    font-size: 1.5rem;
-    font-weight: bold;
-    min-width: 40px;
-    text-align: center;
+  color: var(--white-100);
+  font-family: var(--font-quicksand);
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-width: 40px;
+  text-align: center;
 }
 
-.btnCancelarModal{
-    background-color: var(--dark-blue-100);
-    color: var(--white-100);
-    font-family: var(--font-quicksand);
-    font-size: 28px;
+.btnCancelarModal {
+  background-color: var(--dark-blue-100);
+  color: var(--white-100);
+  font-family: var(--font-quicksand);
+  font-size: 28px;
 }
 
-.btnSalvarModal{
-    background-color: var(--dark-blue-100);
-    color: var(--white-100);
-    font-family: var(--font-quicksand);
-    font-size: 28px;
+.btnSalvarModal {
+  background-color: var(--dark-blue-100);
+  color: var(--white-100);
+  font-family: var(--font-quicksand);
+  font-size: 28px;
 }
 
 .modalActions {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-    padding-top: 12px;
-    padding-bottom: 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding-top: 12px;
+  padding-bottom: 16px;
 }
 
-.modalActions button{
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: none;
-    font-family: var(--font-quicksand);
-    font-weight: 600;
-    cursor: pointer;
-}   
+.modalActions button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  font-family: var(--font-quicksand);
+  font-weight: 600;
+  cursor: pointer;
+}
 
-.modalActions  button:hover{
-    opacity: 0.8;
+.modalActions button:hover {
+  opacity: 0.8;
 }
 
 .paginacaoContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-top: 30px; 
-    color: var(--white-100);
-    font-family: var(--font-quicksand);
-    font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+  color: var(--white-100);
+  font-family: var(--font-quicksand);
+  font-weight: 600;
 }
 
 .btnPaginacao {
-    background-color: var(--orange-100);
-    color: var(--white-100);
-    border: none;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-family: var(--font-quicksand);
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s ease;
+  background-color: var(--orange-100);
+  color: var(--white-100);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: var(--font-quicksand);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .btnPaginacao:hover {
-    background-color: var(--dark-orange-100);
+  background-color: var(--dark-orange-100);
 }
 
 .btnPaginacao:disabled {
-    background-color: var(--grey-100);
-    cursor: not-allowed;
-    opacity: 0.5;
+  background-color: var(--grey-100);
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 @media (max-width: 852px) {
-    #BodyTabelaPostsADM{
-        min-height: 100vh;
-    }
+  #BodyTabelaPostsADM {
+    min-height: 100vh;
+  }
 
-    table{
-        min-width: 700px;
-    }
+  table {
+    min-width: 700px;
+  }
 
-    #TituloDePostsADM{
-        color: var(--white-100);
-        display: flex;
-        justify-content: center;
-        font-family: var(--font-quicksand);
-        font-weight: 1000;
-        font-size: 2rem;
-    }
-    
-    #PesquisaECriarPostADM{
-        align-items: center;
-        gap: 15px;
-        padding: 0 20px;
-    }   
+  #TituloDePostsADM {
+    color: var(--white-100);
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-quicksand);
+    font-weight: 1000;
+    font-size: 2rem;
+  }
 
-    #CaixaDePesquisa{
-        width: 50%;
-    }
+  #PesquisaECriarPostADM {
+    align-items: center;
+    gap: 15px;
+    padding: 0 20px;
+  }
 
-    .btnVisuPostADM,
-    .btnEditPostADM,
-    .btnDeletePostADM{
-        display: none;
-    }
-    .trespontos{
-        display: inline-block;
-    }
+  #CaixaDePesquisa {
+    width: 50%;
+  }
 
-    #modalEditar,
-    #modalVisualizar {
-        width: 95%;
-        max-height: 90vh;
-        overflow-y: auto;
-        padding: 20px 10px;
-    }
+  .btnVisuPostADM,
+  .btnEditPostADM,
+  .btnDeletePostADM {
+    display: none;
+  }
+  .trespontos {
+    display: inline-block;
+  }
 
-    #tituloEditarPosts,
-    #tituloVisualizarPosts{
-        font-size: 2rem;
-    }
-    
-    #lapisEditarPosts,
-    #olhoVisualizarPost,
-    #iconeAlterarTituloPost,
-    #iconeAlterarDescricaoPost,
-    #iconeConfirmarSenhaPost{
-        font-size: 2.2rem;
-    }
-    
-    #imagemAtualFutura{
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    #imagemAtual,
-    #alterarImagemPost,
-    #capaPost {
-        width: 80vw;
-        height: 80vw;
-        max-width: 300px;
-        max-height: 300px;
-    }
+  #modalEditar,
+  #modalVisualizar {
+    width: 95%;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 20px 10px;
+  }
 
-    #alterarTitulo,
-    #confirmarSenha {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        gap: 10px;
-    }       
+  #tituloEditarPosts,
+  #tituloVisualizarPosts {
+    font-size: 2rem;
+  }
 
-    #textoAlterarTituloPost,
-    #textoConfirmarSenhaPost {
-        width: 80%;
-        font-size: 1.5rem;
-    }
+  #lapisEditarPosts,
+  #olhoVisualizarPost,
+  #iconeAlterarTituloPost,
+  #iconeAlterarDescricaoPost,
+  #iconeConfirmarSenhaPost {
+    font-size: 2.2rem;
+  }
 
-    #camposVisualizarPost {
-        width: 95%;
-    }
+  #imagemAtualFutura {
+    flex-direction: column;
+    gap: 20px;
+  }
 
-    .btnCancelarModal,
-    .btnSalvarModal {
-        font-size: 20px;
-    }
+  #imagemAtual,
+  #alterarImagemPost,
+  #capaPost {
+    width: 80vw;
+    height: 80vw;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  #alterarTitulo,
+  #confirmarSenha {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+  }
+
+  #textoAlterarTituloPost,
+  #textoConfirmarSenhaPost {
+    width: 80%;
+    font-size: 1.5rem;
+  }
+
+  #camposVisualizarPost {
+    width: 95%;
+  }
+
+  .btnCancelarModal,
+  .btnSalvarModal {
+    font-size: 20px;
+  }
 }

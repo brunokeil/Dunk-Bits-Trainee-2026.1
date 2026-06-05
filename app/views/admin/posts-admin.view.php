@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,13 @@
         @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
     </style>
 </head>
+
 <body id="BodyTabelaPostsADM">
-    
+
     <div class="containerTabelaPostsAdmin">
-        <div><h2 id="TituloDePostsADM">TABELA DE POSTS</h2></div>
+        <div>
+            <h2 id="TituloDePostsADM">TABELA DE POSTS</h2>
+        </div>
         <div id="PesquisaECriarPostADM">
             <div id="CaixaDePesquisa">
                 <input type="text" placeholder="Pesquisar por Post" id="PesquisaPostsTabelaADM">
@@ -73,7 +77,7 @@
                                 <button class="trespontos">
                                     <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
                                 </button>
-            
+
                                 <div class="dropdownMenuPosts">
                                     <ul>
                                         <li><a onclick="abrirModal('modalVisualizar')">Visualizar</a></li>
@@ -99,7 +103,7 @@
                                 <button class="trespontos">
                                     <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
                                 </button>
-            
+
                                 <div class="dropdownMenuPosts">
                                     <ul>
                                         <li><a onclick="abrirModal('modalVisualizar')">Visualizar</a></li>
@@ -125,7 +129,7 @@
                                 <button class="trespontos">
                                     <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
                                 </button>
-            
+
                                 <div class="dropdownMenuPosts">
                                     <ul>
                                         <li><a onclick="abrirModal('modalVisualizar')">Visualizar</a></li>
@@ -151,7 +155,7 @@
                                 <button class="trespontos">
                                     <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
                                 </button>
-            
+
                                 <div class="dropdownMenuPosts">
                                     <ul>
                                         <li><a onclick="abrirModal('modalVisualizar')">Visualizar</a></li>
@@ -177,7 +181,7 @@
                                 <button class="trespontos">
                                     <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
                                 </button>
-            
+
                                 <div class="dropdownMenuPosts">
                                     <ul>
                                         <li><a onclick="abrirModal('modalVisualizar')">Visualizar</a></li>
@@ -203,7 +207,7 @@
                                 <button class="trespontos">
                                     <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
                                 </button>
-            
+
                                 <div class="dropdownMenuPosts">
                                     <ul>
                                         <li><a onclick="abrirModal('modalVisualizar')">Visualizar</a></li>
@@ -229,7 +233,7 @@
                                 <button class="trespontos">
                                     <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
                                 </button>
-            
+
                                 <div class="dropdownMenuPosts">
                                     <ul>
                                         <li><a onclick="abrirModal('modalVisualizar')">Visualizar</a></li>
@@ -255,7 +259,7 @@
                                 <button class="trespontos">
                                     <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
                                 </button>
-            
+
                                 <div class="dropdownMenuPosts">
                                     <ul>
                                         <li><a onclick="abrirModal('modalVisualizar')">Visualizar</a></li>
@@ -280,88 +284,94 @@
         </div>
     </div>
 
-    <div id="modalVisualizar">
-        <div id="containerVisualizarPosts">
-            <div id="iconeTituloVisualisarPosts">
-                <h1 id="tituloVisualizarPosts">POST</h1>
-            </div>
-            <div id="containerInfoPosts">
-                <div id="containerCapaAutorDataPost">
-                    <div id="capaPost">
-                        <img src="#" alt="Imagem Post">
-                    </div>
-                    <div id="autorDataPosts">
-                        <div id="AutorPost">
-                            <ion-icon name="person-circle-outline"></ion-icon>
-                            <h5 id="autorPost">Autor do Post</h5>
+    <div class="modalContainer">
+
+        <div class="modalPost" id="modalVisualizar">
+            <div id="containerVisualizarPosts">
+                <div id="iconeTituloVisualisarPosts">
+                    <h1 id="tituloVisualizarPosts">POST</h1>
+                </div>
+                <div id="containerInfoPosts">
+                    <div id="containerCapaAutorDataPost">
+                        <div id="capaPost">
+                            <img src="#" alt="Imagem Post">
                         </div>
-                        <h5 id="dataPost">01/01/0001</h5>
+                        <div id="autorDataPosts">
+                            <div id="AutorPost">
+                                <ion-icon name="person-circle-outline"></ion-icon>
+                                <h5 id="autorPost">Autor do Post</h5>
+                            </div>
+                            <h5 id="dataPost">01/01/0001</h5>
+                        </div>
                     </div>
-                </div>
-                <div id="camposVisualizarPost">
-                    <div id="visualizarTitulo">
-                        <h3 id="postTitulo">TÍTULO POST</h3>
-                    </div>
-                    <div id="visualizarDescricao">
-                        <h4 id="postDescricao">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h4>
+                    <div id="camposVisualizarPost">
+                        <div id="visualizarTitulo">
+                            <h3 id="postTitulo">TÍTULO POST</h3>
+                        </div>
+                        <div id="visualizarDescricao">
+                            <h4 id="postDescricao">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h4>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="modalActions">
+                <button class="btnCancelarModal" onclick="fecharModal('modalVisualizar')">Sair</button>
+            </div>
         </div>
-        <div class="modalActions">
-            <button class="btnCancelarModal" onclick="fecharModal('modalVisualizar')">Sair</button>
+
+        <div class="modalPost" id="modalEditar">
+            <div id="containerEditarPosts">
+                <div id="iconeTituloEditarPosts">
+                    <h1 id="tituloEditarPosts">EDITAR POSTS</h1>
+                </div>
+                <div id="containerImagemDescricao">
+                    <div id="alterarImagemPost">
+                        <input type="file" id="arquivoImagemPost" accept="image/*">
+                        <label for="arquivoImagemPost" id="caixaNovaImagem">
+                            <div id="iconeNovaImagem">
+                                <ion-icon name="image-outline"></ion-icon>
+                            </div>
+                            <p id="textoArrasteImagem">Arraste sua imagem ou clique aqui e escolha um novo arquivo</p>
+                        </label>
+                    </div>
+                    <div id="alterarDescricao">
+                        <textarea name="descricao" placeholder="DESCRIÇÃO" id="textoAlterarDescricaoPost"></textarea>
+                        <label for="textoAlterarDescricaoPost" id="labelAlterarDescricaoPost"></label>
+                    </div>
+                </div>
+                <div id="camposAlterarPost">
+                    <div id="alterarTitulo">
+                        <ion-icon name="create-outline" id="iconeAlterarTituloPost"></ion-icon>
+                        <input type="text" placeholder="TÍULO" id="textoAlterarTituloPost">
+                    </div>
+                    <div id="confirmarSenha">
+                        <ion-icon name="lock-closed-outline" id="iconeConfirmarSenhaPost"></ion-icon>
+                        <input type="text" id="textoConfirmarSenhaPost" placeholder="SENHA ATUAL">
+                    </div>
+                </div>
+            </div>
+            <div class="modalActions">
+                <button class="btnCancelarModal" onclick="fecharModal('modalEditar')">Cancelar</button>
+                <button class="btnSalvarModal">Salvar</button>
+            </div>
         </div>
+
+        <div class="modalPost avisoModal" id="modalExcluir">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <div class="modalActions">
+                <button class="btnCancelarModal" onclick="fecharModal('modalExcluir')">Cancelar</button>
+                <button class="btnSalvarModal">Salvar</button>
+            </div>
+        </div>
+
     </div>
 
-    <div id="modalEditar">
-        <div id="containerEditarPosts">
-            <div id="iconeTituloEditarPosts">
-                <h1 id="tituloEditarPosts">EDITAR POSTS</h1>
-            </div>
-            <div id="containerImagemDescricao">
-                <div id="alterarImagemPost">
-                    <input type="file" id="arquivoImagemPost" accept="image/*">
-                    <label for="arquivoImagemPost" id="caixaNovaImagem">
-                        <div id="iconeNovaImagem">
-                            <ion-icon name="image-outline"></ion-icon>
-                        </div>  
-                        <p id="textoArrasteImagem">Arraste sua imagem ou clique aqui e escolha um novo arquivo</p>
-                    </label>
-                </div>
-                <div id="alterarDescricao">
-                    <textarea name="descricao" placeholder="DESCRIÇÃO" id="textoAlterarDescricaoPost"></textarea>
-                    <label for="textoAlterarDescricaoPost" id="labelAlterarDescricaoPost"></label>
-                </div>
-            </div>
-            <div id="camposAlterarPost">
-                <div id="alterarTitulo">
-                    <ion-icon name="create-outline" id="iconeAlterarTituloPost"></ion-icon>
-                    <input type="text" placeholder="TÍULO" id="textoAlterarTituloPost">
-                </div>
-                <div id="confirmarSenha">
-                    <ion-icon name="lock-closed-outline" id="iconeConfirmarSenhaPost"></ion-icon>
-                    <input type="text" id="textoConfirmarSenhaPost" placeholder="SENHA ATUAL">
-                </div>
-            </div>
-        </div>
-        <div class="modalActions">
-            <button class="btnCancelarModal" onclick="fecharModal('modalEditar')">Cancelar</button>
-            <button class="btnSalvarModal">Salvar</button>
-        </div>
-    </div>
-    
-    <div id="modalExcluir">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <div class="modalActions">
-            <button class="btnCancelarModal" onclick="fecharModal('modalExcluir')">Cancelar</button>
-            <button class="btnSalvarModal">Salvar</button>
-        </div>
-    </div>
     <script src="../../../public/js/posts-admin.js"></script>
 </body>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </html>
