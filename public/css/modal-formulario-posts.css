@@ -183,9 +183,7 @@ i:hover {
 /* ----------------- Estilização do Modal ----------------- */
 
 /* ----------------- Modal de Criar Post ----------------- */
-* {
-  /* outline:  1px solid blue; */
-}
+
 /* ------------------------- Corpo do Modal ------------------------- */
 #modal-criar-post {
   box-sizing: border-box;
@@ -382,18 +380,18 @@ i:hover {
   width: 25vw;
   height: fit-content;
   background: var(--linear-red-gradient);
-  border-radius: 20px;
+  border-radius: 25px;
   display: none;
-  padding: 20px 50px;
+  padding: 30px;
   flex-direction: column;
-  left: 25%;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 20;
+  
 }
 
 #modal-excluir-titulo {
@@ -414,7 +412,6 @@ i:hover {
   font-family: var(--font-bebas-neue);
   font-size: 2em;
   color: var(--white-100);
-  letter-spacing: -2;
   white-space: nowrap;
   margin: 0.2em;
 }
@@ -424,6 +421,11 @@ i:hover {
   font-size: 1em;
   color: var(--white-100);
   width: 100%;
+  margin: 0;
+}
+
+#modal-excluir-descricao h4:first-child {
+  margin-bottom: 20px;
 }
 
 #modal-excluir-botoes {
@@ -440,11 +442,11 @@ i:hover {
   border: none;
   cursor: pointer;
   flex-direction: end;
-  border-radius: 25px;
+  border-radius: 15px;
   color: var(--white-100);
   font-family: var(--font-quicksand);
   font-size: 1.2em;
-  padding: 0 10px;
+  padding: 5px 10px;
 }
 
 #btn-modal-excluir-cancelar {
