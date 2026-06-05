@@ -13,7 +13,7 @@ class UsuariosController
 
         $database = App::get("database");
 
-        $searchText = $_GET['search'] ? $_GET['search'] : '';
+        $searchText = isset($_GET['search']) ? $_GET['search'] : '';
         $searchColumn = $searchText !== '' ? ['name', 'email'] : null;
 
         $limit = 5;
