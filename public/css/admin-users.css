@@ -1,7 +1,7 @@
 @import "./styles.css";
 
 body {
-    background-image: var(--bg-table-users);
+    background-image: linear-gradient(rgba(0, 0, 128, 0.5), rgba(0, 0, 128, 0.5)), url("/public/assets/bg_images/bg_table_posts.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -162,6 +162,9 @@ td{
 }
 
 
+.botoesdeacao {
+    display: flex;
+}
 
 
 
@@ -170,6 +173,8 @@ td{
     border-radius: 100px;
     display: flex;
     align-items: center;
+
+    font-size: 20px;
 
         
     
@@ -271,7 +276,6 @@ ion-icon:hover{
      border: none;
     outline: none;
     background: transparent;
-    transform: scaleX(-1);
 
 }
 
@@ -478,8 +482,6 @@ ion-icon:hover{
         width:50px
     }
 
-   
-
 
     .componentes {
             width: 95%;
@@ -507,7 +509,3 @@ ion-icon:hover{
   
 
 }
-
-
-
-
