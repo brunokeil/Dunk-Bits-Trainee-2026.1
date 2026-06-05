@@ -1,30 +1,45 @@
 <div class="modalPost" id="modalVisualizar">
-    <div class="headerModal" >
-        <h1 id="tituloVisualizarPosts">POST</h1>
+    <div class="headerModal">
+        <h1 class="tituloPost">POST</h1>
     </div>
     <div class="contentModal">
-        <div class="infoLeft">
-            <div id="capaPost">
-                <img src="#" alt="Imagem Post">
-            </div>
+        <div class="imagemPost">
+            <img src="#" class="imgPost" />
+            <input type="file" class="imgPostInput" accept="image/*" hidden />
             <div id="autorDataPosts">
-                <div id="AutorPost">
-                    <ion-icon name="person-circle-outline"></ion-icon>
-                    <h5 id="autorPost">Autor do Post</h5>
+                <div class="autorPost">
+                    <ion-icon name="person"></ion-icon>
+                    <h5 id="userPost">Autor do Post</h5>
                 </div>
-                <h5 id="dataPost">01/01/0001</h5>
+                <h5 class="dataPost">01/01/0001</h5>
             </div>
         </div>
-        <div class="infoRight">
-            <div id="visualizarTitulo">
-                <h3 id="postTitulo">TÍTULO POST</h3>
+
+        <div class="postInfo">
+            <div class="inputGroup">
+
+                <input
+                    type="text"
+                    class="titleInput"
+                    placeholder="Titulo do Post"
+                    value="entituladoele"
+                    disabled />
             </div>
-            <div id="visualizarDescricao">
-                <h4 id="postDescricao">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h4>
+
+            <div class="inputGroup">
+
+                <input
+                    type="textarea"
+                    class="descricaoInput"
+                    placeholder="Descrição"
+                    value="Esta é uma descrição de exemplo para o post."
+                    disabled />
             </div>
+
         </div>
     </div>
+
     <div class="footerBtns">
-        <button class="btnCancelarModal closeModalBtn" >Sair</button>
+        <button class="btnCancelarModal closeModalBtn">Sair</button>
     </div>
 </div>

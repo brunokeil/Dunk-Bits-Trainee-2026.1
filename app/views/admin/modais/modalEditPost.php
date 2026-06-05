@@ -17,7 +17,7 @@
             <label for="textoAlterarDescricaoPost" id="labelAlterarDescricaoPost"></label>
         </div>
     </div>
-    <div id="camposAlterarPost">
+    <div class="inputGroup">
         <div id="alterarTitulo">
             <ion-icon name="create-outline" id="iconeAlterarTituloPost"></ion-icon>
             <input type="text" placeholder="TÍULO" id="textoAlterarTituloPost">

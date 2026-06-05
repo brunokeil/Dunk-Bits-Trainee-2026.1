@@ -228,69 +228,73 @@ ion-icon[name="search-outline"] {
 /* classes de view */
 
 .open {
-    opacity: 1;
-    transition: opacity 240ms ease-in;
-    pointer-events: auto;
+  opacity: 1;
+  transition: opacity 140ms ease-in;
+  pointer-events: auto;
 }
 
 .close {
-    opacity: 0;
-    transition: opacity 140ms ease-in;
-    pointer-events: none;
+  opacity: 0;
+  transition: opacity 140ms ease-in;
+  pointer-events: none;
 }
-
 
 /* -------- modal container paizao ------------- */
 
 .modalContainer {
-    /* background: var(--linear-grey-50); */
-    /* background: var(--linear-orange-gradient2); */
-    background: var(--linear-blue-80);
-    z-index: 2;
-    
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    overflow: hidden;
-    backdrop-filter: blur(15px);
+  /* background: var(--linear-grey-50); */
+  /* background: var(--linear-orange-gradient2); */
+  background: var(--linear-blue-80);
+  z-index: 2;
+
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  backdrop-filter: blur(15px);
 }
 
 /* ----------------- modal view padrão ----------------- */
 .modalPost {
-    /* visibility: hidden; */
-    position: absolute;
-    z-index: 4;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    
-    padding: 2rem;
-    
-    background: var(--bg-modal);
-    
-    border-radius: 16px;
+  /* visibility: hidden; */
+  position: absolute;
+  z-index: 4;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  padding: 2rem;
+
+  background: var(--bg-modal);
+
+  border-radius: 16px;
 }
 
 /* parte superior */
-.modalPost #header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    gap: 5px;
+.modalPost .headerModal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 5px;
 }
 
+.contentModal {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
 /* foto de perfil */
-/* .userProfilePicture {
+.imagemPost {
     min-width: 200px;
     min-height: auto;
     aspect-ratio: 0.9;
@@ -304,124 +308,104 @@ ion-icon[name="search-outline"] {
     align-items: center;
 }
 
-.userProfilePicture:hover {
+.imagemPost:hover {
     background-color: var(--white-25);
 }
 
-.imgProfPic {
-    width: 100%;
-    height: 100%;
-    max-width: 200px;
-    object-fit: cover;
-    
-    border-radius: 10px;
-    
+.imgPostInput {
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  object-fit: cover;
+
+  border-radius: 10px;
 }
 
-.imgProfPic:hover {
-    filter: brightness(0.75);
-    cursor: pointer;
-} */
+.imgPostInput:hover {
+  filter: brightness(0.75);
+  cursor: pointer;
+}
 
 /* dados user */
 .postInfo {
-    /* box-sizing: border-box; */
-    
-    display: flex;
-    flex-direction: column;
-    
-    min-width: 100%;
-    width: fit-content;
-    /* border: 1px solid red; */
-    gap: 10px;
+  /* box-sizing: border-box; */
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 100%;
+  width: fit-content;
+  /* border: 1px solid red; */
+  gap: 10px;
 }
 
 .inputGroup {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-inline: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 5px;
 }
 
 /* ----- warning modais -----*/
 
 .warningModal {
-    text-wrap: wrap;
-    max-width: 45ch;
-    background: var(--linear-red-gradient);
-    align-items: baseline;
-    gap: 2rem;
-    font-weight: 600;
+  text-wrap: wrap;
+  max-width: 45ch;
+  background: var(--linear-red-gradient);
+  align-items: baseline;
+  gap: 2rem;
+  font-weight: 600;
 }
 
 .warningModal em {
-    text-decoration: underline;
-    font-style: normal;
-    font-weight: bold;
+  text-decoration: underline;
+  font-style: normal;
+  font-weight: bold;
 }
 
 .footerBtns {
-    display: flex;
-    
-    align-self: end;
+  display: flex;
+
+  align-self: end;
 }
 
 .footerBtns > * {
-    transition: all 120ms ease;
+  transition: all 120ms ease;
 }
 
 .footerBtns :first-child {
-    background: 0;
-    text-decoration: underline;
+  background: 0;
+  text-decoration: underline;
 }
 .warningModal .footerButtons :last-child:hover {
-    filter: drop-shadow(0 0 0px black);
-    color: red;
-    background-color: var(--white-100);
-    transition: all 120ms ease-out;
+  filter: drop-shadow(0 0 0px black);
+  color: red;
+  background-color: var(--white-100);
+  transition: all 120ms ease-out;
 }
 
-
 .warningHeader {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .warningHeader ion-icon {
-    font-size: 64px;
-    color: var(--orange-100);
-    
+  font-size: 64px;
+  color: var(--orange-100);
 }
 
 /* --------------------- */
 
-
-
-
-
 ion-icon {
-    min-height: 1rem;
-    min-width: 1rem;
-    /* border: 1px wheat solid; */
-    padding: 0;
+  min-height: 1rem;
+  min-width: 1rem;
+  /* border: 1px wheat solid; */
+  padding: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  .paginacaoContainer {
+.paginacaoContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -430,29 +414,28 @@ ion-icon {
   color: var(--white-100);
   font-family: var(--font-quicksand);
   font-weight: 600;
-  }
-  
-  
-  .btnSetaPaginacao {
-    background: none;
-    border: none;
-    color: var(--white-100);
-    font-size: 2rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s ease;
-  }
-  
-  .btnSetaPaginacao:hover {
-    color: var(--orange-100);
-  }
-  
-  .btnSetaPaginacao:disabled {
-    color: var(--grey-100);
-    cursor: not-allowed;
-  }
+}
+
+.btnSetaPaginacao {
+  background: none;
+  border: none;
+  color: var(--white-100);
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.btnSetaPaginacao:hover {
+  color: var(--orange-100);
+}
+
+.btnSetaPaginacao:disabled {
+  color: var(--grey-100);
+  cursor: not-allowed;
+}
 
 .btnPaginacao {
   background-color: var(--orange-100);
@@ -475,8 +458,6 @@ ion-icon {
   cursor: not-allowed;
   opacity: 0.5;
 }
-
-
 
 /* ------------------------------------- */
 
