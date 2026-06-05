@@ -166,6 +166,13 @@ ion-icon {
   margin-left: -20px;
 }
 
+@media (max-width: 700px) {
+  #tabela-posts ion-icon{
+    margin: 0;
+  }
+}
+
+
 #seta ion-icon,
 #logout ion-icon {
  font-size: clamp(1.2rem, 3.2vw, 2.2rem);
