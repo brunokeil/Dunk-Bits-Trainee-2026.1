@@ -62,12 +62,12 @@ tresPontos.forEach((botao) => {
 console.log("JS CARREGADO COM SUCESSO");
 
 // função de alterar imagem
-const profPics = document.querySelectorAll(".imgPost");
+const img = document.querySelectorAll(".imgPost");
 
 function alterarImagem(){
-    profPics.forEach((profPic) => {
-        const img = profPic.querySelector("img");
-        const input = profPic.querySelector("input");
+    img.forEach((imagem) => {
+        const img = imagem.querySelector("img");
+        const input = imagem.querySelector("input");
 
         img.addEventListener("click", () => {
             input.click();
@@ -124,25 +124,33 @@ function setAllEventListeners() {
     // todos os eventos de botoes modais aqui
 
     // botoes
-    const viewPost = document.getElementById("viewPost");
-    const createPost = document.getElementById("newPost");
-    const editPost = document.getElementById("editPost");
-    const deletePost = document.getElementById("deletePost");
+    const viewPost = document.querySelectorAll(".btnVisuPostADM");
+    const createPost = document.querySelectorAll(".btnCriarPostADM");
+    const editPost = document.querySelectorAll(".btnEditPostADM");
+    const deletePost = document.querySelectorAll(".btnDeletePostADM");
 
-    viewPost.addEventListener("click", () => {
-        toggleModal("viewModal");
+    viewPost.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            toggleModal("modalVisualizar");
+        });
     });
 
-    createPost.addEventListener("click", () => {
-        toggleModal("createModal");
+    createPost.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            toggleModal("modalCriar");
+        });
     });
 
-    editPost.addEventListener("click", () => {
-        toggleModal("editModal");
+    editPost.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            toggleModal("modalEditar");
+        });
     });
 
-    deletePost.addEventListener("click", () => {
-        toggleModal("deleteModal");
+    deletePost.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            toggleModal("modalExcluir");
+        });
     });
 
 
