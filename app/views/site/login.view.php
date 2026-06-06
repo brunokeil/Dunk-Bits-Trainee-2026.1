@@ -21,13 +21,13 @@
 			<form action="/login" method="POST">
 				<div class="inputBox">
                     <label>
-					    <input name="username" type="text" placeholder="USERNAME" />
+					    <input name="email" id="email" type="text" placeholder="EMAIL" />
                     </label>
 				</div>
 
 				<div class="inputBox">
                     <label>
-					    <input name="senha" type="password" placeholder="SENHA" />
+					    <input name="senha" id="senha" type="password" placeholder="SENHA" />
                     </label>
 				</div>
 
