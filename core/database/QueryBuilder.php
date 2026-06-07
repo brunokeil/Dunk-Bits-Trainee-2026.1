@@ -85,14 +85,24 @@ class QueryBuilder
     }
 
 
-    public function countAll($table, $searchText, $searchColumn)
+    public function countAll($table, $searchText, $searchColumn, $filtro)
     {
         $sql = "SELECT COUNT(*) AS total FROM {$table}";
         $parameters = [];
+        $whereClauses = [];
 
         if ($searchColumn && $searchText) {
-            $sql .= " where $searchColumn[0] like :searchText or $searchColumn[1] like :searchText";
+            $whereClauses[] = "($searchColumn[0] like :searchText or $searchColumn[1] like :searchText)";
             $parameters['searchText'] = '%' . $searchText . '%';
+        }
+
+        if ($filtro) {
+            $whereClauses[] = "(type = :filtro)";
+            $parameters['filtro'] = $filtro;
+        }
+
+        if (!empty($whereClauses)) {
+            $sql .= " where " . implode(' and ', $whereClauses);
         }
 
         try {
@@ -105,18 +115,26 @@ class QueryBuilder
         }
     }
 
-    public function paginate($table, $limit, $offset, $searchText, $searchColumn)
+    public function paginate($table, $limit, $offset, $searchText, $searchColumn, $filtro)
     {
         $parameters = [];
-
+        $whereClauses = [];
         $whereSql = '';
 
 
         if ($searchColumn && $searchText) {
-            $whereSql = "where $searchColumn[0] like :searchText or $searchColumn[1] like :searchText";
+            $whereClauses[] = "($searchColumn[0] like :searchText or $searchColumn[1] like :searchText)";
             $parameters['searchText'] = '%' . $searchText . '%';
-        }
+            }
 
+        if ($filtro) {
+        $whereClauses[] = "(type = :filtro)";
+        $parameters['filtro'] = $filtro;
+            }
+
+        if (!empty($whereClauses)) {
+        $whereSql = "WHERE " . implode(' and ', $whereClauses);
+            }
 
         $sql = "SELECT * FROM {$table} {$whereSql} LIMIT {$limit} OFFSET {$offset}";
 

@@ -14,23 +14,26 @@
     <div id="search">
       <form method="GET" action="/lista-posts" id="form-search">
           <ion-icon name="search-sharp"></ion-icon>
-          
+
         <input type="text" id="search-text" placeholder="SEARCH" value="<?= $searchText ?? '' ?>" name="search" />
       </form>
       <span class="divisor-vertical">|</span>
       <img src="../../../public/assets/icons/basketball_on_fire.png" alt="Logo Basketball" id="icone-busca">
     </div>
+
+       <form method="GET" action="/lista-posts" class="form_filtros"> 
     <div id="grupo-filtro">
       <div id="filtros-opcoes">
-        <button class="botao-filtro-item">Melhores Avaliados</button>
-        <button class="botao-filtro-item">Populares</button>
-        <button class="botao-filtro-item">Tecnologia</button>
+        <button type="submit" name="filtro" value="melhores" class="botao-filtro-item">Melhores Avaliados</button>
+        <button type="submit" name="filtro" value="populares" class="botao-filtro-item">Populares</button>
+        <button type="submit" name="filtro" value="tecnologias"class="botao-filtro-item">Tecnologia</button>
       </div>
 
-      <button id="botao-filtro">
+      <button id="botao-filtro" type="button">
         <ion-icon name="filter-circle-outline"></ion-icon>
       </button>
     </div>
+        </form>
   </section>
 
   <section id="container-titulo">

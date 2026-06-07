@@ -16,6 +16,8 @@ class ListaPostsController
         $searchText = isset($_GET['search']) ? $_GET['search'] : '';
         $searchColumn = $searchText !== '' ? ['title', 'content'] : null;
 
+        $filtro = isset($_GET['filtro']) ? $_GET['filtro'] : '';
+
         $limit = 6;
         $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
@@ -25,16 +27,17 @@ class ListaPostsController
 
         $offset = ($currentPage - 1) * $limit;
 
-        $totalPosts = $database->countAll('posts', $searchText, $searchColumn);
+        $totalPosts = $database->countAll('posts', $searchText, $searchColumn, $filtro);
         $totalPages = ceil($totalPosts / $limit);
 
-        $posts = $database->paginate('posts', $limit, $offset, $searchText, $searchColumn);
+        $posts = $database->paginate('posts', $limit, $offset, $searchText, $searchColumn, $filtro);
 
         return view('site/lista-posts', [
             'posts' => $posts,
             'currentPage' => $currentPage,
             'totalPages' => $totalPages,
-            'searchText' => $searchText
+            'searchText' => $searchText,
+            'valor_filtro' => $filtro
         ]);
     }
 }
