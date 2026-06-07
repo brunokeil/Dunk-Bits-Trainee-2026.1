@@ -18,12 +18,13 @@ class LoginControllerPOST
         if($user){
             session_start();
             $_SESSION['id'] = $user->id;
-            header(header: 'Location: /dashboard');
+            header('Location: /dashboard');
+            exit();
         }
-        // } else{
-        //     session_start();   
-        //     $_SESSION['mensagem-erro'];
-        //     header(header:'Location: /login');
-        // }
+    //     }else{
+    //         session_start();   
+    //         $_SESSION['mensagem-erro'] = "Usuário ou senha incorretos!";
+    //         header('Location: /login');
+    //     }
     }
 }
