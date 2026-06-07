@@ -17,7 +17,7 @@
 			</a>
 
 			<h2>LOGIN</h2>
-
+			
 			<form action="/login" method="POST">
 				<div class="inputBox">
                     <label>
