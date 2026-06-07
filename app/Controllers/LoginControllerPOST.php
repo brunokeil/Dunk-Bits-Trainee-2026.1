@@ -8,17 +8,22 @@ use Exception;
 class LoginControllerPOST
 {
 
-    public function logar()
+    public function logar(): void
     {
         $email = $_POST['email'];
         $senha = $_POST['senha'];
 
-        $user = App::get('database')->verificaLogin($email, $senha);
+        $user = App::get(key: 'database')->verificaLogin($email, $senha);
 
         if($user){
             session_start();
             $_SESSION['id'] = $user->id;
-            header('Location: /pagposts');
+            header(header: 'Location: /dashboard');
         }
+        // } else{
+        //     session_start();   
+        //     $_SESSION['mensagem-erro'];
+        //     header(header:'Location: /login');
+        // }
     }
 }
