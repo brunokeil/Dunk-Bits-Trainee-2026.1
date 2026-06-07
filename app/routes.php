@@ -12,6 +12,10 @@ $router->get('', 'ExampleController@index');
 
 $router->get('login', 'LoginControllerGET@LoginView');
 
+$router->get('pagposts', 'PagPostsController@index');
+
+$router->get('dashboard', 'DashboardController@index');
+
 $router->post('login', 'LoginControllerPOST@logar');
 
-$router->get('pagposts', 'PagPostsController@index');
+$router->post('logout', 'LogoutControllerPOST@deslogar');
