@@ -28,6 +28,20 @@ class QueryBuilder
         }
     }
 
+    public function selectOne($table, $id)
+    {
+        $sql = "select * from {$table}  where id = :id";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['id' => $id]);
+
+            return $stmt->fetchObject();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function insert($table, $parameters)
     {
 
@@ -125,16 +139,16 @@ class QueryBuilder
         if ($searchColumn && $searchText) {
             $whereClauses[] = "($searchColumn[0] like :searchText or $searchColumn[1] like :searchText)";
             $parameters['searchText'] = '%' . $searchText . '%';
-            }
+        }
 
         if ($filtro) {
-        $whereClauses[] = "(type = :filtro)";
-        $parameters['filtro'] = $filtro;
-            }
+            $whereClauses[] = "(type = :filtro)";
+            $parameters['filtro'] = $filtro;
+        }
 
         if (!empty($whereClauses)) {
-        $whereSql = "WHERE " . implode(' and ', $whereClauses);
-            }
+            $whereSql = "WHERE " . implode(' and ', $whereClauses);
+        }
 
         $sql = "SELECT * FROM {$table} {$whereSql} LIMIT {$limit} OFFSET {$offset}";
 
