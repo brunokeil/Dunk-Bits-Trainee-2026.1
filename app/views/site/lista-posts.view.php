@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lista de Posts</title>
   <link rel="stylesheet" href="../../../public/css/lista-posts.css" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <body>
@@ -15,11 +13,8 @@
 
     <div id="search">
       <form method="GET" action="/lista-posts" id="form-search">
-        <label for="search-text">
-          <span class="material-symbols-outlined">search</span>
-        </label>
-
-
+          <ion-icon name="search-sharp"></ion-icon>
+          
         <input type="text" id="search-text" placeholder="SEARCH" value="<?= $searchText ?? '' ?>" name="search" />
       </form>
       <span class="divisor-vertical">|</span>
@@ -33,7 +28,7 @@
       </div>
 
       <button id="botao-filtro">
-        <span class="material-symbols-outlined">filter_alt</span>
+        <ion-icon name="filter-circle-outline"></ion-icon>
       </button>
     </div>
   </section>
@@ -62,6 +57,9 @@
   </section>
 
   <?php require("app/views/site/pagination-posts-site.view.php") ?>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
   <script src="../../../public/js/lista-posts.js"></script>
 </body>
