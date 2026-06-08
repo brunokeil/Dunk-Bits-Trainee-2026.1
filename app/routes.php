@@ -7,4 +7,6 @@ use App\Core\Router;
 
 $router->get('', 'ExampleController@index');
 
-$router->get('posts-admin', 'PostsAdminController@index');
+$router->get('posts-admin', 'PostsAdminControllerGET@index');
+
+$router->post('posts-admin/create', 'PostsAdminControllerPOST@criar');
