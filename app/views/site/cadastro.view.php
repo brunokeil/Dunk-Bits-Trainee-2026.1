@@ -1,4 +1,4 @@
-<!-- FLUMINENSE -->
+  <!-- FLUMINENSE -->
 
 <!doctype html>
 <html lang="pt-BR">
@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>CADASTRO</title>
 
-		<link rel="stylesheet" href="../../../public/css/login.css" />
+		<link rel="stylesheet" href="../../../public/css/cadastro.css" />
 	</head>
 
 	<body class="telaLogin">
@@ -15,20 +15,19 @@
 			<a href="#" class="buttonFechar">
 				<ion-icon name="close-outline"></ion-icon>
 			</a>
-
-			<h2>CADASTRO</h2>
-
-			<form action="#">
+			<h2 id="tituloCadastro">CADASTRO</h2>  
+			<form action="/cadastro/create" method="POST">  
 				<div class="inputBox">
-					<input type="text" placeholder="USERNAME" />
+					<input type="text" name="name" placeholder="NOME" />
 				</div>
 
 				<div class="inputBox">
-					<input type="password" placeholder="SENHA" />
+					<input type="text" name="email" placeholder="EMAIL" />
 				</div>
-
-				
-
+  
+				<div class="inputBox">  
+					<input type="password" name="password" placeholder="SENHA" />  
+				</div>
 				<button type="submit" class="buttonEntrar">CRIAR</button>
 			</form>
 		</main>
