@@ -25,10 +25,10 @@ class UsuariosController
 
         $offset = ($currentPage - 1) * $limit;
 
-        $totalUsuarios = $database->countAll('users', $searchText, $searchColumn);
+        $totalUsuarios = $database->countAll('users', $searchText, $searchColumn, null);
         $totalPages = ceil($totalUsuarios / $limit);
 
-        $usuarios = $database->paginate('users', $limit, $offset, $searchText, $searchColumn);
+        $usuarios = $database->paginate('users', $limit, $offset, $searchText, $searchColumn, null);
 
         return view('admin/admin-users', [
             'usuarios' => $usuarios,

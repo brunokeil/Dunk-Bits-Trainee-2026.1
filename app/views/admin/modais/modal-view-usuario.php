@@ -1,13 +1,14 @@
 <div class="modalUser close" id="viewModal">
-  <span id="header">
+  <div id="header">
+    <ion-icon class="icone-titulo" name="eye"></ion-icon>
     <h1>PERFIL DE USUÁRIO</h1>
     <button class="closeModalBtn terciaryBtn">X</button>
-  </span>
+  </div>
 
-  <div class="userProfilePicture">
+  <div class="userProfilePictureNoEdit">
     <img
-      src="/public/assets/placeholder/blank-prof-pic.png "
-      class="imgProfPic" />
+      src="/public/assets/placeholder/blank-prof-pic.webp"
+      class="imgProfPicNoEdit" />
     <input type="file" class="profileInput" accept="image/*" hidden />
   </div>
 

@@ -3,14 +3,18 @@ console.log("JS CARREGADO COM SUCESSO");
 // função de alterar imagem
 const profPics = document.querySelectorAll(".userProfilePicture");
 
-function alterarImagem(){
+
+
+function alterarImagem() {
     profPics.forEach((profPic) => {
         const img = profPic.querySelector("img");
         const input = profPic.querySelector("input");
+        const icon = profPic.querySelector(".icone-img");
+        const text = profPic.querySelector(".txt-img");
 
-        img.addEventListener("click", () => {
+        profPic.addEventListener("click", () => {
             input.click();
-        })
+        });
 
         input.addEventListener("change", () => {
             const arquivo = input.files[0];
@@ -18,10 +22,14 @@ function alterarImagem(){
             if (arquivo) {
                 const imageURL = URL.createObjectURL(arquivo);
 
+                img.style.display = "flex";
+
+                icon.style.display = "none";
+                text.style.display = "none";
                 img.src = imageURL;
             }
         });
-    })
+    });
 }
 
 // func de abrir/fechar modal
@@ -86,7 +94,13 @@ function setAllEventListeners() {
 
         console.log(btn.dataset.profpic)
 
-        document.querySelector(".imgProfPic").src ="/" + btn.dataset.profpic;
+        if (btn.dataset.profpic && btn.dataset.profpic.trim() !== "") {
+            document.querySelector(".imgProfPicNoEdit").src = "/" + btn.dataset.profpic;
+        } else {
+            document.querySelector(".imgProfPicNoEdit").src = "/public/assets/placeholder/blank-profile-pic.webp";
+        }
+
+
 
         document.getElementById("view-username").value =btn.dataset.name;
 
@@ -103,10 +117,9 @@ function setAllEventListeners() {
         btn.addEventListener("click", () => {
 
             console.log(btn.dataset.profpic)
+            document.getElementById("edit-id").value = btn.dataset.id;
 
             document.querySelector(".imgProfPic").src = "/" + btn.dataset.profpic;
-
-            document.getElementById("edit-id").value = btn.dataset.id;
 
             document.getElementById("edit-username").value = btn.dataset.name;
 
