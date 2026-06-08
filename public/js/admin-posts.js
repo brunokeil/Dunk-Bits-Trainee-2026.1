@@ -122,10 +122,10 @@ function setAllEventListeners() {
 	// todos os eventos de botoes modais aqui
 
 	// botoes
-	const viewPost = document.querySelectorAll(".btnVisuPostADM");
-const createPost = document.querySelectorAll(".btnCriarPostADM");
-	const editPost = document.querySelectorAll(".btnEditPostADM");
-	const deletePost = document.querySelectorAll(".btnDeletePostADM");
+	const viewPost = document.querySelectorAll(".viewPost");
+	const createPost = document.querySelectorAll(".createPost");
+	const editPost = document.querySelectorAll(".editPost");
+	const deletePost = document.querySelectorAll(".deletePost");
 
 	viewPost.forEach((btn) => {
 		btn.addEventListener("click", () => {

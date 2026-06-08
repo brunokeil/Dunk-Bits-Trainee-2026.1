@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Posts</title>
     <link rel="stylesheet" href="../../../public/css/posts-admin.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body id="BodyTabelaPostsADM">
@@ -15,66 +18,67 @@
             <h2 id="TituloDePostsADM">TABELA DE POSTS</h2>
         </div>
         <div id="PesquisaECriarPostADM">
-            <div id="CaixaDePesquisa">
-                <input type="text" placeholder="Pesquisar por Post" id="PesquisaPostsTabelaADM">
+            <div class="searchContainer">
                 <ion-icon name="search-outline"></ion-icon>
+                <input id="PesquisaPostsTabelaADM" type="text" placeholder="Pesquisar por Post" />
             </div>
-            <button id="btnCriarPostADM" type="button" data-bs-toggle="modais" data-bs-target="#modalCriarPost">Criar Post</button>
+            <button class="primaryBtn" id="btnCriarPostADM" type="button" data-bs-toggle="modais" data-bs-target="#modalCriarPost">Criar Post</button>
         </div>
 
         <table id="containerTabelaPostsToda">
             <thead id="IndicesTabelaPostADM">
                 <tr>
-                    <th id="IdTabelaPostsADM">ID</th>
-                    <th id="TituloTabelaPostsADM">Título</th>
-                    <th id="AutorTabelaPostsADM">Autor</th>
-                    <th id="DataTabelaPostsADM">Data</th>
-                    <th id="AcoesTabelaPostsADM">Ações</th>
+                    <th class="tableHead">ID</th>
+                    <th class="tableHead">Título</th>
+                    <th class="tableHead">Autor</th>
+                    <th class="tableHead">Data</th>
+                    <th class="tableHead">Ações</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                <?php foreach($posts as $post): ?>
-                    <td><?= $post -> id ?></td>
-                    <td><?= $post -> title ?></td>
-                    <td><?= $post -> content ?></td>
-                    <td> a definir </td>
-                    <td>
-                        <div class="botoesdeacao">
-                            <button class="btnVisuPostADM" type="button" data-bs-toggle="modais" data-bs-target="#modalViewPost-<?= $post -> id ?>">
-                                <ion-icon name="eye-outline"></ion-icon>
-                            </button>
-                            <button class="btnEditPostADM" type="button" data-bs-toggle="modais" data-bs-target="#modalEditPost-<?= $post -> id ?>">
-                                <ion-icon name="pencil-outline"></ion-icon>
-                            </button>
-                            <button class="btnDeletePostADM" type="button" data-bs-toggle="modais" data-bs-target="#modalDeletPost-<?= $post -> id ?>">
-                                <ion-icon name="trash-bin-outline"></ion-icon>
-                            </button>
-                        </div>
-                        <div class="containerMenuPostsAcoes">
-                            <button class="trespontos">
-                                <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
-                            </button>
-                            <div class="dropdownMenuPosts">
-                                <ul>
-                                    <li><a class="btnVisuPostADM">Visualizar</a></li>
-                                    <li><a class="btnEditPostADM">Editar</a></li>
-                                    <li><a class="btnDeletePostADM">Excluir</a></li>
-                                </ul>
+                    <?php foreach ($posts as $post): ?>
+                        <td><?= $post->id ?></td>
+                        <td><?= $post->title ?></td>
+                        <td><?= $post->author ?></td>
+                        <td> a definir </td>
+                        <td>
+                            <div class="actionBtn-container">
+                                <button class="actionBtn viewPost" type="button" data-bs-toggle="modais" data-bs-target="#modalViewPost-<?= $post->id ?>">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </button>
+                                <button class="actionBtn editPost" type="button" data-bs-toggle="modais" data-bs-target="#modalEditPost-<?= $post->id ?>">
+                                    <ion-icon name="pencil-outline"></ion-icon>
+                                </button>
+                                <button class="actionBtn deletePost" type="button" data-bs-toggle="modais" data-bs-target="#modalDeletePost-<?= $post->id ?>">
+                                    <ion-icon name="trash-bin-outline"></ion-icon>
+                                </button>
                             </div>
-                        </div>
-                    </td>
+                            <div class="containerMenuPostsAcoes">
+                                <button class="trespontos">
+                                    <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
+                                </button>
+                                <div class="dropdownMenuPosts">
+                                    <ul>
+                                        <li><a class="viewPost btnVisuPostADM">Visualizar</a></li>
+                                        <li><a class="editPost btnEditPostADM">Editar</a></li>
+                                        <li><a class="deletePost btnDeletePostADM">Excluir</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
                 </tr>
-                <?php endforeach ?>
+            <?php endforeach ?>
 
             </tbody>
         </table>
-        <div id="novaPaginacao">
-            <button id="btnVoltarPagina" class="btnSetaPaginacao">
+        <div class="paginacaoContainer">
+
+            <button class="btnSetaPaginacao" id="btnVoltarPagina">
                 <ion-icon name="chevron-back-outline"></ion-icon>
             </button>
             <span id="numeroPaginaAtual">1</span>
-            <button id="btnAvancarPagina" class="btnSetaPaginacao">
+            <button class="btnSetaPaginacao" id="btnAvancarPagina">
                 <ion-icon name="chevron-forward-outline"></ion-icon>
             </button>
         </div>
@@ -92,11 +96,9 @@
         ?>
 
     </div>
-    <script src="../../../public/js/modais-posts.js"></script>
 
 </body>
+<script src="../../../public/js/admin-posts.js" rel="script"></script>
 
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </html>
