@@ -19,7 +19,7 @@
                 <input type="text" placeholder="Pesquisar por Post" id="PesquisaPostsTabelaADM">
                 <ion-icon name="search-outline"></ion-icon>
             </div>
-            <button id="btnCriarPostADM">Criar Post</button>
+            <button id="btnCriarPostADM" type="button" data-bs-toggle="modais" data-bs-target="#modalCriarPost">Criar Post</button>
         </div>
 
         <table id="containerTabelaPostsToda">
@@ -34,19 +34,20 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Primeira Publicação</td>
-                    <td>Arthur Morgan</td>
-                    <td>01/01/2023</td>
+                <?php foreach($posts as $post): ?>
+                    <td><?= $post -> id ?></td>
+                    <td><?= $post -> title ?></td>
+                    <td><?= $post -> content ?></td>
+                    <td> a definir </td>
                     <td>
                         <div class="botoesdeacao">
-                            <button class="btnVisuPostADM">
+                            <button class="btnVisuPostADM" type="button" data-bs-toggle="modais" data-bs-target="#modalViewPost-<?= $post -> id ?>">
                                 <ion-icon name="eye-outline"></ion-icon>
                             </button>
-                            <button class="btnEditPostADM">
+                            <button class="btnEditPostADM" type="button" data-bs-toggle="modais" data-bs-target="#modalEditPost-<?= $post -> id ?>">
                                 <ion-icon name="pencil-outline"></ion-icon>
                             </button>
-                            <button class="btnDeletePostADM">
+                            <button class="btnDeletePostADM" type="button" data-bs-toggle="modais" data-bs-target="#modalDeletPost-<?= $post -> id ?>">
                                 <ion-icon name="trash-bin-outline"></ion-icon>
                             </button>
                         </div>
@@ -64,6 +65,7 @@
                         </div>
                     </td>
                 </tr>
+                <?php endforeach ?>
 
             </tbody>
         </table>
@@ -85,6 +87,7 @@
         require("app/views/admin/modais/modalViewPost.php");
         require("app/views/admin/modais/modalEditPost.php");
         require("app/views/admin/modais/modalDeletePost.php");
+        require("app/views/admin/modais/modalCriarPost.php");
 
         ?>
 
