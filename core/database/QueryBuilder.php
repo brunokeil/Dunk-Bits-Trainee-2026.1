@@ -46,4 +46,25 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function existe($parameter){
+        $sql = sprintf('SELECT * FROM users WHERE email = :email');
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                'email' => $parameter
+                ]);
+            $emailexistente = $stmt->fetch(PDO::FETCH_OBJ);
+            if($emailexistente){
+                return true;
+            }
+            return false;
+            
+            
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }
