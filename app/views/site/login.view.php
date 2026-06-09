@@ -19,21 +19,11 @@
 			<h2 id="tituloLogin">LOGIN</h2>
 
 			<form action="/login" method="POST">
-				<div class="mensagem-erro">
-					<!-- <?php
-						session_start();
-						if(isset($_SESSION['mensagem-erro'])){
-							echo $_SESSION['mensagem-erro'];
-						unset($_SESSION['mensagem-erro']);
-						}
-					?> -->
-				</div>
 				<div class="inputBox">
                     <label>
 					    <input name="email" id="email" type="text" placeholder="EMAIL"/>
                     </label>
 				</div>
-
 				<div class="inputBox">
                     <label>
 					    <input name="senha" id="senha" type="password" placeholder="SENHA" onkeyup='checar()'>
@@ -42,7 +32,7 @@
 				</div>
 				<div class="inputBox">
                     <label>
-					    <input id="confirmarsenha" type="password" placeholder="CONFIRMAR SENHA" onkeyup='checar()'>
+					    <input name="confirmarsenha" id="confirmarsenha" type="password" placeholder="CONFIRMAR SENHA" onkeyup='checar()'>
 						<ion-icon name="eye-off-outline" class="olho" id="olhoConfirmarSenha" onclick="mostrarConfirmarSenha()"></ion-icon>
                     </label>
 				</div>
