@@ -24,21 +24,18 @@
 				<div class="inputBox">
 					<input type="text" name="email" placeholder="EMAIL" />
 				</div>
-  
-				<div class="inputBox">  
-					<input type="password" name="password" placeholder="SENHA" />  
+				<div class="inputBox">
+                    <label>
+					    <input name="senha" id="senha" type="password" placeholder="SENHA">
+						<ion-icon name="eye-off-outline" class="olho" id="olhoSenha" onclick="aparecerSenha()"></ion-icon>
+                    </label>
 				</div>
 				<button type="submit" class="buttonEntrar">CRIAR</button>
 			</form>
 		</main>
 
-		<script
-			type="module"
-			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-		></script>
-		<script
-			nomodule
-			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-		></script>
+		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" ></script>
+		<script src="../../../public/js/cadastro.js"></script>
 	</body>
 </html>
