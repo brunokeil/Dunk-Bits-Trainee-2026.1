@@ -30,27 +30,28 @@
 				</div>
 				<div class="inputBox">
                     <label>
-					    <input name="email" id="email" type="text" placeholder="EMAIL" />
+					    <input name="email" id="email" type="text" placeholder="EMAIL"/>
                     </label>
 				</div>
 
 				<div class="inputBox">
                     <label>
-					    <input name="senha" id="senha" type="password" placeholder="SENHA" />
+					    <input name="senha" id="senha" type="password" placeholder="SENHA" onkeyup='checar()'>
+						<ion-icon name="eye-off-outline" class="olho" id="olhoSenha" onclick="mostrarSenha()"></ion-icon>
+                    </label>
+				</div>
+				<div class="inputBox">
+                    <label>
+					    <input id="confirmarsenha" type="password" placeholder="CONFIRMAR SENHA" onkeyup='checar()'>
+						<ion-icon name="eye-off-outline" class="olho" id="olhoConfirmarSenha" onclick="mostrarConfirmarSenha()"></ion-icon>
                     </label>
 				</div>
 
 				<button type="submit" class="buttonEntrar">LOGIN</button>
 			</form>
 		</main>
-
-		<script
-			type="module"
-			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-		></script>
-		<script
-			nomodule
-			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-		></script>
+		<script src="../../../public/js/login.js"></script>
+		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 	</body>
 </html>
