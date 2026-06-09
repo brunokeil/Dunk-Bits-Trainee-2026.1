@@ -27,11 +27,11 @@ function mostrarConfirmarSenha(){
 
 function checar(){
     if(document.getElementById('senha').value == document.getElementById('confirmarsenha').value){
-        document.getElementById('senha').style.borderColor = #008000
-        document.getElementById('confirmarsenha').style.borderColor = #008000
+        document.getElementById('senha').style.borderColor = #008000;
+        document.getElementById('confirmarsenha').style.borderColor = #008000;
     } else{
-        document.getElementById('senha').style.borderColor = #800000
-        document.getElementById('confirmarsenha').style.borderColor = #800000      
+        document.getElementById('senha').style.borderColor = #800000;
+        document.getElementById('confirmarsenha').style.borderColor = #800000;      
     }
 
 }
