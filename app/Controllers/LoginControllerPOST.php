@@ -8,10 +8,17 @@ use Exception;
 class LoginControllerPOST
 {
 
-    public function logar(): void
+    public function logar() 
     {
         $email = $_POST['email'];
         $senha = $_POST['senha'];
+        $confirmarsenha = $_POST['confirmarsenha'];
+
+        if($senha !== $confirmarsenha){
+            session_start();   
+            header('Location: /login');
+            exit();
+        }
 
         $user = App::get(key: 'database')->verificaLogin($email, $senha);
 
@@ -23,6 +30,7 @@ class LoginControllerPOST
         }else{
              session_start();   
              header('Location: /login');
+             exit();
          }
     }
 }
