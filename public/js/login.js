@@ -10,8 +10,6 @@ function mostrarSenha(){
         btnMostrarSenha.classList.replace('eye-off-outline','eye-outline')
     }
 }
-
-
 function mostrarConfirmarSenha(){
     var inputConfirmarSenha = document.getElementById('confirmarsenha')
     var btnMostrarConfirmarSenha = document.getElementById('olhoConfirmarSenha')
@@ -25,13 +23,27 @@ function mostrarConfirmarSenha(){
     }
 }
 
-function checar(){
-    if(document.getElementById('senha').value == document.getElementById('confirmarsenha').value){
-        document.getElementById('senha').style.borderColor = #008000;
-        document.getElementById('confirmarsenha').style.borderColor = #008000;
-    } else{
-        document.getElementById('senha').style.borderColor = #800000;
-        document.getElementById('confirmarsenha').style.borderColor = #800000;      
-    }
+document.getElementById('confirmarsenha').addEventListener('input', function(){ checar(); });
 
+function checar(){
+    const senha = document.getElementById('senha').value;
+    const confirmarsenha = document.getElementById('confirmarsenha').value;
+    const logar = document.querySelector('.buttonEntrar');
+    const caixaborda1 = document.getElementById('confirmarsenha');
+    const caixaborda2 = document.getElementById('senha');
+
+
+    if(!senha || !confirmarsenha){
+        caixaborda1.style.border = "2px solid white";
+        caixaborda2.style.border = "2px solid white";
+        logar.disabled = true;
+    }else if(senha !== confirmarsenha){
+        caixaborda1.style.border = "3px solid red";
+        caixaborda2.style.border = "3px solid red";
+        logar.disabled = true;
+    } else{
+        caixaborda1.style.border = "2px solid green";
+        caixaborda2.style.border = "2px solid green";
+        logar.disabled = false;
+    }
 }
