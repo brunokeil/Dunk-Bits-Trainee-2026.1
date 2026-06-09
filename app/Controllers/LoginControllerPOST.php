@@ -20,11 +20,9 @@ class LoginControllerPOST
             $_SESSION['id'] = $user->id;
             header('Location: /dashboard');
             exit();
-        }
-    //     }else{
-    //         session_start();   
-    //         $_SESSION['mensagem-erro'] = "Usuário ou senha incorretos!";
-    //         header('Location: /login');
-    //     }
+        }else{
+             session_start();   
+             header('Location: /login');
+         }
     }
 }
