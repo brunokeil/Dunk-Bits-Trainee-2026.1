@@ -66,7 +66,7 @@
 
     <div class="footerButtons">
       <button type="button" class="closeModalBtn cancelBtn">CANCELAR</button>
-      <button class="primaryBtn">CRIAR</button>
+      <button class="primaryBtn" id="criar-usuario">CRIAR</button>
     </div>
   </form>
 </div>

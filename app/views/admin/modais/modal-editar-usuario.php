@@ -42,7 +42,7 @@
 
         <div class="footerButtons">
             <button type="button" class="closeModalBtn cancelBtn">CANCELAR</button>
-            <button class="primaryBtn">EDITAR</button>
+            <button class="primaryBtn" id="editar-usuario">EDITAR</button>
         </div>
     </form>
 </div>
