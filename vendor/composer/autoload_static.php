@@ -25,6 +25,9 @@ class ComposerStaticInit90bbf95869b4e88bf0dc5022e708a458
     );
 
     public static $classMap = array (
+        'App\\Controllers\\CadastroControllerGET' => __DIR__ . '/../..' . '/app/Controllers/CadastroControllerGET.php',
+        'App\\Controllers\\CadastroControllerPOST' => __DIR__ . '/../..' . '/app/Controllers/CadastroControllerPOST.php',
+        'App\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Controllers/DashboardController.php',
         'App\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Controllers/ExampleController.php',
         'App\\Controllers\\PostsAdminControllerGET' => __DIR__ . '/../..' . '/app/Controllers/PostsAdminControllerGET.php',
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
