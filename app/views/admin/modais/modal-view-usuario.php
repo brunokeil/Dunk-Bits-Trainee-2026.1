@@ -1,0 +1,51 @@
+<div class="modalUser close" id="viewModal">
+  <span id="header">
+    <h1>PERFIL DE USUÁRIO</h1>
+    <button class="closeModalBtn terciaryBtn">X</button>
+  </span>
+
+  <div class="userProfilePicture">
+    <img
+      src="/public/assets/placeholder/blank-prof-pic.png "
+      class="imgProfPic" />
+    <input type="file" class="profileInput" accept="image/*" hidden />
+  </div>
+
+  <div class="userInfo">
+    <div class="inputGroup">
+      <ion-icon name="person"></ion-icon>
+
+      <input
+        type="text"
+        class="usernameInput"
+        placeholder="Username"
+        value="joaosilva"
+        disabled
+        id="view-username" />
+    </div>
+
+    <div class="inputGroup">
+      <ion-icon name="mail"></ion-icon>
+
+      <input
+        type="text"
+        class="emailInput"
+        placeholder="E-mail"
+        value="joaosilva@gmail.com"
+        disabled
+        id="view-email" />
+    </div>
+
+    <div class="inputGroup">
+      <ion-icon name="lock-closed"></ion-icon>
+
+      <input
+        type="password"
+        class="passwordInput"
+        placeholder="Senha"
+        value="senha"
+        disabled
+        id="view-senha" />
+    </div>
+  </div>
+</div>

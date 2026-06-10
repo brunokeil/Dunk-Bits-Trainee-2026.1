@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Controllers;
+
+use App\Controllers\UsuariosController;
 use App\Controllers\ExampleController;
 use App\Controllers\PostsAdminController;
 use App\Controllers\LoginControllerGET;
@@ -30,3 +32,9 @@ $router->get('cadastro', 'CadastroControllerGET@index');
 $router->get('dashboard', 'DashboardController@index');
 
 $router->post('cadastro/create', 'CadastroControllerPOST@criar');
+
+$router->get('', 'ExampleController@index');
+$router->get('admin-users', 'UsuariosController@index');
+$router->post('admin-users/create', 'UsuariosController@store');
+$router->post('admin-users/edit', 'UsuariosController@edit');
+$router->post('admin-users/delete', 'UsuariosController@delete');
