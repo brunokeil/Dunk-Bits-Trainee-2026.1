@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-class CadastroController
+class CadastroControllerGET
 {
 
     public function index()

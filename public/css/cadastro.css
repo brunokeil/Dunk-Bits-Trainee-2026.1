@@ -6,8 +6,13 @@
 	flex-direction: column;
 }
 
+#tituloCadastro{
+	font-size: 3rem;
+	font-family: var(--font-quicksand);
+}
+
 .telaLogin {
-	background-image: url("/public/assets/bg_images/bg_login.png");
+	background-image: linear-gradient(rgba(239, 100, 0, 0.25), rgba(239, 100, 0, 0.25)), url("/public/assets/bg_images/bg_login.png");
 	background-size: cover;
 	background-position: center;
 	background-color: var(--dark-grey-100);
@@ -78,6 +83,10 @@
 
 .inputBox input::placeholder {
 	color: var(--white-80);
+}
+
+#olhoSenha{
+	cursor: pointer;
 }
 
 .inputBox ion-icon {
