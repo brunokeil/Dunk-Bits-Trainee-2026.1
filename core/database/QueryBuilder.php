@@ -42,14 +42,31 @@ class QueryBuilder
         }
     }
 
+    public function verificaLogin($email, $senha)
+    {
+        $sql = sprintf('SELECT * FROM users WHERE email = :email AND password = :password');
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                'email' => $email,
+                'password' => $senha
+            ]);
+
+            $user = $stmt->fetch(PDO::FETCH_OBJ);
+            return $user;
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function insert($table, $parameters)
     {
-
         $sql = sprintf(
             'INSERT INTO %s (%s) VALUES (:%s)',
             $table,
             implode(', ', array_keys($parameters)),
-            implode(', :', array_keys($parameters)),
+            implode(', :', array_keys($parameters))
         );
 
         try {
@@ -157,6 +174,24 @@ class QueryBuilder
             $stmt->execute($parameters);
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    public function existe($parameter)
+    {
+        $sql = sprintf('SELECT * FROM users WHERE email = :email');
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                'email' => $parameter
+            ]);
+            $emailexistente = $stmt->fetch(PDO::FETCH_OBJ);
+            if ($emailexistente) {
+                return true;
+            }
+            return false;
         } catch (Exception $e) {
             die($e->getMessage());
         }
