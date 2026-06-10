@@ -29,6 +29,7 @@ class QueryBuilder
         }
     }
 
+
     public function verificaLogin($email, $senha){
         $sql = sprintf('SELECT * FROM users WHERE email = :email AND password = :password');
         
@@ -41,6 +42,11 @@ class QueryBuilder
 
             $user = $stmt->fetch(PDO::FETCH_OBJ);
             return $user;
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function insert($table, $parameters){
         $sql = sprintf('INSERT INTO %s (%s) VALUES (:%s)',
         $table,
@@ -58,7 +64,6 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
-}
 
     public function existe($parameter){
         $sql = sprintf('SELECT * FROM users WHERE email = :email');
@@ -80,7 +85,4 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
-    
-    }
-
 }
