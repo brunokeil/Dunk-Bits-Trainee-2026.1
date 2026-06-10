@@ -12,40 +12,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
     <link rel="stylesheet" href="../../../public/css/dashboard.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-    />
   </head>
   <body>
     <section id="locomocao">
       <div id="navbar">
         <button id="seta">
-          <span class="material-symbols-outlined">chevron_left</span>
+          <ion-icon name="arrow-back-outline"></ion-icon>
         </button>
 
-        <div>
-          <form action="/logout" method="POST">
-            <button type="submit" id="logout"> 
-              LOGOUT
-              <span class="material-symbols-outlined">logout</span>
-            </button>
-          </form>
-        </div>
+        <button id="logout">
+          <ion-icon name="log-out-outline"></ion-icon>
+          LOGOUT
+        </button>
       </div>
       <div id="dashboard">
         <h1 id="titulo">Dashboard</h1>
       </div>
       <div id="navegacao">
         <button id="lista-usuarios">
-          <span class="material-symbols-outlined">account_circle</span>
+         <ion-icon name="person-circle-outline"></ion-icon>
           LISTA DE USUÁRIOS (ADMIN)
         </button>
         <button id="tabela-posts">
-          <span class="material-symbols-outlined">dynamic_feed</span>
+          <ion-icon name="albums-outline"></ion-icon>
           TABELA DE POSTS (ADMIN)
         </button>
       </div>
     </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
   </body>
 </html>
