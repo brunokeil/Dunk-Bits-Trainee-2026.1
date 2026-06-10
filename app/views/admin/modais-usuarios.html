@@ -22,13 +22,13 @@
     <div class="userExample">
       <h2>Lorem Ypsum Bits JR</h2>
 
-      <div class="modalButtons" id="modalHead">
-        <button id="viewUser">Visualizar</button>
-        <button id="newUser">Criar</button>
-        <button id="editUser">Editar</button>
-        <button id="deleteUser">Excluir</button>
-        <button id="discardUser">Descartar</button>
-        <button id="errorUser">Erro</button>
+      <div class="testBtns" id="modalHead">
+        <button class="primaryBtn" id="viewUser">Visualizar</button>
+        <button class="primaryBtn" id="newUser">Criar</button>
+        <button class="primaryBtn" id="editUser">Editar</button>
+        <button class="primaryBtn" id="deleteUser">Excluir</button>
+        <button class="primaryBtn" id="discardUser">Descartar</button>
+        <button class="primaryBtn" id="errorUser">Erro</button>
       </div>
     </div>
 
@@ -36,7 +36,7 @@
       <div class="modalUser" id="viewModal">
         <span id="header">
           <h1>PERFIL DE USUÁRIO</h1>
-          <button class="closeModalBtn">X</button>
+          <button class="closeModalBtn terciaryBtn">X</button>
         </span>
 
         <div class="userProfilePicture">
@@ -86,7 +86,7 @@
       <div class="modalUser" id="createModal">
         <span id="header">
           <h1>CRIAR USUÁRIO</h1>
-          <button class="closeModalBtn">X</button>
+          <button class="closeModalBtn terciaryBtn">X</button>
         </span>
 
         <div class="userProfilePicture">
@@ -98,19 +98,19 @@
           <div class="inputGroup">
             <ion-icon name="person"></ion-icon>
 
-            <input type="text" class="usernameInput" placeholder="Username" />
+            <input type="text" class="usernameInput" placeholder="*Username" />
           </div>
 
           <div class="inputGroup">
             <ion-icon name="mail"></ion-icon>
 
-            <input type="text" class="emailInput" placeholder="E-mail" />
+            <input type="text" class="emailInput" placeholder="*E-mail" />
           </div>
 
           <div class="inputGroup">
             <ion-icon name="lock-closed"></ion-icon>
 
-            <input type="password" class="passwordInput" placeholder="Senha" />
+            <input type="password" class="passwordInput" placeholder="*Senha" />
           </div>
           <div class="inputGroup">
             <ion-icon name="lock-closed"></ion-icon>
@@ -118,21 +118,21 @@
             <input
               type="password"
               class="passwordInput"
-              placeholder="Confirme a Senha"
+              placeholder="*Confirme a Senha"
             />
           </div>
         </div>
 
         <div class="footerButtons">
           <button class="closeModalBtn cancelBtn">CANCELAR</button>
-          <button>CRIAR</button>
+          <button class="primaryBtn">CRIAR</button>
         </div>
       </div>
 
       <div class="modalUser" id="editModal">
         <span id="header">
           <h1>EDITAR USUÁRIO</h1>
-          <button class="closeModalBtn">X</button>
+          <button class="closeModalBtn terciaryBtn">X</button>
         </span>
 
         <div class="userProfilePicture">
@@ -178,11 +178,11 @@
 
         <div class="footerButtons">
           <button class="closeModalBtn cancelBtn">CANCELAR</button>
-          <button>SALVAR ALTERAÇÕES</button>
+          <button class="primaryBtn">SALVAR ALTERAÇÕES</button>
         </div>
       </div>
 
-      <div class="modalUser" id="discardModal">
+      <div class="modalUser warningModal" id="discardModal">
         <div class="warningHeader">
           <ion-icon name="warning"></ion-icon>
 
@@ -202,11 +202,11 @@
 
         <div class="footerButtons">
           <button class="closeModalBtn cancelBtn">CANCELAR</button>
-          <button>EXCLUIR</button>
+          <button class="primaryBtn">EXCLUIR</button>
         </div>
       </div>
 
-      <div class="modalUser" id="deleteModal">
+      <div class="modalUser warningModal" id="deleteModal">
         <div class="warningHeader">
           <ion-icon name="warning"></ion-icon>
 
@@ -226,11 +226,11 @@
 
         <div class="footerButtons">
           <button class="closeModalBtn cancelBtn">CANCELAR</button>
-          <button>EXCLUIR</button>
+          <button class="primaryBtn">EXCLUIR</button>
         </div>
       </div>
 
-      <div class="modalUser" id="errorModal">
+      <div class="modalUser warningModal" id="errorModal">
         <div class="warningHeader">
           <ion-icon name="warning"></ion-icon>
 
@@ -242,7 +242,7 @@
         <p>Erro 404: erro de rede</p>
         <div class="footerButtons">
           <button class="closeModalBtn cancelBtn">CANCELAR</button>
-          <button>EXCLUIR</button>
+          <button class="primaryBtn">EXCLUIR</button>
         </div>
       </div>
     </div>

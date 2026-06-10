@@ -5,30 +5,6 @@ const pag = document.querySelector(".visao-pag");
 const btnOpts = document.querySelectorAll(".trespontos")
 
 let linhas = document.querySelectorAll(".row-tabela")
-
-const usuarios = [
-  { id: 1, username: "joaosilva", email: "joao@gmail.com" },
-  { id: 2, username: "mariasantos", email: "maria@gmail.com" },
-  { id: 3, username: "carlosdev", email: "carlos@gmail.com" },
-  { id: 4, username: "anaoliveira", email: "ana@gmail.com" },
-  { id: 5, username: "pedrotech", email: "pedro@gmail.com" },
-
-  { id: 6, username: "lucascode", email: "lucas@gmail.com" },
-  { id: 7, username: "fernandaux", email: "fer@gmail.com" },
-  { id: 8, username: "brunoapi", email: "bruno@gmail.com" },
-  { id: 9, username: "julianadev", email: "juliana@gmail.com" },
-  { id: 10, username: "rafaelux", email: "rafael@gmail.com" },
-
-  { id: 11, username: "gabrieljs", email: "gabriel@gmail.com" },
-  { id: 12, username: "thaisui", email: "thais@gmail.com" },
-  { id: 13, username: "leonardocode", email: "leo@gmail.com" },
-  { id: 14, username: "isabelux", email: "isabela@gmail.com" },
-  { id: 15, username: "matheusdev", email: "matheus@gmail.com" },
-];
-
-
-let linhas = document.querySelectorAll(".row-tabela")
-
 const usuarios = [
   { id: 1, username: "joaosilva", email: "joao@gmail.com" },
   { id: 2, username: "mariasantos", email: "maria@gmail.com" },
@@ -114,8 +90,3 @@ btnOpts.forEach((botao) => {
 
 
 
-
-function abrirModal(idModal) {
-    
-
-}
