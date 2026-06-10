@@ -12,16 +12,13 @@
 	<body class="telaNavbar">
 		<header class="headerNavbar">
 			<a href="#">
-				<img
-					src="../../../public/assets/logo_zoom.png"
-					alt="Logo da Empresa"
-					class="logo_dunkbits"
-				/>
+				<img src="../../../public/assets/logo_zoom.png" alt="Logo da Empresa" class="logo_dunkbits"/>
 			</a>
 			<nav class="menu">
-				<a href="#" class="buttonHome">HOME</a>
-				<a href="#" class="buttonPublicacoes">PUBLICAÇÕES</a>
-				<a href="#" class="buttonLogin">LOGIN</a>
+				<a href="/landingpage" class="buttonSemFundo">HOME</a>
+				<a href="/listaposts" class="buttonSemFundo">POSTS</a>
+				<a href="/dashboard" class="buttonSemFundo">DASHBOARD</a>
+				<a href="/login" class="buttonLogin">LOGIN</a>
 			</nav>
 
 			<div class="hamburguer" id="buttonMenuMobile">
@@ -30,15 +27,12 @@
 		</header>
 
 		<nav class="menuMobile" id="telaMenuMobile">
-			<img
-				src="../../../public/assets/logo_zoom.png"
-				alt="Logo da Empresa"
-				class="logoMobile"
-			/>
+			<img src="../../../public/assets/logo_zoom.png" alt="Logo da Empresa" class="logoMobile"/>
 
-			<a href="#" class="buttonHome">HOME</a>
-			<a href="#" class="buttonPublicacoes">PUBLICAÇÕES</a>
-			<a href="#" class="buttonLogin">LOGIN</a>
+			<a href="/landingpage" class="buttonSemFundo">HOME</a>
+			<a href="listaposts" class="buttonSemFundo">PUBLICAÇÕES</a>
+			<a href="/dashboard" class="buttonSemFundo">DASHBOARD</a>
+			<a href="/login" class="buttonLogin">LOGIN</a>
 
 			<div class="buttonFecharMenu" id="buttonFecharMenu">
 				<ion-icon name="close-outline"></ion-icon>
