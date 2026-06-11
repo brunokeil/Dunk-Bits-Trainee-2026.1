@@ -1,7 +1,8 @@
-function mostrarSenha(){
-    var inputSenha = document.getElementById('senha')
-    var btnMostrarSenha = document.getElementById('olhoSenha')
+const inputSenha = document.getElementById('senha');
+const btnMostrarSenha = document.getElementById('olhoSenha');
+btnMostrarSenha.addEventListener("click", mostrarSenha);
 
+function mostrarSenha(){
     if(inputSenha.type === 'password'){
         inputSenha.setAttribute('type', 'text');
         btnMostrarSenha.setAttribute('name', 'eye-outline');
@@ -11,11 +12,11 @@ function mostrarSenha(){
     }
 }
 
+const inputConfirmarSenha = document.getElementById('confirmarsenha')
+const btnMostrarConfirmarSenha = document.getElementById('olhoConfirmarSenha')
+btnMostrarConfirmarSenha.addEventListener("click", mostrarConfirmarSenha);
 
 function mostrarConfirmarSenha(){
-    var inputConfirmarSenha = document.getElementById('confirmarsenha')
-    var btnMostrarConfirmarSenha = document.getElementById('olhoConfirmarSenha')
-
     if(inputConfirmarSenha.type === 'password'){
         inputConfirmarSenha.setAttribute('type', 'text');
         btnMostrarConfirmarSenha.setAttribute('name', 'eye-outline');
