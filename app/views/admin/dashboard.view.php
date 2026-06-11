@@ -19,11 +19,14 @@
         <button id="seta">
           <ion-icon name="arrow-back-outline"></ion-icon>
         </button>
-
-        <button id="logout">
-          <ion-icon name="log-out-outline"></ion-icon>
-          LOGOUT
-        </button>
+       <div>
+        <form action="/logout" method="POST">
+          <button id="logout">
+            <ion-icon name="log-out-outline"></ion-icon>
+            LOGOUT
+          </button>
+        </form>
+       </div>
       </div>
       <div id="dashboard">
         <h1 id="titulo">Dashboard</h1>
