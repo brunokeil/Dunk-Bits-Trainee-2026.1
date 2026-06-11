@@ -10,7 +10,7 @@
 
 <body>
 
-  <main class="container">
+  <main>
     <section class="post">
       <img
         class="imagem-post-obj imagem-post"
@@ -65,13 +65,17 @@
     </section>
 
     <section class="comentarios">
-      <div class="caixa-de-comentarios">
-        <input
-          type="text"
-          id="input-comentario"
-          placeholder="Digite seu comentário" />
-        <img id="botao-de-enviar" src="/public/assets/icons/sent_arrow.png" />
-      </div>
+      <form action="/post-individual/comment" method="post" enctype="multipart/form-data" class="formulario-comentario">
+        <input type="hidden" name="post_id" value="<?= $post->id ?>">
+        <div class="caixa-de-comentarios">
+          <input
+            type="text"
+            id="input-comentario"
+            placeholder="Digite seu comentário"
+            name="comment" />
+          <img id="botao-de-enviar" src="/public/assets/icons/sent_arrow.png" type="submit" />
+        </div>
+      </form>
 
       <div class="lista-de-comentarios">
         <?php foreach ($comments as $c):
@@ -81,16 +85,12 @@
           <div class="comentario">
             <div class="user-infos">
               <img
-                src="<?php
-
-                      echo $commentAuthor->profile_image;
-
-                      ?>"
+                src="<?php echo $commentAuthor->profile_image ?: '/public/assets/placeholder/blank-prof-pic.png'; ?>"
                 class="img-prof-picture foto-de-perfil" />
             </div>
 
             <div class="nome-de-usuario">
-              <h4><?php echo $commentAuthor->name;; ?></h4>
+              <h4><?php echo $commentAuthor->name; ?></h4>
             </div>
 
             <div class="texto-do-comentario">

@@ -41,3 +41,5 @@ $router->get('cadastro', 'CadastroControllerGET@index');
 $router->post('cadastro/create', 'CadastroControllerPOST@criar');
 
 $router->get('post-individual', 'PostIndividualController@index');
+
+$router->post('post-individual/comment', 'PostIndividualController@storeComment');

@@ -11,6 +11,8 @@ class PostIndividualController
     public function index()
     {
 
+        session_start();
+
         $database = App::get("database");
 
         $currentPost = isset($_GET['post']) ? (int)$_GET['post'] : 1;
@@ -34,5 +36,23 @@ class PostIndividualController
             'post' => $post,
             'comments' => $comments
         ]);
+    }
+
+    public function storeComment()
+    {
+        session_start();
+        if (!isset($_SESSION['id'])) {
+            header('Location: /login');
+            exit;
+        }
+
+        $parameters = [
+            'content' => $_POST['comment'],
+            'author' => $_SESSION['id'],
+            'post_id' => $_POST['post_id'],
+        ];
+
+        App::get("database")->insert('comments', $parameters);
+        header('Location: /post-individual?post=' . $_POST['post_id']);
     }
 }
