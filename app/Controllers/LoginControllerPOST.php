@@ -12,13 +12,6 @@ class LoginControllerPOST
     {
         $email = $_POST['email'];
         $senha = $_POST['senha'];
-        $confirmarsenha = $_POST['confirmarsenha'];
-
-        if($senha !== $confirmarsenha){
-            session_start();   
-            header('Location: /login');
-            exit();
-        }
 
         $user = App::get(key: 'database')->verificaLogin($email, $senha);
 
@@ -28,7 +21,7 @@ class LoginControllerPOST
             header('Location: /dashboard');
             exit();
         }else{
-             session_start();   
+             $_SESSION['mensagem-erro'] = "Usuário e/ou senha incorretos";  
              header('Location: /login');
              exit();
          }
