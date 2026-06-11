@@ -20,22 +20,16 @@
                     </div>
                 </div>
                 <div class="logo">
-                    <img
-                        src="../../../public/assets/logo_dunkbits.png"
-                        alt="Logo do Site"
-                        class="logo_dunkbits"
-                    />
+                    <img id="logodunk" src="../../../public/assets/logo_dunkbits.png" alt="Logo do Site" class="logo_dunkbits"/>
                     <span class="textoMissaoHover">
                         Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry.</span
-                    >
+                        typesetting industry.</span>
                     <span class="textoVisaoHover">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </span>
                     <span class="textoValoresHover">
                         Morbi feugiat felis nec turpis laoreet euismod. Donec
-                        rutrum leo vitae massa cursus</span
-                    >
+                        rutrum leo vitae massa cursus</span>
                 </div>
 
                 <div class="contato">
@@ -47,7 +41,7 @@
                 </div>
             </div>
 
-            <hr class="linha" />
+            <hr class="linha"/>
 
             <div class="abaixo">
                 <p class="buttonMissao">MISSÃO</p>
