@@ -40,6 +40,7 @@ $router->post('cadastro/create', 'CadastroControllerPOST@criar');
 $router->post('login', 'LoginControllerPOST@logar');
 
 $router->post('logout', 'LogoutControllerPOST@deslogar');
+
 $router->post('login', 'LoginControllerPOST@logar');
 
 $router->post('logout', 'LogoutControllerPOST@deslogar');
@@ -47,3 +48,5 @@ $router->post('logout', 'LogoutControllerPOST@deslogar');
 $router->get('cadastro', 'CadastroControllerGET@index');
 
 $router->post('cadastro/create', 'CadastroControllerPOST@criar');
+
+$router->get('footer', 'FooterController@index');
