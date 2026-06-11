@@ -1,59 +1,76 @@
-<div class="modalPost close" id="editModal">
+<div class="modalPost close" id="modalEdit">
     <span id="header">
         <h1>EDITAR POST</h1>
         <button class="closeModalBtn terciaryBtn">X</button>
     </span>
 
-    <form action="admin-posts/edit" method="post" enctype="multipart/form-data">
-        <input type="hidden" id="edit-id" name="id" />
+    <form class="modalForm" action="admin-posts/edit" method="post" enctype="multipart/form-data">
 
-        <div class="userProfilePicture">
-            <img src="/public/assets/placeholder/blank-prof-pic.png" class="imgProfPic" />
-            <input type="file" name="imagem" class="profileInput" accept="image/*" hidden />
-        </div>
 
-        <div class="userInfo">
-            <div class="inputGroup">
-                <ion-icon name="person"></ion-icon>
+        <div class="postInfo">
 
-                <input
-                    type="text"
-                    class="usernameInput"
-                    placeholder="Username"
-                    id="edit-username"
-                    value=" "
-                    name="name" />
+            <div class="postPicture">
+                <img
+                    src="/public/assets/placeholder/blank-prof-pic.png "
+                    class="imgPostPic imgProfPic" />
+                <input type="file" class="profileInput" accept="image/*" hidden />
             </div>
 
-            <div class="inputGroup">
-                <ion-icon name="mail"></ion-icon>
+            <div class="authorData">
 
-                <input
-                    type="text"
-                    class="emailInput"
-                    placeholder="E-mail"
-                    id="edit-email"
-                    value=" "
-                    name="email" />
-            </div>
+                <div class="inputGroup">
+                    <ion-icon name="person"></ion-icon>
 
-            <div class="inputGroup">
-                <ion-icon name="lock-closed"></ion-icon>
+                    <input
+                        type="text"
+                        class="postAuthor"
+                        placeholder="Username"
+                        value="joaosilva"
+                        disabled
+                        id="viewAuthor" />
+                </div>
 
-                <input
-                    type="password"
-                    class="passwordInput"
-                    placeholder="Senha"
-                    id="edit-senha"
-                    value=" "
-                    name="password" />
+                <div class="inputGroup">
+
+                    <input
+                        type="text"
+                        class="postDate"
+                        placeholder="Data"
+                        value="11/06/2014"
+                        disabled
+                        id="viewDate" />
+                </div>
             </div>
 
         </div>
 
-        <div class="footerButtons">
-            <button type="button" class="closeModalBtn cancelBtn">CANCELAR</button>
-            <button type="submit" class="primaryBtn">SALVAR ALTERAÇÕES</button>
+        <div class="postContent">
+
+            <textarea
+                class="titleInput"
+                placeholder="Titulo do post"
+                id="viewTitle">
+
+                Um post titulo longo do caramba aqui... empolguei
+            </textarea>
+
+            <textarea
+                class="descriptionInput"
+                placeholder="Descrição"
+                id="viewDescription"> 
+                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+        <br/> <br/>
+        Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+      </textarea>
+
+
         </div>
+
+
     </form>
+
+    <div class="footerButtons">
+        <button type="button" class="closeModalBtn cancelBtn">CANCELAR</button>
+        <button type="submit" class="primaryBtn">SALVAR ALTERAÇÕES</button>
+    </div>
 </div>

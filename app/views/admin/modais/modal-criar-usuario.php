@@ -4,7 +4,7 @@
     <button class="closeModalBtn terciaryBtn">X</button>
   </span>
 
-  <form action="admin-users/create" method="post" enctype="multipart/form-data">
+  <form class="modalForm" action="admin-users/create" method="post" enctype="multipart/form-data">
 
     <div class="userProfilePicture">
       <img

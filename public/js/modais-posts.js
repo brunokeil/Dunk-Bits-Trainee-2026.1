@@ -64,7 +64,7 @@ function setAllEventListeners() {
 
 	// botoes
 	const viewPost = document.querySelectorAll(".viewPost");
-const createPost = document.querySelectorAll(".createPost");
+	const createPost = document.querySelectorAll(".createPost");
 	const editPost = document.querySelectorAll(".editPost");
 	const deletePost = document.querySelectorAll(".deletePost");
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Posts</title>
     <link rel="stylesheet" href="../../../public/css/posts-admin.css">
-    <link rel="stylesheet" href="../../../public/css/modais.css">
+    <link rel="stylesheet" href="../../../public/css/modais-posts.css">
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -84,19 +84,20 @@
             </button>
         </div>
         </div>
-
-        <div class="modalContainer close">
-
-            <?php
-
-            require("app/views/admin/modais/modalViewPost.php");
-            require("app/views/admin/modais/modalEditPost.php");
-            require("app/views/admin/modais/modalDeletePost.php");
-            require("app/views/admin/modais/modalCriarPost.php");
-
-            ?>
-
     </main>
+
+    <div class="modalContainer close">
+
+        <?php
+
+        require("app/views/admin/modais/modalViewPost.php");
+        require("app/views/admin/modais/modalEditPost.php");
+        require("app/views/admin/modais/modalDeletePost.php");
+        require("app/views/admin/modais/modalCriarPost.php");
+
+        ?>
+    </div>
+
 
 </body>
 <script src="../../../public/js/admin-posts.js" rel="script"></script>
