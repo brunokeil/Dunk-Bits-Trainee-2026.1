@@ -12,11 +12,20 @@
 
 	<body class="telaLogin">
 		<main class="loginContainer">
-			<a href="#" class="buttonFechar">
+			<a href="landingpage" class="buttonFechar">
 				<ion-icon name="close-outline"></ion-icon>
 			</a>
 
 			<h2 id="tituloLogin">LOGIN</h2>
+			<div id="mensagemErro">
+				<?php
+					if(isset($_SESSION['mensagem-erro'])){ 
+						echo $_SESSION['mensagem-erro'];
+						unset($_SESSION['mensage-erro']);
+					}
+				?>
+			</div>
+			
 
 			<form action="/login" method="POST">
 				<div class="inputBox">
@@ -26,17 +35,11 @@
 				</div>
 				<div class="inputBox">
                     <label>
-					    <input name="senha" id="senha" type="password" placeholder="SENHA" onkeyup='checar()'>
+					    <input name="senha" id="senha" type="password" placeholder="SENHA">
 						<ion-icon name="eye-off-outline" class="olho" id="olhoSenha" onclick="mostrarSenha()"></ion-icon>
                     </label>
 				</div>
 				<div class="inputBox">
-                    <label>
-					    <input name="confirmarsenha" id="confirmarsenha" type="password" placeholder="CONFIRMAR SENHA" onkeyup='checar()'>
-						<ion-icon name="eye-off-outline" class="olho" id="olhoConfirmarSenha" onclick="mostrarConfirmarSenha()"></ion-icon>
-                    </label>
-				</div>
-
 				<button type="submit" class="buttonEntrar">LOGIN</button>
 			</form>
 		</main>
