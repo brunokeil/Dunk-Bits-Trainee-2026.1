@@ -45,8 +45,10 @@
   </section>
 
   <section id="container-posts">
+
     <?php foreach ($posts as $p):  ?>
-      <div class="card">
+      <a class="card" href="/post-individual?post=<?= $p->id ?>">
+
         <div class="card-footer">
           <h2 class="card-titulo-fixo"><?php echo $p->title; ?></h2>
         </div>
@@ -61,7 +63,9 @@
                                 ?></p>
           <p class="card-descricao"><?php echo $p->content; ?></p>
         </div>
-      </div>
+
+      </a>
+
     <?php endforeach ?>
 
   </section>

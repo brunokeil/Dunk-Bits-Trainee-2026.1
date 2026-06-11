@@ -39,3 +39,5 @@ $router->post('logout', 'LogoutControllerPOST@deslogar');
 $router->get('cadastro', 'CadastroControllerGET@index');
 
 $router->post('cadastro/create', 'CadastroControllerPOST@criar');
+
+$router->get('post-individual', 'PostIndividualController@index');
