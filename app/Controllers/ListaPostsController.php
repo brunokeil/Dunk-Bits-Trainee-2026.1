@@ -32,6 +32,10 @@ class ListaPostsController
 
         $posts = $database->paginate('posts', $limit, $offset, $searchText, $searchColumn, $filtro);
 
+        foreach ($posts as $p) {
+            $p->authorData = $database->selectOne('users', $p->author);
+        }
+
         return view('site/lista-posts', [
             'posts' => $posts,
             'currentPage' => $currentPage,

@@ -30,10 +30,24 @@ class PostIndividualController
             return;
         }
 
+        $author = $database->selectOne('users', $post->author);
+
         $comments = $database->selectByForeignKey('comments', 'post_id', $currentPost);
+
+        foreach ($comments as $comment) {
+            $comment->authorData = $database->selectOne('users', $comment->author);
+        }
+
+        if (
+            empty($post->cover_image) ||
+            !file_exists($_SERVER['DOCUMENT_ROOT'] . $post->cover_image)
+        ) {
+            $post->cover_image = '/public/assets/placeholder/dinosaur.png';
+        }
 
         return view('site/post-individual', [
             'post' => $post,
+            'author' => $author,
             'comments' => $comments
         ]);
     }

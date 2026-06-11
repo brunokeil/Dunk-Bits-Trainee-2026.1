@@ -14,7 +14,7 @@
     <section class="post">
       <img
         class="imagem-post-obj imagem-post"
-        src="<?php echo $post->cover_image ?>" />
+        src="<?= $post->cover_image ?>" />
 
       <div class="conteudo">
         <div class="texto">
@@ -78,19 +78,17 @@
       </form>
 
       <div class="lista-de-comentarios">
-        <?php foreach ($comments as $c):
-          $commentAuthor = App\Core\App::get('database')->selectOne('users', $c->author);
-        ?>
+        <?php foreach ($comments as $c): ?>
 
           <div class="comentario">
             <div class="user-infos">
               <img
-                src="<?php echo $commentAuthor->profile_image ?: '/public/assets/placeholder/blank-prof-pic.png'; ?>"
+                src="<?php echo $c->authorData->profile_image ?: '/public/assets/placeholder/blank-prof-pic.png'; ?>"
                 class="img-prof-picture foto-de-perfil" />
             </div>
 
             <div class="nome-de-usuario">
-              <h4><?php echo $commentAuthor->name; ?></h4>
+              <h4><?php echo $c->authorData->name; ?></h4>
             </div>
 
             <div class="texto-do-comentario">

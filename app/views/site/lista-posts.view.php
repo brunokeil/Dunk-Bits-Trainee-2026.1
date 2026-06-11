@@ -57,8 +57,7 @@
           <h2 class="card-titulo-overlay"><?php echo $p->title; ?></h2>
           <p class="card-autor"><?php
 
-                                $author = App\Core\App::get('database')->selectOne('users', $p->author);
-                                echo $author->name;
+                                echo $p->authorData->name;
 
                                 ?></p>
           <p class="card-descricao"><?php echo $p->content; ?></p>
