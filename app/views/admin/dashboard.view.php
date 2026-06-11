@@ -15,7 +15,7 @@
   </head>
   <body>
     <section id="locomocao">
-      <div id="navbar">
+      <nav>
         <button id="seta">
           <ion-icon name="arrow-back-outline"></ion-icon>
         </button>
@@ -24,7 +24,7 @@
           <ion-icon name="log-out-outline"></ion-icon>
           LOGOUT
         </button>
-      </div>
+      </nav>
       <div id="dashboard">
         <h1 id="titulo">Dashboard</h1>
       </div>
