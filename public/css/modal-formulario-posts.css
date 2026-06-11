@@ -290,6 +290,19 @@ i:hover {
   border: 1px solid var(--white-100);
 }
 
+.campo-input textarea {
+    resize: none; 
+    overflow: hidden;
+    max-height: 80px;
+    display: block;
+    font-size: 1em; 
+}
+
+.campo-input.descricao.expandido {
+    align-items: flex-start;
+}
+
+
 .campo-input input {
   background: transparent;
   border: none;
@@ -319,7 +332,6 @@ i:hover {
   font-family: var(--font-quicksand);
   text-decoration: underline;
 }
-
 
 .campo-input ion-icon {
   font-size: 1em;
