@@ -1,6 +1,5 @@
 @import "./styles.css";
 
-
 /* ---------------- exemplo -------------------- */
 
 /* classes de view */
@@ -19,29 +18,10 @@
 
 /* ------------------ BOTOES ------------------ */
 
-/* button {
-    background-color: var(--orange-100);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: large;
-    color: var(--white-100);
-}
-
-button:hover {
-    background: var(--white-80);
-    color: var(--orange-100);
-    transition: color background 160ms ease-out;
-    cursor: pointer;
-} */
-
-.testBtns {
+/* .testBtns {
     display: flex;
     gap: 10px;
-}
-
-
+} */
 
 .cancelBtn {
     background: none;
@@ -53,7 +33,7 @@ button:hover {
     color: var(--white-100);
 }
 
- .cancelBtn {
+.cancelBtn {
     color: var(--light-orange-100);
     background-color: none;
 }
@@ -64,8 +44,7 @@ button:hover {
 
 /* ----------- input styling ------------- */
 
-
-.inputGroup input{
+.inputGroup input {
     color: var(--white-100);
     font-weight: 600;
     font-size: medium;
@@ -96,7 +75,6 @@ button:hover {
     cursor: text;
 }
 
-
 .inputGroup input::placeholder {
     color: var(--white-50);
     text-decoration: underline;
@@ -104,45 +82,50 @@ button:hover {
 
 /* -------- modal container paizao ------------- */
 
-.modal-container {
+.modal-container,
+.modalContainer {
     /* background: var(--linear-grey-50); */
     /* background: var(--linear-orange-gradient2); */
     background: var(--linear-blue-80);
     z-index: 2;
-    
+    .testBtns {
+        display: flex;
+        gap: 10px;
+    }
     width: 100vw;
     height: 100vh;
     position: fixed;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     overflow: hidden;
     backdrop-filter: blur(15px);
 }
 
-
 /* ----------------- modal view padrão ----------------- */
-.modalUser {
+.modalUser,
+.modalPost {
     /* visibility: hidden; */
     position: absolute;
     z-index: 4;
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    
+
     padding: 2rem;
-    
+
     background: var(--bg-modal);
-    
+
     border-radius: 16px;
 }
 
 /* parte superior */
-.modalUser #header {
+.modalUser #header,
+.modalPost #header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -151,16 +134,15 @@ button:hover {
     gap: 5px;
 }
 
-
 /* foto de perfil */
 .userProfilePicture {
     min-width: 200px;
     min-height: auto;
     aspect-ratio: 0.9;
     background: var(--white-25);
-    
+
     border-radius: 10px;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -176,9 +158,8 @@ button:hover {
     height: 100%;
     max-width: 200px;
     object-fit: cover;
-    
+
     border-radius: 10px;
-    
 }
 
 .imgProfPic:hover {
@@ -189,10 +170,10 @@ button:hover {
 /* dados user */
 .userInfo {
     /* box-sizing: border-box; */
-    
+
     display: flex;
     flex-direction: column;
-    
+
     min-width: 100%;
     width: fit-content;
     /* border: 1px solid red; */
@@ -226,7 +207,7 @@ button:hover {
 
 .footerButtons {
     display: flex;
-    
+
     align-self: end;
 }
 
@@ -245,7 +226,6 @@ button:hover {
     transition: all 120ms ease-out;
 }
 
-
 .warningHeader {
     display: flex;
     align-items: center;
@@ -255,14 +235,9 @@ button:hover {
 .warningHeader ion-icon {
     font-size: 64px;
     color: var(--orange-100);
-    
 }
 
 /* --------------------- */
-
-
-
-
 
 ion-icon {
     min-height: 1rem;

@@ -1,23 +1,26 @@
-<div class="modalPost warningModal" id="modalExcluir">
-    <div class="warningHeader">
-        <ion-icon name="warning"></ion-icon>
+<div class="modalPost warningModal close" id="deleteModal">
+  <div class="warningHeader">
+    <ion-icon name="warning"></ion-icon>
 
-        <span>
-            <h1>Excluir usuário?</h1>
-        </span>
-    </div>
+    <span>
+      <h1>Excluir post?</h1>
+    </span>
+  </div>
 
-    <p>
-        Tem certeza que deseja excluir este usuário?
-        <br />
-        <br />
+  <p>
+    Tem certeza que deseja excluir este post?
+    <br />
+    <br />
 
-        Essa ação é <em>irreversível</em> e todos os dados relacionados à
-        conta serão <em>removidos permanentemente</em>.
-    </p>
+    Essa ação é <em>irreversível</em> e todos os dados relacionados à
+    conta serão <em>removidos permanentemente</em>.
+  </p>
+  <form action="admin-posts/delete" method="post">
+  <input type="hidden" id="delete-id" name="id" />
 
-    <div class="footerBtns">
-        <button class="closeModalBtn cancelBtn">CANCELAR</button>
-        <button class="primaryBtn">EXCLUIR</button>
-    </div>
+  <div class="footerButtons">
+    <button type="button" class="closeModalBtn cancelBtn">CANCELAR</button>
+    <button type="submit" class="primaryBtn">EXCLUIR</button>
+  </div>
+  </form>
 </div>

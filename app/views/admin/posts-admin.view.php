@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Posts</title>
     <link rel="stylesheet" href="../../../public/css/posts-admin.css">
+    <link rel="stylesheet" href="../../../public/css/modais.css">
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
-<body id="BodyTabelaPostsADM">
+<body class="postAdmin">
 
-    <div class="containerTabelaPostsAdmin">
+    <main>
         <div>
-            <h2 id="TituloDePostsADM">TABELA DE POSTS</h2>
+            <h2 id="title">TABELA DE POSTS</h2>
         </div>
         <div id="PesquisaECriarPostADM">
             <div class="searchContainer">
@@ -25,8 +26,8 @@
             <button class="primaryBtn" id="btnCriarPostADM" type="button" data-bs-toggle="modais" data-bs-target="#modalCriarPost">Criar Post</button>
         </div>
 
-        <table id="containerTabelaPostsToda">
-            <thead id="IndicesTabelaPostADM">
+        <table class="postsTable">
+            <thead class="tableHeadContainer">
                 <tr>
                     <th class="tableHead">ID</th>
                     <th class="tableHead">Título</th>
@@ -82,23 +83,24 @@
                 <ion-icon name="chevron-forward-outline"></ion-icon>
             </button>
         </div>
-    </div>
+        </div>
 
-    <div class="modalContainer close">
+        <div class="modalContainer close">
 
-        <?php
+            <?php
 
-        require("app/views/admin/modais/modalViewPost.php");
-        require("app/views/admin/modais/modalEditPost.php");
-        require("app/views/admin/modais/modalDeletePost.php");
-        require("app/views/admin/modais/modalCriarPost.php");
+            require("app/views/admin/modais/modalViewPost.php");
+            require("app/views/admin/modais/modalEditPost.php");
+            require("app/views/admin/modais/modalDeletePost.php");
+            require("app/views/admin/modais/modalCriarPost.php");
 
-        ?>
+            ?>
 
-    </div>
+    </main>
 
 </body>
 <script src="../../../public/js/admin-posts.js" rel="script"></script>
+<script src="../../../public/js/modais-posts.js" rel="script"></script>
 
 
 </html>
