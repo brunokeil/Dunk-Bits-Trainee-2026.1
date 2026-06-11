@@ -3,14 +3,18 @@ console.log("JS CARREGADO COM SUCESSO");
 // função de alterar imagem
 const profPics = document.querySelectorAll(".userProfilePicture");
 
-function alterarImagem(){
+
+
+function alterarImagem() {
     profPics.forEach((profPic) => {
         const img = profPic.querySelector("img");
         const input = profPic.querySelector("input");
+        const icon = profPic.querySelector(".icone-img");
+        const text = profPic.querySelector(".txt-img");
 
-        img.addEventListener("click", () => {
+        profPic.addEventListener("click", () => {
             input.click();
-        })
+        });
 
         input.addEventListener("change", () => {
             const arquivo = input.files[0];
@@ -18,14 +22,19 @@ function alterarImagem(){
             if (arquivo) {
                 const imageURL = URL.createObjectURL(arquivo);
 
+                img.style.display = "flex";
+
+                icon.style.display = "none";
+                text.style.display = "none";
                 img.src = imageURL;
             }
         });
-    })
+    });
 }
 
 // func de abrir/fechar modal
 function toggleModal(idModal) {
+
     const modal = document.getElementById(idModal);
     const modalContainer = document.querySelector(".modal-container");
 
@@ -43,9 +52,13 @@ function toggleModal(idModal) {
         modal.classList.add("close");
         modalContainer.classList.remove("open");
         modalContainer.classList.add("close");
+        form = modal.querySelector("form");
+        if(form){
+            form.reset();
+        }
     }
 
-    console.log(idModal);
+    
 }
 
 function closeAll() {
@@ -59,51 +72,103 @@ function closeAll() {
 }
 closeAll();
 
+
+
 function setAllEventListeners() {
     // todos os eventos de botoes modais aqui
 
-    // botoes
-    const viewUser = document.getElementById("viewUser");
-    const createUser = document.getElementById("newUser");
-    const editUser = document.getElementById("editUser");
-    const deleteUser = document.getElementById("deleteUser");
-    const discardUser = document.getElementById("discardUser");
-    const errorUser = document.getElementById("errorUser");
 
-    viewUser.addEventListener("click", () => {
+
+    // botoes
+    const viewUser = document.querySelectorAll(".view-user");
+    const createUser = document.getElementById("createUser");
+    const editUser = document.querySelectorAll(".edit-user");
+    const deleteUser = document.querySelectorAll(".delete-user");
+    const discardUser = document.querySelectorAll(".discard-user");
+    const errorUser = document.querySelectorAll(".error-user");
+
+
+
+    viewUser.forEach((btn) => {
+    btn.addEventListener("click", () => {
+
+        console.log(btn.dataset.profpic)
+
+        if (btn.dataset.profpic && btn.dataset.profpic.trim() !== "") {
+            document.querySelector(".imgProfPicNoEdit").src = "/" + btn.dataset.profpic;
+        } else {
+            document.querySelector(".imgProfPicNoEdit").src = "/public/assets/placeholder/blank-profile-pic.webp";
+        }
+
+
+
+        document.getElementById("view-username").value =btn.dataset.name;
+
+        document.getElementById("view-email").value =btn.dataset.email;
+
+        document.getElementById("view-senha").value =  btn.dataset.senha;
+
+
         toggleModal("viewModal");
     });
+    });
+
+    editUser.forEach((btn) => {
+        btn.addEventListener("click", () => {
+
+            console.log(btn.dataset.profpic)
+            document.getElementById("edit-id").value = btn.dataset.id;
+
+            document.querySelector(".imgProfPic").src = "/" + btn.dataset.profpic;
+
+            document.getElementById("edit-username").value = btn.dataset.name;
+
+            document.getElementById("edit-email").value = btn.dataset.email;
+
+            document.getElementById("edit-senha").value = btn.dataset.senha;
+
+            toggleModal("editModal");
+        });
+    });
+
+    deleteUser.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            
+            document.getElementById("delete-id").value = btn.dataset.id;
+
+            toggleModal("deleteModal");
+        });
+    });
+
+    discardUser.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            toggleModal("discardModal");
+        });
+    });
+
+    errorUser.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            toggleModal("errorModal");
+        });
+    });
+
 
     createUser.addEventListener("click", () => {
         toggleModal("createModal");
-    });
-
-    editUser.addEventListener("click", () => {
-        toggleModal("editModal");
-    });
-
-    deleteUser.addEventListener("click", () => {
-        toggleModal("deleteModal");
-    });
-
-    discardUser.addEventListener("click", ()=> {
-        toggleModal("discardModal");
-});
-    errorUser.addEventListener("click", ()=> {
-        toggleModal("errorModal");
-    })
+    }); 
 
 
     // cada ".closeModalBtn" vai receber o "toggleModal"
     const closeBtn = document.querySelectorAll(".closeModalBtn");
 
-    for (let i = 0; i < closeBtn.length; i++) {
-        closeBtn[i].addEventListener("click", () => {
-            toggleModal(closeBtn[i].parentNode.parentNode.id);
-            // pra "closeBtn[i].parentNode.parentNode.id" se referir ao "modal pai", o botao tem q ta 2 elementos a fundo dele... hehe
+    closeBtn.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const modal = btn.closest(".modalUser");
+            toggleModal(modal.id);
         });
-        console.log(closeBtn[i].parentNode.parentNode.id);
-    }
+    });
+        
+    
 }
 
 setAllEventListeners();
