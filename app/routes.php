@@ -5,24 +5,25 @@ use App\Controllers\ExampleController;
 use App\Controllers\LoginControllerGET;
 use App\Controllers\LoginControllerPOST;
 use App\Controllers\PagPostsControllerGET;
-
 use App\Controllers\CadastroController;
 use App\Core\Router;
 
 $router->get('', 'ExampleController@index');
 
 $router->get('cadastro', 'CadastroController@index');
+
 $router->get('login', 'LoginControllerGET@LoginView');
 
 $router->get('pagposts', 'PagPostsController@index');
 
 $router->get('dashboard', 'DashboardController@index');
 
+$router->get('cadastro', 'CadastroControllerGET@index');
+
+$router->get('landingpage', 'LandingPageController@index');
+
+$router->post('cadastro/create', 'CadastroControllerPOST@criar');
+
 $router->post('login', 'LoginControllerPOST@logar');
 
 $router->post('logout', 'LogoutControllerPOST@deslogar');
-$router->get('cadastro', 'CadastroControllerGET@index');
-
-$router->get('dashboard', 'DashboardController@index');
-
-$router->post('cadastro/create', 'CadastroControllerPOST@criar');
