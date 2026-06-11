@@ -1,12 +1,6 @@
 @import "./styles.css";
 
 .telaLogin {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-}
-
-.telaLogin {
 	background-image: linear-gradient(rgba(211, 84, 0, 0.25), rgba(211, 84, 0, 0.25)), url("/public/assets/bg_images/bg_login.png");
 	background-size: cover;
 	background-position: center;
@@ -15,6 +9,7 @@
 	align-items: center;
 	min-height: 100vh;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
@@ -85,6 +80,21 @@
 	color: var(--white-80);
 }
 
+.inputBox a {
+	width: 100%;
+	height: 50px;
+	padding: 0 50px 0 20px;
+	background: transparent;
+	border: 2px solid var(--white-100);
+	border-radius: 30px;
+	color: var(--color-light-text);
+	font-size: 14px;
+	font-family: var(--font-quicksand);
+	outline: none;
+	box-sizing: border-box;
+	transition: 0.3s;
+}
+
 .inputBox ion-icon {
 	position: absolute;
 	right: 20px;
@@ -101,6 +111,11 @@
 	padding-right: 15px;
 }
 
+#botoes{
+	gap: 5px;
+	width: 100%;
+	box-sizing: border-box;
+}
 
 .buttonEntrar {
 	background-color: var(--dark-orange-100);
