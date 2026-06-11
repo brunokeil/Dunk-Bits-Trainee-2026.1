@@ -7,7 +7,6 @@ use Exception;
 
 class CadastroControllerPOST
 {
-
     public function criar()
     {
         $parameters = [
@@ -16,17 +15,14 @@ class CadastroControllerPOST
             'password' => $_POST['senha'],
             'is_admin' => 0,
         ];
+        
+        $confirmarsenha = $_POST['confirmarsenha'];
 
-        if($parameters['senha'] !== $confirmarsenha){
-            session_start();   
-            header('Location: /cadastro');
-        }
-
-        if(App::get('database')->existe($parameters['email'])){
-             header('Location: /cadastro');
-             exit();
-        }else if($parameters['name'] && $parameters['email'] && $parameters['password']){
+        if($parameters['name'] && $parameters['email'] && $parameters['password'] && ($confirmarsenha === $parameters['password'])){
+            session_start();
             App::get('database')->insert('users', $parameters);
+            $user = App::get(key: 'database')->verificaLogin($parameters['email'], $parameters['password']);
+            $_SESSION['id'] = $user->id;
             header('Location: /dashboard');
         } else{
             header('Location: /cadastro');
