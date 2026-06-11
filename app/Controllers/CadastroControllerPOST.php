@@ -16,6 +16,12 @@ class CadastroControllerPOST
             'password' => $_POST['senha'],
             'is_admin' => 0,
         ];
+
+        if($parameters['senha'] !== $confirmarsenha){
+            session_start();   
+            header('Location: /cadastro');
+        }
+
         if(App::get('database')->existe($parameters['email'])){
              header('Location: /cadastro');
              exit();
