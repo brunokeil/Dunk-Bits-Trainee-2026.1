@@ -34,6 +34,8 @@ class ListaPostsController
 
         foreach ($posts as $p) {
             $p->authorData = $database->selectOne('users', $p->author);
+
+            $p->imagem_exibicao = $database->existPhotoPost($p->cover_image);
         }
 
         return view('site/lista-posts', [
@@ -43,5 +45,5 @@ class ListaPostsController
             'searchText' => $searchText,
             'valor_filtro' => $filtro
         ]);
-    }
+     } 
 }

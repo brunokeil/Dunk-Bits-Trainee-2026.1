@@ -208,7 +208,7 @@ ion-icon {
   flex-direction: column;
   justify-content: center;
   background-color: var(--pearl-grey-100);
-  background-image: url(../assets/placeholder/dinosaur.png);
+  /* background-image: url(../assets/placeholder/dinosaur.png); */
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: bottom center;
@@ -222,6 +222,13 @@ ion-icon {
     transform 1.2s ease;
   opacity: 0;
   transform: translateX(80px);
+}
+
+.card-imagem {
+  width: 100%;
+  max-width: 350px;
+  height: 375px;
+  object-fit: cover;
 }
 
 .card.mostrar {

@@ -214,4 +214,20 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function existPhotoPost($imageName) {
+    $imagemPadrao = "/public/assets/post_featured_pics/padrao.png";
+
+    if (empty($imageName)) {
+        return $imagemPadrao;
+    }
+
+    $caminhoFisico = "public/assets/post_featured_pics/" . $imageName;
+
+    if (file_exists($caminhoFisico)) {
+        return $caminhoFisico; 
+    }
+
+    return $imagemPadrao;
+    }
 }
