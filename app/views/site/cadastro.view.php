@@ -6,32 +6,35 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>CADASTRO</title>
 
-		<link rel="stylesheet" href="../../../public/css/cadastro.css" />
+		<link rel="stylesheet" href="../../../public/css/LoginCadastro.css"/>
 	</head>
-	<body class="telaLogin">
-		<main class="loginContainer">
+	<body class="telaLoginCadastro">
+		<main class="LoginCadastroContainer">
 			<a href="/landingpage" class="buttonFechar">
 				<ion-icon name="close-outline"></ion-icon>
 			</a>
-			<h2 id="tituloCadastro">CADASTRO</h2>
+			<h2 class="tituloLoginCadastro">CADASTRO</h2>
 			<form action="/cadastro/create" method="POST">  
 				<div class="inputBox">
-					<input type="text" name="name" placeholder="NOME" />
+					<input type="text" name="name" placeholder="NOME" aria-label="ESCREVER NOME"/>
 				</div>
 				<div class="inputBox">
-					<input type="text" name="email" placeholder="EMAIL" />
+					<input type="text" name="email" placeholder="EMAIL" aria-label="ESCREVER EMAIL"/>
 				</div>
 				<div class="inputBox">
-                    <label>
-					    <input name="senha" id="senha" type="password" placeholder="SENHA">
+					    <input name="senha" id="senha" type="password" placeholder="SENHA" aria-label="ESCREVER SENHA">
 						<ion-icon name="eye-off-outline" class="olho" id="olhoSenha"></ion-icon>
-                    </label>
 				</div>
 				<div class="inputBox">
-				    <label>
-					    <input name="confirmarsenha" id="confirmarsenha" type="password" placeholder="CONFIRMAR SENHA" onkeyup='checar()'>
+					    <input name="confirmarsenha" id="confirmarsenha" type="password" placeholder="CONFIRMAR SENHA" aria-label="CONFIRMAR SENHA">
 						<ion-icon name="eye-off-outline" class="olho" id="olhoConfirmarSenha"></ion-icon>
-                    </label>
+				</div>
+				<div id="senhaforte">
+					<p id="senhaQuantidade">*Senha deve conter pelo menos 8 caracteres</p>
+					<p id="senhaMaiuscula">*Senha deve conter pelo menos uma letra maiscula</p>
+					<p id="senhaMinuscula">*Senha deve conter pelo menos uma letra minuscula</p>
+					<p id="senhaCaracterEspecial">*Senha deve conter pelo menos 1 caracter especial</p>
+					<p id="senhaNumero">*Senha deve conter pelo menos 1 numero</p>
 				</div>
 				<button type="submit" class="buttonEntrar">CRIAR</button>
 			</form>
