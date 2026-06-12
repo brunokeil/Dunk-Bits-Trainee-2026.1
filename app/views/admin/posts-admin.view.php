@@ -23,7 +23,7 @@
                 <ion-icon name="search-outline"></ion-icon>
                 <input id="PesquisaPostsTabelaADM" type="text" placeholder="Pesquisar por Post" />
             </div>
-            <button class="primaryBtn" id="btnCriarPostADM" type="button" data-bs-toggle="modais" data-bs-target="#modalCriarPost">Criar Post</button>
+            <button class="primaryBtn createPost" type="button" data-bs-toggle="modais" data-bs-target="#modalCreate">Criar Post</button>
         </div>
 
         <table class="postsTable">

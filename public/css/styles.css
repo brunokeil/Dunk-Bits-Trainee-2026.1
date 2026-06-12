@@ -111,7 +111,7 @@
 *,
 *::before,
 *::after {
-	box-sizing: content-box;
+	box-sizing: border-box;
 	color: var(--color-dark-text);
 	font-family: var(--font-quicksand);
 	padding: 0;

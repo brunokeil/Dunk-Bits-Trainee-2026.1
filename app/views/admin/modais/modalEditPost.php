@@ -49,19 +49,12 @@
             <textarea
                 class="titleInput"
                 placeholder="Titulo do post"
-                id="viewTitle">
-
-                Um post titulo longo do caramba aqui... empolguei
-            </textarea>
+                id="viewTitle"></textarea>
 
             <textarea
                 class="descriptionInput"
                 placeholder="Descrição"
-                id="viewDescription"> 
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-        <br/> <br/>
-        Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-      </textarea>
+                id="viewDescription"> </textarea>
 
 
         </div>
