@@ -65,17 +65,24 @@
     </section>
 
     <section class="comentarios">
-      <form action="/post-individual/comment" method="post" enctype="multipart/form-data" class="formulario-comentario">
-        <input type="hidden" name="post_id" value="<?= $post->id ?>">
-        <div class="caixa-de-comentarios">
-          <input
-            type="text"
-            id="input-comentario"
-            placeholder="Digite seu comentário"
-            name="comment" />
-          <img id="botao-de-enviar" src="/public/assets/icons/sent_arrow.png" type="submit" />
+      <?php if (isset($_SESSION['id'])): ?>
+        <form action="/post-individual/comment" method="post" enctype="multipart/form-data" class="formulario-comentario">
+          <input type="hidden" name="post_id" value="<?= $post->id ?>">
+          <div class="caixa-de-comentarios">
+            <input
+              type="text"
+              id="input-comentario"
+              placeholder="Digite seu comentário"
+              name="comment" />
+            <img id="botao-de-enviar" src="/public/assets/icons/sent_arrow.png" type="submit" />
+          </div>
+        </form>
+      <?php else: ?>
+        <div class="caixa-login-obrigatorio">
+          <p>Você precisa estar logado para comentar.</p>
+          <a href="/login?redirect=<?= urlencode($_SERVER['REQUEST_URI']) ?>" class="botao-login">Fazer Login</a>
         </div>
-      </form>
+      <?php endif; ?>
 
       <div class="lista-de-comentarios">
         <?php foreach ($comments as $c): ?>
