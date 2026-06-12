@@ -8,6 +8,23 @@ use Exception;
 class ListaPostsController
 {
 
+    public function existPhotoPost($imageName)
+    {
+        $imagemPadrao = "/public/assets/post_featured_pics/padrao.png";
+
+        if (empty($imageName)) {
+            return $imagemPadrao;
+        }
+
+        $caminhoFisico = "public/assets/post_featured_pics/" . $imageName;
+
+        if (file_exists($caminhoFisico)) {
+            return $caminhoFisico;
+        }
+
+        return $imagemPadrao;
+    }
+
     public function index()
     {
 
@@ -35,7 +52,7 @@ class ListaPostsController
         foreach ($posts as $p) {
             $p->authorData = $database->selectOne('users', $p->author);
 
-            $p->imagem_exibicao = $database->existPhotoPost($p->cover_image);
+            $p->imagem_exibicao = $this->existPhotoPost($p->cover_image);
         }
 
         return view('site/lista-posts', [
@@ -45,5 +62,5 @@ class ListaPostsController
             'searchText' => $searchText,
             'valor_filtro' => $filtro
         ]);
-     } 
+    }
 }

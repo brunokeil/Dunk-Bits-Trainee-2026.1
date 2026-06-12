@@ -8,6 +8,25 @@ use Exception;
 class PostIndividualController
 {
 
+    public function getPostImage($post)
+    {
+        $imagemPadrao = "/public/assets/post_featured_pics/padrao.png";
+
+        $imageName = $post->cover_image;
+
+        if (empty($imageName)) {
+            return $imagemPadrao;
+        }
+
+        $caminhoFisico = "public/assets/post_featured_pics/" . $imageName;
+
+        if (file_exists($caminhoFisico)) {
+            return '/' . $caminhoFisico;
+        }
+
+        return $imagemPadrao;
+    }
+
     public function index()
     {
         session_start();
@@ -36,17 +55,13 @@ class PostIndividualController
             $comment->authorData = $database->selectOne('users', $comment->author);
         }
 
-        if (
-            empty($post->cover_image) ||
-            !file_exists($_SERVER['DOCUMENT_ROOT'] . $post->cover_image)
-        ) {
-            $post->cover_image = '/public/assets/placeholder/dinosaur.png';
-        }
+        $postImage = $this->getPostImage($post);
 
         return view('site/post-individual', [
             'post' => $post,
             'author' => $author,
-            'comments' => $comments
+            'comments' => $comments,
+            'postCoverImage' => $postImage
         ]);
     }
 

@@ -14,7 +14,7 @@
     <section class="post">
       <img
         class="imagem-post-obj imagem-post"
-        src="<?= $post->cover_image ?>" />
+        src="<?= $postCoverImage ?>" />
 
       <div class="conteudo">
         <div class="texto">
