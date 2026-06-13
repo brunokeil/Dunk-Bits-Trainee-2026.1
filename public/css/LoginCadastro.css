@@ -1,7 +1,7 @@
 @import "./styles.css";
 
 .telaLoginCadastro {
-	background-image: linear-gradient(rgba(239, 100, 0, 0.25), rgba(239, 100, 0, 0.25)), url("/public/assets/bg_images/bg_login.png");
+	background-image: linear-gradient(rgba(239, 100, 0, 0.5), rgba(239, 100, 0, 0.5)), url("/public/assets/bg_images/bg_login.png");
 	background-size: cover;
 	background-position: center;
 	background-color: var(--dark-grey-100);
@@ -22,8 +22,8 @@
 
 .LoginCadastroContainer {
 	background: var(--white-15);
-	backdrop-filter: blur(15px);
-	-webkit-backdrop-filter: blur(15px);
+	backdrop-filter: blur(24px);
+	-webkit-backdrop-filter: blur(24px);
 	border: 1px solid var(--white-25);
 	border-radius: 20px;
 	padding: 60px 40px;
@@ -133,20 +133,29 @@
 	background-color: var(--orange-100);
 }
 
-#senhaforte{
-	display: block;
+.senhaforte{
+	max-height: 0;
+	opacity: 0;
+	visibility: hidden;
 }
 
-#senhaforte{
-	display: none;
+.senhaforte.ativo{
+	max-height: 25vh;
+	opacity: 1;
+	visibility: visible;
+	padding-bottom: 20px;
+	gap: 12px;
 }
 
-#senhaQuantidade,
-#senhaMaiuscula,
-#senhaMinuscula,
-#senhaCaracterEspecial,
-#senhaNumero{
-	color: red;
+.requisitosSenha{
+	color: darkred;
+	font-size: 1rem;
+	text-align: left;
+	gap: 10px;
+}
+
+.requisitosSenha.feito{
+	color: darkgreen;
 }
 
 @media (max-width: 768px) {
