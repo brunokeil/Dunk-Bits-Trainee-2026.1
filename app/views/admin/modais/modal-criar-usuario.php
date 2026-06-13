@@ -20,19 +20,19 @@
       <div class="inputGroup">
         <ion-icon name="person"></ion-icon>
 
-        <input type="text" class="usernameInput" placeholder="*Username" id="create-username" name="name" />
+        <input type="text" class="usernameInput" placeholder="*Username" id="create-username" name="name" aria-label="*Username"/>
       </div>
 
       <div class="inputGroup">
         <ion-icon name="mail"></ion-icon>
 
-        <input type="email" class="emailInput" placeholder="*E-mail" id="create-email" name="email" />
+        <input type="email" class="emailInput" placeholder="*E-mail" id="create-email" name="email" aria-label="*E-mail"/>
       </div>
 
       <div class="inputGroup">
         <ion-icon name="lock-closed"></ion-icon>
 
-        <input type="password" class="passwordInput" placeholder="*Senha" id="create-senha" name="password" />
+        <input type="password" class="passwordInput" placeholder="*Senha" id="create-senha" name="password" aria-label="*Senha"/>
       </div>
       <div class="inputGroup">
         <ion-icon name="lock-closed"></ion-icon>
@@ -40,7 +40,7 @@
         <input
           type="password"
           class="passwordInput"
-          placeholder="*Confirme a Senha" id="create-senha-confirm" />
+          placeholder="*Confirme a Senha" id="create-senha-confirm" aria-label="*Confirme a Senha" />
       </div>
 
       <div class="admin-question">

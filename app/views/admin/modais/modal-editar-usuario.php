@@ -23,19 +23,19 @@
             <div class="inputGroup">
                 <ion-icon name="person"></ion-icon>
 
-                <input type="text" class="usernameInput" placeholder="*Username" id="edit-username" name="name" />
+                <input type="text" class="usernameInput" placeholder="*Username" id="edit-username" name="name" aria-label="*Username" />
             </div>
 
             <div class="inputGroup">
                 <ion-icon name="mail"></ion-icon>
 
-                <input type="email" class="emailInput" placeholder="*E-mail" id="edit-email" name="email" />
+                <input type="email" class="emailInput" placeholder="*E-mail" id="edit-email" name="email" aria-label="*E-mail" />
             </div>
 
             <div class="inputGroup">
                 <ion-icon name="lock-closed"></ion-icon>
 
-                <input type="password" class="passwordInput" placeholder="*Senha" id="edit-senha" name="password" />
+                <input type="password" class="passwordInput" placeholder="*Senha" id="edit-senha" name="password" arial-label="*Senha" />
             </div>
         </div>
 
