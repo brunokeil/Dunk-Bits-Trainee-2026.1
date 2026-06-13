@@ -11,7 +11,6 @@ class UsuariosController
     public function index()
     {
 
-        session_start();
         if (!isset($_SESSION['id'])) {
             header(header: 'Location: /login');
             exit;
@@ -57,6 +56,7 @@ class UsuariosController
     public function getFormImage()
     {
         $imgPath = null;
+        $nomeImagem = null;
 
         if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
             $temporario = $_FILES['imagem']['tmp_name'];
@@ -68,20 +68,20 @@ class UsuariosController
             move_uploaded_file($temporario, $imgPath);
         }
 
-        return $imgPath;
+        return $nomeImagem;
     }
 
     public function store()
     {
 
-        $imgPath = $this->getFormImage();
+        $imgName = $this->getFormImage();
 
         $parameters = [
             'name' => $_POST['name'],
             'email' => $_POST['email'],
             'password' => $_POST['password'],
             'is_admin' => isset($_POST['is_admin']) ? 1 : 0,
-            'profile_image' => $imgPath
+            'profile_image' => $imgName
         ];
 
         App::get("database")->insert('users', $parameters);
@@ -90,14 +90,24 @@ class UsuariosController
 
     public function edit()
     {
-        $imgPath = $this->getFormImage();
+        $imgName = $this->getFormImage();
 
-        $parameters = [
-            'name' => $_POST['name'],
-            'email' => $_POST['email'],
-            'password' => $_POST['password'],
-            'profile_image' => $imgPath
-        ];
+        if ($imgName != null) {
+            $parameters = [
+                'name' => $_POST['name'],
+                'email' => $_POST['email'],
+                'password' => $_POST['password'],
+                'profile_image' => $imgName
+            ];
+        } else {
+            $parameters = [
+                'name' => $_POST['name'],
+                'email' => $_POST['email'],
+                'password' => $_POST['password']
+            ];
+        }
+
+
         $id = $_POST['id'];
 
         App::get("database")->update('users', $id, $parameters);

@@ -29,14 +29,7 @@ class LoginController
     {
         $email = $_POST['email'];
         $senha = $_POST['senha'];
-        $confirmarsenha = $_POST['confirmarsenha'];
         $redirect = $_POST['redirect'] ?? "dashboard";
-
-        if ($senha !== $confirmarsenha) {
-            session_start();
-            header('Location: /login');
-            exit();
-        }
 
         $user = App::get(key: 'database')->verificaLogin($email, $senha);
 
