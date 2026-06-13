@@ -125,8 +125,6 @@ function setAllEventListeners() {
 
             document.getElementById("edit-email").value = btn.dataset.email;
 
-            document.getElementById("edit-senha").value = btn.dataset.senha;
-
             toggleModal("editModal");
         });
     });
