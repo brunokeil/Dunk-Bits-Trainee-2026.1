@@ -27,12 +27,10 @@ class CadastroController
 
         if($parameters['name'] && $parameters['email'] && $parameters['password'] && ($confirmarsenha === $parameters['password'])){
             App::get('database')->insert('users', $parameters);
-            session_start();
             $user = App::get(key: 'database')->verificaLogin($parameters['email'], $parameters['password']);
             $_SESSION['id'] = $user->id;
             header('Location: /dashboard');
         } else{
-            session_start();
             header('Location: /cadastro');
         }
     }
