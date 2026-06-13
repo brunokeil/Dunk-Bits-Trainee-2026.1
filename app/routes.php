@@ -1,18 +1,16 @@
 <?php
 
 namespace App\Controllers;
-
-use App\Controllers\UsuariosController;
 use App\Controllers\ExampleController;
-use App\Controllers\NavbarController;
-use App\Controllers\LandingPageController;
-use App\Core\Router;
+use App\Controllers\LoginController;
+use App\Controllers\PagPostsControllerGET;
+use App\Controllers\CadastroController;
 
-$router->get('', 'ExampleController@index');
+$router->get('', 'landingpageController@index');
 
 $router->get('navbar', 'NavbarController@index');
 
-$router->get('landingpage', 'LandingPageController@index');
+$router->get('', 'LandingPageController@index');
 
 $router->get('admin-users', 'UsuariosController@index');
 
@@ -26,16 +24,30 @@ $router->get('lista-posts', 'ListaPostsController@index');
 
 $router->get('cadastro', 'CadastroController@index');
 
-$router->get('login', 'LoginControllerGET@LoginView');
+$router->get('login', 'LoginController@LoginView');
 
 $router->get('pagposts', 'PagPostsController@index');
 
 $router->get('dashboard', 'DashboardController@index');
 
-$router->post('login', 'LoginControllerPOST@logar');
+$router->get('landingpage', 'LandingPageController@index');
 
-$router->post('logout', 'LogoutControllerPOST@deslogar');
+$router->post('login', 'LoginController@logar');
 
-$router->get('cadastro', 'CadastroControllerGET@index');
+$router->post('logout', 'LoginController@deslogar');
 
-$router->post('cadastro/create', 'CadastroControllerPOST@criar');
+$router->post('cadastro/create', 'CadastroController@criar');
+
+$router->get('footer', 'FooterController@index');
+
+$router->get('postsadmin', 'PostsAdminController@index');
+
+$router->post('login', 'LoginController@logar');
+
+$router->post('logout', 'LogoutController@deslogar');
+
+$router->post('cadastro/create', 'CadastroController@criar');
+
+$router->get('post-individual', 'PostIndividualController@index');
+
+$router->post('post-individual/comment', 'PostIndividualController@storeComment');

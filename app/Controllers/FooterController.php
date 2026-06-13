@@ -5,8 +5,13 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-class CadastroControllerPOST
+class FooterController
 {
+
+    public function index()
+    {
+        return view('site/footer');
+    }
 
     public function criar()
     {
@@ -16,13 +21,13 @@ class CadastroControllerPOST
             'password' => $_POST['senha'],
             'is_admin' => 0,
         ];
-        if(App::get('database')->existe($parameters['email'])){
-             header('Location: /cadastro');
-             exit();
-        }else if($parameters['name'] && $parameters['email'] && $parameters['password']){
+        if (App::get('database')->existe($parameters['email'])) {
+            header('Location: /cadastro');
+            exit();
+        } else if ($parameters['name'] && $parameters['email'] && $parameters['password']) {
             App::get('database')->insert('users', $parameters);
             header('Location: /dashboard');
-        } else{
+        } else {
             header('Location: /cadastro');
         }
     }

@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lista de Posts</title>
   <link rel="stylesheet" href="../../../public/css/lista-posts.css" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <body>
@@ -45,8 +43,12 @@
   </section>
 
   <section id="container-posts">
+
     <?php foreach ($posts as $p):  ?>
-      <div class="card">
+      <a class="card" href="/post-individual?post=<?= $p->id ?>">
+
+      <img src="<?= $p->imagem_exibicao ?>" alt="<?= $p->title ?>" class="card-imagem">
+
         <div class="card-footer">
           <h2 class="card-titulo-fixo"><?php echo $p->title; ?></h2>
         </div>
@@ -55,13 +57,14 @@
           <h2 class="card-titulo-overlay"><?php echo $p->title; ?></h2>
           <p class="card-autor"><?php
 
-                                $author = App\Core\App::get('database')->selectOne('users', $p->author);
-                                echo $author->name;
+                                echo $p->authorData->name;
 
                                 ?></p>
           <p class="card-descricao"><?php echo $p->content; ?></p>
         </div>
-      </div>
+
+      </a>
+
     <?php endforeach ?>
 
   </section>

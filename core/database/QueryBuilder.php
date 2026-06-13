@@ -196,4 +196,22 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function selectByForeignKey($table, $fkColumn, $fkValue)
+    {
+        $sql = "SELECT * FROM {$table} WHERE {$fkColumn} = :value";
+
+        $stmt = $this->pdo->prepare($sql);
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                'value' => $fkValue
+            ]);
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }
