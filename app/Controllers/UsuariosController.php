@@ -11,7 +11,23 @@ class UsuariosController
     public function index()
     {
 
+        session_start();
+        if (!isset($_SESSION['id'])) {
+            header(header: 'Location: /login');
+            exit;
+        }
+
+
+
+
         $database = App::get("database");
+
+        $usuarioLogado = $database->selectOne('users', $_SESSION['id']);
+
+        if (!$usuarioLogado->is_admin) {
+            header(header: 'Location: /dashboard');
+            exit;
+        }
 
         $searchText = isset($_GET['search']) ? $_GET['search'] : '';
         $searchColumn = $searchText !== '' ? ['name', 'email'] : null;
