@@ -18,6 +18,8 @@
 .tituloLoginCadastro{
 	font-size: 3rem;
 	font-family: var(--font-quicksand);
+	color: white;
+	padding-bottom: 16px;
 }
 
 .LoginCadastroContainer {
@@ -33,7 +35,7 @@
 	box-sizing: border-box;
 }
 
-.LoginCadastroContainer h2 {
+#tituloLoginCadastro {
 	color: var(--color-light-text);
 	margin-bottom: 40px;
 }
@@ -49,7 +51,7 @@
 }
 
 .buttonFechar ion-icon {
-	color: var(--white-100) !important;
+	color: var(--white-100);
 }
 
 .inputBox {
@@ -104,10 +106,6 @@
 	border-radius: 20px;
 }
 
-.olho{
-	cursor: pointer;	
-}
-
 
 #olhoSenha{
 	cursor: pointer;
@@ -115,18 +113,6 @@
 
 #olhoConfirmarSenha{
 	cursor: pointer;
-}
-
-.esqueciSenha {
-	color: var(--color-light-text);
-	text-decoration: none;
-	font-size: 14px;
-	transition: 0.3s;
-}
-
-.esqueciSenha:hover {
-	color: var(--dark-orange-100);
-	text-decoration: underline;
 }
 
 .buttonEntrar:hover {
