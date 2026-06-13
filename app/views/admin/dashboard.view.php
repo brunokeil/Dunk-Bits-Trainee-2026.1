@@ -14,7 +14,7 @@
         </button>
        <div>
         <form action="/logout" method="POST">
-          <button id="logout">
+          <button id="logout" type="submit">
             <ion-icon name="log-out-outline"></ion-icon>
             LOGOUT
           </button>
