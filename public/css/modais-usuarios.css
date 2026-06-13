@@ -1,44 +1,7 @@
 @import "./styles.css";
 
-/* ------- geral (mudar dps) --------- */
-
-body {
-    background: var(--pearl-grey-100);
-    /* background-repeat: no-repeat; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    justify-content: center;
-    gap: 20px;
-
-    position: relative;
-}
-
-body * {
-    color: var(--white-100);
-}
-
-body > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 /* ---------------- exemplo -------------------- */
-
-.userExample {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--blue-100);
-    width: fit-content;
-    border-radius: 10px;
-    padding: 20px;
-    gap: 16px;
-}
-.userExample * {
-    color: var(--white-100);
-}
 
 /* classes de view */
 
@@ -56,7 +19,7 @@ body > div {
 
 /* ------------------ BOTOES ------------------ */
 
-button {
+/* button {
     background-color: var(--orange-100);
     border: none;
     padding: 10px 20px;
@@ -67,17 +30,27 @@ button {
 }
 
 button:hover {
-    /* filter: drop-shadow(0 0 4px var(--pearl-grey-100)); */
-    /* border: 2px solid var(--white-100); */
     background: var(--white-80);
     color: var(--orange-100);
     transition: color background 160ms ease-out;
     cursor: pointer;
+} */
+
+.testBtns {
+    display: flex;
+    gap: 10px;
 }
+
+.admin-question {
+    display: flex;
+    justify-content: center;
+}
+
+
 
 .cancelBtn {
     background: none;
-    color: var(--light-orange-100);
+    color: white;
     text-decoration: underline;
 }
 .cancelBtn:hover {
@@ -86,12 +59,16 @@ button:hover {
 }
 
  .cancelBtn {
-    color: var(--light-orange-100);
+    color: white;
     background-color: none;
 }
 
 .cancelBtn:hover {
     color: var(--white-100);
+}
+
+#criar-usuario, #editar-usuario{
+    background-color: var(--dark-blue-100);
 }
 
 /* ----------- input styling ------------- */
@@ -104,7 +81,7 @@ button:hover {
 
     background: none;
 
-    border-radius: 8px;
+    
     padding: 4%;
 
     text-wrap: nowrap;
@@ -112,7 +89,10 @@ button:hover {
     outline: none;
     border: none;
     transition: background 120ms ease;
-    
+}
+
+.inputGroup ion-icon {
+    font-size: 20px;
 }
 .inputGroup > *:hover {
     cursor: pointer;
@@ -129,6 +109,12 @@ button:hover {
     cursor: text;
 }
 
+
+.inputGroup input::placeholder {
+    color: var(--white-50);
+    text-decoration: underline;
+}
+
 /* -------- modal container paizao ------------- */
 
 .modal-container {
@@ -136,22 +122,22 @@ button:hover {
     /* background: var(--linear-orange-gradient2); */
     background: var(--linear-blue-80);
     z-index: 2;
-
+    
     width: 100vw;
     height: 100vh;
     position: fixed;
-
+    
     display: flex;
     align-items: center;
     justify-content: center;
-
+    
     overflow: hidden;
     backdrop-filter: blur(15px);
 }
 
+
 /* ----------------- modal view padrão ----------------- */
 .modalUser {
-    /* visibility: hidden; */
     position: absolute;
     z-index: 4;
 
@@ -162,9 +148,15 @@ button:hover {
 
     padding: 2rem;
 
-    background: var(--bg-modal);
 
+    overflow-y: auto;
+
+    background: var(--linear-orange-gradient5);
     border-radius: 16px;
+}
+
+#createModal, #editModal {
+    width: min(90vw, 520px);
 }
 
 /* parte superior */
@@ -176,36 +168,65 @@ button:hover {
     width: 100%;
     gap: 5px;
 }
-.modalUser #header > button {
-    background: 0;
-}
+
 
 /* foto de perfil */
 .userProfilePicture {
-    min-width: 200px;
+    width: 100%;
+    max-width: 700px;
+    min-width: 300px;
     min-height: auto;
     aspect-ratio: 0.9;
-    background: var(--white-25);
-
+    
     border-radius: 10px;
 
+    border: 4px dashed white;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 .userProfilePicture:hover {
     background-color: var(--white-25);
 }
 
-.imgProfPic {
+
+.userProfilePictureNoEdit {
+    min-width: 200px;
+    min-height: auto;
+    aspect-ratio: 0.9;
+    
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgProfPicNoEdit {
     width: 100%;
     height: 100%;
     max-width: 200px;
     object-fit: cover;
-
+    
     border-radius: 10px;
+}
+
+.icone-img {
+    font-size: 50px;
+}
+
+.imgProfPic {
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    object-fit: cover;
+    
+    border-radius: 10px;
+    display: none;
     
 }
 
@@ -217,21 +238,38 @@ button:hover {
 /* dados user */
 .userInfo {
     /* box-sizing: border-box; */
-
+    
     display: flex;
     flex-direction: column;
 
+    align-items: center;
+    justify-content: center;
+    
     min-width: 100%;
     width: fit-content;
     /* border: 1px solid red; */
     gap: 10px;
+    margin-block: 10px;
 }
 
-/* delete, discard e error*/
+.inputGroup {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 5px;
+    border: 1px solid white;
+    border-radius: 8px;
+}
 
-#deleteModal,
-#discardModal,
-#errorModal {
+
+.icone-titulo {
+   font-size: 25px;
+}
+
+/* ----- warning modais -----*/
+
+.warningModal {
     text-wrap: wrap;
     max-width: 45ch;
     background: var(--linear-red-gradient);
@@ -240,15 +278,17 @@ button:hover {
     font-weight: 600;
 }
 
-#deleteModal em,
-#discardModal em,
-#errorModal em {
+.warningModal em {
     text-decoration: underline;
     font-style: normal;
+    font-weight: bold;
 }
 
 .footerButtons {
-    align-self: end;
+    display: flex;
+
+    
+    justify-content: end;
 }
 
 .footerButtons > * {
@@ -259,36 +299,18 @@ button:hover {
     background: 0;
     text-decoration: underline;
 }
- .footerButtons :last-child:hover {
+.warningModal .footerButtons :last-child:hover {
     filter: drop-shadow(0 0 0px black);
     color: red;
     background-color: var(--white-100);
-    /* font-size: 30px; */
     transition: all 120ms ease-out;
 }
 
 
-
-/* --------------------- */
-
-
-.inputGroup {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-inline: 5px;
-    
-}
-
-.inputGroup input::placeholder {
-    color: var(--white-50);
-}
-
 .warningHeader {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 0.5rem;
 }
 
 .warningHeader ion-icon {
@@ -297,8 +319,15 @@ button:hover {
     
 }
 
+/* --------------------- */
 
-/* ion-icon {
-    width: 2rem;
-    height: fit-content;
-} */
+
+
+
+
+ion-icon {
+    min-height: 1rem;
+    min-width: 1rem;
+    /* border: 1px wheat solid; */
+    padding: 0;
+}

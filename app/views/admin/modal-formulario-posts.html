@@ -18,29 +18,28 @@
    <form>
   <div id="modal-criar-post">
     <div id="modal-criar-titulo">
-      <img src="../../../public/assets/icons/add-image.svg" alt="adicionar-post">
       <h3>CRIAR POST</h3>
     </div>
     <div id="modal-criar-imagem">
-      <img src="../../../public/assets/icons/FileEarmarkImage-light.svg" alt="pasta-imagem">
-      <h3> Arraste sua imagem aqui
-        ou clique para escolher um arquivo</h3>
+
+      <h4> Arraste sua imagem aqui
+        ou clique para escolher um arquivo</h4>
     </div>
     <div id="modal-criar-data">
-      <h3>DATA: 01/01/0000</h3>
+      <h4>DATA: 01/01/0000</h4>
     </div>
     <div id="modal-criar-info">
       <div class="campo-input titulo">
         <ion-icon name="pencil-outline"></ion-icon>
-        <input type="text" placeholder="TÍTULO DO POST" id="modal-criar-info-titulo">
+        <input type="text" placeholder="Título do Post" id="modal-criar-info-titulo">
       </div>
       <div class="campo-input descricao">
         <ion-icon name="create-outline"></ion-icon>
-        <input type="text" placeholder="Descrição do post..." id="modal-criar-info-descricao">
+        <textarea placeholder="Descrição do Post" id="modal-criar-info-descricao" rows="1" oninput="expandir(this)"></textarea>
       </div>
       <div class="campo-input autor">
         <ion-icon name="person-outline"></ion-icon>
-        <input type="text" placeholder="Autor do Post" id="modal-criar-info-autor">
+        <input type="text" value="Autor do Post" id="modal-criar-info-autor" readonly>
       </div>
     </div>
     <div id="modal-criar-botoes">
@@ -62,11 +61,11 @@
     </div>
     <div id="modal-excluir-descricao">
       <h4>Tem certeza que deseja excluir?</h4>
-      <h4>Essa ação é <span style="text-decoration: underline; color: white;">irreversível</span> e todos os dados referentes ao post serão excluídos <span style="text-decoration: underline; color: white;">permanentementes</span>.</h4>
+      <h4>Essa ação é <span style="text-decoration: underline; color: black;">irreversível</span> e todos os dados referentes ao post serão excluídos <span style="text-decoration: underline; color: black;">permanentementes</span>.</h4>
     </div>
     <div id="modal-excluir-botoes">
              <button id="btn-modal-excluir-cancelar" onclick="fecharModal('modal-excluir-post')">CANCELAR</button>
-             <button id="btn-modal-excluir-confirmar" onclick="fecharModal('modal-excluir-post')">CONFIRMAR</button>
+             <button id="btn-modal-excluir-confirmar" onclick="fecharModal('modal-excluir-post')">EXCLUIR</button>
     </div>
   </div>
   </form>

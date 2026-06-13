@@ -13,3 +13,17 @@ function fecharModal(idModal){
     tela.style.display = 'none';
 }
 
+function expandir(element) {
+    element.style.height = 'auto'; 
+    let novaAltura = element.scrollHeight;
+    element.style.height = novaAltura + 'px';
+
+    let container = element.parentElement;
+    if (novaAltura > 20) {
+        container.classList.add('expandido');
+    } else {
+        container.classList.remove('expandido');
+    }
+}
+
+

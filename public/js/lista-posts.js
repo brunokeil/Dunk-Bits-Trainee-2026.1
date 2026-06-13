@@ -69,3 +69,11 @@ document.addEventListener("DOMContentLoaded", () => {
     menuFiltros.classList.toggle("active");
   });
 });
+
+document.addEventListener("keypress", (event) => {
+  if(event.key === "Enter") {
+    let form = document.getElementById("form-search");
+    event.preventDefault();
+    form.submit();
+  }
+})
