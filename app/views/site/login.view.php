@@ -32,12 +32,6 @@
 					<ion-icon name="eye-off-outline" class="olho" id="olhoSenha" onclick="mostrarSenha()"></ion-icon>
 				</label>
 			</div>
-			<div class="inputBox">
-				<label>
-					<input name="confirmarsenha" id="confirmarsenha" type="password" placeholder="CONFIRMAR SENHA" onkeyup='checar()'>
-					<ion-icon name="eye-off-outline" class="olho" id="olhoConfirmarSenha" onclick="mostrarConfirmarSenha()"></ion-icon>
-				</label>
-			</div>
 
 			<button type="submit" class="buttonEntrar">LOGIN</button>
 		</form>
