@@ -10,7 +10,7 @@ class DashboardController
     public function index()
     {
         if(!isset($_SESSION['id'])){
-            header(header: 'Location: /login');
+            header('Location: /login');
         }
         return view('admin/dashboard');
     }
