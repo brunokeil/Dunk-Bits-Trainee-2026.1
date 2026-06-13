@@ -164,6 +164,7 @@ td{
 
 .botoesdeacao {
     display: flex;
+    justify-content: center;
 }
 
 
@@ -202,9 +203,7 @@ ion-icon:hover{
     color: var(--white-25);
 }
 
-.btnVisuPostADM,
-.btnEditPostADM,
-.btnDeletePostADM{
+.view-user, .edit-user, .delete-user{
     background: none;
     border: none;
     cursor: pointer;
@@ -266,16 +265,28 @@ ion-icon:hover{
 
 }
 
+
 .seta-esquerda {
      border: none;
     outline: none;
     background: transparent;
+    display: flex;
+    align-items: center;
 }
 
 .seta-direita {
      border: none;
     outline: none;
     background: transparent;
+    display: flex;
+    align-items: center;
+
+}
+
+button .pesquisar-botao {
+    color: black;
+
+    background-color: transparent;
 
 }
 
@@ -285,6 +296,7 @@ ion-icon:hover{
     align-items: center;
     justify-content: center;
     min-width: 40px;
+    
 }
 
 
@@ -314,6 +326,15 @@ ion-icon:hover{
 .dropdownMenuPosts {
      display: none;   
     }
+
+.questionAdm {
+    color: white;
+}
+
+.botao-lupa {
+    background-color: transparent;
+
+}
 
 
 @media (max-width: 920px) {
@@ -350,9 +371,7 @@ ion-icon:hover{
     display: flex;
 }
 
-.btnVisuPostADM,
-.btnEditPostADM,
-.btnDeletePostADM {
+.view-user, .edit-user, .delete-user {
     display: none;
 }
 
@@ -366,7 +385,6 @@ ion-icon:hover{
         .texto-criar-usuario {
         display: none;
     }
-
 
 
 }
@@ -451,9 +469,7 @@ ion-icon:hover{
     display: flex;
 }
 
-.btnVisuPostADM,
-.btnEditPostADM,
-.btnDeletePostADM {
+.view-user, .edit-user, .delete-user {
     display: none;
 }
 

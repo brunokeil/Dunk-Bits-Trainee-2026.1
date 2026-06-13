@@ -4,6 +4,7 @@
 
 * {
   box-sizing: border-box;
+  /* outline: 1px solid blue; */
 }
 
 body {
@@ -41,8 +42,20 @@ section {
   border-radius: 2em;
   color: var(--white-100);
   padding: 0 1.5em;
-  gap: 0.5rem;
+  gap: 15px;
   position: relative;
+}
+
+#form-search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 10px;
+}
+
+
+#search ion-icon {
+  font-size: 1.5em;
 }
 
 #search-text {
@@ -51,7 +64,6 @@ section {
   outline: none;
   font-size: 1rem;
   color: var(--black-100);
-  padding-right: 30px;
 }
 
 #search-text::placeholder {
@@ -62,16 +74,14 @@ section {
 .divisor-vertical {
   font-size: 1.8rem;
   color: var(--black-100);
-  margin-right: 35px;
 }
 
 #icone-busca {
-  position: absolute;
+  position: static;
   height: 4.5em;
   width: auto;
-  right: -45px;
-  top: -5px;
-  z-index: 10;
+  margin-right: -60px;
+  z-index: 10px;
 }
 
 #botao-filtro {
@@ -84,7 +94,7 @@ section {
   margin-left: 15px;
 }
 
-#botao-filtro .material-symbols-outlined {
+#botao-filtro ion-icon {
   font-size: 3.5rem;
   color: var(--black-100);
 }
@@ -149,7 +159,7 @@ section {
   }
 }
 
-.material-symbols-outlined {
+ion-icon {
   display: flex;
   line-height: 1;
   vertical-align: middle;
@@ -198,7 +208,7 @@ section {
   flex-direction: column;
   justify-content: center;
   background-color: var(--pearl-grey-100);
-  background-image: url(../assets/placeholder/dinosaur.png);
+  /* background-image: url(../assets/placeholder/dinosaur.png); */
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: bottom center;
@@ -212,6 +222,13 @@ section {
     transform 1.2s ease;
   opacity: 0;
   transform: translateX(80px);
+}
+
+.card-imagem {
+  width: 100%;
+  max-width: 350px;
+  height: 375px;
+  object-fit: cover;
 }
 
 .card.mostrar {
@@ -301,7 +318,7 @@ section {
   gap: 5px;
 }
 
-.ponto .material-symbols-outlined {
+.ponto ion-icon {
   font-size: 1rem;
   color: var(--black-100);
 }
@@ -310,7 +327,7 @@ section {
   color: var(--black-100);
 }
 
-.seta .material-symbols-outlined {
+.seta ion-icon {
   font-size: 2rem;
   color: var(--pearl-grey-100);
 }

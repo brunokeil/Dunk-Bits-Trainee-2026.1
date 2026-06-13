@@ -6,8 +6,13 @@
 	flex-direction: column;
 }
 
+#tituloCadastro{
+	font-size: 3rem;
+	font-family: var(--font-quicksand);
+}
+
 .telaLogin {
-	background-image: linear-gradient(rgba(211, 84, 0, 0.25), rgba(211, 84, 0, 0.25)), url("/public/assets/bg_images/bg_login.png");
+	background-image: linear-gradient(rgba(239, 100, 0, 0.25), rgba(239, 100, 0, 0.25)), url("/public/assets/bg_images/bg_login.png");
 	background-size: cover;
 	background-position: center;
 	background-color: var(--dark-grey-100);
@@ -17,11 +22,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-#tituloLogin{
-	font-size: 3rem;
-	font-family: var(--font-quicksand);
 }
 
 .loginContainer {
@@ -66,7 +66,7 @@
 	height: 50px;
 	padding: 0 50px 0 20px;
 	background: transparent;
-	border: 2px solid var(--white-100);
+	border: 1px solid var(--white-100);
 	border-radius: 30px;
 	color: var(--color-light-text);
 	font-size: 14px;
@@ -85,6 +85,10 @@
 	color: var(--white-80);
 }
 
+#olhoSenha{
+	cursor: pointer;
+}
+
 .inputBox ion-icon {
 	position: absolute;
 	right: 20px;
@@ -101,6 +105,17 @@
 	padding-right: 15px;
 }
 
+.esqueciSenha {
+	color: var(--color-light-text);
+	text-decoration: none;
+	font-size: 14px;
+	transition: 0.3s;
+}
+
+.esqueciSenha:hover {
+	color: var(--dark-orange-100);
+	text-decoration: underline;
+}
 
 .buttonEntrar {
 	background-color: var(--dark-orange-100);
@@ -115,11 +130,6 @@
 	box-sizing: border-box;
 	border-radius: 20px;
 }
-
-.olho{
-	cursor: pointer;	
-}
-
 
 .buttonEntrar:hover {
 	background-color: var(--orange-100);
