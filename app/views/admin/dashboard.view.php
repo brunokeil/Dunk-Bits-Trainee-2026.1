@@ -1,10 +1,3 @@
-<?php
-  session_start();
-  if(!isset($_SESSION['id'])){
-    header(header: 'Location: /login');
-  }
-?>
-
 <!doctype html>
 <html lang="pt-BR">
   <head>
@@ -29,14 +22,15 @@
         <h1 id="titulo">Dashboard</h1>
       </div>
       <div id="navegacao">
-        <button id="lista-usuarios">
-         <ion-icon name="person-circle-outline"></ion-icon>
-          LISTA DE USUÁRIOS (ADMIN)
-        </button>
-        <button id="tabela-posts">
-          <ion-icon name="albums-outline"></ion-icon>
-          TABELA DE POSTS (ADMIN)
-        </button>
+        <a href="/admin-users" id="lista-usuarios">
+           <ion-icon name="person-circle-outline"></ion-icon>
+            LISTA DE USUÁRIOS (ADMIN)
+        </a>
+
+        <a href="/lista-posts" id="tabela-posts">
+            <ion-icon name="albums-outline"></ion-icon>
+            TABELA DE POSTS (ADMIN)
+        </a>
       </div>
     </section>
 

@@ -32,6 +32,7 @@ $router->get('pagposts', 'PagPostsController@index');
 
 $router->get('dashboard', 'DashboardController@index');
 
+
 $router->post('login', 'LoginController@logar');
 
 $router->post('logout', 'LogoutController@deslogar');

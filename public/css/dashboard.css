@@ -145,6 +145,7 @@ ion-icon {
   max-width: 800px;
   border: 2px solid var(--orange-100);
   flex-wrap: wrap;
+  text-decoration: none;
 }
 
 #lista-usuarios ion-icon,
