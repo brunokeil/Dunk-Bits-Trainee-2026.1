@@ -65,7 +65,7 @@
     </section>
 
     <section class="comentarios">
-      <?php if (isset($_SESSION['id'])): ?>
+
         <form action="/post-individual/comment" method="post" enctype="multipart/form-data" class="formulario-comentario">
           <input type="hidden" name="post_id" value="<?= $post->id ?>">
           <div class="caixa-de-comentarios">

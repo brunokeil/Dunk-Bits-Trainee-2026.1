@@ -82,6 +82,7 @@ nav {
   white-space: nowrap;
   font-size: clamp(0.9rem, 2.2vw, 1.8rem);
   gap: 2px;
+  text-decoration: none;
 }
 
 #logout ion-icon {
