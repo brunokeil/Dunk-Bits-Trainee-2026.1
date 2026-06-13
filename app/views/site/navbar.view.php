@@ -1,22 +1,11 @@
-<!-- FLUMINENSE -->
 
-<!doctype html>
-<html lang="pt-BR">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>NAVBAR</title>
-		<link rel="stylesheet" href="../../../public/css/navbar.css" />
-	</head>
-
-	<body class="telaNavbar">
 		<header class="headerNavbar">
 			<a href="#">
 				<img src="../../../public/assets/logo_zoom.png" alt="Logo da Empresa" class="logo_dunkbits"/>
 			</a>
 			<nav class="menu">
 				<a href="/landingpage" class="buttonSemFundo">HOME</a>
-				<a href="/listaposts" class="buttonSemFundo">POSTS</a>
+				<a href="/lista-posts" class="buttonSemFundo">POSTS</a>
 				<a href="/dashboard" class="buttonSemFundo">DASHBOARD</a>
 				<a href="/login" class="buttonLogin">LOGIN</a>
 			</nav>
@@ -38,15 +27,9 @@
 				<ion-icon name="close-outline"></ion-icon>
 			</div>
 		</nav>
-	</body>
 
-	<script
-		type="module"
-		src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-	></script>
-	<script
-		nomodule
-		src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-	></script>
+
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 	<script src="../../../public/js/navbar.js" defer></script>
-</html>
+
