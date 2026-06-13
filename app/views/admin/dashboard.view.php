@@ -16,11 +16,9 @@
           <ion-icon name="arrow-back-outline"></ion-icon>
         </button>
       </a>
-      <a href="/logout">
-        <button id="logout">
+      <a href="/logout" id="logout">
           <ion-icon name="log-out-outline"></ion-icon>
           LOGOUT
-        </button>
       </a>
     </nav>
     <div id="dashboard">
