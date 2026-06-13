@@ -6,7 +6,7 @@ use App\Controllers\LoginController;
 use App\Controllers\PagPostsControllerGET;
 use App\Controllers\CadastroController;
 
-$router->get('', 'ExampleController@index');
+$router->get('', 'landingpageController@index');
 
 $router->get('navbar', 'NavbarController@index');
 
@@ -34,8 +34,10 @@ $router->get('landingpage', 'LandingPageController@index');
 
 $router->post('login', 'LoginController@logar');
 
-$router->post('logout', 'LogoutControllerPOST@deslogar');
+$router->post('logout', 'LoginController@deslogar');
 
 $router->post('cadastro/create', 'CadastroController@criar');
 
 $router->get('footer', 'FooterController@index');
+
+$router->get('postsadmin', 'PostsAdminController@index');
