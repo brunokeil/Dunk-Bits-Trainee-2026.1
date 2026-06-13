@@ -1,21 +1,18 @@
 <div class="modalUser close" id="createModal">
   <div id="header">
-    <ion-icon class="icone-titulo" name="person"></ion-icon>
     <h1>CRIAR USUÁRIO</h1>
-    <button class="closeModalBtn terciaryBtn">X</button>
   </div>
 
-  <form action="admin-users/create" method="post" enctype="multipart/form-data">
+  <form action="admin-users/create" method="post" enctype="multipart/form-data" id="form-create">
 
     <div class="userProfilePicture">
       <img
         class="imgProfPic" />
-      <input type="file" name="imagem" class="profileInput" accept="image/*" hidden />
-      <ion-icon class="icone-img" name="image-outline"></ion-icon>
-      <p class="txt-img">
-        Selecione uma imagem
-      </p>
-
+        <input type="file" name="imagem" class="profileInput" accept="image/*" hidden />
+      <h4 class="txt-img">
+        Arraste sua imagem aqui
+        ou clique para escolher um arquivo
+      </h4>
     </div>
 
     <div class=" userInfo">
@@ -57,12 +54,7 @@
           name="is_admin"
           value="1" />
       </div>
-
-
     </div>
-
-
-
 
     <div class="footerButtons">
       <button type="button" class="closeModalBtn cancelBtn">CANCELAR</button>
