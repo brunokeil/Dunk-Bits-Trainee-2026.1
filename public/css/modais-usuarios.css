@@ -1,7 +1,7 @@
 @import "./styles.css";
 
 * {
-  outline: 1px solid blue;
+  /* outline: 1px solid blue; */
 }
 /* ---------------- exemplo -------------------- */
 
@@ -189,7 +189,7 @@ button:hover {
   position: relative;
   overflow: hidden;
 
-  width: 60%;
+  width: 80%;
   max-width: 700px;
   min-width: 200px;
   min-height: auto;

@@ -11,6 +11,7 @@
             <img
                 class="imgProfPic" />
             <input type="file" name="imagem" class="profileInput" accept="image/*" hidden />
+             <ion-icon class="icone-img" name="image-outline"></ion-icon>
             <h4 class="txt-img">
         Arraste sua imagem aqui
         ou clique para escolher um arquivo
