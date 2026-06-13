@@ -7,10 +7,11 @@ use Exception;
 
 class DashboardController
 {
+
     public function index()
     {
         if(!isset($_SESSION['id'])){
-            header('Location: /login');
+            header('Location: /login')
         }
         return view('admin/dashboard');
     }
