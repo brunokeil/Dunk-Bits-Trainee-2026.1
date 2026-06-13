@@ -90,10 +90,10 @@
 
         <?php
 
-        @require("app/views/admin/modais/modalViewPost.php");
-        @require("app/views/admin/modais/modalEditPost.php");
-        @require("app/views/admin/modais/modalDeletePost.php");
-        @require("app/views/admin/modais/modalCriarPost.php");
+        require("app/views/admin/modais/modalViewPost.php");
+        require("app/views/admin/modais/modalEditPost.php");
+        require("app/views/admin/modais/modalDeletePost.php");
+        require("app/views/admin/modais/modalCriarPost.php");
 
         ?>
     </div>

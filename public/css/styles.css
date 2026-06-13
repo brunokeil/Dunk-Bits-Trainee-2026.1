@@ -94,7 +94,9 @@
 
     --bg-table-posts: linear-gradient(rgba(0, 0, 128, 0.5), rgba(0, 0, 128, 0.5)), url("../assets/bg_images/bg_table_posts.png");
 
-	--bg-modal: linear-gradient(-117deg, #ffffff80 42%, #bbbbbb80 87%);
+	--bg-modal-posts: linear-gradient(45deg, #0f0f4f, #0b0b22);
+	--bg-modal: linear-gradient(45deg, #C25100, #EF9118 67%);
+	--bg-modal1: linear-gradient(-117deg, #ffffff80 42%, #bbbbbb80 87%);
 	--bg-error: linear-gradient(-150deg, #830000 34%, #b43c00 87%);
 	--bg-success: linear-gradient(45deg, #11113acc, #0e0e2dcc);
 
@@ -109,7 +111,7 @@
 *,
 *::before,
 *::after {
-	box-sizing: content-box;
+	box-sizing: border-box;
 	color: var(--color-dark-text);
 	font-family: var(--font-quicksand);
 	padding: 0;
@@ -129,8 +131,10 @@ p {
 	font-family: var(--font-quicksand);
 }
 
-/*----- FIM ROOT -----*/
 
+textarea {
+	resize: none;
+}
 
 
 /* ---- BOTOES GERAIS ---- */

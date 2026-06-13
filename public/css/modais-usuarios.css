@@ -1,42 +1,24 @@
 @import "./styles.css";
 
-
 /* ---------------- exemplo -------------------- */
 
 /* classes de view */
 
 .open {
-    opacity: 1;
-    transition: opacity 240ms ease-in;
-    pointer-events: auto;
+	opacity: 1;
+	transition: opacity 240ms ease-in;
+	pointer-events: auto;
 }
 
 .close {
-    opacity: 0;
-    transition: opacity 140ms ease-in;
-    pointer-events: none;
+	opacity: 0;
+	transition: opacity 140ms ease-in;
+	pointer-events: none;
 }
 
 /* ------------------ BOTOES ------------------ */
 
-/* button {
-    background-color: var(--orange-100);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: large;
-    color: var(--white-100);
-}
-
-button:hover {
-    background: var(--white-80);
-    color: var(--orange-100);
-    transition: color background 160ms ease-out;
-    cursor: pointer;
-} */
-
-.testBtns {
+/* .testBtns {
     display: flex;
     gap: 10px;
 }
@@ -54,8 +36,8 @@ button:hover {
     text-decoration: underline;
 }
 .cancelBtn:hover {
-    background: none;
-    color: var(--white-100);
+	background: none;
+	color: var(--white-100);
 }
 
  .cancelBtn {
@@ -64,7 +46,7 @@ button:hover {
 }
 
 .cancelBtn:hover {
-    color: var(--white-100);
+	color: var(--white-100);
 }
 
 #criar-usuario, #editar-usuario{
@@ -73,86 +55,96 @@ button:hover {
 
 /* ----------- input styling ------------- */
 
+.inputGroup input {
+	color: var(--white-100);
+	font-weight: 600;
+	font-size: medium;
 
-.inputGroup input{
-    color: var(--white-100);
-    font-weight: 600;
-    font-size: medium;
+	background: none;
 
-    background: none;
+	border-radius: 8px;
+	padding: 4%;
 
-    
-    padding: 4%;
+	text-wrap: nowrap;
 
-    text-wrap: nowrap;
-
-    outline: none;
-    border: none;
-    transition: background 120ms ease;
+	outline: none;
+	border: none;
+	transition: background 120ms ease;
 }
 
 .inputGroup ion-icon {
     font-size: 20px;
 }
 .inputGroup > *:hover {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .inputGroup:hover {
-    background: var(--white-25);
-    transition: background 120ms ease;
-    cursor: pointer;
-    border-radius: 8px;
+	background: var(--white-25);
+	transition: background 120ms ease;
+	cursor: pointer;
+	border-radius: 8px;
 }
 
 .inputGroup > *:focus {
-    cursor: text;
+	cursor: text;
 }
 
-
 .inputGroup input::placeholder {
-    color: var(--white-50);
-    text-decoration: underline;
+	color: var(--white-50);
+	text-decoration: underline;
 }
 
 /* -------- modal container paizao ------------- */
 
-.modal-container {
-    /* background: var(--linear-grey-50); */
-    /* background: var(--linear-orange-gradient2); */
-    background: var(--linear-blue-80);
-    z-index: 2;
-    
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    
+/* .testBtns {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    overflow: hidden;
-    backdrop-filter: blur(15px);
+    gap: 10px;
+} */
+
+.modal-container {
+	/* background: var(--linear-grey-50); */
+	/* background: var(--linear-orange-gradient2); */
+	background: var(--linear-blue-80);
+	z-index: 2;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	overflow: hidden;
+	backdrop-filter: blur(15px);
 }
 
-
 /* ----------------- modal view padrão ----------------- */
+
 .modalUser {
-    position: absolute;
-    z-index: 4;
+	/* visibility: hidden; */
+	position: absolute;
+	z-index: 4;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
 
-    padding: 2rem;
+	padding: 2rem;
 
+	background: var(--bg-modal);
 
-    overflow-y: auto;
+	border-radius: 16px;
+}
 
-    background: var(--linear-orange-gradient5);
-    border-radius: 16px;
+.modalForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
 }
 
 #createModal, #editModal {
@@ -161,14 +153,13 @@ button:hover {
 
 /* parte superior */
 .modalUser #header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    gap: 5px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	gap: 5px;
 }
-
 
 /* foto de perfil */
 .userProfilePicture {
@@ -189,9 +180,9 @@ button:hover {
 
 }
 
-.userProfilePicture:hover {
+/* .userProfilePicture:hover {
     background-color: var(--white-25);
-}
+    } */
 
 
 .userProfilePictureNoEdit {
@@ -230,9 +221,9 @@ button:hover {
     
 }
 
-.imgProfPic:hover {
-    filter: brightness(0.75);
-    cursor: pointer;
+.imgProfPic:hover{
+	filter: brightness(0.75);
+	cursor: pointer;
 }
 
 /* dados user */
@@ -270,64 +261,57 @@ button:hover {
 /* ----- warning modais -----*/
 
 .warningModal {
-    text-wrap: wrap;
-    max-width: 45ch;
-    background: var(--linear-red-gradient);
-    align-items: baseline;
-    gap: 2rem;
-    font-weight: 600;
+	text-wrap: wrap;
+	max-width: 45ch;
+	background: var(--linear-red-gradient);
+	align-items: baseline;
+	gap: 2rem;
+	font-weight: 600;
 }
 
 .warningModal em {
-    text-decoration: underline;
-    font-style: normal;
-    font-weight: bold;
+	text-decoration: underline;
+	font-style: normal;
+	font-weight: bold;
 }
 
 .footerButtons {
-    display: flex;
+	display: flex;
 
-    
-    justify-content: end;
+	align-self: end;
 }
 
 .footerButtons > * {
-    transition: all 120ms ease;
+	transition: all 120ms ease;
 }
 
 .footerButtons :first-child {
-    background: 0;
-    text-decoration: underline;
+	background: 0;
+	text-decoration: underline;
 }
 .warningModal .footerButtons :last-child:hover {
-    filter: drop-shadow(0 0 0px black);
-    color: red;
-    background-color: var(--white-100);
-    transition: all 120ms ease-out;
+	filter: drop-shadow(0 0 0px black);
+	color: red;
+	background-color: var(--white-100);
+	transition: all 120ms ease-out;
 }
 
-
 .warningHeader {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
 }
 
 .warningHeader ion-icon {
-    font-size: 64px;
-    color: var(--orange-100);
-    
+	font-size: 64px;
+	color: var(--orange-100);
 }
 
 /* --------------------- */
 
-
-
-
-
 ion-icon {
-    min-height: 1rem;
-    min-width: 1rem;
-    /* border: 1px wheat solid; */
-    padding: 0;
+	min-height: 1rem;
+	min-width: 1rem;
+	/* border: 1px wheat solid; */
+	padding: 0;
 }

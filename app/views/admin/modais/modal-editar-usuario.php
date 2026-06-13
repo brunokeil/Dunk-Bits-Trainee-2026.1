@@ -5,9 +5,8 @@
         <button class="closeModalBtn terciaryBtn">X</button>
     </div>
 
-    <form action="admin-users/edit" method="post" enctype="multipart/form-data">
-
-        <input type="hidden" id="edit-id" name="id">
+    <form class="modalForm" action="admin-users/edit" method="post" enctype="multipart/form-data">
+        <input type="hidden" id="edit-id" name="id" />
 
         <div class="userProfilePicture">
             <img
