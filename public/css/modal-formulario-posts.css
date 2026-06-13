@@ -448,6 +448,11 @@ i:hover {
 #modal-excluir-descricao h4:first-child {
   margin-bottom: 20px;
 }
+
+#modal-excluir-descricao em{
+  text-decoration: underline;
+  color: var(--black-100);
+}
 /* ----------------- Botões do Modal de Excluir Post ----------------- */
 #modal-excluir-botoes {
   padding: 10px;
