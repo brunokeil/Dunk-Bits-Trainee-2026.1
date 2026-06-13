@@ -10,7 +10,6 @@ class LoginController
 
     public function LoginView()
     {
-        session_start();
         if (isset($_SESSION['id'])) {
             header(header: 'Location: /dashboard');
         }
@@ -42,12 +41,10 @@ class LoginController
         $user = App::get(key: 'database')->verificaLogin($email, $senha);
 
         if ($user) {
-            session_start();
             $_SESSION['id'] = $user->id;
             header("Location: " . $redirect);
             exit();
         } else {
-            session_start();
             header('Location: /login');
             exit();
         }
