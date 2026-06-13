@@ -10,36 +10,42 @@ class LoginController
 
     public function LoginView()
     {
-        session_start();
-        if(isset($_SESSION['id'])) {
-            header('Location: /dashboard');
+        if (isset($_SESSION['id'])) {
+            header(header: 'Location: /dashboard');
         }
 
-        // $redirectLabel = 'dashboard';
+        $redirectLabel = '/dashboard';
 
 
-        // if(isset($_REQUEST['redirect'])) {
-        //     $redirectLabel = $_REQUEST['redirect'];
-        // }
-        return view('site/login');
+        if (isset($_REQUEST['redirect'])) {
+            $redirectLabel = $_REQUEST['redirect'];
+        }
+        return view('site/login', [
+            "redirect" => $redirectLabel
+        ]);
     }
-
 
     public function logar()
     {
         $email = $_POST['email'];
         $senha = $_POST['senha'];
-        // $redirect = $_POST['redirect'] ?? "dashboard";
+        $redirect = $_POST['redirect'] ?? "dashboard";
 
         $user = App::get(key: 'database')->verificaLogin($email, $senha);
 
-        if ($user) {
-            session_start();
+        if ($user){
             $_SESSION['id'] = $user->id;
-            header("Location: /dashboard");
+            header("Location: " . $redirect);
+            exit();
         } else {
-            session_start();
             header('Location: /login');
+            exit();
         }
+    }
+        public function deslogar()
+    {
+        session_unset();
+        session_destroy();
+        header('Location: /login');
     }
 }
