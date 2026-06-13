@@ -19,7 +19,7 @@
 					<input type="text" name="name" placeholder="NOME" aria-label="ESCREVER NOME"/>
 				</div>
 				<div class="inputBox">
-					<input type="text" name="email" placeholder="EMAIL" aria-label="ESCREVER EMAIL"/>
+					<input type="email" name="email" placeholder="EMAIL" aria-label="ESCREVER EMAIL"/>
 				</div>
 				<div class="inputBox">
 					    <input name="senha" id="senha" type="password" placeholder="SENHA" aria-label="ESCREVER SENHA">
@@ -29,12 +29,12 @@
 					    <input name="confirmarsenha" id="confirmarsenha" type="password" placeholder="CONFIRMAR SENHA" aria-label="CONFIRMAR SENHA">
 						<ion-icon name="eye-off-outline" class="olho" id="olhoConfirmarSenha"></ion-icon>
 				</div>
-				<div id="senhaforte">
-					<p id="senhaQuantidade">*Senha deve conter pelo menos 8 caracteres</p>
-					<p id="senhaMaiuscula">*Senha deve conter pelo menos uma letra maiscula</p>
-					<p id="senhaMinuscula">*Senha deve conter pelo menos uma letra minuscula</p>
-					<p id="senhaCaracterEspecial">*Senha deve conter pelo menos 1 caracter especial</p>
-					<p id="senhaNumero">*Senha deve conter pelo menos 1 numero</p>
+				<div class="senhaforte" id="senhaforte">
+					<!-- <p class="requisitosSenha" id="senhaQuantidade">*Senha deve conter pelo menos 8 caracteres</p> -->
+					<p class="requisitosSenha" id="senhaMaiuscula">*Senha deve conter pelo menos uma letra maiscula</p>
+					<p class="requisitosSenha" id="senhaMinuscula">*Senha deve conter pelo menos uma letra minuscula</p>
+					<p class="requisitosSenha" id="senhaCaracterEspecial">*Senha deve conter pelo menos 1 caracter especial</p>
+					<p class="requisitosSenha" id="senhaNumero">*Senha deve conter pelo menos 1 numero</p>
 				</div>
 				<button type="submit" class="buttonEntrar">CRIAR</button>
 			</form>
