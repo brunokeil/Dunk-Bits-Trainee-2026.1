@@ -9,11 +9,9 @@ use App\Controllers\NavbarController;
 use App\Controllers\LandingPageController;
 use App\Core\Router;
 
-$router->get('', 'ExampleController@index');
-
 $router->get('navbar', 'NavbarController@index');
 
-$router->get('landingpage', 'LandingPageController@index');
+$router->get('', 'LandingPageController@index');
 
 $router->get('admin-users', 'UsuariosController@index');
 
@@ -35,6 +33,7 @@ $router->get('login', 'LoginController@LoginView');
 $router->get('pagposts', 'PagPostsController@index');
 
 $router->get('dashboard', 'DashboardController@index');
+
 
 $router->post('login', 'LoginController@logar');
 
