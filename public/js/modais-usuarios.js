@@ -95,7 +95,7 @@ function setAllEventListeners() {
         console.log(btn.dataset.profpic)
 
         if (btn.dataset.profpic && btn.dataset.profpic.trim() !== "") {
-            document.querySelector(".imgProfPicNoEdit").src = "/" + btn.dataset.profpic;
+            document.querySelector(".imgProfPicNoEdit").src = "/public/assets/user_profile_pics/" + btn.dataset.profpic;
         } else {
             document.querySelector(".imgProfPicNoEdit").src = "/public/assets/placeholder/blank-profile-pic.webp";
         }
@@ -119,13 +119,11 @@ function setAllEventListeners() {
             console.log(btn.dataset.profpic)
             document.getElementById("edit-id").value = btn.dataset.id;
 
-            document.querySelector(".imgProfPic").src = "/" + btn.dataset.profpic;
+            document.querySelector(".imgProfPic").src = "/public/assets/user_profile_pics/" + btn.dataset.profpic;
 
             document.getElementById("edit-username").value = btn.dataset.name;
 
             document.getElementById("edit-email").value = btn.dataset.email;
-
-            document.getElementById("edit-senha").value = btn.dataset.senha;
 
             toggleModal("editModal");
         });

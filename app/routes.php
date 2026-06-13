@@ -10,7 +10,7 @@ $router->get('', 'landingpageController@index');
 
 $router->get('navbar', 'NavbarController@index');
 
-$router->get('landingpage', 'LandingPageController@index');
+$router->get('', 'LandingPageController@index');
 
 $router->get('admin-users', 'UsuariosController@index');
 
@@ -41,3 +41,13 @@ $router->post('cadastro/create', 'CadastroController@criar');
 $router->get('footer', 'FooterController@index');
 
 $router->get('postsadmin', 'PostsAdminController@index');
+
+$router->post('login', 'LoginController@logar');
+
+$router->post('logout', 'LogoutController@deslogar');
+
+$router->post('cadastro/create', 'CadastroController@criar');
+
+$router->get('post-individual', 'PostIndividualController@index');
+
+$router->post('post-individual/comment', 'PostIndividualController@storeComment');
