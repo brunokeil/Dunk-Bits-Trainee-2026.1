@@ -1,13 +1,11 @@
 @import "./styles.css";
 
-.telaFooter {
+
+.rodape {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
-
-
-.rodape {
+    width: 100%;
     background-color: var(--orange-100);
     color: var(--white-100) !important;
     padding: 40px 60px;
