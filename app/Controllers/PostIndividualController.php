@@ -29,7 +29,6 @@ class PostIndividualController
 
     public function index()
     {
-        session_start();
         $database = App::get("database");
 
         $currentPost = isset($_GET['post']) ? (int)$_GET['post'] : 1;
