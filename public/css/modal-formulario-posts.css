@@ -452,6 +452,8 @@ i:hover {
 #modal-excluir-descricao em{
   text-decoration: underline;
   color: var(--black-100);
+  font-style: normal;
+  font-weight: bold;
 }
 /* ----------------- Botões do Modal de Excluir Post ----------------- */
 #modal-excluir-botoes {
