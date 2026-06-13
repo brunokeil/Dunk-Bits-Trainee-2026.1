@@ -158,26 +158,34 @@ button:hover {
 .primaryBtn {
 	color: var(--white-100);
 	background: var(--orange-100);
+	transition: all 120ms ease-in-out;
 }
 .primaryBtn:hover {
 	color: var(--orange-100);
 	background: var(--white-100);
+	transition: all 120ms ease-in-out;
 }
 
 .secondaryBtn {
 	color: var(--white-100);
 	background: var(--white-50);
+	transition: all 120ms ease-in-out;
 }
 .secondaryBtn:hover {
 	background: var(--white-80);
+	transition: all 120ms ease-in-out;
 }
 
 .terciaryBtn {
 	color: var(--white-100);
 	background: none;
+	transition: all 120ms ease-in-out;
+
 }
 .terciaryBtn:hover {
-	background: var(--white-25);
+	text-decoration: underline;
+	background: none;
+	transition: all 120ms ease-in-out;
 }
 
 /* ------------------------------------- */
