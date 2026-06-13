@@ -12,26 +12,30 @@
 
 <body>
   <section id="secao-barra">
-    <div id="search">
-      <label for="search-text">
-        <span class="material-symbols-outlined">search</span>
-      </label>
 
-      <input type="text" id="search-text" placeholder="SEARCH" />
+    <div id="search">
+      <form method="GET" action="/lista-posts" id="form-search">
+        <ion-icon name="search-sharp"></ion-icon>
+
+        <input type="text" id="search-text" placeholder="SEARCH" value="<?= $searchText ?? '' ?>" name="search" />
+      </form>
       <span class="divisor-vertical">|</span>
       <img src="../../../public/assets/icons/basketball_on_fire.png" alt="Logo Basketball" id="icone-busca">
     </div>
-    <div id="grupo-filtro">
-      <div id="filtros-opcoes">
-        <button class="botao-filtro-item">Melhores Avaliados</button>
-        <button class="botao-filtro-item">Populares</button>
-        <button class="botao-filtro-item">Tecnologia</button>
-      </div>
 
-      <button id="botao-filtro">
-        <span class="material-symbols-outlined">filter_alt</span>
-      </button>
-    </div>
+    <form method="GET" action="/lista-posts" class="form_filtros">
+      <div id="grupo-filtro">
+        <div id="filtros-opcoes">
+          <button type="submit" name="filtro" value="melhores" class="botao-filtro-item">Melhores Avaliados</button>
+          <button type="submit" name="filtro" value="populares" class="botao-filtro-item">Populares</button>
+          <button type="submit" name="filtro" value="tecnologias" class="botao-filtro-item">Tecnologia</button>
+        </div>
+
+        <button id="botao-filtro" type="button">
+          <ion-icon name="filter-circle-outline"></ion-icon>
+        </button>
+      </div>
+    </form>
   </section>
 
   <section id="container-titulo">
@@ -41,230 +45,36 @@
   </section>
 
   <section id="container-posts">
-    <div class="card card1">
-      <div class="card-footer">
-        <h2 class="card-titulo-fixo">TÍTULO</h2>
-      </div>
 
-      <div class="card-overlay">
-        <h2 class="card-titulo-overlay">TÍTULO</h2>
-        <p class="card-autor">Autor</p>
-        <p class="card-descricao">Lorem ipsum is placeholder text commonly used in the graphic.</p>
-      </div>
-    </div>
-    <div class="card card2">
-      <div class="card-footer">
-        <h2 class="card-titulo-fixo">TÍTULO</h2>
-      </div>
+    <?php foreach ($posts as $p):  ?>
+      <a class="card" href="/post-individual?post=<?= $p->id ?>">
 
-      <div class="card-overlay">
-        <h2 class="card-titulo-overlay">TÍTULO</h2>
-        <p class="card-autor">Autor</p>
-        <p class="card-descricao">Lorem ipsum is placeholder text commonly used in the graphic.</p>
-      </div>
-    </div>
-    <div class="card card3">
-      <div class="card-footer">
-        <h2 class="card-titulo-fixo">TÍTULO</h2>
-      </div>
+      <img src="<?= $p->imagem_exibicao ?>" alt="<?= $p->title ?>" class="card-imagem">
 
-      <div class="card-overlay">
-        <h2 class="card-titulo-overlay">TÍTULO</h2>
-        <p class="card-autor">Autor</p>
-        <p class="card-descricao">Lorem ipsum is placeholder text commonly used in the graphic.</p>
-      </div>
-    </div>
-    <div class="card card4">
-      <div class="card-footer">
-        <h2 class="card-titulo-fixo">TÍTULO</h2>
-      </div>
+        <div class="card-footer">
+          <h2 class="card-titulo-fixo"><?php echo $p->title; ?></h2>
+        </div>
 
-      <div class="card-overlay">
-        <h2 class="card-titulo-overlay">TÍTULO</h2>
-        <p class="card-autor">Autor</p>
-        <p class="card-descricao">Lorem ipsum is placeholder text commonly used in the graphic.</p>
-      </div>
-    </div>
-    <div class="card card5">
-      <div class="card-footer">
-        <h2 class="card-titulo-fixo">TÍTULO</h2>
-      </div>
+        <div class="card-overlay">
+          <h2 class="card-titulo-overlay"><?php echo $p->title; ?></h2>
+          <p class="card-autor"><?php
 
-      <div class="card-overlay">
-        <h2 class="card-titulo-overlay">TÍTULO</h2>
-        <p class="card-autor">Autor</p>
-        <p class="card-descricao">Lorem ipsum is placeholder text commonly used in the graphic.</p>
-      </div>
-    </div>
-    <div class="card card6">
-      <div class="card-footer">
-        <h2 class="card-titulo-fixo">TÍTULO</h2>
-      </div>
+                                echo $p->authorData->name;
 
-      <div class="card-overlay">
-        <h2 class="card-titulo-overlay">TÍTULO</h2>
-        <p class="card-autor">Autor</p>
-        <p class="card-descricao">Lorem ipsum is placeholder text commonly used in the graphic.</p>
-      </div>
-    </div>
-    <div class="card card7">
-      <div class="card-footer">
-        <h2 class="card-titulo-fixo">TÍTULO</h2>
-      </div>
+                                ?></p>
+          <p class="card-descricao"><?php echo $p->content; ?></p>
+        </div>
 
-      <div class="card-overlay">
-        <h2 class="card-titulo-overlay">TÍTULO</h2>
-        <p class="card-autor">Autor</p>
-        <p class="card-descricao">Lorem ipsum is placeholder text commonly used in the graphic.</p>
-      </div>
-    </div>
-    <div class="card card8">
-      <div class="card-footer">
-        <h2 class="card-titulo-fixo">TÍTULO</h2>
-      </div>
+      </a>
 
-      <div class="card-overlay">
-        <h2 class="card-titulo-overlay">TÍTULO</h2>
-        <p class="card-autor">Autor</p>
-        <p class="card-descricao">Lorem ipsum is placeholder text commonly used in the graphic.</p>
-      </div>
-    </div>
-    <div class="card card9">
-      <div class="card-footer">
-        <h2 class="card-titulo-fixo">TÍTULO</h2>
-      </div>
-
-      <div class="card-overlay">
-        <h2 class="card-titulo-overlay">TÍTULO</h2>
-        <p class="card-autor">Autor</p>
-        <p class="card-descricao">Lorem ipsum is placeholder text commonly used in the graphic.</p>
-      </div>
-    </div>
-    <div class="card card10">
-      <div class="card-footer">
-        <h2 class="card-titulo-fixo">TÍTULO</h2>
-      </div>
-
-      <div class="card-overlay">
-        <h2 class="card-titulo-overlay">TÍTULO</h2>
-        <p class="card-autor">Autor</p>
-        <p class="card-descricao">Lorem ipsum is placeholder text commonly used in the graphic.</p>
-      </div>
-    </div>
-    <div class="card card11">
-      <div class="card-footer">
-        <h2 class="card-titulo-fixo">TÍTULO</h2>
-      </div>
-
-      <div class="card-overlay">
-        <h2 class="card-titulo-overlay">TÍTULO</h2>
-        <p class="card-autor">Autor</p>
-        <p class="card-descricao">Lorem ipsum is placeholder text commonly used in the graphic.</p>
-      </div>
-    </div>
-    <div class="card card12">
-      <div class="card-footer">
-        <h2 class="card-titulo-fixo">TÍTULO</h2>
-      </div>
-
-      <div class="card-overlay">
-        <h2 class="card-titulo-overlay">TÍTULO</h2>
-        <p class="card-autor">Autor</p>
-        <p class="card-descricao">Lorem ipsum is placeholder text commonly used in the graphic.</p>
-      </div>
-    </div>
-    <div class="card card13">
-      <div class="card-footer">
-        <h2 class="card-titulo-fixo">TÍTULO</h2>
-      </div>
-
-      <div class="card-overlay">
-        <h2 class="card-titulo-overlay">TÍTULO</h2>
-        <p class="card-autor">Autor</p>
-        <p class="card-descricao">Lorem ipsum is placeholder text commonly used in the graphic.</p>
-      </div>
-    </div>
-    <div class="card card14">
-      <div class="card-footer">
-        <h2 class="card-titulo-fixo">TÍTULO</h2>
-      </div>
-
-      <div class="card-overlay">
-        <h2 class="card-titulo-overlay">TÍTULO</h2>
-        <p class="card-autor">Autor</p>
-        <p class="card-descricao">Lorem ipsum is placeholder text commonly used in the graphic.</p>
-      </div>
-    </div>
-    <div class="card card15">
-      <div class="card-footer">
-        <h2 class="card-titulo-fixo">TÍTULO</h2>
-      </div>
-
-      <div class="card-overlay">
-        <h2 class="card-titulo-overlay">TÍTULO</h2>
-        <p class="card-autor">Autor</p>
-        <p class="card-descricao">Lorem ipsum is placeholder text commonly used in the graphic.</p>
-      </div>
-    </div>
-    <div class="card card16">
-      <div class="card-footer">
-        <h2 class="card-titulo-fixo">TÍTULO</h2>
-      </div>
-
-      <div class="card-overlay">
-        <h2 class="card-titulo-overlay">TÍTULO</h2>
-        <p class="card-autor">Autor</p>
-        <p class="card-descricao">Lorem ipsum is placeholder text commonly used in the graphic.</p>
-      </div>
-    </div>
-    <div class="card card17">
-      <div class="card-footer">
-        <h2 class="card-titulo-fixo">TÍTULO</h2>
-      </div>
-
-      <div class="card-overlay">
-        <h2 class="card-titulo-overlay">TÍTULO</h2>
-        <p class="card-autor">Autor</p>
-        <p class="card-descricao">Lorem ipsum is placeholder text commonly used in the graphic.</p>
-      </div>
-    </div>
-    <div class="card card18">
-      <div class="card-footer">
-        <h2 class="card-titulo-fixo">TÍTULO</h2>
-      </div>
-
-      <div class="card-overlay">
-        <h2 class="card-titulo-overlay">TÍTULO</h2>
-        <p class="card-autor">Autor</p>
-        <p class="card-descricao">Lorem ipsum is placeholder text commonly used in the graphic.</p>
-      </div>
+    <?php endforeach ?>
 
   </section>
 
-  <section id="container-paginacao">
-    <div id="paginacao">
-      <button class="seta seta-esquerda">
-        <span class="material-symbols-outlined">chevron_left</span>
-      </button>
+  <?php require("app/views/site/pagination-posts-site.view.php") ?>
 
-
-      <div id="pontos">
-        <button class="ponto ativo">
-          <span class="material-symbols-outlined">radio_button_checked</span>
-        </button>
-        <button class="ponto">
-          <span class="material-symbols-outlined">radio_button_unchecked</span>
-        </button>
-        <button class="ponto">
-          <span class="material-symbols-outlined">radio_button_unchecked</span>
-        </button>
-      </div>
-
-      <button class="seta seta-direita">
-        <span class="material-symbols-outlined">chevron_right</span>
-      </button>
-    </div>
-  </section>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
   <script src="../../../public/js/lista-posts.js"></script>
 </body>

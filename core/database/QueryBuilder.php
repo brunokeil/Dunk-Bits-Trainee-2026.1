@@ -28,14 +28,45 @@ class QueryBuilder
         }
     }
 
+    public function selectOne($table, $id)
+    {
+        $sql = "select * from {$table}  where id = :id";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['id' => $id]);
+
+            return $stmt->fetchObject();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function verificaLogin($email, $senha)
+    {
+        $sql = sprintf('SELECT * FROM users WHERE email = :email AND password = :password');
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                'email' => $email,
+                'password' => $senha
+            ]);
+
+            $user = $stmt->fetch(PDO::FETCH_OBJ);
+            return $user;
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function insert($table, $parameters)
     {
-
         $sql = sprintf(
             'INSERT INTO %s (%s) VALUES (:%s)',
             $table,
             implode(', ', array_keys($parameters)),
-            implode(', :', array_keys($parameters)),
+            implode(', :', array_keys($parameters))
         );
 
         try {
@@ -85,14 +116,24 @@ class QueryBuilder
     }
 
 
-    public function countAll($table, $searchText, $searchColumn)
+    public function countAll($table, $searchText, $searchColumn, $filtro)
     {
         $sql = "SELECT COUNT(*) AS total FROM {$table}";
         $parameters = [];
+        $whereClauses = [];
 
         if ($searchColumn && $searchText) {
-            $sql .= " where $searchColumn[0] like :searchText or $searchColumn[1] like :searchText";
+            $whereClauses[] = "($searchColumn[0] like :searchText or $searchColumn[1] like :searchText)";
             $parameters['searchText'] = '%' . $searchText . '%';
+        }
+
+        if ($filtro) {
+            $whereClauses[] = "(type = :filtro)";
+            $parameters['filtro'] = $filtro;
+        }
+
+        if (!empty($whereClauses)) {
+            $sql .= " where " . implode(' and ', $whereClauses);
         }
 
         try {
@@ -105,18 +146,26 @@ class QueryBuilder
         }
     }
 
-    public function paginate($table, $limit, $offset, $searchText, $searchColumn)
+    public function paginate($table, $limit, $offset, $searchText, $searchColumn, $filtro)
     {
         $parameters = [];
-
+        $whereClauses = [];
         $whereSql = '';
 
 
         if ($searchColumn && $searchText) {
-            $whereSql = "where $searchColumn[0] like :searchText or $searchColumn[1] like :searchText";
+            $whereClauses[] = "($searchColumn[0] like :searchText or $searchColumn[1] like :searchText)";
             $parameters['searchText'] = '%' . $searchText . '%';
         }
 
+        if ($filtro) {
+            $whereClauses[] = "(type = :filtro)";
+            $parameters['filtro'] = $filtro;
+        }
+
+        if (!empty($whereClauses)) {
+            $whereSql = "WHERE " . implode(' and ', $whereClauses);
+        }
 
         $sql = "SELECT * FROM {$table} {$whereSql} LIMIT {$limit} OFFSET {$offset}";
 
@@ -129,42 +178,38 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
-
-
-    public function verificaLogin($email, $senha){
-        $sql = sprintf('SELECT * FROM users WHERE email = :email AND password = :password');
-        
-        try {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute([
-                'email' => $email,
-                'password' => $senha
-            ]);
-
-            $user = $stmt->fetch(PDO::FETCH_OBJ);
-            return $user;
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
-    }
-
-
-    public function existe($parameter){
+    public function existe($parameter)
+    {
         $sql = sprintf('SELECT * FROM users WHERE email = :email');
 
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute([
                 'email' => $parameter
-                ]);
+            ]);
             $emailexistente = $stmt->fetch(PDO::FETCH_OBJ);
-            if($emailexistente){
+            if ($emailexistente) {
                 return true;
             }
             return false;
-            
-            
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 
+    public function selectByForeignKey($table, $fkColumn, $fkValue)
+    {
+        $sql = "SELECT * FROM {$table} WHERE {$fkColumn} = :value";
+
+        $stmt = $this->pdo->prepare($sql);
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                'value' => $fkValue
+            ]);
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
         } catch (Exception $e) {
             die($e->getMessage());
         }

@@ -21,25 +21,36 @@
 /* .testBtns {
     display: flex;
     gap: 10px;
-} */
+}
+
+.admin-question {
+    display: flex;
+    justify-content: center;
+}
+
+
 
 .cancelBtn {
-	background: none;
-	color: var(--light-orange-100);
-	text-decoration: underline;
+    background: none;
+    color: white;
+    text-decoration: underline;
 }
 .cancelBtn:hover {
 	background: none;
 	color: var(--white-100);
 }
 
-.cancelBtn {
-	color: var(--light-orange-100);
-	background: none;
+ .cancelBtn {
+    color: white;
+    background-color: none;
 }
 
 .cancelBtn:hover {
 	color: var(--white-100);
+}
+
+#criar-usuario, #editar-usuario{
+    background-color: var(--dark-blue-100);
 }
 
 /* ----------- input styling ------------- */
@@ -59,6 +70,10 @@
 	outline: none;
 	border: none;
 	transition: background 120ms ease;
+}
+
+.inputGroup ion-icon {
+    font-size: 20px;
 }
 .inputGroup > *:hover {
 	cursor: pointer;
@@ -132,6 +147,10 @@
 	gap: 2rem;
 }
 
+#createModal, #editModal {
+    width: min(90vw, 520px);
+}
+
 /* parte superior */
 .modalUser #header {
 	display: flex;
@@ -144,30 +163,62 @@
 
 /* foto de perfil */
 .userProfilePicture {
-	min-width: 100%;
-	min-height: auto;
-	/* background: var(--white-25); */
+    width: 100%;
+    max-width: 700px;
+    min-width: 300px;
+    min-height: auto;
+    aspect-ratio: 0.9;
+    
+    border-radius: 10px;
 
-	border-radius: 10px;
+    border: 4px dashed white;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 }
 
 /* .userProfilePicture:hover {
     background-color: var(--white-25);
     } */
 
-.imgProfPic {
-	width: 100%;
-	height: 100%;
-	max-width: 20vw;
-	object-fit: cover;
-	aspect-ratio: 1;
 
-	border-radius: 10px;
+.userProfilePictureNoEdit {
+    min-width: 200px;
+    min-height: auto;
+    aspect-ratio: 0.9;
+    
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgProfPicNoEdit {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    object-fit: cover;
+    
+    border-radius: 10px;
+}
+
+.icone-img {
+    font-size: 50px;
+}
+
+.imgProfPic {
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    object-fit: cover;
+    
+    border-radius: 10px;
+    display: none;
+    
 }
 
 .imgProfPic:hover{
@@ -177,23 +228,34 @@
 
 /* dados user */
 .userInfo {
-	/* box-sizing: border-box; */
+    /* box-sizing: border-box; */
+    
+    display: flex;
+    flex-direction: column;
 
-	display: flex;
-	flex-direction: column;
-
-	min-width: 100%;
-	width: fit-content;
-	/* border: 1px solid red; */
-	gap: 0.4rem;
+    align-items: center;
+    justify-content: center;
+    
+    min-width: 100%;
+    width: fit-content;
+    /* border: 1px solid red; */
+    gap: 10px;
+    margin-block: 10px;
 }
 
 .inputGroup {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding-inline: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 5px;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+
+
+.icone-titulo {
+   font-size: 25px;
 }
 
 /* ----- warning modais -----*/
