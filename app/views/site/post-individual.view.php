@@ -56,22 +56,31 @@
           </div>
 
           <div class="botoes-de-compartilhar">
-            <a>
+
+            <?php
+            $postUrl = urlencode(
+              (isset($_SERVER['HTTPS']) ? 'https' : 'http') .
+                '://' .
+                $_SERVER['HTTP_HOST'] .
+                $_SERVER['REQUEST_URI']
+            );
+
+            $postTitle = urlencode($post->title);
+            ?>
+            <a href="https://wa.me/?text=<?= $postTitle ?>%20<?= $postUrl ?>"
+              target="_blank">
               <img
                 class="compartilhar-post"
                 src="/public/assets/icons/whatsapp.png" />
             </a>
-            <a>
-              <img
-                class="compartilhar-post"
-                src="/public/assets/icons/instagram.png" />
-            </a>
-            <a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=<?= $postUrl ?>"
+              target="_blank">
               <img
                 class="compartilhar-post"
                 src="/public/assets/icons/facebook-messenger.png" />
             </a>
-            <a>
+            <a href="https://twitter.com/intent/tweet?text=<?= $postTitle ?>&url=<?= $postUrl ?>"
+              target="_blank">
               <img
                 class="compartilhar-post"
                 src="/public/assets/icons/twitter.png" />
