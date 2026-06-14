@@ -43,19 +43,21 @@
                     <tr>
                         <td><?= $post->id ?></td>
                         <td><?= $post->title ?></td>
-                        <td><?= $post->author ?></td>
+                        <td><?= $post->authorData->name ?></td>
                         <td><?= $post->created_at ?></td>
                         <td>
                             <div class="actionBtn-container">
                                 <button class="actionBtn viewPost" type="button" data-bs-toggle="modais" data-bs-target="#modalViewPost-<?= $post->id ?>">
                                     <ion-icon name="eye-outline"></ion-icon>
                                 </button>
-                                <button class="actionBtn editPost" type="button" data-bs-toggle="modais" data-bs-target="#modalEditPost-<?= $post->id ?>">
-                                    <ion-icon name="pencil-outline"></ion-icon>
-                                </button>
-                                <button class="actionBtn deletePost" type="button" data-bs-toggle="modais" data-bs-target="#modalDeletePost-<?= $post->id ?>">
-                                    <ion-icon name="trash-bin-outline"></ion-icon>
-                                </button>
+                                <?php if($_SESSION['id'] === $post->author || $_SESSION['is_admin'] === 1): ?>
+                                    <button class="actionBtn editPost" type="button" data-bs-toggle="modais" data-bs-target="#modalEditPost-<?= $post->id ?>">
+                                        <ion-icon name="pencil-outline"></ion-icon>
+                                    </button>
+                                    <button class="actionBtn deletePost" type="button" data-bs-toggle="modais" data-bs-target="#modalDeletePost-<?= $post->id ?>">
+                                        <ion-icon name="trash-bin-outline"></ion-icon>
+                                    </button>
+                                <?php endif; ?>
                             </div>
                             <div class="containerMenuPostsAcoes">
                                 <button class="trespontos">
@@ -64,8 +66,10 @@
                                 <div class="dropdownMenuPosts">
                                     <ul>
                                         <li><a class="viewPost btnVisuPostADM" data-bs-target="#modalViewPost-<?= $post->id ?>">Visualizar</a></li>
-                                        <li><a class="editPost btnEditPostADM" data-bs-target="#modalEditPost-<?= $post->id ?>">Editar</a></li>
-                                        <li><a class="deletePost btnDeletePostADM" data-bs-target="#modalDeletePost-<?= $post->id ?>">Excluir</a></li>
+                                        <?php if($_SESSION['id'] === $post->author || $_SESSION['is_admin'] === 1): ?>
+                                            <li><a class="editPost btnEditPostADM" data-bs-target="#modalEditPost-<?= $post->id ?>">Editar</a></li>
+                                            <li><a class="deletePost btnDeletePostADM" data-bs-target="#modalDeletePost-<?= $post->id ?>">Excluir</a></li>
+                                        <?php endif; ?>
                                     </ul>
                                 </div>
                             </div>
