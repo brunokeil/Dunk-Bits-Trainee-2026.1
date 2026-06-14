@@ -6,12 +6,16 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Controllers\\DashboardController' => $baseDir . '/app/Controllers/DashboardController.php',
     'App\\Controllers\\ExampleController' => $baseDir . '/app/Controllers/ExampleController.php',
-    'App\\Controllers\\LoginControllerGET' => $baseDir . '/app/Controllers/LoginControllerGET.php',
-    'App\\Controllers\\LoginControllerPOST' => $baseDir . '/app/Controllers/LoginControllerPOST.php',
-    'App\\Controllers\\LogoutControllerPOST' => $baseDir . '/app/Controllers/LogoutControllerPOST.php',
+    'App\\Controllers\\FooterController' => $baseDir . '/app/Controllers/FooterController.php',
+    'App\\Controllers\\LandingPageController' => $baseDir . '/app/Controllers/LandingPageController.php',
+    'App\\Controllers\\ListaPostsController' => $baseDir . '/app/Controllers/ListaPostsController.php',
+    'App\\Controllers\\LoginController' => $baseDir . '/app/Controllers/LoginController.php',
+    'App\\Controllers\\NavbarController' => $baseDir . '/app/Controllers/NavbarController.php',
     'App\\Controllers\\PagPostsController' => $baseDir . '/app/Controllers/PagPostsController.php',
-    'App\\Controllers\\PostsAdminControllerGET' => $baseDir . '/app/Controllers/PostsAdminControllerGET.php',
+    'App\\Controllers\\PostIndividualController' => $baseDir . '/app/Controllers/PostIndividualController.php',
+    'App\\Controllers\\PostsAdminController' => $baseDir . '/app/Controllers/PostsAdminController.php',
     'App\\Controllers\\UsuariosController' => $baseDir . '/app/Controllers/UsuariosController.php',
     'App\\Core\\App' => $baseDir . '/core/App.php',
     'App\\Core\\Database\\Connection' => $baseDir . '/core/database/Connection.php',

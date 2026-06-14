@@ -56,11 +56,23 @@ class PostIndividualController
 
         $postImage = $this->getPostImage($post);
 
+        $usuarioLogado = null;
+        $userEhAdmin = false;
+
+        if (isset($_SESSION['id'])) {
+            $usuarioLogado = $database->selectOne('users', $_SESSION['id']);
+            $userEhAdmin = $usuarioLogado ? (bool)$usuarioLogado->is_admin : false;
+        }
+
+
+
         return view('site/post-individual', [
             'post' => $post,
             'author' => $author,
             'comments' => $comments,
-            'postCoverImage' => $postImage
+            'postCoverImage' => $postImage,
+            'usuarioLogado' => $usuarioLogado,
+            'userEhAdmin' => $userEhAdmin
         ]);
     }
 
@@ -79,5 +91,42 @@ class PostIndividualController
 
         App::get("database")->insert('comments', $parameters);
         header('Location: /post-individual?post=' . $_POST['post_id']);
+    }
+
+    public function deleteComment()
+    {
+        $id = $_POST['id'];
+
+        $postId = $_POST['post_id'];
+
+        App::get('database')->delete('comments', $id);
+        header('Location: /post-individual?post=' . $postId);
+    }
+
+    public function editComment()
+    {
+        if (!isset($_SESSION['id'])) {
+            header('Location: /login');
+            exit;
+        }
+
+        $id = $_POST['id'];
+        $postId = $_POST['post_id'];
+        $novoConteudo = $_POST['comment'];
+
+        $database = App::get("database");
+
+        $comment = $database->selectOne('comments', $id);
+        $usuarioLogado = $database->selectOne('users', $_SESSION['id']);
+        $userEhAdmin = $usuarioLogado ? (bool)$usuarioLogado->is_admin : false;
+
+        if ($comment && ($userEhAdmin || $comment->author == $_SESSION['id'])) {
+            $database->update('comments', $id, [
+                'content' => $novoConteudo
+            ]);
+        }
+
+        header('Location: /post-individual?post=' . $postId);
+        exit;
     }
 }

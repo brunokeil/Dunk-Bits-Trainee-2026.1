@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Controllers\ExampleController;
 use App\Controllers\LoginController;
 use App\Controllers\PagPostsControllerGET;
@@ -48,7 +49,7 @@ $router->post('cadastro/create', 'CadastroController@criar');
 
 $router->get('footer', 'FooterController@index');
 
-$router->get('postsadmin', 'PostsAdminController@index');
+$router->get('posts-admin', 'PostsAdminController@index');
 
 $router->post('postsadmin/create', 'PostsAdminController@store');
 
@@ -69,3 +70,7 @@ $router->post('postsadmin/delete', 'PostsAdminController@delete');
 $router->post('admin-users/delete', 'UsuariosController@delete');
 
 $router->post('post-individual/comment', 'PostIndividualController@storeComment');
+
+$router->post('post-individual/comment/delete', 'PostIndividualController@deleteComment');
+
+$router->post('post-individual/comment/edit', 'PostIndividualController@editComment');

@@ -25,12 +25,16 @@ class ComposerStaticInit90bbf95869b4e88bf0dc5022e708a458
     );
 
     public static $classMap = array (
+        'App\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Controllers/DashboardController.php',
         'App\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Controllers/ExampleController.php',
-        'App\\Controllers\\LoginControllerGET' => __DIR__ . '/../..' . '/app/Controllers/LoginControllerGET.php',
-        'App\\Controllers\\LoginControllerPOST' => __DIR__ . '/../..' . '/app/Controllers/LoginControllerPOST.php',
-        'App\\Controllers\\LogoutControllerPOST' => __DIR__ . '/../..' . '/app/Controllers/LogoutControllerPOST.php',
+        'App\\Controllers\\FooterController' => __DIR__ . '/../..' . '/app/Controllers/FooterController.php',
+        'App\\Controllers\\LandingPageController' => __DIR__ . '/../..' . '/app/Controllers/LandingPageController.php',
+        'App\\Controllers\\ListaPostsController' => __DIR__ . '/../..' . '/app/Controllers/ListaPostsController.php',
+        'App\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Controllers/LoginController.php',
+        'App\\Controllers\\NavbarController' => __DIR__ . '/../..' . '/app/Controllers/NavbarController.php',
         'App\\Controllers\\PagPostsController' => __DIR__ . '/../..' . '/app/Controllers/PagPostsController.php',
-        'App\\Controllers\\PostsAdminControllerGET' => __DIR__ . '/../..' . '/app/Controllers/PostsAdminControllerGET.php',
+        'App\\Controllers\\PostIndividualController' => __DIR__ . '/../..' . '/app/Controllers/PostIndividualController.php',
+        'App\\Controllers\\PostsAdminController' => __DIR__ . '/../..' . '/app/Controllers/PostsAdminController.php',
         'App\\Controllers\\UsuariosController' => __DIR__ . '/../..' . '/app/Controllers/UsuariosController.php',
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
         'App\\Core\\Database\\Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
