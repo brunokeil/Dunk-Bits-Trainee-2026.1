@@ -163,50 +163,88 @@ h1 {
 /* ------------ */
 
 .card {
-	width: 300px;
-	aspect-ratio: 3 4;
-	padding: 120px 20px 120px 20px;
+    min-width: 300px;
+    aspect-ratio: 3 4;
 
 	position: relative;
 
 	background-color: var(--pearl-grey-100);
 
-	border-radius: 18px;
-	cursor: pointer;
+    border-radius: 18px;
+    cursor: pointer;
+
+    display: flex; 
+    text-decoration: none; 
+    overflow: hidden; 
 }
 
+.card-imagem,
 .card > img {
-	width: inherit;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-.card::after {
-	content: "omg hiiiiiiiiiiiiii";
+.card.mostrar {
+	opacity: 1;
+	transform: translateX(0);
+}
 
+.card-footer {
+    position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 20px;
+	transition: opacity 0.3s ease;
+}
+
+.card-titulo-fixo {
+	color: var(--white-100);
+	font-size: 3rem;
+}
+
+.card-overlay {
 	position: absolute;
-	box-sizing: border-box;
-
-	color: white;
-
-	background-color: var(--pearl-grey-50);
-
-	z-index: 1;
-
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
-
-	cursor: pointer;
-
-	top: 100%;
-	left: 0;
-	bottom: 0px;
-
-	border-radius: inherit;
-	transition: 1s ease-in-out;
+	background-color: var(--pearl-grey-80);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 15px;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	backdrop-filter: blur(2px);
+    box-sizing: border-box;
 }
 
-.card:hover::after {
-	top: 0;
-	transition: 1s ease-in-out;
+.card-titulo-overlay {
+	color: var(--white-100);
+	font-size: 300%;
+	margin-bottom: 5px;
+}
+
+.card-autor {
+	color: var(--white-100);
+	font-weight: bold;
+	margin-bottom: 10px;
+	font-size: 150%;
+}
+
+.card-descricao {
+	color: var(--white-100);
+	font-size: 100%;
+}
+
+.card:hover .card-footer {
+	opacity: 0;
+}
+
+.card:hover .card-overlay {
+	opacity: 1;
 }
 
 /* ----------QUEM-SOMOS---------- */

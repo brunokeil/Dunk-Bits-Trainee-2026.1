@@ -36,12 +36,25 @@
         <button class="chevette" id="carroLeftArrow">
           <ion-icon name="chevron-back-outline"></ion-icon>
         </button>
-
+        
         <div class="cards-container">
           <!-- php foreach start -->
-          <div class="card">
-            <img src="/public/assets/code-logo.png" />
-          </div>
+          <?php foreach ($posts as $p): ?>
+            <a class="card" href="/post-individual?post=<?= $p->id ?>">
+              <img src="<?= $p->imagem_exibicao ?>" alt="<?= $p->title ?>" class="card-imagem">
+  
+              <div class="card-footer">
+                <h2 class="card-titulo-fixo"><?php echo $p->title; ?></h2>
+              </div>
+  
+              <div class="card-overlay">
+                <h2 class="card-titulo-overlay"><?php echo $p->title; ?></h2>
+                <p class="card-autor"><?php echo $p->authorData->name; ?></p>
+                <p class="card-descricao"><?php echo $p->content; ?></p>
+              </div>
+            </a>
+          <?php endforeach ?>
+          
           <!-- php foreach end -->
         </div>
 
@@ -74,6 +87,7 @@
       </div>
     </section>
     <img src="/public/assets/landing-page-images/circulo-fundo-landing.webp" id="bg-ball" />
+    <script src="../../../public/./js/landing-page.js"></script>
   </main>
   <?php @require "footer.view.php" ?>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
