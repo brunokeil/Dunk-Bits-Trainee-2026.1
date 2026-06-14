@@ -15,7 +15,7 @@
     Essa ação é <em>irreversível</em> e todos os dados relacionados à
     conta serão <em>removidos permanentemente</em>.
   </p>
-  <form action="admin-users/delete" method="post">
+  <form action="admin-users/delete" method="post" id="form-delete">
   <input type="hidden" id="delete-id" name="id" />
 
   <div class="footerButtons">

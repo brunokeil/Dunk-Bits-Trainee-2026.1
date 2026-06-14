@@ -36,10 +36,9 @@ class LoginController
         if ($user){
             $_SESSION['id'] = $user->id;
             header("Location: " . $redirect);
-            exit();
         } else {
+            $_SESSION['mensagem-erro'] = "Usuário e/ou senha incorretos";
             header('Location: /login');
-            exit();
         }
     }
         public function deslogar()

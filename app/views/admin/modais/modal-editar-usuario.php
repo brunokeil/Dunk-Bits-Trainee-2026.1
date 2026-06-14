@@ -1,11 +1,9 @@
 <div class="modalUser close" id="editModal">
     <div id="header">
-        <ion-icon class="icone-titulo" name="pencil"></ion-icon>
         <h1>EDITAR USUÁRIO</h1>
-        <button class="closeModalBtn terciaryBtn">X</button>
     </div>
 
-    <form action="admin-users/edit" method="post" enctype="multipart/form-data">
+    <form action="admin-users/edit" method="post" enctype="multipart/form-data" id="form-edit">
 
         <input type="hidden" id="edit-id" name="id">
 
@@ -13,10 +11,11 @@
             <img
                 class="imgProfPic" />
             <input type="file" name="imagem" class="profileInput" accept="image/*" hidden />
-            <ion-icon class="icone-img" name="image-outline"></ion-icon>
-            <p class="txt-img">
-                Selecione uma imagem
-            </p>
+             <ion-icon class="icone-img" name="image-outline"></ion-icon>
+            <h4 class="txt-img">
+        Arraste sua imagem aqui
+        ou clique para escolher um arquivo
+      </h4>
 
         </div>
 
@@ -24,19 +23,19 @@
             <div class="inputGroup">
                 <ion-icon name="person"></ion-icon>
 
-                <input type="text" class="usernameInput" placeholder="*Username" id="edit-username" name="name" />
+                <input type="text" class="usernameInput" placeholder="*Username" id="edit-username" name="name" aria-label="*Username" />
             </div>
 
             <div class="inputGroup">
                 <ion-icon name="mail"></ion-icon>
 
-                <input type="email" class="emailInput" placeholder="*E-mail" id="edit-email" name="email" />
+                <input type="email" class="emailInput" placeholder="*E-mail" id="edit-email" name="email" aria-label="*E-mail" />
             </div>
 
             <div class="inputGroup">
                 <ion-icon name="lock-closed"></ion-icon>
 
-                <input type="password" class="passwordInput" placeholder="*Senha" id="edit-senha" name="password" />
+                <input type="password" class="passwordInput" placeholder="*Senha" id="edit-senha" name="password" arial-label="*Senha" />
             </div>
         </div>
 
