@@ -49,7 +49,7 @@ $router->post('cadastro/create', 'CadastroController@criar');
 
 $router->get('footer', 'FooterController@index');
 
-$router->get('posts-admin', 'PostsAdminController@index');
+$router->get('postsadmin', 'PostsAdminController@index');
 
 $router->post('postsadmin/create', 'PostsAdminController@store');
 
