@@ -11,7 +11,12 @@
       </div>
       <div class="authorData">
         <div class="inputGroup">
-          <input type="text" class="postTipo" placeholder="Insira tipo do POST" id="postTipo" name="postTipo"/>
+          <select type="text" class="postTipo" placeholder="Insira tipo do POST" id="postTipo" name="postTipo" required>
+            <option value="" disabled selected>Selecione o tipo do POST</option>
+            <option value="highlights">highlights</option>
+            <option value="jogos">jogos</option>
+            <option value="noticias">noticias</option>
+          </select>
         </div>
       </div>
     </div>
