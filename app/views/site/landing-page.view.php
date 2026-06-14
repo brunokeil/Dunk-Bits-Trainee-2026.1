@@ -20,7 +20,7 @@
       <div class="text">
         <h1>DUNK BIT'S</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. 
+          Lorem ipsum dolor sit amet consectetur adipiscing elit.
           <br />
           Dolor sit amet consectetur adipiscing elit quisque faucibus.
         </p>
@@ -33,8 +33,23 @@
     <section id="posts">
       <h1>ACOMPANHE A COMUNIDADE</h1>
       <div class="carrossel">
-        <div class="card"><img src="/public/assets/code-logo.png" /></div>
+        <?php foreach ($posts as $p): ?>
+          <a class="card" href="/post-individual?post=<?= $p->id ?>">
+            <img src="<?= $p->imagem_exibicao ?>" alt="<?= $p->title ?>" class="card-imagem">
+
+            <div class="card-footer">
+              <h2 class="card-titulo-fixo"><?php echo $p->title; ?></h2>
+            </div>
+
+            <div class="card-overlay">
+              <h2 class="card-titulo-overlay"><?php echo $p->title; ?></h2>
+              <p class="card-autor"><?php echo $p->authorData->name; ?></p>
+              <p class="card-descricao"><?php echo $p->content; ?></p>
+            </div>
+          </a>
+        <?php endforeach ?>
       </div>
+
       <div>
         <input type="radio" />
         <input type="radio" />
@@ -60,6 +75,7 @@
       </div>
     </section>
     <img src="/public/assets/landing-page-images/circulo-fundo-landing.webp" id="bg-ball" />
+    <script src="../../../public/./js/landing-page.js"></script>
   </main>
   <?php @require "footer.view.php" ?>
 </body>

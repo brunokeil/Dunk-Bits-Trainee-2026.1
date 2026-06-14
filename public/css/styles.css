@@ -128,11 +128,6 @@ html {
 	font-family: var(--font-quicksand);
 	padding: 0;
 	margin: 0;
-	box-sizing: content-box;
-	color: var(--color-dark-text);
-	font-family: var(--font-quicksand);
-	padding: 0;
-	margin: 0;
 }
 
 h1,
