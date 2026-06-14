@@ -162,6 +162,15 @@ h1 {
 
 /* ------------ */
 
+.cards-container {
+    display: flex;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+
+/* ------------ */
+
 .card {
     min-width: 300px;
     aspect-ratio: 3 4;
