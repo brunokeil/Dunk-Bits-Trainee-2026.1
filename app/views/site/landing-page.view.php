@@ -32,14 +32,20 @@
     </section>
     <section id="posts">
       <h1>ACOMPANHE A COMUNIDADE</h1>
-      <div id="posts-carrossel">
-        <div id="card"><img src="/public/assets/code-logo.png" /></div>
-        <div id="card"><img src="/public/assets/code-logo.png" /></div>
-        <div id="card"><img src="/public/assets/code-logo.png" /></div>
-        <div id="card"><img src="/public/assets/code-logo.png" /></div>
-        <div id="card"><img src="/public/assets/code-logo.png" /></div>
-        <div id="card"><img src="/public/assets/code-logo.png" /></div>
-        <div id="card"><img src="/public/assets/code-logo.png" /></div>
+      <div class="carrossel">
+        <div class="card"><img src="/public/assets/code-logo.png" /></div>
+        <div class="card"><img src="/public/assets/code-logo.png" /></div>
+        <div class="card"><img src="/public/assets/code-logo.png" /></div>
+        <div class="card"><img src="/public/assets/code-logo.png" /></div>
+        <div class="card"><img src="/public/assets/code-logo.png" /></div>
+        <div class="card"><img src="/public/assets/code-logo.png" /></div>
+        <div class="card"><img src="/public/assets/code-logo.png" /></div>
+      </div>
+      <div>
+        <input type="radio" />
+        <input type="radio" />
+        <input type="radio" />
+        <input type="radio" />
       </div>
     </section>
     <section id="about">
@@ -59,7 +65,7 @@
         </p>
       </div>
     </section>
-    <img src="/public/assets/landing-page-images/circulo-fundo-landing.png" id="bg-ball" />
+    <img src="/public/assets/landing-page-images/circulo-fundo-landing.webp" id="bg-ball" />
   </main>
   <?php @require "footer.view.php" ?>
 </body>
