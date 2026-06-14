@@ -27,18 +27,12 @@
       </div>
       <div id="call-to-action">
         <button class="primaryBtn">POSTS</button>
-        <button class="secondaryBtn">SOBRE</button>
+        <button class="terciaryBtn">SOBRE</button>
       </div>
     </section>
     <section id="posts">
       <h1>ACOMPANHE A COMUNIDADE</h1>
       <div class="carrossel">
-        <div class="card"><img src="/public/assets/code-logo.png" /></div>
-        <div class="card"><img src="/public/assets/code-logo.png" /></div>
-        <div class="card"><img src="/public/assets/code-logo.png" /></div>
-        <div class="card"><img src="/public/assets/code-logo.png" /></div>
-        <div class="card"><img src="/public/assets/code-logo.png" /></div>
-        <div class="card"><img src="/public/assets/code-logo.png" /></div>
         <div class="card"><img src="/public/assets/code-logo.png" /></div>
       </div>
       <div>

@@ -41,19 +41,19 @@ ion-icon {
 	color: var(--color-light-text);
 	text-decoration: none;
 	font-family: var(--font-quicksand);
-	font-size: 2rem;
+	font-size: 1.4rem;
 	font-weight: 500;
 }
 
 .buttonLogin {
-	background-color: var(--blue-100);
+	background-color: var(--dark-blue-100);
 	padding: 10px 25px;
 	border-radius: 50px;
 	transition: 0.3s;
 }
 
 .buttonLogin:hover {
-	background-color: var(--dark-blue-100);
+	background-color: var(--pearl-grey-100);
 }
 
 .hamburguer {
