@@ -6,7 +6,17 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Controllers\\DashboardController' => $baseDir . '/app/Controllers/DashboardController.php',
     'App\\Controllers\\ExampleController' => $baseDir . '/app/Controllers/ExampleController.php',
+    'App\\Controllers\\FooterController' => $baseDir . '/app/Controllers/FooterController.php',
+    'App\\Controllers\\LandingPageController' => $baseDir . '/app/Controllers/LandingPageController.php',
+    'App\\Controllers\\ListaPostsController' => $baseDir . '/app/Controllers/ListaPostsController.php',
+    'App\\Controllers\\LoginController' => $baseDir . '/app/Controllers/LoginController.php',
+    'App\\Controllers\\NavbarController' => $baseDir . '/app/Controllers/NavbarController.php',
+    'App\\Controllers\\PagPostsController' => $baseDir . '/app/Controllers/PagPostsController.php',
+    'App\\Controllers\\PostIndividualController' => $baseDir . '/app/Controllers/PostIndividualController.php',
+    'App\\Controllers\\PostsAdminController' => $baseDir . '/app/Controllers/PostsAdminController.php',
+    'App\\Controllers\\UsuariosController' => $baseDir . '/app/Controllers/UsuariosController.php',
     'App\\Core\\App' => $baseDir . '/core/App.php',
     'App\\Core\\Database\\Connection' => $baseDir . '/core/database/Connection.php',
     'App\\Core\\Database\\QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',

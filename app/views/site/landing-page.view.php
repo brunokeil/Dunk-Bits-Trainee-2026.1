@@ -1,16 +1,20 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dunk Bit's</title>
-    <link rel="stylesheet" href="../../../public/css/footer.css" />
-    <link rel="stylesheet" href="../../../public/css/navbar.css" />
-    <link rel="icon" href="/public/assets/logo_zoom.png" />
-    <link rel="stylesheet" href="/public/css/landing-page.css" />
-  </head>
-  <body>
-    <?php @require "navbar.view.php"?>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dunk Bit's</title>
+  <link rel="stylesheet" href="../../../public/css/footer.css" />
+  <link rel="stylesheet" href="../../../public/css/navbar.css" />
+  <link rel="stylesheet" href="/public/css/landing-page.css" />
+  <link rel="icon" href="/public/assets/logo_zoom.png" />
+</head>
+
+<body>
+  <?php @require "navbar.view.php" ?>
+  <main>
+
     <img src="/public/assets/landing-page-images/cesta-fundo-landing.png" id="bg-basket" />
     <section id="hero-section">
       <div id="text">
@@ -55,6 +59,8 @@
       </div>
     </section>
     <img src="/public/assets/landing-page-images/circulo-fundo-landing.png" id="bg-ball" />
-    <?php @require "footer.view.php"?>
-  </body>
+  </main>
+  <?php @require "footer.view.php" ?>
+</body>
+
 </html>
