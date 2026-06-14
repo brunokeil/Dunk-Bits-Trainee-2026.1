@@ -30,6 +30,26 @@
     margin-bottom: 15px;
 }
 
+/* --- ajustes pra centralizar tudo */
+
+.lilSection {
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonVisao {
+    text-align: center;
+}
+
+.buttonValores {
+    text-align: end;
+}
+
+/* --- fim da xeretagem */
 
 .redes {
     display: flex;
@@ -38,7 +58,7 @@
     cursor: pointer;
 }
 
-.redes ion-icon{
+.redes ion-icon {
     color: var(--white-100);
 }
 
@@ -51,11 +71,11 @@
     text-align: right;
 }
 
-.logo_dunkbits {
+/* .logo {
     width: 100px;
     height: 108px;
     object-fit: contain;
-}
+} */
 
 .infoContato p {
     display: flex;

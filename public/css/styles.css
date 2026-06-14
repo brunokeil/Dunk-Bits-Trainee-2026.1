@@ -85,8 +85,7 @@
 			#8e3a0a,
 			#050517 40%,
 			#0073ff 290%
-		),
-		radial-gradient(circle at top right, #0073ff 40%, #c1c1c1);
+		);
 
 	--bg-lista-posts: linear-gradient(224deg, #fea163 31.27%, #d35400 55.9%);
 

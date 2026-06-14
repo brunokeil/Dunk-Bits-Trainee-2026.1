@@ -16,11 +16,11 @@
   <main>
 
     <img src="/public/assets/landing-page-images/cesta-fundo-landing.png" id="bg-basket" />
-    <section id="hero-section">
+    <section class="hero-section">
       <div class="text">
         <h1>DUNK BIT'S</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. 
+          Lorem ipsum dolor sit amet consectetur adipiscing elit.
           <br />
           Dolor sit amet consectetur adipiscing elit quisque faucibus.
         </p>
@@ -30,10 +30,25 @@
         <button class="terciaryBtn">SOBRE</button>
       </div>
     </section>
-    <section id="posts">
+    <section class="posts">
       <h1>ACOMPANHE A COMUNIDADE</h1>
       <div class="carrossel">
-        <div class="card"><img src="/public/assets/code-logo.png" /></div>
+        <button class="chevette" id="carroLeftArrow">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </button>
+
+        <div class="cards-container">
+          <!-- php foreach start -->
+          <div class="card">
+            <img src="/public/assets/code-logo.png" />
+          </div>
+          <!-- php foreach end -->
+        </div>
+
+        <button class="chevette" id="carroRightArrow">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+
       </div>
       <div>
         <input type="radio" />
@@ -42,7 +57,7 @@
         <input type="radio" />
       </div>
     </section>
-    <section id="about">
+    <section class="about">
       <img src="/public/assets/logo_dunkbits_sombreada.png" />
       <div class="text">
         <h1>QUEM SOMOS?</h1>
@@ -62,6 +77,8 @@
     <img src="/public/assets/landing-page-images/circulo-fundo-landing.webp" id="bg-ball" />
   </main>
   <?php @require "footer.view.php" ?>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
