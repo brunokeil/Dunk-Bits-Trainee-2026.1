@@ -17,16 +17,17 @@
 
     <img src="/public/assets/landing-page-images/cesta-fundo-landing.png" id="bg-basket" />
     <section id="hero-section">
-      <div id="text">
+      <div class="text">
         <h1>DUNK BIT'S</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet
-          consectetur adipiscing elit quisque faucibus.
+          Lorem ipsum dolor sit amet consectetur adipiscing elit. 
+          <br />
+          Dolor sit amet consectetur adipiscing elit quisque faucibus.
         </p>
       </div>
       <div id="call-to-action">
-        <button id="btn-posts">POSTS</button>
-        <button id="btn-sobre">SOBRE</button>
+        <button class="primaryBtn">POSTS</button>
+        <button class="secondaryBtn">SOBRE</button>
       </div>
     </section>
     <section id="posts">
@@ -43,7 +44,7 @@
     </section>
     <section id="about">
       <img src="/public/assets/logo_dunkbits_sombreada.png" />
-      <div id="text">
+      <div class="text">
         <h1>QUEM SOMOS?</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
