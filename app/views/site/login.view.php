@@ -12,7 +12,7 @@
 
 <body class="telaLoginCadastro">
 	<main class="LoginCadastroContainer">
-		<a href="/landingpage" class="buttonFechar">
+		<a href="/" class="buttonFechar">
 			<ion-icon name="close-outline"></ion-icon>
 		</a>
 

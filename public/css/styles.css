@@ -153,7 +153,7 @@ textarea {
 
 /* ---- BOTOES GERAIS ---- */
 
-button {
+button, a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -161,6 +161,7 @@ button {
 
 	border: 0;
 	border-radius: 1.8rem;
+    text-decoration: none;
 
 	font-weight: 600;
 	color: var(--white-100);
@@ -168,7 +169,7 @@ button {
 	transition: all 120ms ease-in-out;
 }
 
-button:hover {
+button:hover, a:hover {
 	cursor: pointer;
 	transition: all 120ms ease-out;
 }

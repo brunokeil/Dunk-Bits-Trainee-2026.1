@@ -16,7 +16,7 @@
   <main>
 
     <img src="/public/assets/landing-page-images/cesta-fundo-landing.png" id="bg-basket" />
-    <section class="hero-section">
+    <section class="hero-section" id="hero">
       <div class="text">
         <h1>DUNK BIT'S</h1>
         <p>
@@ -26,8 +26,8 @@
         </p>
       </div>
       <div id="call-to-action">
-        <button class="primaryBtn">POSTS</button>
-        <button class="terciaryBtn">SOBRE</button>
+        <a class="primaryBtn" href="/lista-posts">POSTS</a>
+        <a class="terciaryBtn" href="#sobre">SOBRE</a>
       </div>
     </section>
     <section class="posts">
@@ -50,14 +50,13 @@
         </button>
 
       </div>
-      <div>
-        <input type="radio" />
-        <input type="radio" />
-        <input type="radio" />
-        <input type="radio" />
+      <div class="dots-container">
+        <input type="radio" name="dot" value="1" />
+        <input type="radio" name="dot" value="2" />
+        <input type="radio" name="dot" value="3" />
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="sobre">
       <img src="/public/assets/logo_dunkbits_sombreada.png" />
       <div class="text">
         <h1>QUEM SOMOS?</h1>

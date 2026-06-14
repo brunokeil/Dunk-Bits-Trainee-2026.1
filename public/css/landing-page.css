@@ -22,7 +22,7 @@ main {
 	background: var(--bg-landing-page);
 	/* background-color: var(--orange-100); */
 	overflow-x: hidden;
-	padding-bottom: 14%;
+	padding-bottom: 8%;
 	/* border: 1px solid red; */
 }
 
@@ -33,7 +33,7 @@ section {
 	/* border: 1px solid white; */
 }
 
-button {
+a {
 	font-weight: 500;
 	font-size: 1.8rem;
 }
@@ -76,7 +76,7 @@ h1 {
 
 .hero-section {
 	width: 100%;
-	height: 80vh;
+	height: 90vh;
 	box-sizing: border-box;
 	/* height: fit-content; */
 
@@ -116,11 +116,12 @@ h1 {
 	justify-content: space-around;
 	gap: 40px;
 
-	padding: 20px 0 60px 0;
+	/* padding: 20px 0 60px 0; */
+    padding: 4rem 0;
 
 	box-shadow: 0px 20px 20px var(--pearl-grey-50);
 
-	margin: 10% 0 10% 0;
+	/* margin: 10% 0 10% 0; */
 }
 
 .posts h1 {
@@ -139,10 +140,11 @@ h1 {
 	overflow: hidden;
 }
 
+/* navegacao */
+
 .chevette {
 	background: none;
 }
-
 .chevette > ion-icon {
 	font-size: 4rem;
 	transition: all 120ms ease-in-out;
@@ -151,6 +153,14 @@ h1 {
 	color: var(--white-50);
 	transition: all 120ms ease-in-out;
 }
+
+.dots-container > input {
+    border: 0;
+    background: var(--white-50);
+}
+
+
+/* ------------ */
 
 .card {
 	width: 300px;
@@ -205,9 +215,9 @@ h1 {
 	flex-direction: row;
 	flex-wrap: wrap;
 
-	padding: 0 200px;
+	/* padding: 0 2rem; */
 
-	gap: 30px;
+	gap: 3rem;
 
 	/* align-items: start; */
 	justify-content: center;
@@ -215,6 +225,7 @@ h1 {
 	height: fit-content;
 	width: 100%;
 
+    margin: 8rem 0;
 	/* border: 1px solid palegreen; */
 }
 
