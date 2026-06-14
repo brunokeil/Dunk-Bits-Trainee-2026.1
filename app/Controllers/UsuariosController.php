@@ -16,9 +16,6 @@ class UsuariosController
             exit;
         }
 
-
-
-
         $database = App::get("database");
 
         $usuarioLogado = $database->selectOne('users', $_SESSION['id']);
