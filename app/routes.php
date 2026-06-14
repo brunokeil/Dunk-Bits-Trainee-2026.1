@@ -10,6 +10,8 @@ use App\Controllers\NavbarController;
 use App\Controllers\LandingPageController;
 use App\Core\Router;
 
+
+
 $router->get('navbar', 'NavbarController@index');
 
 $router->get('', 'LandingPageController@index');
@@ -24,9 +26,8 @@ $router->post('admin-users/delete', 'UsuariosController@delete');
 
 $router->get('lista-posts', 'ListaPostsController@index');
 
-$router->get('posts-admin', 'PostsAdminControllerGET@index');
-
 $router->post('posts-admin/create', 'PostsAdminControllerPOST@criar');
+
 $router->get('cadastro', 'CadastroController@index');
 
 $router->get('login', 'LoginController@LoginView');
@@ -47,19 +48,22 @@ $router->get('footer', 'FooterController@index');
 
 $router->get('postsadmin', 'PostsAdminController@index');
 
+$router->post('postsadmin/create', 'PostsAdminController@store');
+
 $router->post('login', 'LoginController@logar');
 
 $router->post('logout', 'LogoutController@deslogar');
 
-$router->post('cadastro/create', 'CadastroController@criar');
-
 $router->get('post-individual', 'PostIndividualController@index');
 
-$router->post('cadastro/create', 'CadastroControllerPOST@criar');
-
-$router->get('', 'ExampleController@index');
 $router->get('admin-users', 'UsuariosController@index');
+
 $router->post('admin-users/create', 'UsuariosController@store');
+
 $router->post('admin-users/edit', 'UsuariosController@edit');
+
+$router->post('postsadmin/edit', 'PostsAdminController@edit');
+
 $router->post('admin-users/delete', 'UsuariosController@delete');
+
 $router->post('post-individual/comment', 'PostIndividualController@storeComment');
