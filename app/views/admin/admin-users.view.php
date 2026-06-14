@@ -138,6 +138,10 @@
       require("app/views/admin/modais/modal-deletar-usuario.php");
 
       require("app/views/admin/modais/modal-criar-usuario.php");
+
+      if (isset($_SESSION['error_message'])) {
+        require("app/views/admin/modais/modal-erro-usuario.php");
+      }
       ?>
 
 
