@@ -7,6 +7,7 @@
     <title>Admin - Posts</title>
     <link rel="stylesheet" href="../../../public/css/posts-admin.css">
     <link rel="stylesheet" href="../../../public/css/modais-posts.css">
+    <link rel="stylesheet" href="../../../public/css/modal-formulario-posts.css">
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -19,10 +20,11 @@
             <h2 id="title">TABELA DE POSTS</h2>
         </div>
         <div id="PesquisaECriarPostADM">
-            <div class="searchContainer">
+            <form class="searchContainer" method="GET" action="/postsadmin">
+
                 <ion-icon name="search-outline"></ion-icon>
-                <input id="PesquisaPostsTabelaADM" type="text" placeholder="Pesquisar por Post" />
-            </div>
+                <input id="PesquisaPostsTabelaADM" type="text" placeholder="Pesquisar por Post" name="search" value="<?= $searchText ?? '' ?>" />
+            </form>
             <button class="primaryBtn createPost" type="button" data-bs-toggle="modais" data-bs-target="#modalCreate">Criar Post</button>
         </div>
 
@@ -37,12 +39,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <?php foreach ($posts as $post): ?>
+                <?php foreach ($posts as $post): ?>
+                    <tr>
                         <td><?= $post->id ?></td>
                         <td><?= $post->title ?></td>
                         <td><?= $post->author ?></td>
-                        <td> a definir </td>
+                        <td><?= $post->created_at ?></td>
                         <td>
                             <div class="actionBtn-container">
                                 <button class="actionBtn viewPost" type="button" data-bs-toggle="modais" data-bs-target="#modalViewPost-<?= $post->id ?>">
@@ -61,40 +63,35 @@
                                 </button>
                                 <div class="dropdownMenuPosts">
                                     <ul>
-                                        <li><a class="viewPost btnVisuPostADM">Visualizar</a></li>
-                                        <li><a class="editPost btnEditPostADM">Editar</a></li>
-                                        <li><a class="deletePost btnDeletePostADM">Excluir</a></li>
+                                        <li><a class="viewPost btnVisuPostADM" data-bs-target="#modalViewPost-<?= $post->id ?>">Visualizar</a></li>
+                                        <li><a class="editPost btnEditPostADM" data-bs-target="#modalEditPost-<?= $post->id ?>">Editar</a></li>
+                                        <li><a class="deletePost btnDeletePostADM" data-bs-target="#modalDeletePost-<?= $post->id ?>">Excluir</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </td>
-                </tr>
-            <?php endforeach ?>
+                    </tr>
+                <?php endforeach ?>
 
             </tbody>
         </table>
-        <div class="paginacaoContainer">
+        <?php
 
-            <button class="btnSetaPaginacao" id="btnVoltarPagina">
-                <ion-icon name="chevron-back-outline"></ion-icon>
-            </button>
-            <span id="numeroPaginaAtual">1</span>
-            <button class="btnSetaPaginacao" id="btnAvancarPagina">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-            </button>
-        </div>
-        </div>
+        require("app/views/admin/paginationCrudPosts.view.php");
+
+        ?>
+
     </main>
 
     <div class="modalContainer close">
-
         <?php
+        require("app/views/admin/modais/modalCriarPost.php");
 
-        @require("app/views/admin/modais/modalViewPost.php");
-        @require("app/views/admin/modais/modalEditPost.php");
-        @require("app/views/admin/modais/modalDeletePost.php");
-        @require("app/views/admin/modais/modalCriarPost.php");
-
+        foreach ($posts as $post) {
+            require("app/views/admin/modais/modalViewPost.php");
+            require("app/views/admin/modais/modalEditPost.php");
+            require("app/views/admin/modais/modalDeletePost.php");
+        }
         ?>
     </div>
 

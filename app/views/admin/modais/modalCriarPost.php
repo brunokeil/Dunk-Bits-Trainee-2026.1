@@ -4,65 +4,29 @@
     <button class="closeModalBtn terciaryBtn">X</button>
   </span>
 
-  <form class="modalForm" action="admin-posts/create" method="post" enctype="multipart/form-data">
-
-
+  <form class="modalForm" action="/postsadmin/create" method="POST" enctype="multipart/form-data">
     <div class="postInfo">
-
-      <div class="postPicture">
-        <img
-          src="/public/assets/placeholder/blank-prof-pic.png "
-          class="imgPostPic imgProfPic" />
-        <input type="file" class="profileInput" accept="image/*" hidden />
+      <div class="postPicture"> 
+        <input name="cover_image" type="file" class="imgPostPic imgProfPic" accept="image/*" id="imagemDoPost" aria-label="IMAGEM DO POST"/>
       </div>
-
       <div class="authorData">
-
         <div class="inputGroup">
-          <ion-icon name="person"></ion-icon>
-
-          <input
-            type="text"
-            class="postAuthor"
-            placeholder="Username"
-            value=""
-            disabled
-            id="viewAuthor" />
-        </div>
-
-        <div class="inputGroup">
-
-          <input
-            type="text"
-            class="postDate"
-            placeholder="Data"
-            value="?"
-            disabled
-            id="viewDate" />
+          <input type="text" class="postTipo" placeholder="Insira tipo do POST" id="postTipo" name="postTipo"/>
         </div>
       </div>
-
     </div>
 
     <div class="postContent">
 
-      <textarea
-        class="titleInput"
-        placeholder="Titulo do post"
-        id="viewTitle"></textarea>
+      <textarea name="tituloDoPost" class="titleInput" placeholder="Titulo do post" id="viewTitle"></textarea>
 
-      <textarea
-        class="descriptionInput"
-        placeholder="Descrição"
-        id="viewDescription"></textarea>
-
+      <textarea name="descricaoDoPost" class="descriptionInput" placeholder="Descrição" id="viewDescription"></textarea>
 
     </div>
-
-
+    <div class="footerButtons">
+      <button type="button" class="closeModalBtn cancelBtn">CANCELAR</button>
+      <button type="submit" class="primaryBtn">CRIAR</button>
+    </div>
   </form>
-  <div class="footerButtons">
-    <button type="button" class="closeModalBtn cancelBtn">CANCELAR</button>
-    <button class="primaryBtn">CRIAR</button>
-  </div>
 </div>
+

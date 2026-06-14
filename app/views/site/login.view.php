@@ -17,21 +17,29 @@
 		</a>
 
 		<h2 class="tituloLoginCadastro">LOGIN</h2>
+		<div class="mensagemErro">
+			<p>
+				<?php
+					if(isset($_SESSION['mensagem-erro'])){
+						echo $_SESSION['mensagem-erro'];
+					}
+					unset($_SESSION['mensagem-erro']);
+				?>
+			</p>
+		</div>
 
 		<form action="/login" method="POST">
 			<input type="hidden" value="<?= $redirect ?>" name="redirect">
 			<div class="inputBox">
-				<label>
-					<input name="email" id="email" type="text" placeholder="EMAIL" />
-				</label>
+				<input name="email" id="email" type="text" placeholder="EMAIL" aria-label="DIGITAR EMAIL"/>
 			</div>
 			<div class="inputBox">
-				<label>
-					<input name="senha" id="senha" type="password" placeholder="SENHA">
-					<ion-icon name="eye-off-outline" class="olho" id="olhoSenha"></ion-icon>
-				</label>
+				<input name="senha" id="senha" type="password" placeholder="SENHA" aria-label="DIGITAR SENHA">
+				<ion-icon name="eye-off-outline" class="olho" id="olhoSenha"></ion-icon>
 			</div>
-
+			<div class="inputBox">
+				<a href="/cadastro" class="ancoraReferencia">CRIAR CONTA </a>
+			</div>			
 			<button type="submit" class="buttonEntrar">LOGIN</button>
 		</form>
 	</main>

@@ -2,333 +2,327 @@
 
 /*----- Lista-De-Posts ----*/
 
-* {
-  box-sizing: border-box;
-  /* outline: 1px solid blue; */
-}
 
-body {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 0;
-  background-image: var(--bg-lista-posts);
-  background-attachment: fixed;
-  background-size: cover;
+main {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	background-image: var(--bg-lista-posts);
+	background-attachment: fixed;
+	background-size: cover;
 }
 
 section {
-  display: flex;
-  height: auto;
-  padding: 0 1.5rem;
-  justify-content: flex-start;
-  align-items: center;
-  align-self: stretch;
+	display: flex;
+	height: auto;
+	padding: 0 1.5rem;
+	justify-content: flex-start;
+	align-items: center;
+	align-self: stretch;
 }
 
 #secao-barra {
-  justify-content: space-between;
+	justify-content: space-between;
 }
 
 #search {
-  display: flex;
-  align-items: center;
-  background-color: var(--white-100);
-  width: 100%;
-  max-width: 45em;
-  height: 4em;
-  border-radius: 2em;
-  color: var(--white-100);
-  padding: 0 1.5em;
-  gap: 15px;
-  position: relative;
+	display: flex;
+	align-items: center;
+	background-color: var(--white-100);
+	width: 100%;
+	max-width: 45em;
+	height: 4em;
+	border-radius: 2em;
+	color: var(--white-100);
+	padding: 0 1.5em;
+	gap: 15px;
+	position: relative;
 }
 
 #form-search {
-  display: flex;
-  align-items: center;
-  flex: 1;
-  gap: 10px;
+	display: flex;
+	align-items: center;
+	flex: 1;
+	gap: 10px;
 }
 
-
 #search ion-icon {
-  font-size: 1.5em;
+	font-size: 1.5em;
 }
 
 #search-text {
-  flex: 1;
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  color: var(--black-100);
+	flex: 1;
+	border: none;
+	outline: none;
+	font-size: 1rem;
+	color: var(--black-100);
 }
 
 #search-text::placeholder {
-  font-size: 1.2rem;
-  color: var(--black-100);
+	font-size: 1.2rem;
+	color: var(--black-100);
 }
 
 .divisor-vertical {
-  font-size: 1.8rem;
-  color: var(--black-100);
+	font-size: 1.8rem;
+	color: var(--black-100);
 }
 
 #icone-busca {
-  position: static;
-  height: 4.5em;
-  width: auto;
-  margin-right: -60px;
-  z-index: 10px;
+	position: static;
+	height: 4.5em;
+	width: auto;
+	margin-right: -60px;
+	z-index: 10px;
 }
 
 #botao-filtro {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--linear-orange-gradient3);
-  border: none;
-  margin-left: 15px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--linear-orange-gradient3);
+	border: none;
+	margin-left: 15px;
 }
 
 #botao-filtro ion-icon {
-  font-size: 3.5rem;
-  color: var(--black-100);
+	font-size: 3.5rem;
+	color: var(--black-100);
 }
 
 #grupo-filtro {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  position: relative;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	position: relative;
 }
 
 #filtros-opcoes {
-  display: flex;
-  gap: 10px;
-  max-width: 0;
-  opacity: 0;
-  transition: all 0.3s ease;
-  pointer-events: none;
+	display: flex;
+	gap: 10px;
+	max-width: 0;
+	opacity: 0;
+	transition: all 0.3s ease;
+	pointer-events: none;
 }
 
 #filtros-opcoes.active {
-  display: flex;
-  max-width: 800px;
-  opacity: 1;
-  flex-direction: row;
-  gap: 10px;
-  pointer-events: auto;
-  z-index: 100;
+	display: flex;
+	max-width: 800px;
+	opacity: 1;
+	flex-direction: row;
+	gap: 10px;
+	pointer-events: auto;
+	z-index: 100;
 }
 
 .botao-filtro-item {
-  background-color: var(--orange-100);
-  color: var(--white-100);
-  padding: 10px;
-  border-radius: 20px;
-  font-family: var(--font-bebas-neue);
-  cursor: pointer;
-  white-space: nowrap;
-  font-size: 1.4rem;
-  box-shadow: 6px 5px 4px 0 rgba(88, 46, 5, 0.29);
-  border: 1px solid var(--dark-orange-100);
+	background-color: var(--orange-100);
+	color: var(--white-100);
+	padding: 10px;
+	border-radius: 20px;
+	font-family: var(--font-bebas-neue);
+	cursor: pointer;
+	white-space: nowrap;
+	font-size: 1.4rem;
+	box-shadow: 6px 5px 4px 0 rgba(88, 46, 5, 0.29);
+	border: 1px solid var(--dark-orange-100);
 }
 
 .botao-filtro-item:hover {
-  background-color: var(--white-100);
-  color: var(--orange-100);
-  transform: translateY(-2px);
+	background-color: var(--white-100);
+	color: var(--orange-100);
+	transform: translateY(-2px);
 }
 
 @media (max-width: 1000px) {
-  #filtros-opcoes.active {
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    /* background-color: var(--bg-lista-posts); */
-    padding: 10px;
-    border-radius: 20px;
-    z-index: 100;
-    max-width: 250px;
-  }
+	#filtros-opcoes.active {
+		flex-direction: column;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		/* background-color: var(--bg-lista-posts); */
+		padding: 10px;
+		border-radius: 20px;
+		z-index: 100;
+		max-width: 250px;
+	}
 }
 
 ion-icon {
-  display: flex;
-  line-height: 1;
-  vertical-align: middle;
+	display: flex;
+	line-height: 1;
+	vertical-align: middle;
 }
 
 #container-titulo {
-  border-top: solid 0.4rem var(--black-100);
-  padding: 0 40px;
-  align-items: center;
+	border-top: solid 0.4rem var(--black-100);
+	padding: 0 40px;
+	align-items: center;
 }
 
 #secao-titulo h1 {
-  font-size: 6rem;
-  color: var(--pearl-grey-100);
-  font-style: var(--font-quicksand);
+	font-size: 6rem;
+	color: var(--pearl-grey-100);
+	font-style: var(--font-quicksand);
 }
 
 #container-posts {
-  display: grid;
-  grid-template-columns: repeat(3, 350px);
-  justify-content: center;
-  justify-items: center;
-  row-gap: 50px;
-  column-gap: 60px;
-  width: 100%;
-  padding: 40px 10px;
+	display: grid;
+	grid-template-columns: repeat(3, 350px);
+	justify-content: center;
+	justify-items: center;
+	row-gap: 50px;
+	column-gap: 60px;
+	width: 100%;
+	padding: 40px 10px;
 }
 
 @media (max-width: 1150px) {
-  #container-posts {
-    grid-template-columns: repeat(2, 350px);
-  }
+	#container-posts {
+		grid-template-columns: repeat(2, 350px);
+	}
 }
 
 @media (max-width: 740px) {
-  #container-posts {
-    grid-template-columns: repeat(1, 350px);
-  }
+	#container-posts {
+		grid-template-columns: repeat(1, 350px);
+	}
 }
 
 .card {
-  width: 100%;
-  max-width: 350px;
-  height: 375px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: var(--pearl-grey-100);
-  /* background-image: url(../assets/placeholder/dinosaur.png); */
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: bottom center;
-  border-radius: 16px;
-  box-shadow: 6px 5px 4px 0 rgba(88, 46, 5, 0.29);
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  transition:
-    opacity 1.2s ease,
-    transform 1.2s ease;
-  opacity: 0;
-  transform: translateX(80px);
+	width: 100%;
+	max-width: 350px;
+	height: 375px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: var(--pearl-grey-100);
+	/* background-image: url(../assets/placeholder/dinosaur.png); */
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: bottom center;
+	border-radius: 16px;
+	box-shadow: 6px 5px 4px 0 rgba(88, 46, 5, 0.29);
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+	transition:
+		opacity 1.2s ease,
+		transform 1.2s ease;
+	opacity: 0;
+	transform: translateX(80px);
 }
 
 .card-imagem {
-  width: 100%;
-  max-width: 350px;
-  height: 375px;
-  object-fit: cover;
+	width: 100%;
+	max-width: 350px;
+	height: 375px;
+	object-fit: cover;
 }
 
 .card.mostrar {
-  opacity: 1;
-  transform: translateX(0);
+	opacity: 1;
+	transform: translateX(0);
 }
 
 .card-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 20px;
-  transition: opacity 0.3s ease;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 20px;
+	transition: opacity 0.3s ease;
 }
 
 .card-titulo-fixo {
-  color: var(--white-100);
-  font-size: 3rem;
+	color: var(--white-100);
+	font-size: 3rem;
 }
 
 .card-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--pearl-grey-80);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 30px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  backdrop-filter: blur(2px);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--pearl-grey-80);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 30px;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	backdrop-filter: blur(2px);
 }
 .card-titulo-overlay {
-  color: var(--white-100);
-  font-size: 300%;
-  margin-bottom: 5px;
+	color: var(--white-100);
+	font-size: 300%;
+	margin-bottom: 5px;
 }
 
 .card-autor {
-  color: var(--white-100);
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-size: 150%;
+	color: var(--white-100);
+	font-weight: bold;
+	margin-bottom: 10px;
+	font-size: 150%;
 }
 
 .card-descricao {
-  color: var(--white-100);
-  font-size: 100%;
+	color: var(--white-100);
+	font-size: 100%;
 }
 
 .card:hover .card-footer {
-  opacity: 0;
+	opacity: 0;
 }
 
 .card:hover .card-overlay {
-  opacity: 1;
+	opacity: 1;
 }
 
 #container-paginacao {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 0;
 }
 
 #paginacao {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
 }
 
 #paginacao button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	background: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #pontos {
-  display: flex;
-  gap: 5px;
+	display: flex;
+	gap: 5px;
 }
 
 .ponto ion-icon {
-  font-size: 1rem;
-  color: var(--black-100);
+	font-size: 1rem;
+	color: var(--black-100);
 }
 
 #pontos .ponto.ativo {
-  color: var(--black-100);
+	color: var(--black-100);
 }
 
 .seta ion-icon {
-  font-size: 2rem;
-  color: var(--pearl-grey-100);
+	font-size: 2rem;
+	color: var(--pearl-grey-100);
 }
 
 /*----- Lista de Posts ---- */

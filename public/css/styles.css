@@ -79,22 +79,32 @@
 	--linear-red-gradient: linear-gradient(-150deg, #830000 34%, #b43c00 87%);
 
 	/* ----- FUNDOS DE PAGINAS */
-	--bg-landing-page: linear-gradient(
-		25deg,
-		#ff6600,
-		#ff8534,
-		#ff6600,
-		#ff7c25,
-		#ff9d5c,
-		#ff7c25
-	);
+	--bg-landing-page:
+		radial-gradient(
+			circle at bottom left,
+			#8e3a0a,
+			#050517 40%,
+			#0073ff 290%
+		),
+		radial-gradient(circle at top right, #0073ff 40%, #c1c1c1);
+
 	--bg-lista-posts: linear-gradient(224deg, #fea163 31.27%, #d35400 55.9%);
-    
-    --bg-table-users: linear-gradient(rgba(0, 0, 128, 0.5), rgba(0, 0, 128, 0.5)), url("../assets/bg_images/bg_table_users.png");
 
-    --bg-table-posts: linear-gradient(rgba(0, 0, 128, 0.5), rgba(0, 0, 128, 0.5)), url("../assets/bg_images/bg_table_posts.png");
+	--bg-modal-posts: linear-gradient(45deg, #0f0f4f, #0b0b22);
+	--bg-modal: linear-gradient(45deg, #c25100, #ef9118 67%);
+	--bg-modal1: linear-gradient(-117deg, #ffffff80 42%, #bbbbbb80 87%);
+	--bg-error: linear-gradient(-150deg, #830000 34%, #b43c00 87%);
+	--bg-success: linear-gradient(45deg, #11113acc, #0e0e2dcc);
+	--bg-table-users:
+		linear-gradient(rgba(0, 0, 128, 0.5), rgba(0, 0, 128, 0.5)),
+		url("../assets/bg_images/bg_table_users.png");
 
-	--bg-modal: linear-gradient(-117deg, #ffffff80 42%, #bbbbbb80 87%);
+	--bg-table-posts:
+		linear-gradient(rgba(0, 0, 128, 0.5), rgba(0, 0, 128, 0.5)),
+		url("../assets/bg_images/bg_table_posts.png");
+
+	--bg-modal: radial-gradient(circle at top right, #ef9118 40%, #ac4800);
+	/* --bg-modal: linear-gradient(210deg, #EF9118 50%, #9B4101); */
 	--bg-error: linear-gradient(-150deg, #830000 34%, #b43c00 87%);
 	--bg-success: linear-gradient(45deg, #11113acc, #0e0e2dcc);
 
@@ -106,9 +116,18 @@
 	--font-quicksand: "Quicksand", sans-serif;
 }
 
+html {
+	overflow-x: hidden;
+}
+
 *,
 *::before,
 *::after {
+	box-sizing: border-box;
+	color: var(--color-dark-text);
+	font-family: var(--font-quicksand);
+	padding: 0;
+	margin: 0;
 	box-sizing: content-box;
 	color: var(--color-dark-text);
 	font-family: var(--font-quicksand);
@@ -129,9 +148,9 @@ p {
 	font-family: var(--font-quicksand);
 }
 
-/*----- FIM ROOT -----*/
-
-
+textarea {
+	resize: none;
+}
 
 /* ---- BOTOES GERAIS ---- */
 
@@ -139,10 +158,10 @@ button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0.4rem 0.7rem;
+	padding: 0.5rem 1rem;
 
 	border: 0;
-	border-radius: 0.8rem;
+	border-radius: 1.8rem;
 
 	font-weight: 600;
 	color: var(--white-100);
@@ -166,10 +185,10 @@ button:hover {
 
 .secondaryBtn {
 	color: var(--white-100);
-	background: var(--white-50);
+	background: var(--white-25);
 }
 .secondaryBtn:hover {
-	background: var(--white-80);
+	background: var(--white-50);
 }
 
 .terciaryBtn {
@@ -177,7 +196,8 @@ button:hover {
 	background: none;
 }
 .terciaryBtn:hover {
-	background: var(--white-25);
+	/* background: var(--white-25); */
+	text-decoration: underline;
 }
 
 /* ------------------------------------- */
