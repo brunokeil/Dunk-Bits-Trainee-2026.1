@@ -8,8 +8,8 @@
     <div class="userProfilePicture">
       <img
         class="imgProfPic" />
-        <input type="file" name="imagem" class="profileInput" accept="image/*" hidden />
-         <ion-icon class="icone-img" name="image-outline"></ion-icon>
+      <input type="file" name="imagem" class="profileInput" accept="image/*" hidden />
+      <ion-icon class="icone-img" name="image-outline"></ion-icon>
       <h4 class="txt-img">
         Arraste sua imagem aqui
         ou clique para escolher um arquivo
@@ -20,19 +20,21 @@
       <div class="inputGroup">
         <ion-icon name="person"></ion-icon>
 
-        <input type="text" class="usernameInput" placeholder="*Username" id="create-username" name="name" aria-label="*Username"/>
+        <input type="text" class="usernameInput" placeholder="*Username" id="create-username" name="name" aria-label="*Username" />
       </div>
 
       <div class="inputGroup">
         <ion-icon name="mail"></ion-icon>
 
-        <input type="email" class="emailInput" placeholder="*E-mail" id="create-email" name="email" aria-label="*E-mail"/>
+        <input type="email" class="emailInput" placeholder="*E-mail" id="create-email" name="email" aria-label="*E-mail" />
       </div>
 
       <div class="inputGroup">
         <ion-icon name="lock-closed"></ion-icon>
 
-        <input type="password" class="passwordInput" placeholder="*Senha" id="create-senha" name="password" aria-label="*Senha"/>
+        <input type="password" class="passwordInput" placeholder="*Senha" id="senha1" name="password" arial-label="*Senha" />
+
+        <ion-icon name="eye-off-outline" class="olho" id="olhoSenha1"></ion-icon>
       </div>
       <div class="inputGroup">
         <ion-icon name="lock-closed"></ion-icon>
@@ -40,7 +42,9 @@
         <input
           type="password"
           class="passwordInput"
-          placeholder="*Confirme a Senha" id="create-senha-confirm" aria-label="*Confirme a Senha" />
+          placeholder="*Confirme a Senha" id="confirmarsenha" aria-label="*Confirme a Senha" name="confirm-password" />
+
+        <ion-icon name="eye-off-outline" class="olho" id="olhoConfirmarSenha"></ion-icon>
       </div>
 
       <div class="admin-question">

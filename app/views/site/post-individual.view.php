@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Post Individual</title>
+  <link rel="stylesheet" href="/public/css/modais-usuarios.css" />
   <link rel="stylesheet" href="../../../public/css/footer.css" />
   <link rel="stylesheet" href="../../../public/css/navbar.css" />
   <link rel="stylesheet" href="/public/css/post-individual.css" />
@@ -46,8 +47,6 @@
         <div class="footer">
           <div class="metadados">
             <span><?php
-
-                  $author = App\Core\App::get('database')->selectOne('users', $post->author);
                   echo $author->name;
 
                   ?>
@@ -131,13 +130,13 @@
                     <ion-icon name="pencil-outline"></ion-icon>
                   </button>
 
-                  <form action="post-individual/comment/delete" method="POST" class="form-deletar">
-                    <input type="hidden" name="id" value="<?= $c->id ?>">
-                    <input type="hidden" name="post_id" value="<?= $post->id ?>">
-                    <button type="submit" class="btn-excluir-icone">
-                      <ion-icon name="trash-outline"></ion-icon>
-                    </button>
-                  </form>
+                  <button
+                    type="button"
+                    class="btn-excluir-icone delete-comment-btn"
+                    data-id="<?= $c->id ?>"
+                    data-post-id="<?= $post->id ?>">
+                    <ion-icon name="trash-outline"></ion-icon>
+                  </button>
                 </div>
               <?php endif; ?>
             </div>
@@ -178,6 +177,15 @@
 
   </main>
   <?php @require "footer.view.php" ?>
+  <div class="modal-container close">
+    <?php
+
+    require("app/views/admin/modais/modal-deletar-comentario.php");
+
+    ?>
+
+    <script src="/public/js/post-individual.js"></script>
+  </div>
 </body>
 
 

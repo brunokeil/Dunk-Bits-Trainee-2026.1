@@ -141,6 +141,7 @@
 
       if (isset($_SESSION['error_message'])) {
         require("app/views/admin/modais/modal-erro-usuario.php");
+        unset($_SESSION['error_message']);
       }
       ?>
 
