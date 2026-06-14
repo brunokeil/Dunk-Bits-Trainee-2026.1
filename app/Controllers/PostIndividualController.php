@@ -64,7 +64,7 @@ class PostIndividualController
             $userEhAdmin = $usuarioLogado ? (bool)$usuarioLogado->is_admin : false;
         }
 
-
+        $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
         return view('site/post-individual', [
             'post' => $post,
@@ -72,7 +72,8 @@ class PostIndividualController
             'comments' => $comments,
             'postCoverImage' => $postImage,
             'usuarioLogado' => $usuarioLogado,
-            'userEhAdmin' => $userEhAdmin
+            'userEhAdmin' => $userEhAdmin,
+            'currentPage' => $currentPage
         ]);
     }
 
