@@ -1,4 +1,5 @@
 
+// ---------------------Função que abre e fecha Modais---------------------
 const tela = document.querySelector('#tela');
 
 function abrirModal(idModal){
@@ -12,4 +13,19 @@ function fecharModal(idModal){
     modal.style.display = 'none';
     tela.style.display = 'none';
 }
+
+// ---------------------Função que expande a descrição---------------------
+function expandir(element) {
+    element.style.height = 'auto'; 
+    let novaAltura = element.scrollHeight;
+    element.style.height = novaAltura + 'px';
+
+    let container = element.parentElement;
+    if (novaAltura > 20) {
+        container.classList.add('expandido');
+    } else {
+        container.classList.remove('expandido');
+    }
+}
+
 
