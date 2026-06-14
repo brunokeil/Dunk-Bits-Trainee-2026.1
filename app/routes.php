@@ -40,6 +40,8 @@ $router->get('landingpage', 'LandingPageController@index');
 
 $router->post('login', 'LoginController@logar');
 
+$router->get('logout', 'LoginController@deslogar');
+
 $router->post('logout', 'LoginController@deslogar');
 
 $router->post('cadastro/create', 'CadastroController@criar');
@@ -52,8 +54,6 @@ $router->post('postsadmin/create', 'PostsAdminController@store');
 
 $router->post('login', 'LoginController@logar');
 
-$router->post('logout', 'LogoutController@deslogar');
-
 $router->get('post-individual', 'PostIndividualController@index');
 
 $router->get('admin-users', 'UsuariosController@index');
@@ -63,6 +63,8 @@ $router->post('admin-users/create', 'UsuariosController@store');
 $router->post('admin-users/edit', 'UsuariosController@edit');
 
 $router->post('postsadmin/edit', 'PostsAdminController@edit');
+
+$router->post('postsadmin/delete', 'PostsAdminController@delete');
 
 $router->post('admin-users/delete', 'UsuariosController@delete');
 
