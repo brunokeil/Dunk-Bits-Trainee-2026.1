@@ -14,6 +14,21 @@
 				<ion-icon name="close-outline"></ion-icon>
 			</a>
 			<h2 class="tituloLoginCadastro">CADASTRO</h2>
+
+			<div class="mensagemErro">
+				<p>
+					<?php
+						if(isset($_SESSION['senhas-diferentes'])){
+							echo $_SESSION['senhas-diferentes'];
+						}else if(isset($_SESSION['email-usado'])){
+							echo $_SESSION['email-usado'];
+						}
+						unset($_SESSION['senhas-diferentes']);
+						unset($_SESSION['email-usado']);
+					?>
+				</p>
+			</div>
+			
 			<form action="/cadastro/create" method="POST">  
 				<div class="inputBox">
 					<input type="text" name="name" placeholder="NOME" aria-label="ESCREVER NOME"/>
@@ -36,6 +51,9 @@
 					<p class="requisitosSenha" id="senhaCaracterEspecial">*Senha deve conter pelo menos 1 caracter especial</p>
 					<p class="requisitosSenha" id="senhaNumero">*Senha deve conter pelo menos 1 numero</p>
 				</div>
+				<div class="inputBox">
+					<a href="/login" class="ancoraReferencia">JÁ POSSUI CONTA?</a>
+				</div>		
 				<button type="submit" class="buttonEntrar">CRIAR</button>
 			</form>
 		</main>
