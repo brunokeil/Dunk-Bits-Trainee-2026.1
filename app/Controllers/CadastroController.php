@@ -25,7 +25,13 @@ class CadastroController
         
         $confirmarsenha = $_POST['confirmarsenha'];
 
-        if($parameters['name'] && $parameters['email'] && $parameters['password'] && ($confirmarsenha === $parameters['password'])){
+        if($confirmarsenha !== $parameters['password']){
+            $_SESSION['senhas-diferentes'] = "Senhas diferentes!";
+            header('Location: /cadastro');
+        }else if(App::get(key: 'database')->existe($parameters['email'])){
+            $_SESSION['email-usado'] = "Email já cadastrado!";
+            header('Location: /cadastro');
+        }else if($parameters['name'] && $parameters['email'] && $parameters['password'] && ($confirmarsenha === $parameters['password'])){
             App::get('database')->insert('users', $parameters);
             $user = App::get(key: 'database')->verificaLogin($parameters['email'], $parameters['password']);
             $_SESSION['id'] = $user->id;
