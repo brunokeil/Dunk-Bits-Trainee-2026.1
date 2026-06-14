@@ -1,4 +1,4 @@
-<div class="modalPost warningModal close" id="modalDelete">
+<div class="modalPost warningModal close" id="modalDeletePost-<?= $post->id?>">
   <div class="warningHeader">
     <ion-icon name="warning"></ion-icon>
 
