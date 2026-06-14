@@ -10,9 +10,11 @@ class PostsAdminController
 
     public function index()
     {
-        $posts = App::get('database')->selectAllAndJoin('posts');
-
-        return view('admin/posts-admin', compact('posts'));
+        if(isset($_SESSION['id'])){
+            $posts = App::get('database')->selectAllAndJoin('posts');
+            return view('admin/posts-admin', compact('posts'));
+        }
+        header('Location: /login');
     }
 
     public function store(){
@@ -39,7 +41,7 @@ class PostsAdminController
     }
 
     public function edit(){
-            $temporario = $_FILES['cover_image']['tmp_name'];
+        $temporario = $_FILES['cover_image']['tmp_name'];
     
         $nomeimagem = sha1(uniqid($_FILES['cover_image']['name'], true)) . "." . pathinfo($_FILES['cover_image']['name'], PATHINFO_EXTENSION);
 
@@ -59,6 +61,12 @@ class PostsAdminController
         $id = $_POST['id'];
 
         App::get(key: 'database')->update('posts', $id, $parameters);
+        header('Location: /postsadmin');
+    }
+
+    public function delete(){
+        $id = $_POST['id'];
+        App::get(key: 'database')->delete('posts', $id);
         header('Location: /postsadmin');
     }
 }
