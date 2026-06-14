@@ -1,11 +1,33 @@
-<footer class="rodape">
-    <div class="acima">
-        <div class="social">
-            <h3>REDES SOCIAIS</h3>
-            <div class="redes">
-                <ion-icon name="logo-instagram"></ion-icon>
-                <ion-icon name="logo-facebook"></ion-icon>
-                <ion-icon name="logo-twitter"></ion-icon>
+        <footer class="rodape">
+            <div class="acima">
+                <div class="social">
+                    <h3>REDES SOCIAIS</h3>
+                    <div class="redes">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </div>
+                </div>
+                <div class="logo">
+                    <img id="logodunk" src="../../../public/assets/logo_dunkbits.png" alt="Logo do Site" class="logo_dunkbits"/>
+                    <span class="textoMissaoHover">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry.</span>
+                    <span class="textoVisaoHover">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </span>
+                    <span class="textoValoresHover">
+                        Morbi feugiat felis nec turpis laoreet euismod. Donec
+                        rutrum leo vitae massa cursus</span>
+                </div>
+
+                <div class="contato">
+                    <h3>CONTATO</h3>
+                    <div class="infoContato">
+                        <p>(00) 00000-0000</p>
+                        <p>exemplo@gmail.com</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="logo">

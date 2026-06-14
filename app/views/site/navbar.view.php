@@ -2,6 +2,14 @@
 	<a href="#">
 		<img src="../../../public/assets/logo_zoom.png" alt="Logo da Empresa" class="logo_dunkbits" />
 	</a>
+	<nav class="menu">
+		<a href="/" class="buttonSemFundo">HOME</a>
+		<a href="/lista-posts" class="buttonSemFundo">POSTS</a>
+		<a href="/dashboard" class="buttonSemFundo">DASHBOARD</a>
+		<a href="/login" class="buttonLogin">LOGIN</a>
+
+	</nav>
+
 	<div class="hamburguer" id="buttonMenuMobile">
 		<ion-icon name="menu-outline"></ion-icon>
 	</div>
@@ -10,9 +18,9 @@
 <nav class="menuMobile" id="telaMenuMobile">
 	<img src="../../../public/assets/logo_zoom.png" alt="Logo da Empresa" class="logoMobile" />
 
-	<a href="/landingpage" class="terciaryBtn">HOME</a>
-	<a href="/listaposts" class="terciaryBtn">POSTS</a>
-	<a href="/dashboard" class="terciaryBtn">DASHBOARD</a>
+	<a href="/" class="buttonSemFundo">HOME</a>
+	<a href="lista-posts" class="buttonSemFundo">PUBLICAÇÕES</a>
+	<a href="/dashboard" class="buttonSemFundo">DASHBOARD</a>
 	<a href="/login" class="buttonLogin">LOGIN</a>
 
 	<div class="buttonFecharMenu" id="buttonFecharMenu">

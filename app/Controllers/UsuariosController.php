@@ -16,9 +16,6 @@ class UsuariosController
             exit;
         }
 
-
-
-
         $database = App::get("database");
 
         $usuarioLogado = $database->selectOne('users', $_SESSION['id']);
@@ -73,8 +70,15 @@ class UsuariosController
 
     public function store()
     {
-
+        $database = App::get("database");
         $imgName = $this->getFormImage();
+
+
+        if ($database->existe($_POST['email'])) {
+            $_SESSION['error_message'] = "Não foi possível atualizar: O e-mail informado já está em uso!";
+            header('Location: /admin-users');
+            exit;
+        }
 
         $parameters = [
             'name' => $_POST['name'],
@@ -84,13 +88,20 @@ class UsuariosController
             'profile_image' => $imgName
         ];
 
-        App::get("database")->insert('users', $parameters);
+        $database->insert('users', $parameters);
         header('Location: /admin-users');
     }
 
     public function edit()
     {
         $imgName = $this->getFormImage();
+
+        $database = App::get("database");
+
+        if ($database->existe($_POST['email'])) {
+            header('Location: /admin-users');
+            exit;
+        }
 
         if ($imgName != null) {
             $parameters = [
@@ -110,7 +121,7 @@ class UsuariosController
 
         $id = $_POST['id'];
 
-        App::get("database")->update('users', $id, $parameters);
+        $database->update('users', $id, $parameters);
         header('Location: /admin-users');
     }
 

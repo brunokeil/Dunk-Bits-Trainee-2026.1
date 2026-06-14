@@ -1,5 +1,8 @@
 @import "./styles.css";
 
+* {
+	/* outline: 1px solid blue; */
+}
 /* ---------------- exemplo -------------------- */
 
 /* classes de view */
@@ -42,19 +45,25 @@ button:hover {
 
 .admin-question {
 	display: flex;
-	justify-content: center;
+	align-items: center;
+	justify-content: flex-end;
+	width: 100%;
+}
+
+.admin-question input[type="checkbox"] {
+	margin-left: 10px;
+	margin-right: 5px;
 }
 
 .cancelBtn {
-    background: none;
-    color: var(--white-100);
-    text-decoration: underline;
+	background: none;
+	color: var(--white-100);
+	text-decoration: underline;
 }
 .cancelBtn:hover {
-    background: none;
-    color: var(--white-100);
+	background: none;
+	color: var(--white-100);
 }
-
 
 #criar-usuario,
 #editar-usuario {
@@ -66,22 +75,20 @@ button:hover {
 .inputGroup {
 	border: 1px solid white;
 	border-radius: 8px;
-}
-
-.inputGroup input {
-	color: var(--white-100);
-	font-weight: 600;
-	font-size: medium;
 
 	background: none;
 
-    padding: 0.6rem 1rem;
+	border-radius: 8px;
+	padding: 4%;
+
+	padding: 0.6rem 1rem;
 
 	text-wrap: nowrap;
 
 	outline: none;
 	border: none;
 	transition: background 120ms ease;
+	width: 100%;
 }
 
 .inputGroup ion-icon {
@@ -128,6 +135,7 @@ button:hover {
 }
 
 /* ----------------- modal view padrão ----------------- */
+
 .modalUser {
 	position: absolute;
 	z-index: 4;
@@ -135,19 +143,41 @@ button:hover {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 20px;
+	gap: 10px;
 
-	padding: 2rem;
+	padding-block: 30px;
+	padding-inline: 80px;
 
 	overflow-y: auto;
 
-	background: var(--linear-orange-gradient5);
-	border-radius: 16px;
+	background:
+		radial-gradient(
+			136.68% 167.85% at 140.67% 11.14%,
+			#eea600 0%,
+			#ef6400 100%
+		),
+		linear-gradient(
+			200deg,
+			rgba(255, 255, 255, 0.5) 43.04%,
+			rgba(187, 187, 187, 0.5) 80.67%
+		);
+	border-radius: 25px;
 }
 
 #createModal,
 #editModal {
-	width: min(90vw, 520px);
+	width: min(90vw, 300px);
+}
+
+@media (max-width: 410px) {
+	#createModal,
+	#editModal {
+		width: min(80vw, 230px);
+	}
+}
+
+#createModal .modalUser {
+	padding: 0;
 }
 
 /* parte superior */
@@ -162,15 +192,20 @@ button:hover {
 
 /* foto de perfil */
 .userProfilePicture {
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+
 	width: 100%;
 	max-width: 700px;
-	min-width: 300px;
+	min-width: 200px;
 	min-height: auto;
 	aspect-ratio: 0.9;
+	margin: 0 auto;
 
 	border-radius: 10px;
 
-	border: 4px dashed white;
+	border: 4px dashed var(--white-100);
 
 	display: flex;
 	flex-direction: column;
@@ -208,9 +243,14 @@ button:hover {
 }
 
 .imgProfPic {
+	position: absolute;
+	top: 0;
+	left: 0;
+
 	width: 100%;
 	height: 100%;
 	max-width: 800px;
+
 	object-fit: cover;
 
 	border-radius: 10px;
@@ -220,6 +260,14 @@ button:hover {
 .imgProfPic:hover {
 	filter: brightness(0.75);
 	cursor: pointer;
+}
+
+.txt-img {
+	color: var(--white-100);
+	font-size: 1em;
+	max-width: 6em;
+	text-align: center;
+	font-family: var(--font-quicksand);
 }
 
 /* dados user */
@@ -233,20 +281,23 @@ button:hover {
 	justify-content: center;
 
 	min-width: 100%;
-	width: fit-content;
 	/* border: 1px solid red; */
-	gap: 10px;
-	margin-block: 10px;
+	gap: 5px;
+	margin-block: 5px;
 }
 
 .inputGroup {
-	width: 100%;
+	width: 120%;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 	padding-inline: 5px;
-	border: 1px solid white;
+	border: 1px solid var(--white-100);
 	border-radius: 8px;
+	background-color: var(--light-orange-75);
+}
+#viewModal .inputGroup {
+	width: 100%;
 }
 
 .icone-titulo {
@@ -271,9 +322,23 @@ button:hover {
 }
 
 .footerButtons {
+	padding: 10px;
 	display: flex;
+	align-items: center;
+	gap: 20px;
+	width: 100%;
+	justify-content: flex-end;
+	font-size: 10px;
+}
 
-	justify-content: end;
+#createModal .footerButtons {
+	padding-bottom: 4px;
+}
+
+#form-delete,
+#form-create,
+#form-edit {
+	width: 100%;
 }
 
 .footerButtons > * {
@@ -303,7 +368,6 @@ button:hover {
 }
 
 /* --------------------- */
-
 ion-icon {
 	min-height: 1rem;
 	min-width: 1rem;
