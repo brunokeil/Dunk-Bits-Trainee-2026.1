@@ -9,16 +9,15 @@
 
     <div class="postInfo">
       <div class="postPicture">
-        <img src="/public/assets/placeholder/blank-prof-pic.png" class="imgPostPic imgProfPic"/>
-        <input type="file" class="profileInput" accept="image/*" hidden/>
+        <img src="<?=$post->cover_image?>"/>
       </div>
       <div class="authorData">
         <div class="inputGroup">
           <ion-icon name="person"></ion-icon>
-          <input type="text" class="postAuthor" placeholder="Username" value="<?= $post->author_name?>" disabled id="viewAuthor"/>
+          <input type="text" class="postAuthor" placeholder="Username" value="<?=$post->author_name?>" disabled id="viewAuthor"/>
         </div>
         <div class="inputGroup">
-          <input type="text" class="postDate" placeholder="Data" value="<?= $post->created_at?>" disabled id="viewDate" />
+          <input type="text" class="postDate" placeholder="Data" value="<?=$post->created_at?>" disabled id="viewDate" />
         </div>
       </div>
     </div>
