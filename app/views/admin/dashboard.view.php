@@ -34,7 +34,7 @@
         </a>
       <?php endif ?>
 
-      <a href="/posts-admin" id="tabela-posts">
+      <a href="/postsadmin" id="tabela-posts">
         <ion-icon name="albums-outline"></ion-icon>
         TABELA DE POSTS (ADMIN)
       </a>

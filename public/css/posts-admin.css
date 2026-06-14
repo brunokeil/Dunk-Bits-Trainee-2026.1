@@ -108,6 +108,33 @@ td {
 	box-sizing: border-box;
 }
 
+.carrossel {
+    display: flex;
+    justify-content: center;
+	gap:20px;
+    align-items: center;
+    padding-top: 20px;
+
+}
+
+
+.seta-esquerda {
+     border: none;
+    outline: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.seta-direita {
+     border: none;
+    outline: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+
+}
+
 /* ------------- action btns ------------- */
 
 .actionBtn-container {
