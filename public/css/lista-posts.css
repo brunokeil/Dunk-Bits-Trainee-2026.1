@@ -2,10 +2,6 @@
 
 /*----- Lista-De-Posts ----*/
 
-* {
-	box-sizing: border-box;
-	/* outline: 1px solid blue; */
-}
 
 main {
 	display: flex;

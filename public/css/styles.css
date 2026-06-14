@@ -116,6 +116,10 @@
 	--font-quicksand: "Quicksand", sans-serif;
 }
 
+html {
+	overflow-x: hidden;
+}
+
 *,
 *::before,
 *::after {
