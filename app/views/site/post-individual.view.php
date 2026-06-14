@@ -5,15 +5,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Post Individual</title>
+  <link rel="stylesheet" href="../../../public/css/footer.css" />
+  <link rel="stylesheet" href="../../../public/css/navbar.css" />
   <link rel="stylesheet" href="/public/css/post-individual.css" />
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 </head>
 
 <body>
-
+  <?php @require "navbar.view.php" ?>
   <main>
+
+
     <div class="sair-pagina">
       <a href='/lista-posts'>
         <ion-icon name="arrow-back-outline"></ion-icon>
@@ -161,7 +166,10 @@
 
 
     </section>
+
   </main>
+  <?php @require "footer.view.php" ?>
 </body>
+
 
 </html>
