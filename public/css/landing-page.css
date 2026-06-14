@@ -4,11 +4,11 @@
     color: var(--white-100);
 }
 
-html {
+/* html {
     overflow-x: hidden;
-}
+} */
 
-body {
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,12 +17,12 @@ body {
     position: relative;
 
     width: 100%;
-    gap: 50%;
+    gap: 13vw;
     /* padding-bottom: 20%; */
-    background-image: var(--bg-landing-page);
+    background: var(--bg-landing-page);
     /* background-color: var(--orange-100); */
     overflow-x: hidden;
-    padding-bottom: 8%;
+    padding-bottom: 14%;
     /* border: 1px solid red; */
 }
 
@@ -34,14 +34,8 @@ section {
 }
 
 button {
-    display: flex;
-    align-items: end;
-    border-radius: 70px;
-    padding: 12px 16px 6px 16px;
     font-weight: 500;
     font-size: 1.5rem;
-    cursor: pointer;
-    border: 0;
 }
 
 h1 {
@@ -60,38 +54,40 @@ h1 {
 
 #bg-basket {
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     right: 0;
     top: 30%;
     width: 30%;
+    filter: invert(1);
 }
 
 #bg-ball {
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: -1; /* This puts it behind everything */
-    width: 300px; /* Adjust as needed */
+    z-index: 0;
+    width: 25%;
     height: auto;
-    /* Remove background-color: wheat; */
 }
 
 /* --------HERO-SECTION---------- */
 
 #hero-section {
     width: 100%;
+    height: 80vh;
     box-sizing: border-box;
     /* height: fit-content; */
 
     align-items: baseline;
     gap: 20px;
 
-    padding: 10% 20% 40% 10%;
+    padding: 10%;
+    padding-bottom: 28%;
 
-    background-image: url("/../assets/landing-page-images/mask-bg-landing-wide.webp");
+    background: url("/public/assets/landing-page-images/bg-wide2.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top;
 }
 
 #hero-section h1 {
@@ -101,13 +97,14 @@ h1 {
 #hero-section p {
     font-size: large;
     font-weight: 500;
+    max-width: 72ch;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
 
 #call-to-action {
     display: flex;
-    gap: 2%;
+    gap: 1rem;
 }
 
 /* ---------POSTS-PREVIEW--------- */
@@ -129,7 +126,7 @@ h1 {
     padding: 0 10%;
 }
 
-#posts-carrossel {
+.carrossel {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -139,7 +136,7 @@ h1 {
     overflow-y: hidden;
 }
 
-#card {
+.card {
     width: 300px;
     aspect-ratio: 3 4;
     padding: 120px 20px 120px 20px;
@@ -152,11 +149,11 @@ h1 {
     cursor: pointer;
 }
 
-#card > img {
+.card > img {
     width: inherit;
 }
 
-#card::after {
+.card::after {
     content: "omg hiiiiiiiiiiiiii";
 
     position: absolute;
@@ -181,7 +178,7 @@ h1 {
     transition: 1s ease-in-out;
 }
 
-#card:hover::after {
+.card:hover::after {
     top: 0;
     transition: 1s ease-in-out;
 }
@@ -212,9 +209,10 @@ h1 {
 
 #about img {
     width: 500px;
+    z-index: 2;
 }
 
-#about #text {
+#about .text {
     width: 45ch;
     height: 100%;
     margin: 30px 0 30px 0;
@@ -237,7 +235,7 @@ h1 {
         padding-bottom: 60%;
     }
 
-    #about #text {
+    #about .text {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -265,7 +263,7 @@ h1 {
         flex-wrap: wrap;
         justify-content: center;
     }
-    #about #text {
+    #about .text {
         justify-content: center;
         width: 80%;
     }
