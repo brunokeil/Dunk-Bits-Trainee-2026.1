@@ -35,6 +35,7 @@ class CadastroController
             App::get('database')->insert('users', $parameters);
             $user = App::get(key: 'database')->verificaLogin($parameters['email'], $parameters['password']);
             $_SESSION['id'] = $user->id;
+            $_SESSION['is_admin'] = $user->is_admin;
             header('Location: /dashboard');
         } else{
             header('Location: /cadastro');
