@@ -15,7 +15,7 @@
   <div id="tela"></div>
 
   <!------------------------------------- Modal! ------------------------------------->
-   <form>
+  <form>
   <div id="modal-criar-post">
     <div id="modal-criar-titulo">
       <h3>CRIAR POST</h3>
