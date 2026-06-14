@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Controllers\ExampleController;
 use App\Controllers\LoginController;
 use App\Controllers\PagPostsControllerGET;
@@ -40,7 +41,7 @@ $router->post('cadastro/create', 'CadastroController@criar');
 
 $router->get('footer', 'FooterController@index');
 
-$router->get('postsadmin', 'PostsAdminController@index');
+$router->get('posts-admin', 'PostsAdminController@index');
 
 $router->post('login', 'LoginController@logar');
 

@@ -5,12 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lista de Posts</title>
-  <link rel="stylesheet" href="../../../public/css/lista-posts.css" />
+
   <link rel="stylesheet" href="../../../public/css/footer.css" />
   <link rel="stylesheet" href="../../../public/css/navbar.css" />
+  <link rel="stylesheet" href="../../../public/css/lista-posts.css" />
 </head>
 
 <body>
+  <?php @require "navbar.view.php" ?>
   <section id="secao-barra">
 
     <div id="search">
@@ -77,6 +79,8 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
   <script src="../../../public/js/lista-posts.js"></script>
+
+  <?php @require "footer.view.php" ?>
 </body>
 
 </html>
