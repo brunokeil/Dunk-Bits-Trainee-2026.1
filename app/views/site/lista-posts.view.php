@@ -27,13 +27,13 @@
         <img src="../../../public/assets/icons/basketball_on_fire.png" alt="Logo Basketball" id="icone-busca">
       </div>
 
-    <form method="GET" action="/lista-posts" class="form_filtros">
-      <div id="grupo-filtro">
-        <div id="filtros-opcoes">
-          <button type="submit" name="filtro" value="highlights" class="botao-filtro-item">Highlights</button>
-          <button type="submit" name="filtro" value="jogos" class="botao-filtro-item">Jogos</button>
-          <button type="submit" name="filtro" value="notícias" class="botao-filtro-item">Notícias</button>
-        </div>
+      <form method="GET" action="/lista-posts" class="form_filtros">
+        <div id="grupo-filtro">
+          <div id="filtros-opcoes">
+            <button type="submit" name="filtro" value="highlights" class="botao-filtro-item">Highlights</button>
+            <button type="submit" name="filtro" value="jogos" class="botao-filtro-item">Jogos</button>
+            <button type="submit" name="filtro" value="notícias" class="botao-filtro-item">Notícias</button>
+          </div>
 
           <button id="botao-filtro" type="button">
             <ion-icon name="filter-circle-outline"></ion-icon>
@@ -51,7 +51,7 @@
     <section id="container-posts">
 
       <?php foreach ($posts as $p):  ?>
-        <a class="card" href="/post-individual?post=<?= $p->id ?>">
+        <a class="card" href="/post-individual?post=<?= $p->id ?>&page=<?= $currentPage ?>">
 
           <img src="<?= $p->imagem_exibicao ?>" alt="<?= $p->title ?>" class="card-imagem">
 
