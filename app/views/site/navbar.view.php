@@ -1,5 +1,5 @@
 <header class="headerNavbar">
-	<a href="#">
+	<a href="/">
 		<img src="../../../public/assets/logo_zoom.png" alt="Logo da Empresa" class="logo_dunkbits" />
 	</a>
 	<nav class="menu">
