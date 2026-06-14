@@ -2,18 +2,18 @@
 
 
 .rodape {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
-    width: 100%;
+    /* width: 100%; */
     background-color: var(--orange-100);
-    color: var(--white-100) !important;
     padding: 40px 60px;
     font-family: var(--font-quicksand);
-    margin-top: auto;
+    /* margin-top: 2rem; */
+    bottom: 0;
 }
 
-.rodape p, .rodape h3{
+.rodape * {
     color: var(--white-100) !important;
 }
 
