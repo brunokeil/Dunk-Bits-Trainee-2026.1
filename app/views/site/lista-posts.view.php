@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
   <section id="secao-barra">
 
     <div id="search">
@@ -24,9 +25,9 @@
     <form method="GET" action="/lista-posts" class="form_filtros">
       <div id="grupo-filtro">
         <div id="filtros-opcoes">
-          <button type="submit" name="filtro" value="melhores" class="botao-filtro-item">Melhores Avaliados</button>
-          <button type="submit" name="filtro" value="populares" class="botao-filtro-item">Populares</button>
-          <button type="submit" name="filtro" value="tecnologias" class="botao-filtro-item">Tecnologia</button>
+          <button type="submit" name="filtro" value="highlights" class="botao-filtro-item">Highlights</button>
+          <button type="submit" name="filtro" value="jogos" class="botao-filtro-item">Jogos</button>
+          <button type="submit" name="filtro" value="notícias" class="botao-filtro-item">Notícias</button>
         </div>
 
         <button id="botao-filtro" type="button">
