@@ -9,14 +9,14 @@ const cardsPorPagina = 6;
 
 function atualizarPagina(indexDaPagina) {
   pontos.forEach((ponto, index) => {
-    const icone = ponto.querySelector("span");
+    const icone = ponto.querySelector("ion-icon");
 
     if (index === indexDaPagina) {
       ponto.classList.add("ativo");
-      icone.textContent = "radio_button_checked";
+      if(icone) icone.setAttribute ("name", "radio-button-on-outline");
     } else {
       ponto.classList.remove("ativo");
-      icone.textContent = "radio_button_unchecked";
+      if(icone) icone.setAttribute ("name", "radio-button-off-outline");
     }
   });
 

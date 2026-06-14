@@ -1,18 +1,7 @@
 @import "./styles.css";
 
-.telaLogin {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-}
-
-#tituloCadastro{
-	font-size: 3rem;
-	font-family: var(--font-quicksand);
-}
-
-.telaLogin {
-	background-image: linear-gradient(rgba(239, 100, 0, 0.25), rgba(239, 100, 0, 0.25)), url("/public/assets/bg_images/bg_login.png");
+.telaLoginCadastro {
+	background-image: linear-gradient(rgba(239, 100, 0, 0.5), rgba(239, 100, 0, 0.5)), url("/public/assets/bg_images/bg_login.png");
 	background-size: cover;
 	background-position: center;
 	background-color: var(--dark-grey-100);
@@ -20,14 +9,23 @@
 	align-items: center;
 	min-height: 100vh;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+    min-height: 100vh;
 }
 
-.loginContainer {
+.tituloLoginCadastro{
+	font-size: 3rem;
+	font-family: var(--font-quicksand);
+	color: white;
+	padding-bottom: 16px;
+}
+
+.LoginCadastroContainer {
 	background: var(--white-15);
-	backdrop-filter: blur(15px);
-	-webkit-backdrop-filter: blur(15px);
+	backdrop-filter: blur(24px);
+	-webkit-backdrop-filter: blur(24px);
 	border: 1px solid var(--white-25);
 	border-radius: 20px;
 	padding: 60px 40px;
@@ -37,7 +35,7 @@
 	box-sizing: border-box;
 }
 
-.loginContainer h2 {
+#tituloLoginCadastro {
 	color: var(--color-light-text);
 	margin-bottom: 40px;
 }
@@ -53,7 +51,7 @@
 }
 
 .buttonFechar ion-icon {
-	color: var(--white-100) !important;
+	color: var(--white-100);
 }
 
 .inputBox {
@@ -66,7 +64,7 @@
 	height: 50px;
 	padding: 0 50px 0 20px;
 	background: transparent;
-	border: 1px solid var(--white-100);
+	border: 2px solid var(--white-100);
 	border-radius: 30px;
 	color: var(--color-light-text);
 	font-size: 14px;
@@ -85,10 +83,6 @@
 	color: var(--white-80);
 }
 
-#olhoSenha{
-	cursor: pointer;
-}
-
 .inputBox ion-icon {
 	position: absolute;
 	right: 20px;
@@ -96,25 +90,6 @@
 	transform: translateY(-50%);
 	color: var(--color-light-text);
 	font-size: 20px;
-}
-
-.opcoesLogin {
-	text-align: right;
-	margin-top: 10px;
-	margin-bottom: 30px;
-	padding-right: 15px;
-}
-
-.esqueciSenha {
-	color: var(--color-light-text);
-	text-decoration: none;
-	font-size: 14px;
-	transition: 0.3s;
-}
-
-.esqueciSenha:hover {
-	color: var(--dark-orange-100);
-	text-decoration: underline;
 }
 
 .buttonEntrar {
@@ -131,17 +106,51 @@
 	border-radius: 20px;
 }
 
+
+#olhoSenha{
+	cursor: pointer;
+}
+
+#olhoConfirmarSenha{
+	cursor: pointer;
+}
+
 .buttonEntrar:hover {
 	background-color: var(--orange-100);
 }
 
+.senhaforte{
+	max-height: 0;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.senhaforte.ativo{
+	max-height: 25vh;
+	opacity: 1;
+	visibility: visible;
+	padding-bottom: 20px;
+	gap: 12px;
+}
+
+.requisitosSenha{
+	color: darkred;
+	font-size: 1rem;
+	text-align: left;
+	gap: 10px;
+}
+
+.requisitosSenha.feito{
+	color: darkgreen;
+}
+
 @media (max-width: 768px) {
-	.loginContainer {
+	.LoginCadastroContainer {
 		width: 90%;
 		padding: 40px 20px;
 	}
 
-	.loginContainer {
+	.LoginCadastroContainer {
 		width: 90%;
 		padding: 60px 20px 40px 20px;
 	}

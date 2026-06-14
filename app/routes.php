@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Controllers;
-
-use App\Controllers\UsuariosController;
 use App\Controllers\ExampleController;
-use App\Controllers\NavbarController;
-use App\Controllers\LandingPageController;
-use App\Core\Router;
+use App\Controllers\LoginController;
+use App\Controllers\PagPostsControllerGET;
+use App\Controllers\CadastroController;
+
+$router->get('', 'landingpageController@index');
 
 $router->get('navbar', 'NavbarController@index');
 
@@ -30,6 +30,17 @@ $router->get('pagposts', 'PagPostsController@index');
 
 $router->get('dashboard', 'DashboardController@index');
 
+$router->get('landingpage', 'LandingPageController@index');
+
+$router->post('login', 'LoginController@logar');
+
+$router->post('logout', 'LoginController@deslogar');
+
+$router->post('cadastro/create', 'CadastroController@criar');
+
+$router->get('footer', 'FooterController@index');
+
+$router->get('postsadmin', 'PostsAdminController@index');
 
 $router->post('login', 'LoginController@logar');
 

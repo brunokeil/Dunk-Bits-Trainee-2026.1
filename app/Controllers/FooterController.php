@@ -5,12 +5,12 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-class CadastroController
+class FooterController
 {
 
     public function index()
     {
-        return view('site/cadastro');
+        return view('site/footer');
     }
 
     public function criar()
