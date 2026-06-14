@@ -1,21 +1,19 @@
 @import "./styles.css";
 
-.telaFooter {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
 
 .rodape {
-    background-color: var(--grey-100);
-    color: var(--white-100) !important;
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+    background-color: var(--orange-100);
     padding: 40px 60px;
     font-family: var(--font-quicksand);
-    margin-top: auto;
+    /* margin-top: 2rem; */
+    bottom: 0;
 }
 
-.rodape p, .rodape h3{
+.rodape * {
     color: var(--white-100) !important;
 }
 
@@ -45,7 +43,7 @@
 }
 
 .redes ion-icon:hover {
-    color: var(--dark-orange-100);
+    color: var(--dark-grey-100);
     transition: 0.3s;
 }
 
@@ -92,7 +90,7 @@
 }
 
 .abaixo p:hover {
-    color: var(--dark-orange-100);
+    color: var(--dark-grey-100);
 }
 
 
@@ -100,7 +98,7 @@
 .textoVisaoHover,
 .textoValoresHover {
     display: none;
-    color: var(--dark-orange-100);
+    color: var(--dark-grey-100);
     font-size: 16px;
     font-weight: 700;
     text-align: center;
@@ -109,7 +107,7 @@
 }
 
 
-.rodape:has(.buttonMissao:hover, .buttonVisao:hover, .buttonValores:hover) .Logo5 {
+.rodape:has(.buttonMissao:hover, .buttonVisao:hover, .buttonValores:hover) #logodunk{
     display: none;
 }
 

@@ -5,12 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lista de Posts</title>
+
+  <link rel="stylesheet" href="../../../public/css/footer.css" />
+  <link rel="stylesheet" href="../../../public/css/navbar.css" />
   <link rel="stylesheet" href="../../../public/css/lista-posts.css" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <body>
+  <?php @require "navbar.view.php" ?>
   <section id="secao-barra">
 
     <div id="search">
@@ -49,7 +51,7 @@
     <?php foreach ($posts as $p):  ?>
       <a class="card" href="/post-individual?post=<?= $p->id ?>">
 
-      <img src="<?= $p->imagem_exibicao ?>" alt="<?= $p->title ?>" class="card-imagem">
+        <img src="<?= $p->imagem_exibicao ?>" alt="<?= $p->title ?>" class="card-imagem">
 
         <div class="card-footer">
           <h2 class="card-titulo-fixo"><?php echo $p->title; ?></h2>
@@ -77,6 +79,8 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
   <script src="../../../public/js/lista-posts.js"></script>
+
+  <?php @require "footer.view.php" ?>
 </body>
 
 </html>

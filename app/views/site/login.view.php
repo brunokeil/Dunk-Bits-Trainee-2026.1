@@ -1,5 +1,4 @@
 <!-- FLUMINENSE -->
-
 <!doctype html>
 <html lang="pt-BR">
 
@@ -8,16 +7,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>LOGIN</title>
 
-	<link rel="stylesheet" href="../../../public/css/login.css" />
+	<link rel="stylesheet" href="../../../public/css/LoginCadastro.css" />
 </head>
 
-<body class="telaLogin">
-	<main class="loginContainer">
-		<a href="#" class="buttonFechar">
+<body class="telaLoginCadastro">
+	<main class="LoginCadastroContainer">
+		<a href="/landingpage" class="buttonFechar">
 			<ion-icon name="close-outline"></ion-icon>
 		</a>
 
-		<h2 id="tituloLogin">LOGIN</h2>
+		<h2 class="tituloLoginCadastro">LOGIN</h2>
 
 		<form action="/login" method="POST">
 			<input type="hidden" value="<?= $redirect ?>" name="redirect">
@@ -28,8 +27,8 @@
 			</div>
 			<div class="inputBox">
 				<label>
-					<input name="senha" id="senha" type="password" placeholder="SENHA" onkeyup='checar()'>
-					<ion-icon name="eye-off-outline" class="olho" id="olhoSenha" onclick="mostrarSenha()"></ion-icon>
+					<input name="senha" id="senha" type="password" placeholder="SENHA">
+					<ion-icon name="eye-off-outline" class="olho" id="olhoSenha"></ion-icon>
 				</label>
 			</div>
 

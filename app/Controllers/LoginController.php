@@ -33,7 +33,7 @@ class LoginController
 
         $user = App::get(key: 'database')->verificaLogin($email, $senha);
 
-        if ($user) {
+        if ($user){
             $_SESSION['id'] = $user->id;
             header("Location: " . $redirect);
             exit();
@@ -41,5 +41,11 @@ class LoginController
             header('Location: /login');
             exit();
         }
+    }
+        public function deslogar()
+    {
+        session_unset();
+        session_destroy();
+        header('Location: /login');
     }
 }
