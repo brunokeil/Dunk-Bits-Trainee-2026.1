@@ -40,3 +40,7 @@ $router->post('cadastro/create', 'CadastroController@criar');
 $router->get('post-individual', 'PostIndividualController@index');
 
 $router->post('post-individual/comment', 'PostIndividualController@storeComment');
+
+$router->post('post-individual/comment/delete', 'PostIndividualController@deleteComment');
+
+$router->post('post-individual/comment/edit', 'PostIndividualController@editComment');
