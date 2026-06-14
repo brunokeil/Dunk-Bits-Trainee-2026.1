@@ -70,7 +70,10 @@ function setAllEventListeners() {
 
 	viewPost.forEach((btn) => {
 		btn.addEventListener("click", () => {
-			toggleModal("modalView");
+
+			const mudancaID = btn.getAttribute("data-bs-target").replace("#", "");
+
+			toggleModal(mudancaID);
 		});
 	});
 
@@ -82,13 +85,19 @@ function setAllEventListeners() {
 
 	editPost.forEach((btn) => {
 		btn.addEventListener("click", () => {
-			toggleModal("modalEdit");
+			
+			const mudancaID = btn.getAttribute("data-bs-target").replace("#", "");
+
+			toggleModal(mudancaID);
 		});
 	});
 
 	deletePost.forEach((btn) => {
 		btn.addEventListener("click", () => {
-			toggleModal("modalDelete");
+			
+			const mudancaID = btn.getAttribute("data-bs-target").replace("#", "");
+
+			toggleModal(mudancaID);
 		});
 	});
 

@@ -57,5 +57,3 @@ tresPontos.forEach((botao) => {
 	});
 });
 
-console.log("JS CARREGADO COM SUCESSO");
-
