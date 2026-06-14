@@ -8,19 +8,69 @@ use Exception;
 class PostsAdminController
 {
 
+    public function existPhotoPost($imageName)
+    {
+        $imagemPadrao = "/public/assets/post_featured_pics/padrao.png";
+
+        if (empty($imageName)) {
+            return $imagemPadrao;
+        }
+
+        $caminhoFisico = "public/assets/post_featured_pics/" . $imageName;
+
+        if (file_exists($caminhoFisico)) {
+            return $caminhoFisico;
+        }
+
+        return $imagemPadrao;
+    }
+
     public function index()
     {
-        if(isset($_SESSION['id'])){
-            $posts = App::get('database')->selectAllAndJoin('posts');
-            return view('admin/posts-admin', compact('posts'));
+        $database = App::get('database');
+        if (isset($_SESSION['id'])) {
+
+            $searchText = isset($_GET['search']) ? $_GET['search'] : '';
+            $searchColumn = $searchText !== '' ? ['title', 'content'] : null;
+
+            $limit = 5;
+            $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+
+            if ($currentPage < 1) {
+                $currentPage = 1;
+            }
+
+            $offset = ($currentPage - 1) * $limit;
+
+            $totalPosts = $database->countAll('posts', $searchText, $searchColumn, null);
+            $totalPages = ceil($totalPosts / $limit);
+
+
+            $posts = $database->paginate('posts', $limit, $offset, $searchText, $searchColumn, null);
+
+            foreach ($posts as $p) {
+                $p->authorData = $database->selectOne('users', $p->author);
+
+                $p->imagem_exibicao = $this->existPhotoPost($p->cover_image);
+            }
+
+            $compactoPosts = array_merge(compact('posts'), [
+                'currentPage' => $currentPage,
+                'totalPages' => $totalPages,
+                'searchText' => $searchText
+            ]);
+
+
+            return view('admin/posts-admin', $compactoPosts);
         }
         header('Location: /login');
     }
 
-    public function store(){
+    public function store()
+    {
 
         $temporario = $_FILES['cover_image']['tmp_name'];
-    
+
         $nomeimagem = sha1(uniqid($_FILES['cover_image']['name'], true)) . "." . pathinfo($_FILES['cover_image']['name'], PATHINFO_EXTENSION);
 
         $caminhodaimagem = "public/assets/post_featured_pics/" . $nomeimagem;
@@ -40,9 +90,10 @@ class PostsAdminController
         header('Location: /postsadmin');
     }
 
-    public function edit(){
+    public function edit()
+    {
         $temporario = $_FILES['cover_image']['tmp_name'];
-    
+
         $nomeimagem = sha1(uniqid($_FILES['cover_image']['name'], true)) . "." . pathinfo($_FILES['cover_image']['name'], PATHINFO_EXTENSION);
 
         $caminhodaimagem = "public/assets/post_featured_pics/" . $nomeimagem;
@@ -64,7 +115,8 @@ class PostsAdminController
         header('Location: /postsadmin');
     }
 
-    public function delete(){
+    public function delete()
+    {
         $id = $_POST['id'];
         App::get(key: 'database')->delete('posts', $id);
         header('Location: /postsadmin');

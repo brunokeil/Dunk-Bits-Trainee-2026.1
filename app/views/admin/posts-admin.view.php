@@ -20,10 +20,11 @@
             <h2 id="title">TABELA DE POSTS</h2>
         </div>
         <div id="PesquisaECriarPostADM">
-            <div class="searchContainer">
+            <form class="searchContainer" method="GET" action="/postsadmin">
+
                 <ion-icon name="search-outline"></ion-icon>
-                <input id="PesquisaPostsTabelaADM" type="text" placeholder="Pesquisar por Post"/>
-            </div>
+                <input id="PesquisaPostsTabelaADM" type="text" placeholder="Pesquisar por Post" name="search" value="<?= $searchText ?? '' ?>" />
+            </form>
             <button class="primaryBtn createPost" type="button" data-bs-toggle="modais" data-bs-target="#modalCreate">Criar Post</button>
         </div>
 
@@ -38,8 +39,8 @@
                 </tr>
             </thead>
             <tbody>
-             <?php foreach ($posts as $post): ?>
-                <tr>
+                <?php foreach ($posts as $post): ?>
+                    <tr>
                         <td><?= $post->id ?></td>
                         <td><?= $post->title ?></td>
                         <td><?= $post->author ?></td>
@@ -69,33 +70,28 @@
                                 </div>
                             </div>
                         </td>
-                </tr>
-             <?php endforeach ?>
+                    </tr>
+                <?php endforeach ?>
 
             </tbody>
         </table>
-        <div class="paginacaoContainer">
+        <?php
 
-            <button class="btnSetaPaginacao" id="btnVoltarPagina">
-                <ion-icon name="chevron-back-outline"></ion-icon>
-            </button>
-            <span id="numeroPaginaAtual">1</span>
-            <button class="btnSetaPaginacao" id="btnAvancarPagina">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-            </button>
-        </div>
-        </div>
+        require("app/views/admin/paginationCrudPosts.view.php");
+
+        ?>
+
     </main>
 
     <div class="modalContainer close">
         <?php
-            require("app/views/admin/modais/modalCriarPost.php");
+        require("app/views/admin/modais/modalCriarPost.php");
 
-            foreach($posts as $post){
-                require("app/views/admin/modais/modalViewPost.php");
-                require("app/views/admin/modais/modalEditPost.php");
-                require("app/views/admin/modais/modalDeletePost.php");
-            }
+        foreach ($posts as $post) {
+            require("app/views/admin/modais/modalViewPost.php");
+            require("app/views/admin/modais/modalEditPost.php");
+            require("app/views/admin/modais/modalDeletePost.php");
+        }
         ?>
     </div>
 
