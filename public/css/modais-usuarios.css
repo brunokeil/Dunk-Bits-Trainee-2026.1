@@ -89,6 +89,8 @@ button:hover {
 	border: none;
 	transition: background 120ms ease;
 	width: 100%;
+	display: flex;
+	justify-content: space-between;
 }
 
 .inputGroup ion-icon {
@@ -108,6 +110,7 @@ button:hover {
 .inputGroup > *:focus {
 	cursor: text;
 }
+
 
 .inputGroup input::placeholder {
 	color: var(--white-50);
@@ -295,6 +298,16 @@ button:hover {
 	border: 1px solid var(--white-100);
 	border-radius: 8px;
 	background-color: var(--light-orange-75);
+	gap: 10px;
+	padding-inline: 10px;
+}
+
+.inputGroup input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+	color: white;
 }
 #viewModal .inputGroup {
 	width: 100%;

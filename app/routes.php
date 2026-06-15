@@ -27,8 +27,6 @@ $router->post('admin-users/delete', 'UsuariosController@delete');
 
 $router->get('lista-posts', 'ListaPostsController@index');
 
-$router->post('posts-admin/create', 'PostsAdminControllerPOST@criar');
-
 $router->get('cadastro', 'CadastroController@index');
 
 $router->get('login', 'LoginController@LoginView');

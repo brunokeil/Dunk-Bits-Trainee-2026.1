@@ -73,6 +73,11 @@ class UsuariosController
         $database = App::get("database");
         $imgName = $this->getFormImage();
 
+        if ($_POST['password'] != $_POST['confirm-password']) {
+            $_SESSION['error_message'] = "As senhas são diferentes!";
+            header('Location: /admin-users');
+            exit;
+        }
 
         if ($database->existe($_POST['email'])) {
             $_SESSION['error_message'] = "Não foi possível atualizar: O e-mail informado já está em uso!";
@@ -94,14 +99,14 @@ class UsuariosController
 
     public function edit()
     {
+
         $imgName = $this->getFormImage();
+
+
 
         $database = App::get("database");
 
-        if ($database->existe($_POST['email'])) {
-            header('Location: /admin-users');
-            exit;
-        }
+
 
         if ($imgName != null) {
             $parameters = [

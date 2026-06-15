@@ -35,6 +35,7 @@ class LoginController
 
         if ($user){
             $_SESSION['id'] = $user->id;
+            $_SESSION['is_admin'] = $user->is_admin;
             header("Location: " . $redirect);
         } else {
             $_SESSION['mensagem-erro'] = "Usuário e/ou senha incorretos";
