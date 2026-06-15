@@ -46,7 +46,8 @@ class UsuariosController
             'usuarios' => $usuarios,
             'currentPage' => $currentPage,
             'totalPages' => $totalPages,
-            'searchText' => $searchText
+            'searchText' => $searchText,
+            'usuarioLogado' => $usuarioLogado
         ]);
     }
 

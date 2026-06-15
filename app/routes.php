@@ -72,3 +72,5 @@ $router->post('post-individual/comment', 'PostIndividualController@storeComment'
 $router->post('post-individual/comment/delete', 'PostIndividualController@deleteComment');
 
 $router->post('post-individual/comment/edit', 'PostIndividualController@editComment');
+
+$router->get('api-teste', 'TesteApiController@index');

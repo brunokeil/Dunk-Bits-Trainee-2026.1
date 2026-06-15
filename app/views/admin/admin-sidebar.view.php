@@ -6,8 +6,16 @@
       <div class="user-space-sidebar">
         <ion-icon id="user-icon" name="person-outline"></ion-icon>
         <div>
-          <p id="user-name">Lorem Ipsum</p>
-          <p id="cargo">Adm</p>
+          <p id="user-name"><?php echo $usuarioLogado->name ?></p>
+          <p id="cargo">
+            <?php
+            if ($usuarioLogado->is_admin) {
+              echo "Admin";
+            } else {
+              echo "Membro";
+            }
+            ?>
+          </p>
         </div>
       </div>
       <div class="setinha">
@@ -36,23 +44,23 @@
               </span>
             </a>
           </li>
-          <?php if($_SESSION['is_admin'] === 1): ?>
-          <li>
-            <a href="/postsadmin">
-              <span class="item-sidebar">
-                <ion-icon name="albums-outline"></ion-icon>
-                <p>Gerenciar Posts</p>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="/admin-users">
-              <span class="item-sidebar">
-                <ion-icon name="people-outline"></ion-icon>
-                <p>Gerenciar Usuários</p>
-              </span>
-            </a>
-          </li>
+          <?php if ($_SESSION['is_admin'] === 1): ?>
+            <li>
+              <a href="/postsadmin">
+                <span class="item-sidebar">
+                  <ion-icon name="albums-outline"></ion-icon>
+                  <p>Gerenciar Posts</p>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="/admin-users">
+                <span class="item-sidebar">
+                  <ion-icon name="people-outline"></ion-icon>
+                  <p>Gerenciar Usuários</p>
+                </span>
+              </a>
+            </li>
           <?php endif; ?>
         </ul>
       </nav>

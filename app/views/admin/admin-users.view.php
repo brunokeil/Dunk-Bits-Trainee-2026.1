@@ -77,17 +77,17 @@
 
               <tr class="row-tabela" id="<?php echo $u->id; ?>">
                 <td class="info-id"><?php echo $u->id; ?></td>
-                <td class="info-name"><?php echo $u->name; ?></td>
-                <td class="info-email"><?php echo $u->email; ?></td>
+                <td class="info-name"><?php echo htmlspecialchars($u->name, ENT_QUOTES, 'UTF-8'); ?></td>
+                <td class="info-email"><?php echo htmlspecialchars($u->email, ENT_QUOTES, 'UTF-8'); ?></td>
 
                 <td>
                   <div class="botoesdeacao">
                     <button class="view-user"
                       data-profpic="<?php echo $u->profile_image; ?>"
-                      data-id=" <?php echo $u->id; ?>"
-                      data-name="<?php echo $u->name; ?>"
-                      data-email="<?php echo $u->email; ?>"
-                      data-senha=" <?php echo $u->password ?>">
+                      data-id="<?php echo $u->id; ?>"
+                      data-name="<?php echo htmlspecialchars($u->name, ENT_QUOTES, 'UTF-8'); ?>"
+                      data-email="<?php echo htmlspecialchars($u->email, ENT_QUOTES, 'UTF-8'); ?>"
+                      data-senha="<?php echo htmlspecialchars($u->password, ENT_QUOTES, 'UTF-8'); ?>">
 
                       <ion-icon name="eye-outline"></ion-icon>
                     </button>
@@ -95,9 +95,9 @@
                     <button class="edit-user"
                       data-profPic="<?php echo $u->profile_image; ?>"
                       data-id="<?php echo $u->id; ?>"
-                      data-name="<?php echo $u->name; ?>"
-                      data-email="<?php echo $u->email; ?>"
-                      data-senha="<?php echo $u->password ?>">
+                      data-name="<?php echo htmlspecialchars($u->name, ENT_QUOTES, 'UTF-8'); ?>"
+                      data-email="<?php echo htmlspecialchars($u->email, ENT_QUOTES, 'UTF-8'); ?>"
+                      data-senha="<?php echo htmlspecialchars($u->password, ENT_QUOTES, 'UTF-8'); ?>">
 
                       <ion-icon name="pencil-outline"></ion-icon>
                     </button>

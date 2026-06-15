@@ -54,10 +54,13 @@ class PostsAdminController
                 $p->imagem_exibicao = $this->existPhotoPost($p->cover_image);
             }
 
+            $usuarioLogado = $database->selectOne('users', $_SESSION['id']);
+
             $compactoPosts = array_merge(compact('posts'), [
                 'currentPage' => $currentPage,
                 'totalPages' => $totalPages,
-                'searchText' => $searchText
+                'searchText' => $searchText,
+                'usuarioLogado' => $usuarioLogado
             ]);
 
 
@@ -69,19 +72,19 @@ class PostsAdminController
     public function store()
     {
 
-        if(empty($_POST['tituloDoPost'])){
+        if (empty($_POST['tituloDoPost'])) {
             $_SESSION['semTitulo'] = "Não foi possível criar, post sem Titulo.";
             header('Location: /postsadmin');
             exit();
-        } else if(empty($_POST['descricaoDoPost'])){
+        } else if (empty($_POST['descricaoDoPost'])) {
             $_SESSION['semDescricao'] = "Não foi possível criar, post sem Descricao.";
             header('Location: /postsadmin');
             exit();
-        }else if(empty($_FILES['cover_image']['tmp_name'])){
+        } else if (empty($_FILES['cover_image']['tmp_name'])) {
             $_SESSION['semImagem'] = "Não foi possível criar, post sem Imagem.";
             header('Location: /postsadmin');
             exit();
-        }else if(empty($_POST['postTipo'])){
+        } else if (empty($_POST['postTipo'])) {
             $_SESSION['semTipo'] = "Não foi possível criar, post sem Tipo.";
             header('Location: /postsadmin');
             exit();
@@ -114,31 +117,31 @@ class PostsAdminController
 
         $conteudo = App::get(key: 'database')->selectOne('posts', $id);
 
-        if(!empty($_POST['tituloDoPost'])){
+        if (!empty($_POST['tituloDoPost'])) {
             $titulo = $_POST['tituloDoPost'];
-        }else{
+        } else {
             $titulo = $conteudo->title;
         }
 
-        if(!empty($_POST['descricaoDoPost'])){
+        if (!empty($_POST['descricaoDoPost'])) {
             $descricao = $_POST['descricaoDoPost'];
-        }else{
+        } else {
             $descricao = $conteudo->content;
         }
 
-        if(!empty($_FILES['cover_image']['tmp_name'])){
+        if (!empty($_FILES['cover_image']['tmp_name'])) {
             $temporario = $_FILES['cover_image']['tmp_name'];
             $nomeimagem = sha1(uniqid($_FILES['cover_image']['name'], true)) . "." . pathinfo($_FILES['cover_image']['name'], PATHINFO_EXTENSION);
             $caminhodaimagem = "public/assets/post_featured_pics/" . $nomeimagem;
 
             move_uploaded_file($temporario, $caminhodaimagem);
-        }else {
+        } else {
             $caminhodaimagem = $conteudo->cover_image;
         }
 
-        if(!empty($_POST['postTipo'])){
+        if (!empty($_POST['postTipo'])) {
             $postTipo = $_POST['postTipo'];
-        }else{
+        } else {
             $postTipo = $conteudo->type;
         }
 
