@@ -38,7 +38,7 @@
 				<ion-icon name="eye-off-outline" class="olho" id="olhoSenha"></ion-icon>
 			</div>
 			<div class="inputBox">
-				<a href="/cadastro" class="ancoraReferencia">CRIAR CONTA </a>
+				<a href="/cadastro" class="ancoraReferencia">CRIAR CONTA</a>
 			</div>			
 			<button type="submit" class="buttonEntrar">LOGIN</button>
 		</form>
