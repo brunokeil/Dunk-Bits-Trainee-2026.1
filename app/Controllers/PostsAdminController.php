@@ -69,6 +69,24 @@ class PostsAdminController
     public function store()
     {
 
+        if(empty($_POST['tituloDoPost'])){
+            $_SESSION['semTitulo'] = "Não foi possível criar, post sem Titulo.";
+            header('Location: /postsadmin');
+            exit();
+        } else if(empty($_POST['descricaoDoPost'])){
+            $_SESSION['semDescricao'] = "Não foi possível criar, post sem Descricao.";
+            header('Location: /postsadmin');
+            exit();
+        }else if(empty($_FILES['cover_image']['tmp_name'])){
+            $_SESSION['semImagem'] = "Não foi possível criar, post sem Imagem.";
+            header('Location: /postsadmin');
+            exit();
+        }else if(empty($_POST['postTipo'])){
+            $_SESSION['semTipo'] = "Não foi possível criar, post sem Tipo.";
+            header('Location: /postsadmin');
+            exit();
+        }
+
         $temporario = $_FILES['cover_image']['tmp_name'];
 
         $nomeimagem = sha1(uniqid($_FILES['cover_image']['name'], true)) . "." . pathinfo($_FILES['cover_image']['name'], PATHINFO_EXTENSION);
@@ -92,24 +110,47 @@ class PostsAdminController
 
     public function edit()
     {
-        $temporario = $_FILES['cover_image']['tmp_name'];
+        $id = $_POST['id'];
 
-        $nomeimagem = sha1(uniqid($_FILES['cover_image']['name'], true)) . "." . pathinfo($_FILES['cover_image']['name'], PATHINFO_EXTENSION);
+        $conteudo = App::get(key: 'database')->selectOne('posts', $id);
 
-        $caminhodaimagem = "public/assets/post_featured_pics/" . $nomeimagem;
+        if(!empty($_POST['tituloDoPost'])){
+            $titulo = $_POST['tituloDoPost'];
+        }else{
+            $titulo = $conteudo->title;
+        }
 
-        move_uploaded_file($temporario, $caminhodaimagem);
+        if(!empty($_POST['descricaoDoPost'])){
+            $descricao = $_POST['descricaoDoPost'];
+        }else{
+            $descricao = $conteudo->content;
+        }
+
+        if(!empty($_FILES['cover_image']['tmp_name'])){
+            $temporario = $_FILES['cover_image']['tmp_name'];
+            $nomeimagem = sha1(uniqid($_FILES['cover_image']['name'], true)) . "." . pathinfo($_FILES['cover_image']['name'], PATHINFO_EXTENSION);
+            $caminhodaimagem = "public/assets/post_featured_pics/" . $nomeimagem;
+
+            move_uploaded_file($temporario, $caminhodaimagem);
+        }else {
+            $caminhodaimagem = $conteudo->cover_image;
+        }
+
+        if(!empty($_POST['postTipo'])){
+            $postTipo = $_POST['postTipo'];
+        }else{
+            $postTipo = $conteudo->type;
+        }
+
 
         $parameters = [
-            'title' => $_POST['tituloDoPost'],
-            'content' => $_POST['descricaoDoPost'],
+            'title' => $titulo,
+            'content' => $descricao,
             'cover_image' => $caminhodaimagem,
             'created_at' => date('Y-m-d H:i:s'),
             'author' => $_POST['author'],
-            'type' => $_POST['postTipo'],
+            'type' => $postTipo,
         ];
-
-        $id = $_POST['id'];
 
         App::get(key: 'database')->update('posts', $id, $parameters);
         header('Location: /postsadmin');
