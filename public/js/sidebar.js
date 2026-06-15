@@ -1,18 +1,19 @@
 const TOGGLESIDEBAR = document.querySelector("#toggle-sidebar-btn");
-const SIDEBAR = document.querySelector("aside");
-
-
 
 TOGGLESIDEBAR.addEventListener("click", () => toggleSidebar());
 
+function toggleSidebar() {
+    const SIDEBAR = document.querySelector("aside");
 
-function toggleSidebar(){
-    if(SIDEBAR.className == "sidebar"){
-        SIDEBAR.className = "closed-sidebar";
-        
-    }
-    else if (SIDEBAR.className == "closed-sidebar"){
-        SIDEBAR.className = "sidebar";
+    if (SIDEBAR.classList.contains("sidebar")) {
+        SIDEBAR.classList.remove("sidebar");
+        SIDEBAR.classList.add("closed-sidebar");
+        console.log("detectou sidebar");
+    } 
+    else if (SIDEBAR.classList.contains("closed-sidebar")) {
+        SIDEBAR.classList.remove("closed-sidebar");
+        SIDEBAR.classList.add("sidebar");
+        console.log("detectou closed-sidebar");
     }
     console.log(SIDEBAR.className);
 }

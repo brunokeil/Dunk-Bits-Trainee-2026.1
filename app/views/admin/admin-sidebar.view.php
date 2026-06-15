@@ -1,66 +1,67 @@
 <link rel="stylesheet" href="/public/css/sidebar.css" />
 
-  <aside class="sidebar" id="sidebar">
-    <div class="top-sidebar">
-      <div class="top-top-sidebar">
-        <div class="setinha">
-          <button id="toggle-sidebar-btn">
-            <img id="setinha" src="/public/assets/ArrowLeft.svg" />
-          </button>
-        </div>
-        <div class="user-space-sidebar">
-          <img id="user-icon" src="/public/assets/PersonCircle.svg" />
-          <div>
-            <p id="user-name">Lorem Ipsum</p>
-            <p id="cargo">Adm</p>
-          </div>
+<aside class="closed-sidebar " id="sidebar">
+  <div class="top-sidebar">
+    <div class="top-top-sidebar">
+      <div class="user-space-sidebar">
+        <ion-icon id="user-icon" name="person-outline"></ion-icon>
+        <div>
+          <p id="user-name">Lorem Ipsum</p>
+          <p id="cargo">Adm</p>
         </div>
       </div>
-      <div class="admin-sidebar">
-        <p>Admin</p>
-        <nav class="content-sidebar">
-          <ul>
-            <li>
-              <a href="#">
-                <span class="item-sidebar">
-                  <img id="chevette" src="/public/assets/chevette-left.svg" />
-                  Voltar à Página Inicial
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="item-sidebar">
-                  <img id="chevette" src="/public/assets/chevette-left.svg" />
-                  Acessar Dashboard
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="item-sidebar">
-                  <img id="chevette" src="/public/assets/chevette-left.svg" />
-                  Gerenciar Posts
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="item-sidebar">
-                  <img id="chevette" src="/public/assets/chevette-left.svg" />
-                  Gerenciar Usuários
-                </span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+      <div class="setinha">
+        <button id="toggle-sidebar-btn">
+          <ion-icon id="setinha" name="chevron-back-outline"></ion-icon>
+        </button>
       </div>
     </div>
-    <div class="logout-sidebar">
-      <button type="button" id="logout-btn">
-        Sair
-      </button>
+    <div class="admin-sidebar">
+      <p>Admin</p>
+      <nav class="content-sidebar">
+        <ul>
+          <li>
+            <a href="/">
+              <span class="item-sidebar">
+                <ion-icon name="home-outline"></ion-icon>
+                <p>Voltar à Página Inicial</p>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="/dashboard">
+              <span class="item-sidebar">
+                <ion-icon name="grid-outline"></ion-icon>
+                <p>Acessar Dashboard</p>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="/postsadmin">
+              <span class="item-sidebar">
+                <ion-icon name="reader-outline"></ion-icon>
+                <p>Gerenciar Posts</p>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="/admin-users">
+              <span class="item-sidebar">
+                <ion-icon name="people-outline"></ion-icon>
+                <p>Gerenciar Usuários</p>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
-  </aside>
-  
+  </div>
+  <div class="logout-sidebar">
+    <button type="button" id="logout-btn">
+      <ion-icon name="exit-outline"></ion-icon>
+      <p>Sair</p>
+    </button>
+  </div>
+</aside>
+
 <script src="/public/js/sidebar.js"></script>

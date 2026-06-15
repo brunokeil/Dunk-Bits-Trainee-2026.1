@@ -16,24 +16,29 @@
 <div class="mensagemErro">
     <p class="mensagemErroA">
         <?php
-            if(isset($_SESSION['semTitulo'])){
-                echo $_SESSION['semTitulo'];
-            }else if(isset($_SESSION['semDescricao'])){
-                echo $_SESSION['semDescricao'];
-            }else if(isset($_SESSION['semImagem'])){
-                echo $_SESSION['semImagem'];
-            }else if(isset($_SESSION['semTipo'])){
-                echo $_SESSION['semTipo'];
-            }
-            unset($_SESSION['semTitulo']);
-            unset($_SESSION['semImagem']);
-            unset($_SESSION['semDescricao']);
-            unset($_SESSION['semTipo']);
+        if (isset($_SESSION['semTitulo'])) {
+            echo $_SESSION['semTitulo'];
+        } else if (isset($_SESSION['semDescricao'])) {
+            echo $_SESSION['semDescricao'];
+        } else if (isset($_SESSION['semImagem'])) {
+            echo $_SESSION['semImagem'];
+        } else if (isset($_SESSION['semTipo'])) {
+            echo $_SESSION['semTipo'];
+        }
+        unset($_SESSION['semTitulo']);
+        unset($_SESSION['semImagem']);
+        unset($_SESSION['semDescricao']);
+        unset($_SESSION['semTipo']);
         ?>
     </p>
 </div>
 
 <body class="postAdmin">
+    <?php
+
+    require("app/views/admin/admin-sidebar.view.php");
+
+    ?>
 
     <main>
         <div>
@@ -72,7 +77,7 @@
                                 <button class="actionBtn viewPost" type="button" data-bs-toggle="modais" data-bs-target="#modalViewPost-<?= $post->id ?>">
                                     <ion-icon name="eye-outline"></ion-icon>
                                 </button>
-                                <?php if($_SESSION['id'] === $post->author || $_SESSION['is_admin'] === 1): ?>
+                                <?php if ($_SESSION['id'] === $post->author || $_SESSION['is_admin'] === 1): ?>
                                     <button class="actionBtn editPost" type="button" data-bs-toggle="modais" data-bs-target="#modalEditPost-<?= $post->id ?>">
                                         <ion-icon name="pencil-outline"></ion-icon>
                                     </button>
@@ -88,7 +93,7 @@
                                 <div class="dropdownMenuPosts">
                                     <ul>
                                         <li><a class="viewPost btnVisuPostADM" data-bs-target="#modalViewPost-<?= $post->id ?>">Visualizar</a></li>
-                                        <?php if($_SESSION['id'] === $post->author || $_SESSION['is_admin'] === 1): ?>
+                                        <?php if ($_SESSION['id'] === $post->author || $_SESSION['is_admin'] === 1): ?>
                                             <li><a class="editPost btnEditPostADM" data-bs-target="#modalEditPost-<?= $post->id ?>">Editar</a></li>
                                             <li><a class="deletePost btnDeletePostADM" data-bs-target="#modalDeletePost-<?= $post->id ?>">Excluir</a></li>
                                         <?php endif; ?>

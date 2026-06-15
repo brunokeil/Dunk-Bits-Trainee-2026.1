@@ -4,77 +4,91 @@
     border: 1px solid palegreen;
 } */
 
-main {
-    padding: 5%;
-}
-main > * {
-    color:aliceblue;
-}
-
-body {
-    display: flex;
-
-    background-color: black;
-}
-
 .sidebar {
+    z-index: 3;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
 
-    position: sticky;
+    position: fixed;
     gap: 10%;
+    top: 0;
+    left: 0;
 
     min-height: 100vh;
     width: fit-content;
-    padding: 2%;
+    padding: 5rem 2%;
 
-    background-color: var(--grey-100);
+    background: var(--pearl-grey-80);
+    backdrop-filter: blur(15px);
     /* border: 1px solid rebeccapurple; */
     overflow: hidden;
-    transition: all 0.8s ease;
+    /* transition: all 180ms ease; */
+    transition:
+        width 180ms ease,
+        position 180ms ease; 
 }
 
-.sidebar *, .closed-sidebar * {
+.sidebar *,
+.closed-sidebar * {
     color: var(--white-100);
 }
 
-.sidebar button, .closed-sidebar button {
+.sidebar button,
+.closed-sidebar button {
     background: 0;
     border: 0;
     /* font-weight: 600; */
     cursor: pointer;
 }
 
+/* icones */
+
+.item-sidebar ion-icon {
+    font-size: 1.6rem;
+}
+
 /* ----------fechada----------- */
 
 .closed-sidebar {
+    z-index: 3;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
 
-    position: sticky;
+    position: fixed;
     gap: 10%;
+    top: 0;
+    left: 0;
 
     min-height: 100vh;
-    width: 5%;
-    
-    padding-top: 2%;
+    width: fit-content;
+    padding: 5rem 2%;
+
+    background: var(--pearl-grey-80);
+    backdrop-filter: blur(15px);
+    /* border: 1px solid rebeccapurple; */
+    overflow: hidden;
+
     /* padding: 2%; */
 
     /* background-color: var(--grey-100); */
     /* border: 1px solid rebeccapurple; */
-    overflow: hidden;
-    transition: width 0.8s ease, position 0.8s ease;
+    /* overflow: hidden;
+    */
+    transition:
+        width 180ms ease,
+        position 180ms ease; 
 }
 
 .closed-sidebar .setinha {
     width: 100%;
-    background-color: var(--grey-100);
     border-radius: 0 20px 20px 0;
-    transition: background-color 0.8s;
+    transition: background-color 180ms;
 }
 
 .closed-sidebar #toggle-sidebar-btn {
@@ -82,7 +96,7 @@ body {
     align-self: center;
 
     /* justify-content: center; */
-    
+
     padding: 15% 20%;
 
     rotate: 180deg;
@@ -90,48 +104,40 @@ body {
     transition: 0.3s ease-in-out;
 }
 
-.closed-sidebar .user-space-sidebar {
-    display: none;
-    transition: none;
-}
-
-.closed-sidebar .admin-sidebar {
-    display: none;
-    transition: none;
-}
-
-.closed-sidebar .logout-sidebar {
+.closed-sidebar .item-sidebar > p, 
+.closed-sidebar .user-space-sidebar,
+.closed-sidebar #logout-btn > p{
     display: none;
 }
 
+/* --------icons---------- */
 
-
-/* --------imagens---------- */
-
-#setinha {
+.setinha {
     width: 50%;
-    transition: all 0.8s ease;
+    transition: all 180ms ease;
+    padding: 0;
 }
 
-#setinha:hover {
+.setinha * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.setinha:hover {
     scale: 1.2;
 }
-
 #user-icon {
-    width: 20%;
+    font-size: 2.5rem;
 }
 
-#chevette {
-    width: 0.3rem;
-    /* height: 1rem; */
-}
 
 /* ----------upper-part------------ */
 
 .top-sidebar {
     display: flex;
     flex-direction: column;
-    gap: 10%;
+    gap: 5rem;
     height: 60%;
 }
 
@@ -139,26 +145,29 @@ body {
 
 .top-top-sidebar {
     display: flex;
-    flex-direction: column;
-    gap: 20%;
+    align-items: center;
+    /* gap: 20%; */
 }
 
-.setinha {
+.setinha, #toggle-sidebar-btn {
     align-self: flex-end;
-    transition: all 0.8s ease;
+    font-size: 2.6rem;
+    transition: all 180ms ease;
 }
-
 
 .user-space-sidebar {
     display: flex;
-    gap: 5%;
+    gap: 1rem;
     padding-right: 2rem;
+    width: 100%;
+}
+.user-space-sidebar div {
+    width: 100%;
 }
 
 .user-space-sidebar * {
     cursor: pointer;
 }
-
 
 #user-name {
     font-weight: bold;
@@ -193,6 +202,10 @@ body {
     /* border: 1px solid wheat; */
 }
 
+.content-sidebar a {
+    width: fit-content;
+}
+
 .content-sidebar > ul {
     display: flex;
     flex-direction: column;
@@ -210,9 +223,6 @@ body {
     scale: 1.04;
 }
 
-
-
-
 /* -------logout------- */
 
 .logout-sidebar {
@@ -222,8 +232,14 @@ body {
 }
 
 #logout-btn {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+#logout-btn * {
     color: var(--orange-100);
-    font-size: large;
+    font-size: 1.6rem;
     font-weight: 600;
 }
 
