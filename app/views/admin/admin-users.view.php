@@ -24,7 +24,11 @@
     src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <div class="conteudo">
     <div class="painel">
+
       <div class="componentes">
+        <a href="/dashboard" class="x-sair">
+          <ion-icon name="close-outline"></ion-icon>
+        </a>
         <div class="titulo">
           <p class="titulo-texto">TABELA DE USUÁRIOS</p>
         </div>
