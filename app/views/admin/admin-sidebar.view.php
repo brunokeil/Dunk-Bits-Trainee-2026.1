@@ -36,6 +36,7 @@
               </span>
             </a>
           </li>
+          <?php if($_SESSION['is_admin'] === 1): ?>
           <li>
             <a href="/postsadmin">
               <span class="item-sidebar">
@@ -52,15 +53,16 @@
               </span>
             </a>
           </li>
+          <?php endif; ?>
         </ul>
       </nav>
     </div>
   </div>
   <div class="logout-sidebar">
-    <button type="button" id="logout-btn">
+    <a href="/logout" type="button" id="logout-btn">
       <ion-icon name="exit-outline"></ion-icon>
       <p>Sair</p>
-    </button>
+    </a>
   </div>
 </aside>
 

@@ -1,7 +1,7 @@
 @import "./styles.css";
 
 .telaLoginCadastro {
-	background-image: linear-gradient(rgba(239, 100, 0, 0.5), rgba(239, 100, 0, 0.5)), url("/public/assets/bg_images/bg_login.png");
+	background-image: linear-gradient(rgba(239, 100, 0, 0.4), rgba(239, 100, 0, 0.4)), url("/public/assets/bg_images/bg_login.png");
 	background-size: cover;
 	background-position: center;
 	background-color: var(--dark-grey-100);
