@@ -120,7 +120,7 @@
 
             <div class="user-infos">
               <img
-                src="<?php echo $c->authorData->profile_image ?: '/public/assets/placeholder/blank-prof-pic.png'; ?>"
+                src="<?php echo $c->authorData->profile_image ? "/public/assets/user_profile_pics/" . $c->authorData->profile_image : '/public/assets/placeholder/blank-prof-pic.png'; ?>"
                 class="img-prof-picture foto-de-perfil" />
 
               <?php if ($userEhAdmin || (isset($_SESSION['id']) && $_SESSION['id'] == $c->author)): ?>
