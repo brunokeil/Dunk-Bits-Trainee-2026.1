@@ -18,7 +18,7 @@
 
 		<h2 class="tituloLoginCadastro">LOGIN</h2>
 		<div class="mensagemErro">
-			<p>
+			<p class="mensagemErroA">
 				<?php
 					if(isset($_SESSION['mensagem-erro'])){
 						echo $_SESSION['mensagem-erro'];
@@ -38,7 +38,7 @@
 				<ion-icon name="eye-off-outline" class="olho" id="olhoSenha"></ion-icon>
 			</div>
 			<div class="inputBox">
-				<a href="/cadastro" class="ancoraReferencia">CRIAR CONTA </a>
+				<a href="/cadastro" class="ancoraReferencia">CRIAR CONTA</a>
 			</div>			
 			<button type="submit" class="buttonEntrar">LOGIN</button>
 		</form>
