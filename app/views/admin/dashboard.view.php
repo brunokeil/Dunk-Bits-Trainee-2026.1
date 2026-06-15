@@ -16,11 +16,9 @@
           <ion-icon name="arrow-back-outline"></ion-icon>
         </button>
       </a>
-      <a href="/logout">
-        <button id="logout">
+      <a href="/logout" id="logout">
           <ion-icon name="log-out-outline"></ion-icon>
           LOGOUT
-        </button>
       </a>
     </nav>
     <div id="dashboard">
@@ -32,12 +30,17 @@
           <ion-icon name="person-circle-outline"></ion-icon>
           LISTA DE USUÁRIOS (ADMIN)
         </a>
-      <?php endif ?>
-
-      <a href="/postsadmin" id="tabela-posts">
+        <a href="/postsadmin" id="tabela-posts">
         <ion-icon name="albums-outline"></ion-icon>
         TABELA DE POSTS (ADMIN)
       </a>
+      <?php else: ?>
+
+      <a href="/lista-posts" id="tabela-posts">
+        <ion-icon name="albums-outline"></ion-icon>
+        TABELA DE POSTS
+      </a>
+       <?php endif ?>
     </div>
   </section>
 
