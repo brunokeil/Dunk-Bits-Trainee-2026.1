@@ -14,6 +14,25 @@
 </head>
 
 <body class="postAdmin">
+    <div class="mensagemErro">
+        <p class="mensagemErro">
+            <?php
+                if(isset($_SESSION['semTitulo'])){
+                    echo $_SESSION['semTitulo'];
+                }else if(isset($_SESSION['semDescricao'])){
+                    echo $_SESSION['semDescricao'];
+                }else if(isset($_SESSION['semImagem'])){
+                    echo $_SESSION['semImagem'];
+                }else if(isset($_SESSION['semTipo'])){
+                    echo $_SESSION['semTipo'];
+                }
+                unset($_SESSION['semTitulo']);
+                unset($_SESSION['semImagem']);
+                unset($_SESSION['semDescricao']);
+                unset($_SESSION['semTipo']);
+            ?>
+        </p>
+    </div>
 
     <main>
         <div>
