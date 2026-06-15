@@ -32,12 +32,12 @@
     </section>
     <section class="posts">
       <h1>ACOMPANHE A COMUNIDADE</h1>
-      <div class="carrossel">
-        <button class="chevette" id="carroLeftArrow">
+      <div class="carrossel slider">
+        <button class="chevette left-arrow" id="carroLeftArrow">
           <ion-icon name="chevron-back-outline"></ion-icon>
         </button>
         
-        <div class="cards-container">
+        <div class="slider-content">
           <!-- php foreach start -->
           <?php foreach ($posts as $p): ?>
             <a class="card" href="/post-individual?post=<?= $p->id ?>">
@@ -58,15 +58,13 @@
           <!-- php foreach end -->
         </div>
 
-        <button class="chevette" id="carroRightArrow">
+        <button class="chevette right-arrow" id="carroRightArrow">
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </button>
 
       </div>
-      <div class="dots-container">
-        <input type="radio" name="dot" value="1" />
-        <input type="radio" name="dot" value="2" />
-        <input type="radio" name="dot" value="3" />
+      <div class="radio-auto">
+        <label class="radio-btn"></label>
       </div>
     </section>
     <section class="about" id="sobre">
@@ -87,11 +85,12 @@
       </div>
     </section>
     <img src="/public/assets/landing-page-images/circulo-fundo-landing.webp" id="bg-ball" />
-    <script src="../../../public/./js/landing-page.js"></script>
   </main>
   <?php @require "footer.view.php" ?>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="../../../public/./js/landing-page.js"></script>
+  <script src="../../../public/./js/landing-carrossel.js"></script>
 </body>
 
 </html>
