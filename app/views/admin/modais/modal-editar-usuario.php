@@ -11,11 +11,11 @@
             <img
                 class="imgProfPic" />
             <input type="file" name="imagem" class="profileInput" accept="image/*" hidden />
-             <ion-icon class="icone-img" name="image-outline"></ion-icon>
+            <ion-icon class="icone-img" name="image-outline"></ion-icon>
             <h4 class="txt-img">
-        Arraste sua imagem aqui
-        ou clique para escolher um arquivo
-      </h4>
+                Arraste sua imagem aqui
+                ou clique para escolher um arquivo
+            </h4>
 
         </div>
 
@@ -35,7 +35,9 @@
             <div class="inputGroup">
                 <ion-icon name="lock-closed"></ion-icon>
 
-                <input type="password" class="passwordInput" placeholder="*Senha" id="edit-senha" name="password" arial-label="*Senha" />
+                <input type="password" class="passwordInput" placeholder="*Senha" id="senha2" name="password" arial-label="*Senha" />
+
+                <ion-icon name="eye-off-outline" class="olho" id="olhoSenha2"></ion-icon>
             </div>
         </div>
 

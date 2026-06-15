@@ -211,6 +211,11 @@ ion-icon:hover{
     transition: 0.3s ease;
 }
 
+.x-sair {
+    font-size: 40px;
+    padding-top: 10px;
+}
+
 
 .input-de-busca {
     background-color: white;

@@ -79,7 +79,6 @@ main {
 	flex-direction: column;
 	padding: 20px;
 	flex: 1 1 300px;
-	text-align: justify;
 	max-width: 50ch;
 	gap: 2rem;
 }
