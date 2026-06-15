@@ -2,6 +2,13 @@
 
 /*----- Lista-De-Posts ----*/
 
+*{
+	/* outline: 1px solid green; */
+}
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
 
 main {
 	display: flex;
@@ -107,6 +114,7 @@ section {
 	opacity: 0;
 	transition: all 0.3s ease;
 	pointer-events: none;
+	overflow: hidden;
 }
 
 #filtros-opcoes.active {
@@ -239,7 +247,11 @@ ion-icon {
 
 .card-titulo-fixo {
 	color: var(--white-100);
-	font-size: 3rem;
+	font-size: 3em;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
 }
 
 .card-overlay {
@@ -252,27 +264,36 @@ ion-icon {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 30px;
+	padding: 24px;
 	opacity: 0;
 	transition: opacity 0.3s ease;
 	backdrop-filter: blur(2px);
 }
+
 .card-titulo-overlay {
 	color: var(--white-100);
-	font-size: 300%;
+	font-size: 3em;
 	margin-bottom: 5px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
 }
 
 .card-autor {
 	color: var(--white-100);
 	font-weight: bold;
 	margin-bottom: 10px;
-	font-size: 150%;
+	font-size: 1.5em;
 }
 
 .card-descricao {
 	color: var(--white-100);
-	font-size: 100%;
+	font-size: 1em;
+	overflow: hidden;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
 }
 
 .card:hover .card-footer {
