@@ -16,7 +16,7 @@
 			<h2 class="tituloLoginCadastro">CADASTRO</h2>
 
 			<div class="mensagemErro">
-				<p>
+				<p class="mensagemErroA">
 					<?php
 						if(isset($_SESSION['senhas-diferentes'])){
 							echo $_SESSION['senhas-diferentes'];
