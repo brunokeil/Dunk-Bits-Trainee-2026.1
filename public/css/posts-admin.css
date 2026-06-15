@@ -505,3 +505,8 @@ ion-icon:hover {
 		font-size: 20px;
 	}
 }
+
+.mensagemErroA{
+	font-size: 2rem;
+	padding-bottom: 16px;
+}

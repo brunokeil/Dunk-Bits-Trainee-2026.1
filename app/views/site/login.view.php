@@ -18,7 +18,7 @@
 
 		<h2 class="tituloLoginCadastro">LOGIN</h2>
 		<div class="mensagemErro">
-			<p>
+			<p class="mensagemErroA">
 				<?php
 					if(isset($_SESSION['mensagem-erro'])){
 						echo $_SESSION['mensagem-erro'];
