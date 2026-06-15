@@ -1,4 +1,4 @@
-<div class="modalPost warningModal close" id="modalDeletePost-<?= $post->id?>">
+<form class="modalPost warningModal close" id="modalDeletePost-<?= $post->id ?>" action="/postsadmin/delete" method="POST">
   <div class="warningHeader">
     <ion-icon name="warning"></ion-icon>
 
@@ -14,11 +14,9 @@
 
     Essa ação é <em>irreversível</em> e todos os dados do post serão <em>removidos permanentemente</em>.
   </p>
-  <form action="/postsadmin/delete" method="POST">
-    <input type="hidden" name="id" value="<?= $post->id?>">
-      <div class="footerButtons">
-        <button type="button" class="closeModalBtn cancelBtn">CANCELAR</button>
-        <button type="submit" class="primaryBtn">EXCLUIR</button>
-      </div>
-  </form>
-</div>
+  <input type="hidden" name="id" value="<?= $post->id ?>" />
+  <div class="footerButtons">
+    <button type="button" class="closeModalBtn cancelBtn">CANCELAR</button>
+    <button type="submit" class="primaryBtn">EXCLUIR</button>
+  </div>
+</form>

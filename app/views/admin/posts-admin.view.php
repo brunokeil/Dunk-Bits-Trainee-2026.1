@@ -20,11 +20,13 @@
             <h2 id="title">TABELA DE POSTS</h2>
         </div>
         <div id="PesquisaECriarPostADM">
-            <form class="searchContainer" method="GET" action="/postsadmin">
 
+            <form class="searchContainer" method="GET" action="/postsadmin">
                 <ion-icon name="search-outline"></ion-icon>
+
                 <input id="PesquisaPostsTabelaADM" type="text" placeholder="Pesquisar por Post" name="search" value="<?= $searchText ?? '' ?>" />
             </form>
+
             <button class="primaryBtn createPost" type="button" data-bs-toggle="modais" data-bs-target="#modalCreate">Criar Post</button>
         </div>
 

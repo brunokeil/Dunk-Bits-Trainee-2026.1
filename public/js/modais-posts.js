@@ -31,6 +31,7 @@ function toggleModal(idModal) {
 
 	// lógica: ao invés de trocar a classe principal, dá pra adicionar múltiplas classes,
 	// então, no css, configurei classes de abrir e fechar
+	// console.log(idModal);
 
 	//verifica se quer abrir ou fechar
 	if (modal.classList.contains("close")) {
@@ -45,7 +46,6 @@ function toggleModal(idModal) {
 		modalContainer.classList.add("close");
 	}
 
-	console.log(idModal);
 }
 
 function closeAll() {
@@ -55,7 +55,7 @@ function closeAll() {
 			modais[i].classList.add("close");
 		modais[i].classList.remove("open");
 	}
-	console.log(modais);
+	// console.log(modais);
 }
 closeAll();
 
@@ -106,10 +106,10 @@ function setAllEventListeners() {
 
 	for (let i = 0; i < closeBtn.length; i++) {
 		closeBtn[i].addEventListener("click", () => {
-			toggleModal(closeBtn[i].parentNode.parentNode.id);
+			toggleModal(closeBtn[i].parentNode.parentNode.getAttribute("id"));
 			// pra "closeBtn[i].parentNode.parentNode.id" se referir ao "modal pai", o botao tem q ta 2 elementos a fundo dele... hehe
 		});
-		console.log(closeBtn[i].parentNode.parentNode.id);
+		// console.log(closeBtn[i].parentNode.parentNode);
 	}
 }
 
