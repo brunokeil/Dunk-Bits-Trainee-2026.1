@@ -36,7 +36,7 @@
       </a>
       <?php else: ?>
 
-      <a href="/lista-posts" id="tabela-posts">
+      <a href="/postadmin" id="tabela-posts">
         <ion-icon name="albums-outline"></ion-icon>
         TABELA DE POSTS
       </a>
