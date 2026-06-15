@@ -1,14 +1,3 @@
-<!-- FLUMINENSE-->
-
-<!doctype html>
-<html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>FOOTER</title>
-        <link rel="stylesheet" href="../../../public/css/footer.css" />
-    </head>
-    <body class="telaFooter">
         <footer class="rodape">
             <div class="acima">
                 <div class="social">
@@ -20,22 +9,16 @@
                     </div>
                 </div>
                 <div class="logo">
-                    <img
-                        src="../../../public/assets/logo_dunkbits.png"
-                        alt="Logo do Site"
-                        class="logo_dunkbits"
-                    />
+                    <img id="logodunk" src="../../../public/assets/logo_dunkbits.png" alt="Logo do Site" class="logo_dunkbits" />
                     <span class="textoMissaoHover">
                         Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry.</span
-                    >
+                        typesetting industry.</span>
                     <span class="textoVisaoHover">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </span>
                     <span class="textoValoresHover">
                         Morbi feugiat felis nec turpis laoreet euismod. Donec
-                        rutrum leo vitae massa cursus</span
-                    >
+                        rutrum leo vitae massa cursus</span>
                 </div>
 
                 <div class="contato">
@@ -55,13 +38,5 @@
                 <p class="buttonValores">VALORES</p>
             </div>
         </footer>
-    </body>
-    <script
-        type="module"
-        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-        nomodule
-        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-</html>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"> </script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

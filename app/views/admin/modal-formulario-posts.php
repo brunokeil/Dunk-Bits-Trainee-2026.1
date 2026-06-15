@@ -15,7 +15,7 @@
   <div id="tela"></div>
 
   <!------------------------------------- Modal! ------------------------------------->
-   <form>
+  <form>
   <div id="modal-criar-post">
     <div id="modal-criar-titulo">
       <h3>CRIAR POST</h3>
@@ -31,15 +31,15 @@
     <div id="modal-criar-info">
       <div class="campo-input titulo">
         <ion-icon name="pencil-outline"></ion-icon>
-        <input type="text" placeholder="Título do Post" id="modal-criar-info-titulo">
+        <input type="text" placeholder="Título do Post" id="modal-criar-info-titulo" aria-label="Título do Post">
       </div>
       <div class="campo-input descricao">
         <ion-icon name="create-outline"></ion-icon>
-        <textarea placeholder="Descrição do Post" id="modal-criar-info-descricao" rows="1" oninput="expandir(this)"></textarea>
+        <textarea placeholder="Descrição do Post" id="modal-criar-info-descricao" aria-label="Descrição do Post" rows="1" oninput="expandir(this)"></textarea>
       </div>
       <div class="campo-input autor">
         <ion-icon name="person-outline"></ion-icon>
-        <input type="text" value="Autor do Post" id="modal-criar-info-autor" readonly>
+        <input type="text" value="Autor do Post" id="modal-criar-info-autor" aria-label="Autor do Post" readonly>
       </div>
     </div>
     <div id="modal-criar-botoes">
@@ -61,15 +61,14 @@
     </div>
     <div id="modal-excluir-descricao">
       <h4>Tem certeza que deseja excluir?</h4>
-      <h4>Essa ação é <span style="text-decoration: underline; color: black;">irreversível</span> e todos os dados referentes ao post serão excluídos <span style="text-decoration: underline; color: black;">permanentementes</span>.</h4>
+      <h4>Essa ação é <em>irreversível</em> e todos os dados referentes ao post serão excluídos <em>permanentementes</em>.</h4>
     </div>
     <div id="modal-excluir-botoes">
-             <button id="btn-modal-excluir-cancelar" onclick="fecharModal('modal-excluir-post')">CANCELAR</button>
-             <button id="btn-modal-excluir-confirmar" onclick="fecharModal('modal-excluir-post')">EXCLUIR</button>
+             <button id="btn-modal-excluir-cancelar" class="closeModalBtn">CANCELAR</button>
+             <button id="btn-modal-excluir-confirmar" class="closeModalBtn">EXCLUIR</button>
     </div>
   </div>
   </form>
-  <!------------------------------------- Modal! ------------------------------------->
 
   <div class="containerTabelaPostsAdmin">
     <div>

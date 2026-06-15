@@ -28,6 +28,20 @@ class QueryBuilder
         }
     }
 
+        public function selectAllAndJoin($table)
+    {
+        $sql = "select {$table}.*, users.name as author_name from {$table} join users on {$table}.author = users.id";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function selectOne($table, $id)
     {
         $sql = "select * from {$table}  where id = :id";
@@ -178,6 +192,7 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
     public function existe($parameter)
     {
         $sql = sprintf('SELECT * FROM users WHERE email = :email');
@@ -215,3 +230,4 @@ class QueryBuilder
         }
     }
 }
+

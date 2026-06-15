@@ -1,42 +1,50 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dunk Bit's</title>
-    <link rel="icon" href="/public/assets/logo_zoom.png" />
-    <link rel="stylesheet" href="/public/css/landing-page.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dunk Bit's</title>
+  <link rel="stylesheet" href="../../../public/css/footer.css" />
+  <link rel="stylesheet" href="../../../public/css/navbar.css" />
+  <link rel="stylesheet" href="/public/css/landing-page.css" />
+  <link rel="icon" href="/public/assets/logo_zoom.png" />
+</head>
+
+<body>
+  <?php @require "navbar.view.php" ?>
+  <main>
+
     <img src="/public/assets/landing-page-images/cesta-fundo-landing.png" id="bg-basket" />
     <section id="hero-section">
-      <div id="text">
+      <div class="text">
         <h1>DUNK BIT'S</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet
-          consectetur adipiscing elit quisque faucibus.
+          Lorem ipsum dolor sit amet consectetur adipiscing elit. 
+          <br />
+          Dolor sit amet consectetur adipiscing elit quisque faucibus.
         </p>
       </div>
       <div id="call-to-action">
-        <button id="btn-posts">POSTS</button>
-        <button id="btn-sobre">SOBRE</button>
+        <button class="primaryBtn">POSTS</button>
+        <button class="terciaryBtn">SOBRE</button>
       </div>
     </section>
     <section id="posts">
       <h1>ACOMPANHE A COMUNIDADE</h1>
-      <div id="posts-carrossel">
-        <div id="card"><img src="/public/assets/code-logo.png" /></div>
-        <div id="card"><img src="/public/assets/code-logo.png" /></div>
-        <div id="card"><img src="/public/assets/code-logo.png" /></div>
-        <div id="card"><img src="/public/assets/code-logo.png" /></div>
-        <div id="card"><img src="/public/assets/code-logo.png" /></div>
-        <div id="card"><img src="/public/assets/code-logo.png" /></div>
-        <div id="card"><img src="/public/assets/code-logo.png" /></div>
+      <div class="carrossel">
+        <div class="card"><img src="/public/assets/code-logo.png" /></div>
+      </div>
+      <div>
+        <input type="radio" />
+        <input type="radio" />
+        <input type="radio" />
+        <input type="radio" />
       </div>
     </section>
     <section id="about">
       <img src="/public/assets/logo_dunkbits_sombreada.png" />
-      <div id="text">
+      <div class="text">
         <h1>QUEM SOMOS?</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
@@ -51,6 +59,9 @@
         </p>
       </div>
     </section>
-    <img src="/public/assets/landing-page-images/circulo-fundo-landing.png" id="bg-ball" />
-  </body>
+    <img src="/public/assets/landing-page-images/circulo-fundo-landing.webp" id="bg-ball" />
+  </main>
+  <?php @require "footer.view.php" ?>
+</body>
+
 </html>

@@ -1,7 +1,54 @@
 console.log("JS CARREGADO COM SUCESSO");
 
-// função de alterar imagem
 const profPics = document.querySelectorAll(".userProfilePicture");
+
+const inputSenha1 = document.getElementById('senha1');
+const inputSenha2 = document.getElementById('senha2');
+const btnMostrarSenha1 = document.getElementById('olhoSenha1');
+const btnMostrarSenha2 = document.getElementById('olhoSenha2');
+
+
+btnMostrarSenha1.addEventListener("click", mostrarSenhaCriar);
+btnMostrarSenha2.addEventListener("click", mostrarSenhaEditar);
+
+const inputConfirmarSenha = document.getElementById('confirmarsenha');
+const btnMostrarConfirmarSenha = document.getElementById('olhoConfirmarSenha');
+
+
+
+btnMostrarConfirmarSenha.addEventListener("click", mostrarConfirmarSenha);
+
+function mostrarSenhaCriar() {
+    if (inputSenha1.type === 'password') {
+        inputSenha1.type = 'text';
+        btnMostrarSenha1.setAttribute('name', 'eye-outline');
+    } else {
+        inputSenha1.type = 'password';
+        btnMostrarSenha1.setAttribute('name', 'eye-off-outline');
+    }
+}
+
+function mostrarSenhaEditar() {
+    if (inputSenha2.type === 'password') {
+        inputSenha2.type = 'text';
+        btnMostrarSenha2.setAttribute('name', 'eye-outline');
+    } else {
+        inputSenha2.type = 'password';
+        btnMostrarSenha2.setAttribute('name', 'eye-off-outline');
+    }
+}
+
+function mostrarConfirmarSenha(){
+
+        if(inputConfirmarSenha.type === 'password'){
+            inputConfirmarSenha.setAttribute('type', 'text');
+            btnMostrarConfirmarSenha.setAttribute('name', 'eye-outline');
+        }else{
+            inputConfirmarSenha.setAttribute('type', 'password');
+            btnMostrarConfirmarSenha.setAttribute('name', 'eye-off-outline');
+        }
+    }
+
 
 
 
@@ -71,6 +118,12 @@ function closeAll() {
     console.log(modais);
 }
 closeAll();
+
+const errorModal = document.getElementById("errorModal");
+
+if (errorModal) {
+    toggleModal("errorModal");
+}
 
 
 

@@ -33,13 +33,19 @@ class LoginController
 
         $user = App::get(key: 'database')->verificaLogin($email, $senha);
 
-        if ($user) {
+        if ($user){
             $_SESSION['id'] = $user->id;
+            $_SESSION['is_admin'] = $user->is_admin;
             header("Location: " . $redirect);
-            exit();
         } else {
+            $_SESSION['mensagem-erro'] = "Usuário e/ou senha incorretos";
             header('Location: /login');
-            exit();
         }
+    }
+        public function deslogar()
+    {
+        session_unset();
+        session_destroy();
+        header('Location: /login');
     }
 }
