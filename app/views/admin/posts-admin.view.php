@@ -5,35 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Posts</title>
-    <link rel="stylesheet" href="../../../public/css/posts-admin.css">
+    <link rel="stylesheet" href="../../../public/css/admin-posts.css">
     <link rel="stylesheet" href="../../../public/css/modais-posts.css">
-    <link rel="stylesheet" href="../../../public/css/modal-formulario-posts.css">
+    <!-- <link rel="stylesheet" href="../../../public/css/modal-formulario-posts.css"> -->
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
-<div class="mensagemErro">
-    <p class="mensagemErroA">
-        <?php
-        if (isset($_SESSION['semTitulo'])) {
-            echo $_SESSION['semTitulo'];
-        } else if (isset($_SESSION['semDescricao'])) {
-            echo $_SESSION['semDescricao'];
-        } else if (isset($_SESSION['semImagem'])) {
-            echo $_SESSION['semImagem'];
-        } else if (isset($_SESSION['semTipo'])) {
-            echo $_SESSION['semTipo'];
-        }
-        unset($_SESSION['semTitulo']);
-        unset($_SESSION['semImagem']);
-        unset($_SESSION['semDescricao']);
-        unset($_SESSION['semTipo']);
-        ?>
-    </p>
-</div>
-
 <body class="postAdmin">
+    <div class="mensagemErro">
+        <p class="mensagemErroA">
+            <?php
+            if (isset($_SESSION['semTitulo'])) {
+                echo $_SESSION['semTitulo'];
+            } else if (isset($_SESSION['semDescricao'])) {
+                echo $_SESSION['semDescricao'];
+            } else if (isset($_SESSION['semImagem'])) {
+                echo $_SESSION['semImagem'];
+            } else if (isset($_SESSION['semTipo'])) {
+                echo $_SESSION['semTipo'];
+            }
+            unset($_SESSION['semTitulo']);
+            unset($_SESSION['semImagem']);
+            unset($_SESSION['semDescricao']);
+            unset($_SESSION['semTipo']);
+            ?>
+        </p>
+    </div>
+
     <?php
 
     require("app/views/admin/admin-sidebar.view.php");
@@ -47,12 +47,14 @@
         <div id="PesquisaECriarPostADM">
 
             <form class="searchContainer" method="GET" action="/postsadmin">
+                <input id="PesquisaPostsTabelaADM" type="text" placeholder="Pesquisar por Título" name="search" value="<?= $searchText ?? '' ?>" />
+                
                 <ion-icon name="search-outline"></ion-icon>
-
-                <input id="PesquisaPostsTabelaADM" type="text" placeholder="Pesquisar por Post" name="search" value="<?= $searchText ?? '' ?>" />
             </form>
 
-            <button class="primaryBtn createPost" type="button" data-bs-toggle="modais" data-bs-target="#modalCreate">Criar Post</button>
+            <button class="primaryBtn createPost" type="button" data-bs-toggle="modais" data-bs-target="#modalCreate">
+                + CRIAR POST
+            </button>
         </div>
 
         <table class="postsTable">

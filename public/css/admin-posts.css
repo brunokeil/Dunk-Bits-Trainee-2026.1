@@ -11,9 +11,10 @@ html {
 
 body.postAdmin {
     height: 100vh;
-    
+
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 2.6rem 5rem;
 
     background-image: var(--bg-table-posts);
@@ -31,15 +32,16 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1.6rem;
 
-    width: 90%;
+    max-width: 90%;
 
     background-color: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(10px);
 
     border-radius: 16px;
     border: 1px solid var(--white-100);
-    padding: 0 4rem;
+    padding: 3rem 4rem;
 }
 
 #title {
@@ -50,13 +52,6 @@ main {
     font-optical-sizing: auto;
     font-weight: 1000;
     font-size: 2.5rem;
-}
-
-#PesquisaECriarPostADM {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    /* margin: 2vh auto; */
 }
 
 th,
@@ -74,32 +69,45 @@ td {
     position: relative;
 }
 
+#PesquisaECriarPostADM {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    /* margin: 2vh auto; */
+}
+
 .searchContainer {
     display: flex;
     align-items: center;
     width: fit-content;
-    border-radius: 16px;
+    border-radius: 1.8rem;
     gap: 1rem;
     padding: 0 1rem;
     background: white;
 }
 .searchContainer > * {
-    font-weight: 800;
+    font-weight: 600;
+    color: var(--black-100);
 }
 .searchContainer > input {
     width: 100%;
     border: none;
     padding: 0.4rem;
-    border-radius: 16px;
     color: var(--black-100);
 }
 #PesquisaPostsTabelaADM::placeholder {
-	color: var(--grey-50);
-
+    color: var(--grey-50);
 }
 .searchContainer > ion-icon {
     pointer-events: none;
 }
+
+.createPost {
+    font-size: larger;
+}
+
+
 /* -------------- TABELA ----------------- */
 
 .tableHead {
@@ -349,7 +357,7 @@ ion-icon:hover {
     }
 }
 
-.mensagemErroA{
-	font-size: 2rem;
-	padding-bottom: 16px;
+.mensagemErroA {
+    font-size: 2rem;
+    padding-bottom: 16px;
 }

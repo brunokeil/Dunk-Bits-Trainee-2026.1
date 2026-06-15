@@ -39,7 +39,7 @@
           <li>
             <a href="/postsadmin">
               <span class="item-sidebar">
-                <ion-icon name="reader-outline"></ion-icon>
+                <ion-icon name="albums-outline"></ion-icon>
                 <p>Gerenciar Posts</p>
               </span>
             </a>
