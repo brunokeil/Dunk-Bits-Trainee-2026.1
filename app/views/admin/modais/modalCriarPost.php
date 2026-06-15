@@ -1,12 +1,14 @@
 <form class="modalForm modalPost" id="modalCreate" action="/postsadmin/create" method="POST" enctype="multipart/form-data">
+  
   <span id="header">
     <h1>CRIAR POST</h1>
-    <button class="closeModalBtn terciaryBtn">X</button>
+    <button type="button" class="closeModalBtn terciaryBtn">X</button>
   </span>
 
   <div class="postInfo">
     <div class="postPicture">
-      <input name="cover_image" type="file" class="imgPostPic imgProfPic" accept="image/*" id="imagemDoPost" aria-label="IMAGEM DO POST" />
+      <img src="/public/assets/placeholder/posts_placeholder.webp" class="imgPost" />
+      <input name="cover_image" type="file" class="imgPostPic imgProfPic" accept="image/*" id="imagemDoPost" aria-label="IMAGEM DO POST" hidden/>
     </div>
     <div class="authorData">
       <div class="inputGroup">

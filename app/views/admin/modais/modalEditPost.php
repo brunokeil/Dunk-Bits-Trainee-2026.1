@@ -1,15 +1,15 @@
 <form class="modalForm modalPost close" id="modalEditPost-<?= $post->id ?>" action="/postsadmin/edit" method="POST" enctype="multipart/form-data">
     <span id="header">
         <h1>EDITAR POST</h1>
-        <button class="closeModalBtn terciaryBtn">X</button>
+        <button type="button" class="closeModalBtn terciaryBtn">X</button>
     </span>
 
     <input type="hidden" name="id" value="<?= $post->id ?>">
     <input type="hidden" name="author" value="<?= $post->author ?>">
     <div class="postInfo">
         <div class="postPicture">
-            <img src="/public/assets/placeholder/blank-prof-pic.png " class="imgPostPic imgProfPic" />
-            <input type="file" class="profileInput" accept="image/*" name="cover_image" />
+            <img src="<?= $post->cover_image ?>" class="imgPost"/>
+            <input type="file" class="profileInput" accept="image/*" name="cover_image" hidden/>
         </div>
         <div class="authorData">
             <div class="inputGroup">

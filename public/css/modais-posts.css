@@ -3,7 +3,6 @@
 .modalPost * {
     color: var(--white-100);
     /* border: 1px solid rgba(0, 94, 255, 0.313); */
-	
 }
 
 /* ---------------- abrir e fechar -------------------- */
@@ -76,7 +75,7 @@
     /* visibility: hidden; */
     box-sizing: content-box;
     max-width: 80vw;
-    max-height: 80vh;
+    max-height: 90vh;
     width: 55ch;
 
     position: absolute;
@@ -116,8 +115,9 @@
 
 /* foto de perfil */
 .postPicture {
-    /* min-width: 100%;
-	min-height: auto; */
+    /* width: 80%; */
+    height: 40vh;
+    /* min-height: auto; */
     /* background: var(--white-25); */
 
     border-radius: 10px;
@@ -126,24 +126,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
 
-/* .userProfilePicture:hover {
-    background-color: var(--white-25);
-    } */
-
-.imgPostPic {
-    box-sizing: content-box;
-    width: 100px;
-    /* height: 100%; */
-    max-height: 20vh;
-    background-image: url("../assets/placeholder/blank-prof-pic.png");
+    border: 0.5rem dashed var(--white-25);
+    aspect-ratio: 9/12;
     object-fit: cover;
-    aspect-ratio: 1;
-    border-radius: 10px;
+    /* max-height: 20vh; */
+
+    overflow: hidden;
+    /* background-image: url("../assets/placeholder/posts_placeholder.webp"); */
 }
 
-.imgPostPic:hover {
+.imgPost {
+    width: 100%;
+    /* height: 100%; */
+
+    border-radius: inherit;
+}
+
+.imgPost:hover {
     filter: brightness(0.75);
     cursor: pointer;
 }
@@ -154,9 +154,10 @@
 
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     /* min-width: 100%; */
-    width: fit-content;
+    width: 100%;
     /* border: 1px solid red; */
     gap: 0.4rem;
 }
@@ -239,9 +240,8 @@ textarea:placeholder {
     width: 100%;
     /* min-height: fit-content; */
     word-break: break-word;
-	/* scrollbar-width: thin; */
-	scrollbar-color: var(--white-80) transparent;
-	
+    /* scrollbar-width: thin; */
+    scrollbar-color: var(--white-80) transparent;
 }
 
 .titleInput {
@@ -253,14 +253,17 @@ textarea:placeholder {
 }
 
 .titleInput::placeholder {
-	color: var(--white-50);
+    color: var(--white-50);
 }
 
 .descriptionInput {
+	font-size: 1rem;
     min-width: 40ch;
     min-height: 5rem;
+	max-height: 20vh;
+	field-sizing: content;
     /* height: auto; */
-    resize: auto;
+    resize: none;
     background: none;
     overflow-y: scroll;
 }

@@ -1,7 +1,7 @@
 console.log("JS CARREGADO COM SUCESSO");
 
 // função de alterar imagem
-const img = document.querySelectorAll(".imgPost");
+const img = document.querySelectorAll(".postPicture");
 
 function alterarImagem() {
 	img.forEach((imagem) => {
