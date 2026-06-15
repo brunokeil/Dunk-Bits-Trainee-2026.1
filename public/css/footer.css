@@ -33,23 +33,27 @@
 /* --- ajustes pra centralizar tudo */
 
 .lilSection {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+}
+.lilSection > p {
+    width: fit-content;
 }
 
 .logo {
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
-.buttonVisao {
-    text-align: center;
+.lilSection.vis {
+    align-items: center;
+}
+.lilSection.val {
+    align-items: flex-end;
 }
 
-.buttonValores {
-    text-align: end;
-}
-
-/* --- fim da xeretagem */
+/* --- fim da xeretagem --- */
 
 .redes {
     display: flex;
@@ -83,7 +87,6 @@
     justify-content: flex-end;
     gap: 10px;
     font-size: 18px;
-    margin: 10px 0;
     font-weight: 400;
 }
 

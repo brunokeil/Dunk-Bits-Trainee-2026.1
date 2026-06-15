@@ -33,9 +33,17 @@
     <hr class="linha" />
 
     <div class="abaixo">
-        <p class="buttonMissao lilSection">MISSÃO</p>
-        <p class="buttonVisao lilSection">VISÃO</p>
-        <p class="buttonValores lilSection">VALORES</p>
+        <div class="lilSection">
+            <p class="buttonMissao">MISSÃO</p>
+        </div>
+
+        <div class="lilSection vis">
+            <p class="buttonVisao">VISÃO</p>
+        </div>
+        
+        <div class="lilSection val">
+            <p class="buttonValores">VALORES</p>
+        </div>
     </div>
 </footer>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"> </script>
