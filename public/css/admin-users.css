@@ -303,6 +303,11 @@ button .pesquisar-botao {
     background-color: transparent;
 }
 
+.icone-mais {
+    font-size: 30px;
+}
+
+
 @media (max-width: 920px) {
     .header-tabela,
     .linha-tabela {
@@ -379,6 +384,7 @@ button .pesquisar-botao {
     .input-de-busca input {
         width: 50%;
     }
+
 }
 
 .visao-pag {

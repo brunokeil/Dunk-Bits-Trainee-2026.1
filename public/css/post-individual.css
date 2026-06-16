@@ -300,9 +300,21 @@ main {
 
 .sair-pagina {
 	padding-top: 50px;
-	font-size: 42px;;
 	padding-bottom: 0;
+
+	max-width: 100px;
+
+
+
 }
+
+.sair-pagina ion-icon {
+    font-size: 48px;
+}
+
+
+
+
 
 
 

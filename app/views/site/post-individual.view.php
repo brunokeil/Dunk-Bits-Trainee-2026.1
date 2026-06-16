@@ -22,7 +22,7 @@
 
     <div class="sair-pagina">
       <a href="/lista-posts?page=<?= $currentPage ?>">
-        <ion-icon name="arrow-back-outline"></ion-icon>
+        <ion-icon class="icone-sair" name="arrow-back-outline"></ion-icon>
       </a>
     </div>
     <section class="post">
