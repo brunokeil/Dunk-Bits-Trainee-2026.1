@@ -1,4 +1,4 @@
-<form class="modalPost warningModal close" id="modalDeletePost-<?= $post->id ?>" action="/postsadmin/delete" method="POST">
+<form class="modalPost warningModal close" id="modalErrorPost-<?= $post->id ?>" action="/postsadmin/delete" method="POST">
   <div class="warningHeader">
     <ion-icon name="warning"></ion-icon>
 
