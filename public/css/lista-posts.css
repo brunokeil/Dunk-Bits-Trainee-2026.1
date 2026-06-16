@@ -16,7 +16,7 @@ main {
 	flex-direction: column;
 	align-items: center;
 	gap: 10px;
-	background-image: var(--bg-lista-posts);
+	background: var(--bg-lista-posts);
 	background-attachment: fixed;
 	background-size: cover;
 }
@@ -32,6 +32,7 @@ section {
 /* -----------------------------Local de Pesquisar----------------------------- */
 #secao-barra {
 	justify-content: space-between;
+	background: var(--pearl-grey-100);
 }
 
 #search {
@@ -98,7 +99,7 @@ section {
 
 #botao-filtro ion-icon {
 	font-size: 3.5rem;
-	color: var(--black-100);
+	color: var(--white-100);
 }
 
 #grupo-filtro {
@@ -175,7 +176,7 @@ ion-icon {
 
 #secao-titulo h1 {
 	font-size: 6rem;
-	color: var(--pearl-grey-100);
+	color: var(--white-100);
 	font-style: var(--font-quicksand);
 }
 /* -----------------------------Local de Posts----------------------------- */
