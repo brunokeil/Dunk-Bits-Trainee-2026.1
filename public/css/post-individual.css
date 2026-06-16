@@ -321,10 +321,6 @@ main {
 /* ------- responsividade ------- */
 
 @media (max-width: 820px) {
-	body {
-		
-		padding: 0 16px;
-	}
 
 	.post {
 		display: flex;
