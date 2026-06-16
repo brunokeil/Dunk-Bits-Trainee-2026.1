@@ -139,6 +139,9 @@ function setAllEventListeners() {
     const deleteUser = document.querySelectorAll(".delete-user");
     const discardUser = document.querySelectorAll(".discard-user");
     const errorUser = document.querySelectorAll(".error-user");
+    const dropdownView = document.querySelectorAll(".dropdown-view");
+    const dropdownEdit = document.querySelectorAll(".dropdown-edit");
+    const dropdownDelete = document.querySelectorAll(".dropdown-delete");
 
 
 
@@ -218,6 +221,38 @@ function setAllEventListeners() {
             toggleModal(modal.id);
         });
     });
+
+    dropdownView.forEach((link) => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault(); 
+            const row = link.closest(".row-tabela"); 
+            const botaoPrincipal = row.querySelector(".view-user"); 
+            if (botaoPrincipal) botaoPrincipal.click(); 
+            link.closest(".dropdownMenuPosts").classList.remove("ativo"); 
+        });
+    });
+
+    dropdownEdit.forEach((link) => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const row = link.closest(".row-tabela");
+            const botaoPrincipal = row.querySelector(".edit-user"); 
+            if (botaoPrincipal) botaoPrincipal.click();
+            link.closest(".dropdownMenuPosts").classList.remove("ativo");
+        });
+    });
+
+
+    dropdownDelete.forEach((link) => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const row = link.closest(".row-tabela");
+            const botaoPrincipal = row.querySelector(".delete-user"); 
+            if (botaoPrincipal) botaoPrincipal.click();
+            link.closest(".dropdownMenuPosts").classList.remove("ativo");
+        });
+    });
+
         
     
 }

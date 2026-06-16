@@ -107,6 +107,14 @@ class UsuariosController
 
         $database = App::get("database");
 
+        $id = $_POST['id'];
+
+        $usuario = $database->selectOne('users', $id);
+
+        if ($_POST['password'] == "") {
+            $_POST['password'] = $usuario->password;
+        }
+
 
 
         if ($imgName != null) {
@@ -125,7 +133,7 @@ class UsuariosController
         }
 
 
-        $id = $_POST['id'];
+
 
         $database->update('users', $id, $parameters);
         header('Location: /admin-users');

@@ -12,7 +12,7 @@ p {
 }
 
 body {
-	background-color: var(--pearl-grey-100);
+	background-color: var(--pearl-light-grey);
 	display: flex;
 	flex-direction: column;
 
