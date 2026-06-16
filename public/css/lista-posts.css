@@ -3,7 +3,7 @@
 /*----- Lista-De-Posts ----*/
 
 *{
-	/* outline: 1px solid green; */
+	/* outline: 1px solid blue; */
 }
 html, body {
     max-width: 100vw;
@@ -29,7 +29,7 @@ section {
 	align-items: center;
 	align-self: stretch;
 }
-
+/* -----------------------------Local de Pesquisar----------------------------- */
 #secao-barra {
 	justify-content: space-between;
 }
@@ -85,6 +85,7 @@ section {
 	z-index: 10px;
 }
 
+/* -----------------------------Local de Pesquisar-Filtro----------------------------- */
 #botao-filtro {
 	cursor: pointer;
 	display: flex;
@@ -165,7 +166,7 @@ ion-icon {
 	line-height: 1;
 	vertical-align: middle;
 }
-
+/* -----------------------------Local de Título----------------------------- */
 #container-titulo {
 	border-top: solid 0.4rem var(--black-100);
 	padding: 0 40px;
@@ -177,7 +178,7 @@ ion-icon {
 	color: var(--pearl-grey-100);
 	font-style: var(--font-quicksand);
 }
-
+/* -----------------------------Local de Posts----------------------------- */
 #container-posts {
 	display: grid;
 	grid-template-columns: repeat(3, 350px);
@@ -202,22 +203,22 @@ ion-icon {
 }
 
 .card {
-	width: 100%;
-	max-width: 350px;
-	height: 375px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: var(--pearl-grey-100);
-	/* background-image: url(../assets/placeholder/dinosaur.png); */
-	background-repeat: no-repeat;
-	background-size: 100% auto;
-	background-position: bottom center;
+
+	width: 100%;
+	max-width: 350px;
+	height: 375px;
+	/* aspect-ratio: 9 / 4; */
+
+    background-color: var(--pearl-grey-100);
 	border-radius: 16px;
 	box-shadow: 6px 5px 4px 0 rgba(88, 46, 5, 0.29);
-	position: relative;
+
 	cursor: pointer;
 	overflow: hidden;
+
 	transition:
 		opacity 1.2s ease,
 		transform 1.2s ease;
@@ -226,32 +227,38 @@ ion-icon {
 }
 
 .card-imagem {
-	width: 100%;
-	max-width: 350px;
-	height: 375px;
-	object-fit: cover;
+    min-width: 350px;
+    height: 90%;
+	/* object-fit: cover; */
 }
+
 
 .card.mostrar {
 	opacity: 1;
 	transform: translateX(0);
+	padding: 0;
 }
 
 .card-footer {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	padding: 20px;
+	padding: 0 20px;
 	transition: opacity 0.3s ease;
+	background: linear-gradient(0deg, var(--pearl-grey-100), transparent);
 }
 
 .card-titulo-fixo {
 	color: var(--white-100);
 	font-size: 3em;
+    max-height: 4em;
+	overflow: hidden;
+	width: 100%;
+
+
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 3;
-	overflow: hidden;
 }
 
 .card-overlay {
@@ -274,10 +281,12 @@ ion-icon {
 	color: var(--white-100);
 	font-size: 3em;
 	margin-bottom: 5px;
+	max-height: 5em;
+	overflow: hidden;
+
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 3;
-	overflow: hidden;
 }
 
 .card-autor {
@@ -291,6 +300,8 @@ ion-icon {
 	color: var(--white-100);
 	font-size: 1em;
 	overflow: hidden;
+    max-height: 7.5em;
+
 	display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
@@ -303,7 +314,7 @@ ion-icon {
 .card:hover .card-overlay {
 	opacity: 1;
 }
-
+/* -----------------------------Local de Paginação----------------------------- */
 #container-paginacao {
 	display: flex;
 	justify-content: center;
@@ -327,23 +338,14 @@ ion-icon {
 	justify-content: center;
 }
 
-#pontos {
-	display: flex;
-	gap: 5px;
-}
-
-.ponto ion-icon {
-	font-size: 1rem;
-	color: var(--black-100);
-}
-
-#pontos .ponto.ativo {
-	color: var(--black-100);
-}
-
-.seta ion-icon {
+.seta ion-icon{
+	color: var(--white-100);
 	font-size: 2rem;
-	color: var(--pearl-grey-100);
+}
+
+#pagina-atual p {
+	color: var(--white-100);
+	font-size: 1.5em;
 }
 
 /*----- Lista de Posts ---- */
