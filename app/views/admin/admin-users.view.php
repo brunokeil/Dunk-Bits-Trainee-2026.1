@@ -54,8 +54,8 @@
         </form>
 
         <button class="botao-criar-usuario primaryBtn" id="createUser">
-          <!-- <ion-icon name="add" class="add-user"></ion-icon> -->
-          + CRIAR USUÁRIO
+          <ion-icon name="add" class="icone-mais"></ion-icon>
+          <span class="texto-criar-usuario ">CRIAR USUÁRIO</span>
         </button>
       </div>
 
