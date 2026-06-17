@@ -61,6 +61,7 @@ function alterarImagem() {
 
         profPic.addEventListener("click", () => {
             input.click();
+            console.log("Imagem clicada");
         });
 
         input.addEventListener("change", () => {

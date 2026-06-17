@@ -114,9 +114,9 @@
 /* ======================================== */
 
 /* foto de perfil */
-.postPicture {
-    /* width: 80%; */
-    height: 40vh;
+.postPicture, .postPictureView {
+    width: 100%;
+    /* height: 40vh; */
     /* min-height: auto; */
     /* background: var(--white-25); */
 
@@ -128,7 +128,7 @@
     align-items: center;
 
     border: 0.5rem dashed var(--white-25);
-    aspect-ratio: 9/12;
+    aspect-ratio: 16/9;
     object-fit: cover;
     /* max-height: 20vh; */
 
@@ -136,9 +136,11 @@
     /* background-image: url("../assets/placeholder/posts_placeholder.webp"); */
 }
 
-.imgPost {
+.postPicture img, .postPictureView img {
+    /* min-width: max-content; */
     width: 100%;
     height: 100%;
+    object-fit: cover;
 
     border-radius: inherit;
 }
