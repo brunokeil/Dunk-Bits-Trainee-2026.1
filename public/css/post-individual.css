@@ -15,12 +15,25 @@ body {
 	background-color: var(--pearl-light-grey);
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 
-
-
-	  min-height: 100vh;
+	min-height: 100vh;
 
 	/* margin: 0 auto; */
+}
+
+main {
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding: 3rem 0;
+
+	max-width: 82ch;
+
+	gap: 4rem;
 }
 
 section {
@@ -29,7 +42,44 @@ section {
 	align-items: center;
 }
 
+/* ------------------- */
+
+.sair-pagina {
+	width: 100%;
+	justify-content: flex-start;
+	display: flex;
+}
+
+.sair-pagina ion-icon {
+	font-size: 48px;
+}
+
+.sair-pagina a {
+	padding: 0;
+}
+
+.sair-pagina p:hover {
+	text-decoration: underline;
+}
+
 /* ---- post ----- */
+
+.post {
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	gap: 5rem;
+}
+
+.conteudo {
+	display: flex;
+	flex-direction: column;
+	/* flex: 1 1 300px; */
+	width: 100%;
+	/* max-width: 50ch; */
+	gap: 3rem;
+}
 
 .imagem-post {
 	display: flex;
@@ -38,69 +88,54 @@ section {
 
 .imagem-post-obj {
 	width: 100%;
-	max-width: 600px;
-  	aspect-ratio: 4/5;
-  	height: auto;
-  	object-fit: cover;
+	/* max-width: 600px; */
+	aspect-ratio: 16/9;
+	/* height: 100%; */
+	object-fit: cover;
 }
+
+.descricao {
+	display: flex;
+	font-size: 1.2rem;
+}
+/* ----------------------- */
+
+.footer-post {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 1rem;
+}
+
+.footer-post a {
+	padding: 0;
+}
+
 
 .metadados {
 	display: flex;
 	flex-direction: column;
-	padding-bottom: 10px;
 }
 
 .metadados > span {
-	font-size: 15px;
+	font-size: small;
 }
 
-.post {
-	display: flex;
-	padding: 20px;
-	padding-top: 0px;
-	margin-top: 20px;
-	align-items: center;
-    justify-content: baseline;
-	gap: 20px;
+.metadados :first-child {
+	font-weight: bold;
+	font-size: 1rem;
 }
 
-main {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
-  
-  display: flex;
-  flex-direction: column;
-}
-
-.conteudo {
-	display: flex;
-	flex-direction: column;
-	padding: 20px;
-	flex: 1 1 300px;
-	max-width: 50ch;
-	gap: 2rem;
-}
-
-.conteudo > .texto p {
-	width: fit-content;
-}
 
 .botoes-de-compartilhar {
 	display: flex;
 	flex-direction: row;
-	gap: 10px;
+	gap: 1rem;
 }
 
 .compartilhar-post {
 	display: flex;
-	width: 50px;
-}
-
-.footer {
-	display: flex;
-	flex-direction: column;
+	width: 3rem;
 }
 
 /* ------ comentários -------- */
@@ -110,7 +145,7 @@ main {
 	justify-content: center;
 	flex-direction: column;
 	color: white;
-	padding: 20px;
+	/* padding: 20px; */
 	gap: 40px;
 	width: 100%;
 }
@@ -152,8 +187,9 @@ main {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-	padding-bottom: 15px;
-	padding-inline: 20px;
+
+	padding: 1rem 0;
+
 	border-bottom: 1px solid rgba(110, 109, 169, 0.551);
 }
 
@@ -178,15 +214,11 @@ main {
 	justify-content: space-between;
 }
 
-.descricao {
-	display: flex;
-}
-
 .lista-de-comentarios {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-    gap: 20px;
+	gap: 20px;
 }
 
 .formulario-comentario {
@@ -222,106 +254,84 @@ main {
 
 .btn-excluir-icone {
 	background-color: red;
-    border: none;           
-    padding: 4px;            
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    width: fit-content;     
+	border: none;
+	padding: 4px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: fit-content;
 }
 
 .btn-excluir-icone ion-icon {
-    font-size: 24px;         
+	font-size: 24px;
 }
 
 .btn-editar-icone {
 	background-color: var(--blue-100);
-    border: none;           
-    padding: 4px;            
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    width: fit-content;     
+	border: none;
+	padding: 4px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: fit-content;
 }
 
 .btn-editar-icone ion-icon {
-	font-size: 24px;    
+	font-size: 24px;
 }
 
 [x-cloak] {
-    display: none !important;
+	display: none !important;
 }
 
 .acoes-comentario {
-    display: flex;
-    gap: 8px;
+	display: flex;
+	gap: 8px;
 }
 
 .form-editar-comentario {
-    margin-top: 10px;
+	margin-top: 10px;
 }
 
 .input-editar-comentario {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
 	color: black;
 }
 
 .botoes-edicao {
-    display: flex;
-    gap: 8px;
+	display: flex;
+	gap: 8px;
 }
 
 .btn-salvar {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
+	background-color: #28a745;
+	color: white;
+	border: none;
+	padding: 6px 12px;
+	border-radius: 4px;
+	cursor: pointer;
 }
 
 .btn-cancelar {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
+	background-color: #dc3545;
+	color: white;
+	border: none;
+	padding: 6px 12px;
+	border-radius: 4px;
+	cursor: pointer;
 }
-
-
-.sair-pagina {
-	padding-top: 50px;
-	padding-bottom: 0;
-
-	max-width: 100px;
-
-
-
-}
-
-.sair-pagina ion-icon {
-    font-size: 48px;
-}
-
-
-
-
-
-
 
 /* ------- responsividade ------- */
 
 @media (max-width: 820px) {
-
 	.post {
 		display: flex;
 		flex-direction: column;
