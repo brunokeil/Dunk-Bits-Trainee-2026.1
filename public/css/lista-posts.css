@@ -31,8 +31,8 @@ section {
 }
 /* -----------------------------Local de Pesquisar----------------------------- */
 #secao-barra {
+	margin-top: 10px;
 	justify-content: space-between;
-	background: var(--pearl-grey-100);
 }
 
 #search {
@@ -280,9 +280,9 @@ ion-icon {
 
 .card-titulo-overlay {
 	color: var(--white-100);
-	font-size: 3em;
+	font-size: 2.5em;
 	margin-bottom: 5px;
-	max-height: 5em;
+	max-height: 150px;
 	overflow: hidden;
 
 	display: -webkit-box;
@@ -301,7 +301,7 @@ ion-icon {
 	color: var(--white-100);
 	font-size: 1em;
 	overflow: hidden;
-    max-height: 7.5em;
+    max-height: 120px;
 
 	display: -webkit-box;
     -webkit-box-orient: vertical;

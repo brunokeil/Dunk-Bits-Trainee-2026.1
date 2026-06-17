@@ -29,7 +29,7 @@ class LandingPageController
         $database = App::get("database");
 
 
-        $posts = $database->paginate('posts', 9, 0, null, null, null);
+        $posts = $database->paginate('posts', 10, 0, null, null, null);
 
         foreach ($posts as $p) {
             
