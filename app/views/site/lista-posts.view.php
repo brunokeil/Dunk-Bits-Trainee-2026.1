@@ -19,6 +19,7 @@
 
       <div id="search">
         <form method="GET" action="/lista-posts" id="form-search">
+          
           <ion-icon name="search-sharp"></ion-icon>
 
           <input type="text" id="search-text" placeholder="SEARCH" value="<?= $searchText ?? '' ?>" name="search" />
@@ -30,7 +31,7 @@
       <form method="GET" action="/lista-posts" class="form_filtros">
         <div id="grupo-filtro">
           <div id="filtros-opcoes">
-            <button type="submit" name="filtro" value="highlights" class="botao-filtro-item">Highlights</button>
+            <button type="submit" name="filtro" value="destaques" class="botao-filtro-item">Destaques</button>
             <button type="submit" name="filtro" value="jogos" class="botao-filtro-item">Jogos</button>
             <button type="submit" name="filtro" value="notícias" class="botao-filtro-item">Notícias</button>
           </div>

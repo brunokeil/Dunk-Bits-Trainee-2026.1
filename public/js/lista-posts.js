@@ -40,24 +40,6 @@ function atualizarPagina(indexDaPagina) {
   paginaAtual = indexDaPagina;
 }
 
-pontos.forEach((ponto, index) => {
-  ponto.addEventListener("click", () => {
-    atualizarPagina(index);
-  });
-});
-
-setaDireita.addEventListener("click", () => {
-  if (paginaAtual < pontos.length - 1) {
-    atualizarPagina(paginaAtual + 1);
-  }
-});
-
-setaEsquerda.addEventListener("click", () => {
-  if (paginaAtual > 0) {
-    atualizarPagina(paginaAtual - 1);
-  }
-});
-
 atualizarPagina(0);
 
 /* Função do Filtro */
@@ -65,15 +47,33 @@ document.addEventListener("DOMContentLoaded", () => {
   const botaoFiltro = document.getElementById("botao-filtro");
   const menuFiltros = document.getElementById("filtros-opcoes");
 
-  botaoFiltro.addEventListener("click", () => {
+  botaoFiltro.addEventListener("click", (event) => {
+  const parametrosUrl = new URLSearchParams(window.location.search);
+
+  if (parametrosUrl.has("filtro")) {
+    event.preventDefault();
+    menuFiltros.style.transition = "none";
+    menuFiltros.style.animation = "none";
+    menuFiltros.style.display = "none";
+    
+    window.location.href = "/lista-posts"; 
+    return;
+  }
     menuFiltros.classList.toggle("active");
   });
 });
 
-document.addEventListener("keypress", (event) => {
-  if(event.key === "Enter") {
-    let form = document.getElementById("form-search");
-    event.preventDefault();
-    form.submit();
+/* Função Barra Pesquisar - Limita o Enter */
+const barraPesquisar = document.getElementById("search-text");
+const formPesquisa = document.getElementById("form-search");
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    if (event.target !== barraPesquisar) {
+      event.preventDefault(); 
+    } else {
+      event.preventDefault();
+      formPesquisa.submit();
+    }
   }
-})
+});
