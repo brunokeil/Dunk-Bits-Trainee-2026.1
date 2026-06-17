@@ -5,9 +5,9 @@
     /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
-    /* width: 100%; */
-    background-color: var(--orange-100);
-    padding: 40px 60px;
+    width: 100%;
+    background-color: var(--dark-orange-100);
+    padding: 2rem 4rem;
     font-family: var(--font-quicksand);
     /* margin-top: 2rem; */
     bottom: 0;
