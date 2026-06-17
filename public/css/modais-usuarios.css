@@ -135,17 +135,7 @@
 
     overflow-y: auto;
 
-    background:
-        radial-gradient(
-            136.68% 167.85% at 140.67% 11.14%,
-            #eea600 0%,
-            #ef6400 100%
-        ),
-        linear-gradient(
-            200deg,
-            rgba(255, 255, 255, 0.5) 43.04%,
-            rgba(187, 187, 187, 0.5) 80.67%
-        );
+    background: var(--bg-modal);
     border-radius: 25px;
 }
 
@@ -176,19 +166,18 @@
 }
 
 /* foto de perfil */
-.userProfilePicture {
+.userProfilePicture, .userProfilePictureNoEdit {
     cursor: pointer;
     position: relative;
     overflow: hidden;
 
     width: 100%;
-    max-width: 300px;
+    /* max-width: 300px;
     min-width: 200px;
-    min-height: auto;
-    aspect-ratio: 0.9;
-    margin: 0 auto;
+    min-height: auto; */
+    aspect-ratio: 1/1;
 
-    border-radius: 10px;
+    border-radius: 100%;
 
     border: 4px dashed var(--white-100);
 
@@ -196,13 +185,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-self: center;
 }
 
 .userProfilePicture:hover {
     background-color: var(--white-25);
 }
 
-.userProfilePictureNoEdit {
+/* .userProfilePictureNoEdit {
     min-width: 200px;
     min-height: auto;
     aspect-ratio: 0.9;
@@ -212,15 +202,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .imgProfPicNoEdit {
     width: 100%;
     height: 100%;
-    max-width: 200px;
+    max-width: 20vw;
     object-fit: cover;
 
-    border-radius: 10px;
+    border-radius: inherit;
 }
 
 .icone-img {
@@ -335,6 +325,10 @@
 #form-create,
 #form-edit {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .footerButtons > * {
