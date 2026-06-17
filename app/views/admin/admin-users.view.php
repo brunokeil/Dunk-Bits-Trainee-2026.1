@@ -117,9 +117,9 @@
 
                     <div class="dropdownMenuPosts">
                       <ul>
-                        <li><a>Visualizar</a></li>
-                        <li><a>Editar</a></li>
-                        <li><a>Excluir</a></li>
+                        <li><a class="dropdown-view">Visualizar</a></li>
+                        <li><a class="dropdown-edit">Editar</a></li>
+                        <li><a class="dropdown-delete">Excluir</a></li>
                       </ul>
                     </div>
                   </div>

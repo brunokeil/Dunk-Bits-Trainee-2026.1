@@ -19,23 +19,21 @@
   <?php @require "navbar.view.php" ?>
   <main>
 
-
+    
     <div class="sair-pagina">
       <a href="/lista-posts?page=<?= $currentPage ?>">
         <ion-icon class="icone-sair" name="arrow-back-outline"></ion-icon>
+        <p>Retornar à Lista de Posts</p>
       </a>
     </div>
+    
     <section class="post">
-
+      
+      <div class="conteudo">
       <img
         class="imagem-post-obj imagem-post"
         src="<?= $postCoverImage ?>" />
 
-
-
-
-      <div class="conteudo">
-        <div class="texto">
           <h1 class="titulo"><?php echo $post->title ?></h1>
 
           <p class="descricao">
@@ -44,7 +42,7 @@
           </p>
         </div>
 
-        <div class="footer">
+        <div class="footer-post">
           <div class="metadados">
             <span><?php
                   echo $author->name;
@@ -176,6 +174,7 @@
     </section>
 
   </main>
+
   <?php @require "footer.view.php" ?>
   <div class="modal-container close">
     <?php

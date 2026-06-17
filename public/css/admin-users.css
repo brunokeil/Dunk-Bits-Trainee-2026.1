@@ -7,10 +7,15 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+
     min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 main * {
@@ -21,51 +26,98 @@ main * {
 .painel {
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+    width: min(1400px, 100%);
+    max-width: 100%;
+
+    padding: 2rem;
+
     background: rgba(255, 255, 255, 0.18);
     border-radius: 2rem;
-
-    max-width: 80%;
-    height: auto;
-
     backdrop-filter: blur(10px);
-
     border: 1px solid white;
+}
 
-    padding: 2.6rem 5rem;
-
-    align-items: center;
+.componentes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
 }
 
 .titulo {
-    font-weight: 1000;
-    font-size: 2.5rem;
     display: flex;
     justify-content: center;
+
+    font-size: 2.5rem;
+    font-weight: 1000;
+    text-align: center;
+}
+
+.interacoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.input-de-busca {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: white;
+    border-radius: 20px;
+
+    padding-inline: 10px;
+
+    width: 100%;
+    max-width: 400px;
+    height: 40px;
 }
 
 .input-de-busca input {
     border: none;
     outline: none;
     background: transparent;
+
     width: 100%;
-    
     padding: 0.4rem;
+
     font-size: 1rem;
     font-weight: 600;
     color: var(--black-100);
 }
+
 .input-de-busca input::placeholder {
     color: var(--pearl-grey-50);
 }
 
-.componentes {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 15px;
-
-    width: 100%;
+.botao-lupa {
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
+
+button .pesquisar-botao {
+    color: black;
+    background: transparent;
+}
+
+.botao-criar-usuario {
+    font-size: 1.2rem;
+}
+
+.botao-criar-usuario:hover {
+    color: var(--orange-100);
+}
+
+.icone-mais {
+    font-size: 30px;
+}
+
 .tabela-container {
     width: 100%;
     overflow-x: auto;
@@ -73,46 +125,27 @@ main * {
 
 table {
     width: 100%;
-    min-width: 500px;
+    min-width: 700px;
 
     border-collapse: separate;
     border-spacing: 0;
-    table-layout: fixed;
-}
-
-.interacoes {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.dropdownMenuPosts {
-    display: none;
-    position: absolute;
-    top: 52px;
-    right: 10px;
-    background-color: var(--white-100);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    z-index: 1;
-}
-
-table {
-    border-collapse: separate;
-    border-spacing: 0;
-    width: 100%;
-    margin: 0 auto;
     table-layout: fixed;
     box-sizing: border-box;
 }
 
+.header-tabela th {
+    background-color: #ffffff40;
+}
+
 th,
 td {
+    padding: 12px;
+
     text-align: center;
-    padding: 1.5vh;
+
     color: var(--white-100);
+
     font-family: var(--font-quicksand);
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 
@@ -120,13 +153,59 @@ td {
     text-overflow: ellipsis;
 }
 
+td {
+    position: relative;
+    border-bottom: 1px solid var(--white-100);
+}
+
 .info-email {
     overflow: hidden;
 }
 
-td {
-    border-bottom: 1px solid var(--white-100);
-    position: relative;
+.botoesdeacao {
+    display: flex;
+    justify-content: center;
+}
+
+.view-user,
+.edit-user,
+.delete-user {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+}
+
+.acoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.trespontos {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+    color: var(--white-100);
+}
+
+.dropdownMenuPosts {
+    display: none;
+    position: absolute;
+    top: 52px;
+    right: 10px;
+
+    background-color: var(--white-100);
+
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+    z-index: 999;
 }
 
 .dropdownMenuPosts.ativo {
@@ -142,6 +221,7 @@ td {
 .dropdownMenuPosts li a {
     display: block;
     padding: 10px 20px;
+
     color: var(--black-100);
     text-decoration: none;
     font-family: var(--font-quicksand);
@@ -152,32 +232,6 @@ td {
     border-radius: 8px;
 }
 
-.botoesdeacao {
-    display: flex;
-    justify-content: center;
-}
-
-.botao-criar-usuario {
-    font-size: 1.2rem;
-}
-.botao-criar-usuario:hover {
-    color: var(--orange-100);
-}
-
-.header-tabela th {
-    background-color: #ffffff40;
-}
-
-.trespontos {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    transition: 0.3s ease;
-    color: var(--white-100);
-    display: none;
-}
-
 ion-icon {
     color: var(--white-100);
 }
@@ -186,55 +240,9 @@ ion-icon:hover {
     color: var(--white-25);
 }
 
-.view-user,
-.edit-user,
-.delete-user {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    transition: 0.3s ease;
-}
-
 .x-sair {
     font-size: 40px;
     padding-top: 10px;
-}
-
-.input-de-busca {
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 20px;
-    padding-inline: 10px;
-    width: 400px;
-    height: 40px;
-
-    justify-content: space-between;
-}
-
-.acoes {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: center;
-}
-
-.icone-acao:hover {
-    background-color: #ff6600;
-}
-
-/*
-.icone-acao {
-    width: 25px;
-    height: 25px;
-    transition: background-color 0.3s ease;
-}
-    */
-
-.trespontos {
-    display: none;
 }
 
 .carrossel {
@@ -244,26 +252,19 @@ ion-icon:hover {
     padding-top: 20px;
 }
 
-.seta-esquerda {
-    border: none;
-    outline: none;
-    background: transparent;
-    display: flex;
-    align-items: center;
-}
-
+.seta-esquerda,
 .seta-direita {
+    display: flex;
+    align-items: center;
+
     border: none;
     outline: none;
     background: transparent;
-    display: flex;
-    align-items: center;
 }
 
-button .pesquisar-botao {
-    color: black;
-
-    background-color: transparent;
+.carrossel .paginacao img,
+.carrossel button img {
+    width: 20px;
 }
 
 .paginacao {
@@ -273,25 +274,11 @@ button .pesquisar-botao {
     min-width: 40px;
 }
 
-.carrossel .paginacao img {
-    width: 20px;
-}
-.carrossel button img {
-    width: 20px;
-}
-.resumo {
-    display: none;
-}
-
 .visao-pag {
     margin: 0;
 }
 
-.dropdownMenuPosts {
-    display: none;
-}
-
-.dropdownMenuPosts {
+.resumo {
     display: none;
 }
 
@@ -299,172 +286,95 @@ button .pesquisar-botao {
     color: white;
 }
 
-.botao-lupa {
-    background-color: transparent;
-}
-
-.icone-mais {
-    font-size: 30px;
-}
-
 
 @media (max-width: 920px) {
-    .header-tabela,
-    .linha-tabela {
-        min-width: 700px;
 
-        grid-template-columns:
-            0.5fr
-            1fr
-            2fr
-            1fr;
+    .painel {
+        padding: 1.5rem;
     }
-    .tabela {
-        overflow-x: auto;
+
+    .titulo {
+        font-size: 2rem;
+    }
+
+    .interacoes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input-de-busca {
+        max-width: 100%;
+    }
+
+    .botao-criar-usuario {
         width: 100%;
+        justify-content: center;
     }
-    .icone-acao {
+    .texto-criar-usuario {
         display: none;
     }
 
-    .resumo {
-        display: flex;
-    }
-
-    .painel {
-        width: 80%;
-        overflow: visible;
+    .botoesdeacao {
+        display: none;
     }
 
     .trespontos {
         display: flex;
     }
 
-    .view-user,
-    .edit-user,
-    .delete-user {
-        display: none;
-    }
-
-    .botao-criar-usuario {
-        width: 35%;
-        justify-content: center;
-        padding: 10px 0;
-    }
-    .texto-criar-usuario {
-        display: none;
-    }
-}
-
-@media (max-width: 600px) {
-    .painel {
-        width: 98%;
-    }
-
-    .botao-criar-usuario {
-        width: 50px;
-    }
-
-    .componentes {
-        width: 95%;
-    }
-    .painel {
-        height: 90vh;
-        justify-content: center;
-    }
-
-    .input-de-busca {
-        background-color: white;
-
-        width: 60%;
-        justify-content: space-between;
-        height: 80%;
-    }
-
-    .input-de-busca input {
-        width: 50%;
-    }
-
-}
-
-.visao-pag {
-    margin: 0;
-}
-
-@media (max-width: 920px) {
-    .header-tabela,
-    .linha-tabela {
-        min-width: 700px;
-
-        grid-template-columns:
-            0.5fr
-            1fr
-            2fr
-            1fr;
-    }
-    .tabela {
-        overflow-x: auto;
-        width: 100%;
-    }
-    .icone-acao {
-        display: none;
-    }
-
     .resumo {
         display: flex;
     }
-
-    .painel {
-        width: 80%;
-        overflow: visible;
-    }
-
-    .trespontos {
-        display: flex;
-    }
-
-    .view-user,
-    .edit-user,
-    .delete-user {
-        display: none;
-    }
-
-    .botao-criar-usuario {
-        width: 35%;
-        justify-content: center;
-        padding: 10px 0;
-    }
-    .texto-criar-usuario {
-        display: none;
-    }
 }
 
+
+
 @media (max-width: 600px) {
-    .painel {
-        width: 98%;
+
+    body {
+        padding: 10px;
     }
 
-    .botao-criar-usuario {
-        width: 50px;
+    .painel {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 1rem;
     }
 
     .componentes {
-        width: 95%;
+        width: 100%;
+        gap: 12px;
     }
-    .painel {
-        height: 90vh;
-        justify-content: center;
+
+    .titulo {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .interacoes {
+        gap: 10px;
     }
 
     .input-de-busca {
-        background-color: white;
-
-        width: 60%;
-        justify-content: space-between;
-        height: 80%;
+        width: 100%;
+        max-width: 100%;
+        height: 42px;
     }
 
     .input-de-busca input {
-        width: 50%;
+        width: 100%;
+    }
+
+    .botao-criar-usuario {
+        width: 100%;
+    }
+
+    .texto-criar-usuario {
+        display: none;
+    }
+
+    table {
+        min-width: 650px;
     }
 }
+

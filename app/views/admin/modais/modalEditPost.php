@@ -13,10 +13,10 @@
         </div>
         <div class="authorData">
             <div class="inputGroup">
-                <input type="text" class="postAuthor" name="postTipo" value="<?= $post->type ?>" id="viewAuthor" />
+                <input type="text" class="postAuthor" name="postTipo" value="<?= $post->type ?>" id="viewAuthor" readonly/>
             </div>
             <div class="inputGroup">
-                <input name="" type="text" class="postDate" value="<?= $post->created_at ?>" id="viewDate" />
+                <input name="" type="text" class="postDate" value="<?= $post->created_at ?>" id="viewDate" readonly/>
             </div>
         </div>
     </div>

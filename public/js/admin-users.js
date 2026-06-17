@@ -18,4 +18,13 @@ btnOpts.forEach((botao) => {
 })
 
 
+document.addEventListener('click', (event) => {
+    const dropdownsAbertos = document.querySelectorAll(".dropdownMenuPosts.ativo");
 
+    dropdownsAbertos.forEach((menu) => {
+        const containerAcoes = menu.closest(".acoes");
+        if (!containerAcoes.contains(event.target)) {
+            menu.classList.remove("ativo");
+        }
+    });
+});
