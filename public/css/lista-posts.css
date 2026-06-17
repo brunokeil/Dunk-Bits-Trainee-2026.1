@@ -3,7 +3,7 @@
 /*----- Lista-De-Posts ----*/
 
 *{
-	/* outline: 1px solid blue; */
+	outline: 1px solid blue;
 }
 html, body {
     max-width: 100vw;
@@ -29,6 +29,13 @@ section {
 	align-items: center;
 	align-self: stretch;
 }
+
+ion-icon {
+	display: flex;
+	line-height: 1;
+	vertical-align: middle;
+}
+
 /* -----------------------------Local de Pesquisar----------------------------- */
 #secao-barra {
 	margin-top: 10px;
@@ -86,6 +93,11 @@ section {
 	z-index: 10px;
 }
 
+#search ion-icon {
+	font-size: 1.2em;
+	color: var(--black-100);
+}
+
 /* -----------------------------Local de Pesquisar-Filtro----------------------------- */
 #botao-filtro {
 	cursor: pointer;
@@ -100,6 +112,11 @@ section {
 #botao-filtro ion-icon {
 	font-size: 3.5rem;
 	color: var(--white-100);
+}
+
+#botao-filtro ion-icon:hover{
+	color: var(--white-50);
+	transition: all 120ms ease-in-out;
 }
 
 #grupo-filtro {
@@ -161,12 +178,6 @@ section {
 		max-width: 250px;
 	}
 }
-
-ion-icon {
-	display: flex;
-	line-height: 1;
-	vertical-align: middle;
-}
 /* -----------------------------Local de Título----------------------------- */
 #container-titulo {
 	border-top: solid 0.4rem var(--black-100);
@@ -211,7 +222,7 @@ ion-icon {
 	width: 100%;
 	max-width: 350px;
 	height: 375px;
-	/* aspect-ratio: 9 / 4; */
+	/* aspect-ratio: 16 / 9; */
 
     background-color: var(--pearl-grey-100);
 	border-radius: 16px;
@@ -271,7 +282,7 @@ ion-icon {
 	background-color: var(--pearl-grey-80);
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-end;
 	padding: 24px;
 	opacity: 0;
 	transition: opacity 0.3s ease;
@@ -344,9 +355,19 @@ ion-icon {
 	font-size: 2rem;
 }
 
+.seta ion-icon:hover{
+	color: var(--white-50);
+	transition: all 120ms ease-in-out;
+}
+
 #pagina-atual p {
 	color: var(--white-100);
 	font-size: 1.5em;
+}
+
+#pagina-atual p:hover{
+	color: var(--white-50);
+	transition: all 120ms ease-in-out;
 }
 
 /*----- Lista de Posts ---- */
