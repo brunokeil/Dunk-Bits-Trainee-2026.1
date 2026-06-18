@@ -19,89 +19,95 @@
   <?php @require "navbar.view.php" ?>
   <main>
 
-    
+
     <div class="sair-pagina">
       <a href="/lista-posts?page=<?= $currentPage ?>">
         <ion-icon class="icone-sair" name="arrow-back-outline"></ion-icon>
         <p>Retornar à Lista de Posts</p>
       </a>
     </div>
-    
+
     <section class="post">
-      
+
       <div class="conteudo">
-      <img
-        class="imagem-post-obj imagem-post"
-        src="<?= $postCoverImage ?>" />
+        <img
+          class="imagem-post-obj imagem-post"
+          src="<?= $postCoverImage ?>" />
 
-          <h1 class="titulo"><?php echo $post->title ?></h1>
+        <h1 class="titulo"><?php echo $post->title ?></h1>
 
-          <p class="descricao">
-            <?php echo $post->content; ?>
+        <p class="descricao">
+          <?php echo $post->content; ?>
 
-          </p>
+        </p>
+      </div>
+
+      <div class="footer-post">
+        <div class="metadados">
+          <span><?php
+                echo $author->name;
+
+                ?>
+          </span>
+          <span><?php echo $post->created_at; ?></span>
         </div>
 
-        <div class="footer-post">
-          <div class="metadados">
-            <span><?php
-                  echo $author->name;
+        <div class="botoes-de-compartilhar">
 
-                  ?>
-            </span>
-            <span><?php echo $post->created_at; ?></span>
-          </div>
+          <?php
+          $postUrl = urlencode(
+            (isset($_SERVER['HTTPS']) ? 'https' : 'http') .
+              '://' .
+              $_SERVER['HTTP_HOST'] .
+              $_SERVER['REQUEST_URI']
+          );
 
-          <div class="botoes-de-compartilhar">
-
-            <?php
-            $postUrl = urlencode(
-              (isset($_SERVER['HTTPS']) ? 'https' : 'http') .
-                '://' .
-                $_SERVER['HTTP_HOST'] .
-                $_SERVER['REQUEST_URI']
-            );
-
-            $postTitle = urlencode($post->title);
-            ?>
-            <a href="https://wa.me/?text=<?= $postTitle ?>%20<?= $postUrl ?>"
-              target="_blank">
-              <img
-                class="compartilhar-post"
-                src="/public/assets/icons/whatsapp.png" />
-            </a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=<?= $postUrl ?>"
-              target="_blank">
-              <img
-                class="compartilhar-post"
-                src="/public/assets/icons/facebook-messenger.png" />
-            </a>
-            <a href="https://twitter.com/intent/tweet?text=<?= $postTitle ?>&url=<?= $postUrl ?>"
-              target="_blank">
-              <img
-                class="compartilhar-post"
-                src="/public/assets/icons/twitter.png" />
-            </a>
-          </div>
+          $postTitle = urlencode($post->title);
+          ?>
+          <a href="https://wa.me/?text=<?= $postTitle ?>%20<?= $postUrl ?>"
+            target="_blank">
+            <img
+              class="compartilhar-post"
+              src="/public/assets/icons/whatsapp.png" />
+          </a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=<?= $postUrl ?>"
+            target="_blank">
+            <img
+              class="compartilhar-post"
+              src="/public/assets/icons/facebook-messenger.png" />
+          </a>
+          <a href="https://twitter.com/intent/tweet?text=<?= $postTitle ?>&url=<?= $postUrl ?>"
+            target="_blank">
+            <img
+              class="compartilhar-post"
+              src="/public/assets/icons/twitter.png" />
+          </a>
         </div>
+      </div>
       </div>
     </section>
 
     <section class="comentarios">
       <?php if (isset($_SESSION['id'])): ?>
 
-        <form action="/post-individual/comment" method="post" enctype="multipart/form-data" class="formulario-comentario">
+        <form
+          action="/post-individual/comment"
+          method="post"
+          enctype="multipart/form-data"
+          class="formulario-comentario"
+          x-data="{ novoComentario: '' }"
+          @submit.prevent="if (novoComentario.trim() !== '') { $el.submit(); }">
           <input type="hidden" name="post_id" value="<?= $post->id ?>">
           <div class="caixa-de-comentarios">
             <input
               type="text"
               id="input-comentario"
               placeholder="Digite seu comentário"
-              name="comment" />
+              name="comment"
+              x-model="novoComentario" />
             <button type="submit" id="botao-de-enviar">
               <img id="botao-de-enviar" src="/public/assets/icons/sent_arrow.png" />
             </button>
-
           </div>
         </form>
       <?php else: ?>
@@ -114,7 +120,7 @@
       <div class="lista-de-comentarios">
         <?php foreach ($comments as $c): ?>
 
-          <div class="comentario" x-data="{ editando: false, texto: ' <?= htmlspecialchars($c->content, ENT_QUOTES, 'UTF-8') ?>', textoOriginal: '<?= htmlspecialchars($c->content, ENT_QUOTES, 'UTF-8') ?>' }">
+          <div class="comentario" x-data="{ editando: false, texto: '<?= htmlspecialchars($c->content, ENT_QUOTES, 'UTF-8') ?>', textoOriginal: '<?= htmlspecialchars($c->content, ENT_QUOTES, 'UTF-8') ?>' }">
 
             <div class="user-infos">
               <img
@@ -148,7 +154,7 @@
             </div>
 
             <div class="form-editar-comentario" x-show="editando" x-cloak>
-              <form action="/post-individual/comment/edit" method="POST">
+              <form action="/post-individual/comment/edit" method="POST" @submit.prevent="if (texto.trim() !== '') { $el.submit(); }">
                 <input type="hidden" name="id" value="<?= $c->id ?>">
                 <input type="hidden" name="post_id" value="<?= $post->id ?>">
 
