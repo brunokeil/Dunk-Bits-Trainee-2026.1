@@ -1,0 +1,68 @@
+@import "./styles.css";
+
+section.api {
+    width: 100%;
+    display: flex;
+    flex-direction: center;
+    gap: 0.5rem;
+}
+
+.api .icones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.api .icones > * {
+    font-size: 3rem;
+}
+.api .icones .casinha {
+    font-size: 2.8rem;
+}
+
+.jogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0.4rem 3rem;
+    /* width: 50vw; */
+
+    background: var(--bg-jogo);
+}
+
+.jogo > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;1
+}
+
+.jogo .meio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.data {
+    font-weight: 500;
+}
+
+.pontos {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.casa {
+    text-align: end;
+}
+
+.logo-time {
+    width: 3rem;
+    border-radius: 100%;
+}
+
+.pontos > h2 {
+    font-size: 3rem;
+}
