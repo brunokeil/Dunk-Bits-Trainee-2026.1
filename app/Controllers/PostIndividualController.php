@@ -84,6 +84,11 @@ class PostIndividualController
             exit;
         }
 
+        if (trim($_POST['comment']) == "") {
+            header('Location: /post-individual?post=' . $_POST['post_id']);
+            exit;
+        }
+
         $parameters = [
             'content' => $_POST['comment'],
             'author' => $_SESSION['id'],
@@ -108,6 +113,11 @@ class PostIndividualController
     {
         if (!isset($_SESSION['id'])) {
             header('Location: /login');
+            exit;
+        }
+
+        if (trim($_POST['comment']) == "") {
+            header('Location: /post-individual?post=' . $_POST['post_id']);
             exit;
         }
 
