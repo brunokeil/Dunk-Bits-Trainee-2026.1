@@ -4,27 +4,31 @@
         <ion-icon name="people"></ion-icon>
     </div>
 
-    <div class="jogo">
-        <h4 class="data">11-08-2026</h5>
-        <div>
+    <?php foreach ($jogosFormatados as $jogo): ?>
+        <div class="jogo">
+            <h4 class="data"><?= substr($jogo['data'] ?? '', 0, 10) ?></h5>
+                <div>
 
-            <h4 class="time casa">time foda aqui grande
-                <br />
-                (sigla)
-            </h4>
-            <img class="logo-time" src="public/assets/placeholder/blank-profile-pic.webp" />
-            
-            <div class="pontos">
-                <h2>00</h2>
-                <p>X</p>
-                <h2>00</h2>
-            </div>
-            
-            <img class="logo-time" src="public/assets/placeholder/blank-profile-pic.webp" />
-            <h4 class="time visitante">time foda aqui grande
-                <br />
-                (sigla)
-            </h4>
+                    <h4 class="time casa"><?= $jogo['casa']['nome'] ?? 'Não encontrado' ?>
+                        <br />
+                        (<?= $jogo['casa']['abreviacao'] ?? '---' ?>)
+                    </h4>
+                    <img class="logo-time" src="<?= $jogo['casa']['logo'] ?>" />
+
+                    <div class="pontos">
+                        <h2><?= $jogo['casa']['pontos'] ?></h2>
+                        <p>X</p>
+                        <h2><?= $jogo['visitante']['pontos'] ?></h2>
+                    </div>
+
+                    <img class="logo-time" src="<?= $jogo['visitante']['logo'] ?>" />
+                    <h4 class="time visitante"><?= $jogo['visitante']['nome'] ?>
+                        <br />
+                        (<?= $jogo['visitante']['abreviacao'] ?>)
+                    </h4>
+                </div>
         </div>
-    </div>
+    <?php endforeach; ?>
+
+
 </section>
