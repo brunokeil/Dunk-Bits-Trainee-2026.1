@@ -46,12 +46,26 @@ class PostIndividualController
             return;
         }
 
+        if (!empty($post->created_at)) {
+            $post->dataFormatada = (new \DateTime($post->created_at))->format('d/m/Y H:i');
+        } else {
+            $post->dataFormatada = "Data indisponível";
+        }
+
         $author = $database->selectOne('users', $post->author);
 
         $comments = $database->selectByForeignKey('comments', 'post_id', $currentPost);
 
         foreach ($comments as $comment) {
             $comment->authorData = $database->selectOne('users', $comment->author);
+            $fotoNome = $comment->authorData->profile_image ?? '';
+            $caminhoFoto = "public/assets/user_profile_pics/" . $fotoNome;
+
+            if (!empty($fotoNome) && file_exists($caminhoFoto)) {
+                $comment->authorData->foto_exibicao = $caminhoFoto;
+            } else {
+                $comment->authorData->foto_exibicao = "/public/assets/placeholder/blank-prof-pic.png";
+            }
         }
 
         $postImage = $this->getPostImage($post);
