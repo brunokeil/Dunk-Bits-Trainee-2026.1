@@ -199,6 +199,14 @@ class PostsAdminController
             $_POST['password'] = $usuario->password;
         }
 
+
+
+        if ($database->existe($_POST['email']) && $usuario->email != $_POST['email']) {
+            $_SESSION['error_message'] = "Não foi possível atualizar: O e-mail informado já está em uso!";
+            header('Location: /postsadmin');
+            exit;
+        }
+
         if ($imgName != null) {
             $parameters = [
                 'name' => $_POST['name'],
@@ -217,5 +225,4 @@ class PostsAdminController
         $database->update('users', $id, $parameters);
         header('Location: /postsadmin');
     }
-
 }

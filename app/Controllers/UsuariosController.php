@@ -115,7 +115,7 @@ class UsuariosController
             $_POST['password'] = $usuario->password;
         }
 
-        if ($database->existe($_POST['email'])) {
+        if ($database->existe($_POST['email']) && $usuario->email != $_POST['email']) {
             $_SESSION['error_message'] = "Não foi possível atualizar: O e-mail informado já está em uso!";
             header('Location: /admin-users');
             exit;

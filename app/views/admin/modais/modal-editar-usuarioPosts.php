@@ -35,7 +35,7 @@
             <div class="inputGroup">
                 <ion-icon name="lock-closed"></ion-icon>
 
-                <input type="password" class="passwordInput" placeholder="*Senha" id="senha2" name="passwordUser" arial-label="*Senha" />
+                <input type="password" class="passwordInput" placeholder="*Senha" id="senha2" name="password" arial-label="*Senha" />
 
                 <ion-icon name="eye-off-outline" class="olho" id="olhoSenha2"></ion-icon>
             </div>
@@ -47,4 +47,3 @@
         </div>
     </form>
 </div>
-
