@@ -119,5 +119,6 @@ function setAllEventListeners() {
     console.log(document.getElementById('editModal'));
 }
 
+
 setAllEventListeners();
 alterarImagem();

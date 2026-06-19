@@ -1,4 +1,4 @@
-<form class="modalPost warningModal close" id="modalErrorPost-<?= $post->id ?>" action="/postsadmin/delete" method="POST">
+<div class="modalPost warningModal close" id="modalErrorPost">
   <div class="warningHeader">
     <ion-icon name="warning"></ion-icon>
 
@@ -8,15 +8,13 @@
   </div>
 
   <p>
-    Ocorreu um erro ao tentar criar o post.
+    <?= $mensagemErro ?>
     <br />
     <br />
 
     Lembre-se que todos os campos são obrigatórios.
   </p>
-  <input type="hidden" name="id" value="<?= $post->id ?>" />
   <div class="footerButtons">
-    <button type="button" class="closeModalBtn cancelBtn">CANCELAR</button>
-    <button type="submit" class="primaryBtn">EXCLUIR</button>
+    <button type="button" class="closeModalBtn cancelBtn">OK</button>
   </div>
-</form>
+</div>

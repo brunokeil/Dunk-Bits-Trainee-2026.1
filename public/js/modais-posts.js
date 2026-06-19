@@ -124,5 +124,11 @@ function setAllEventListeners() {
 	});
 }
 
+const modalErro = document.getElementById('modalErrorPost');
+
+if(modalErro){
+	toggleModal("modalErrorPost");
+}
+
 setAllEventListeners();
 alterarImagem();
