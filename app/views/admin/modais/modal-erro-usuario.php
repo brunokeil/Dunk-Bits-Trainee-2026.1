@@ -11,4 +11,5 @@
           <div class="footerButtons">
               <button class="closeModalBtn cancelBtn">OK</button>
           </div>
+          <?php unset($_SESSION['error_message']); ?>
       </div>
