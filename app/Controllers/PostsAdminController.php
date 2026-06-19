@@ -150,7 +150,7 @@ class PostsAdminController
             'title' => $titulo,
             'content' => $descricao,
             'cover_image' => $caminhodaimagem,
-            'created_at' => date('Y-m-d H:i:s'),
+            'created_at' => date('d-m-Y H:i:s'),
             'author' => $_POST['author'],
             'type' => $postTipo,
         ];
@@ -163,6 +163,66 @@ class PostsAdminController
     {
         $id = $_POST['id'];
         App::get(key: 'database')->delete('posts', $id);
+        header('Location: /postsadmin');
+    }
+
+    public function getFormImage()
+    {
+        $imgPath = null;
+        $nomeImagem = null;
+
+        if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
+            $temporario = $_FILES['imagem']['tmp_name'];
+
+            $nomeImagem = sha1(uniqid($_FILES['imagem']['name'], True)) . "." . pathinfo($_FILES['imagem']['name'], PATHINFO_EXTENSION);
+
+            $imgPath = "public/assets/user_profile_pics/" . $nomeImagem;
+
+            move_uploaded_file($temporario, $imgPath);
+        }
+
+        return $nomeImagem;
+    }
+
+    public function editUser()
+    {
+
+        $imgName = $this->getFormImage();
+
+        $database = App::get("database");
+
+        $id = $_POST['id'];
+
+        $usuario = $database->selectOne('users', $id);
+
+        if ($_POST['password'] == "") {
+            $_POST['password'] = $usuario->password;
+        }
+
+
+
+        if ($database->existe($_POST['email']) && $usuario->email != $_POST['email']) {
+            //$_SESSION['error_message'] = "Não foi possível atualizar: O e-mail informado já está em uso!"; comentei aqui pq o modal de erro pra tabela de posts ainda n ta definido
+            header('Location: /postsadmin');
+            exit;
+        }
+
+        if ($imgName != null) {
+            $parameters = [
+                'name' => $_POST['name'],
+                'email' => $_POST['email'],
+                'password' => $_POST['password'],
+                'profile_image' => $imgName
+            ];
+        } else {
+            $parameters = [
+                'name' => $_POST['name'],
+                'email' => $_POST['email'],
+                'password' => $_POST['password']
+            ];
+        }
+
+        $database->update('users', $id, $parameters);
         header('Location: /postsadmin');
     }
 }

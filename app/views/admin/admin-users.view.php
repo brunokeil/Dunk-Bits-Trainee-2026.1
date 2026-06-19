@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/public/css/admin-users.css" />
-  <link rel="stylesheet" href="/public/css/modais-usuarios.css" />
+  <link rel="stylesheet" href="/public/css/modais-usuarios.css"/>
   <title>Admin - Usuários</title>
 
   <link rel="sc" />
@@ -160,8 +160,8 @@
 
 
 
-  <script src="/public/js/admin-users.js"></script>
-  <script src="/public/js/modais-usuarios.js"></script>
+<script src="/public/js/admin-users.js"></script>
+<script src="/public/js/modais-usuarios.js"></script>
 
 
 </body>

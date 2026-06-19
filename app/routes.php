@@ -61,6 +61,8 @@ $router->post('admin-users/create', 'UsuariosController@store');
 
 $router->post('admin-users/edit', 'UsuariosController@edit');
 
+$router->post('postsadmin/editUser', 'PostsAdminController@editUser');
+
 $router->post('postsadmin/edit', 'PostsAdminController@edit');
 
 $router->post('postsadmin/delete', 'PostsAdminController@delete');

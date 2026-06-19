@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Posts</title>
+    <link rel="stylesheet" href="/public/css/modais-usuarios.css"/>
     <link rel="stylesheet" href="../../../public/css/admin-posts.css">
     <link rel="stylesheet" href="../../../public/css/modais-posts.css">
     <!-- <link rel="stylesheet" href="../../../public/css/modal-formulario-posts.css"> -->
@@ -126,6 +127,7 @@
             require("app/views/admin/modais/modalDeletePost.php");
             require("app/views/admin/modais/modalErrorPost.php");
         }
+        require("app/views/admin/modais/modal-editar-usuarioPosts.php");
         ?>
     </div>
 
@@ -133,6 +135,6 @@
 </body>
 <script src="../../../public/js/admin-posts.js" rel="script"></script>
 <script src="../../../public/js/modais-posts.js" rel="script"></script>
-
+<script src="../../../public/js/modalEditarUserPosts.js" rel="script"></script>
 
 </html>

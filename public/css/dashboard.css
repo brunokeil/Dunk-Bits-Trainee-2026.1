@@ -12,7 +12,7 @@
 body {
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(../assets/bg_images/BasketBall-Background.jpg);
+    url(../assets/bg_images/bg_dashboard.webp);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
