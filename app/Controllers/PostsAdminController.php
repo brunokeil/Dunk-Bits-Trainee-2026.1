@@ -202,7 +202,7 @@ class PostsAdminController
 
 
         if ($database->existe($_POST['email']) && $usuario->email != $_POST['email']) {
-            $_SESSION['error_message'] = "Não foi possível atualizar: O e-mail informado já está em uso!";
+            //$_SESSION['error_message'] = "Não foi possível atualizar: O e-mail informado já está em uso!"; comentei aqui pq o modal de erro pra tabela de posts ainda n ta definido
             header('Location: /postsadmin');
             exit;
         }
