@@ -150,7 +150,7 @@ class PostsAdminController
             'title' => $titulo,
             'content' => $descricao,
             'cover_image' => $caminhodaimagem,
-            'created_at' => date('d-m-Y H:i:s'),
+            'created_at' => date('Y-m-d H:i:s'),
             'author' => $_POST['author'],
             'type' => $postTipo,
         ];
