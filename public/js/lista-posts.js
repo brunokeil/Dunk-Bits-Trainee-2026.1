@@ -13,10 +13,10 @@ function atualizarPagina(indexDaPagina) {
 
     if (index === indexDaPagina) {
       ponto.classList.add("ativo");
-      if(icone) icone.setAttribute ("name", "radio-button-on-outline");
+      if (icone) icone.setAttribute("name", "radio-button-on-outline");
     } else {
       ponto.classList.remove("ativo");
-      if(icone) icone.setAttribute ("name", "radio-button-off-outline");
+      if (icone) icone.setAttribute("name", "radio-button-off-outline");
     }
   });
 
@@ -48,17 +48,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuFiltros = document.getElementById("filtros-opcoes");
 
   botaoFiltro.addEventListener("click", (event) => {
-  const parametrosUrl = new URLSearchParams(window.location.search);
+    const parametrosUrl = new URLSearchParams(window.location.search);
 
-  if (parametrosUrl.has("filtro")) {
-    event.preventDefault();
-    menuFiltros.style.transition = "none";
-    menuFiltros.style.animation = "none";
-    menuFiltros.style.display = "none";
-    
-    window.location.href = "/lista-posts"; 
-    return;
-  }
+    if (parametrosUrl.has("filtro")) {
+      event.preventDefault();
+      menuFiltros.style.transition = "none";
+      menuFiltros.style.animation = "none";
+      menuFiltros.style.display = "none";
+
+      window.location.href = "/lista-posts";
+      return;
+    }
     menuFiltros.classList.toggle("active");
   });
 });
@@ -66,11 +66,19 @@ document.addEventListener("DOMContentLoaded", () => {
 /* Função Barra Pesquisar - Limita o Enter */
 const barraPesquisar = document.getElementById("search-text");
 const formPesquisa = document.getElementById("form-search");
+const termoPesquisado = barraPesquisar.value;
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     if (event.target !== barraPesquisar) {
-      event.preventDefault(); 
+      event.preventDefault();
+      return;
+    }
+    const termoPesquisado = barraPesquisar.value;
+
+    if (termoPesquisado === "Vamos Dunkar") {
+      event.preventDefault();
+      window.location.href = "/easter-egg";
     } else {
       event.preventDefault();
       formPesquisa.submit();
