@@ -76,3 +76,5 @@ $router->post('post-individual/comment/delete', 'PostIndividualController@delete
 $router->post('post-individual/comment/edit', 'PostIndividualController@editComment');
 
 $router->get('api-teste', 'TesteApiController@index');
+
+$router->get('easter-egg', 'EasterEggController@index');
