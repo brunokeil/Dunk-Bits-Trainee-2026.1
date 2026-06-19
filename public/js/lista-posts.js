@@ -66,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
 /* Função Barra Pesquisar - Limita o Enter */
 const barraPesquisar = document.getElementById("search-text");
 const formPesquisa = document.getElementById("form-search");
-const termoPesquisado = barraPesquisar.value;
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
