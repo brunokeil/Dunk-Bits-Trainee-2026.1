@@ -1,4 +1,17 @@
 const profPics = document.querySelectorAll(".userProfilePicture");
+const inputSenha2 = document.getElementById('senha2');
+const btnMostrarSenha2 = document.getElementById('olhoSenha2');
+btnMostrarSenha2.addEventListener("click", mostrarSenhaEditar);
+
+function mostrarSenhaEditar() {
+    if (inputSenha2.type === 'password') {
+        inputSenha2.type = 'text';
+        btnMostrarSenha2.setAttribute('name', 'eye-outline');
+    } else {
+        inputSenha2.type = 'password';
+        btnMostrarSenha2.setAttribute('name', 'eye-off-outline');
+    }
+}
 
 function alterarImagem() {
     profPics.forEach((profPic) => {
@@ -51,9 +64,7 @@ function toggleModal(idModal) {
         if(form){
             form.reset();
         }
-    }
-
-    
+    }    
 }
 
 function closeAll() {
@@ -105,16 +116,6 @@ function setAllEventListeners() {
             toggleModal(modal.id);
         });
     });
-
-    // dropdownEdit.forEach((link) => {
-    //     link.addEventListener("click", (e) => {
-    //         e.preventDefault();
-    //         const row = link.closest(".row-tabela");
-    //         const botaoPrincipal = row.querySelector(".edit-user"); 
-    //         if (botaoPrincipal) botaoPrincipal.click();
-    //         link.closest(".dropdownMenuPosts").classList.remove("ativo");
-    //     });
-    // });      
     console.log(document.getElementById('editModal'));
 }
 
