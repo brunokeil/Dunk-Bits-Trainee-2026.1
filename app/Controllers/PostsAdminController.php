@@ -73,19 +73,19 @@ class PostsAdminController
     {
 
         if (empty($_POST['tituloDoPost'])) {
-            $_SESSION['semTitulo'] = "Não foi possível criar, post sem Titulo.";
+            $_SESSION['semTitulo'] = "Não foi possível criar, post sem título.";
             header('Location: /postsadmin');
             exit();
         } else if (empty($_POST['descricaoDoPost'])) {
-            $_SESSION['semDescricao'] = "Não foi possível criar, post sem Descricao.";
+            $_SESSION['semDescricao'] = "Não foi possível criar, post sem descrição.";
             header('Location: /postsadmin');
             exit();
         } else if (empty($_FILES['cover_image']['tmp_name'])) {
-            $_SESSION['semImagem'] = "Não foi possível criar, post sem Imagem.";
+            $_SESSION['semImagem'] = "Não foi possível criar, post sem imagem.";
             header('Location: /postsadmin');
             exit();
         } else if (empty($_POST['postTipo'])) {
-            $_SESSION['semTipo'] = "Não foi possível criar, post sem Tipo.";
+            $_SESSION['semTipo'] = "Não foi possível criar, post sem tipo.";
             header('Location: /postsadmin');
             exit();
         }
@@ -199,10 +199,8 @@ class PostsAdminController
             $_POST['password'] = $usuario->password;
         }
 
-
-
         if ($database->existe($_POST['email']) && $usuario->email != $_POST['email']) {
-            //$_SESSION['error_message'] = "Não foi possível atualizar: O e-mail informado já está em uso!"; comentei aqui pq o modal de erro pra tabela de posts ainda n ta definido
+            $_SESSION['emailEmUso'] = "Não foi possível atualizar: O e-mail informado já está em uso!";
             header('Location: /postsadmin');
             exit;
         }
