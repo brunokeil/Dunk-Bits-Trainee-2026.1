@@ -4,9 +4,9 @@
   <div class="top-sidebar">
     <div class="top-top-sidebar">
       <div class="user-space-sidebar">
-        <button class="edit-user" data-profPic="<?php echo $usuarioLogado->profile_image; ?>" data-id="<?php echo $usuarioLogado->id; ?>" data-name="<?php echo htmlspecialchars($usuarioLogado->name, ENT_QUOTES, 'UTF-8'); ?>" data-email="<?php echo htmlspecialchars($usuarioLogado->email, ENT_QUOTES, 'UTF-8'); ?>" data-senha="<?php echo htmlspecialchars($usuarioLogado->password, ENT_QUOTES, 'UTF-8'); ?>">>
-            <ion-icon id="user-icon" name="person-outline"></ion-icon>
-          
+        <button class="edit-user" data-profPic="<?php echo $usuarioLogado->profile_image; ?>" data-id="<?php echo $usuarioLogado->id; ?>" data-name="<?php echo htmlspecialchars($usuarioLogado->name, ENT_QUOTES, 'UTF-8'); ?>" data-email="<?php echo htmlspecialchars($usuarioLogado->email, ENT_QUOTES, 'UTF-8'); ?>" data-senha="<?php echo htmlspecialchars($usuarioLogado->password, ENT_QUOTES, 'UTF-8'); ?>">
+          <ion-icon id="user-icon" name="person-outline"></ion-icon>
+
           <div>
             <p id="user-name"><?php echo $usuarioLogado->name ?></p>
             <p id="cargo">
