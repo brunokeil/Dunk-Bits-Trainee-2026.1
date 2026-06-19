@@ -18,14 +18,17 @@
     <div class="mensagemErro">
         <p class="mensagemErroA">
             <?php
-            if (isset($_SESSION['semTitulo'])) {
-                echo $_SESSION['semTitulo'];
+
+            $mensagemErro = null;
+                     
+            if(isset($_SESSION['semTitulo'])) {
+                $mensagemErro = $_SESSION['semTitulo'];
             } else if (isset($_SESSION['semDescricao'])) {
-                echo $_SESSION['semDescricao'];
+                $mensagemErro = $_SESSION['semDescricao'];
             } else if (isset($_SESSION['semImagem'])) {
-                echo $_SESSION['semImagem'];
+                $mensagemErro = $_SESSION['semImagem'];
             } else if (isset($_SESSION['semTipo'])) {
-                echo $_SESSION['semTipo'];
+                $mensagemErro = $_SESSION['semTipo'];
             }
             unset($_SESSION['semTitulo']);
             unset($_SESSION['semImagem']);
@@ -125,9 +128,11 @@
             require("app/views/admin/modais/modalViewPost.php");
             require("app/views/admin/modais/modalEditPost.php");
             require("app/views/admin/modais/modalDeletePost.php");
-            require("app/views/admin/modais/modalErrorPost.php");
         }
         require("app/views/admin/modais/modal-editar-usuarioPosts.php");
+        if($mensagemErro){
+            require("app/views/admin/modais/modalErrorPost.php");
+        }
         ?>
     </div>
 
