@@ -119,11 +119,6 @@ function setAllEventListeners() {
     console.log(document.getElementById('editModal'));
 }
 
-const modalErro = document.getElementById('modalErrorPost');
-
-if(modalErro){
-	toggleModal("modalErrorPost");
-}
 
 setAllEventListeners();
 alterarImagem();
