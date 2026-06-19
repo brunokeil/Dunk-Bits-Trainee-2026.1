@@ -18,6 +18,8 @@
 
 	--offwhite-100: #f5eee9;
 
+	--orange-50: #ff660080;
+	--orange-80: #ff6600CC;
 	--orange-100: #ff6600;
 	--dark-orange-100: #d35400;
 	--light-orange-100: #ff954f;
@@ -105,6 +107,8 @@
 	/* --bg-modal: linear-gradient(210deg, #EF9118 50%, #9B4101); */
 	--bg-error: linear-gradient(-150deg, #830000 34%, #b43c00 87%);
 	--bg-success: linear-gradient(45deg, #11113acc, #0e0e2dcc);
+
+	--bg-jogo: linear-gradient(90deg, #00000000, var(--orange-50), #00000000);
 
 	/* VARIAVEIS PARA TEXTOS */
 	--color-light-text: var(--white-100);

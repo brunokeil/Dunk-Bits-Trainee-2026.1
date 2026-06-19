@@ -2,6 +2,7 @@
 
 * {
 	color: var(--white-100);
+	/* outline: 1px solid blue; */
 }
 
 /* html {
@@ -109,6 +110,9 @@ h1 {
 	gap: 0.6rem;
 }
 
+
+
+
 /* ---------POSTS-PREVIEW--------- */
 
 .posts {
@@ -165,7 +169,7 @@ h1 {
 
 .slider-content {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     overflow: hidden;
 }
 
@@ -174,7 +178,7 @@ h1 {
 
 .card {
     min-width: 300px;
-    aspect-ratio: 3 4;
+    aspect-ratio: 16 / 9;
 
 	position: relative;
 
@@ -192,6 +196,7 @@ h1 {
 .card > img {
     width: 100%;
     height: 110%;
+	min-width: 300px;
     object-fit: cover;
     display: block;
 }
@@ -216,7 +221,7 @@ h1 {
 	overflow: hidden;
 	max-height: 4em;
 
-	 display: -webkit-box;
+	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 3;
 }
@@ -232,7 +237,7 @@ h1 {
 	
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-end;
 	gap: 0.2rem;
 	
 	padding: 24px;
@@ -249,7 +254,7 @@ h1 {
 	margin-bottom: 5px;
 	overflow: hidden;
 	font-size: 2rem;
-	max-height: 5rem;
+	max-height: 2rem;
 
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
@@ -298,7 +303,7 @@ h1 {
 	height: fit-content;
 	width: 100%;
 
-    margin: 8rem 0;
+    margin: 5rem 0;
 	/* border: 1px solid palegreen; */
 }
 

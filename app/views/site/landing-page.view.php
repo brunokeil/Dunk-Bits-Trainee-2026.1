@@ -7,6 +7,7 @@
   <title>Dunk Bit's</title>
   <link rel="stylesheet" href="../../../public/css/footer.css" />
   <link rel="stylesheet" href="../../../public/css/navbar.css" />
+  <link rel="stylesheet" href="../../../public/css/api-nba.css" />
   <link rel="stylesheet" href="/public/css/landing-page.css" />
   <link rel="icon" href="/public/assets/logo_zoom.png" />
 </head>
@@ -30,6 +31,12 @@
         <a class="terciaryBtn" href="#sobre">SOBRE</a>
       </div>
     </section>
+
+  
+    <?php 
+    require("app/views/site/api-nba.php");
+    ?>
+
     <section class="posts">
       <h1>ACOMPANHE A COMUNIDADE</h1>
       <div class="carrossel slider">
