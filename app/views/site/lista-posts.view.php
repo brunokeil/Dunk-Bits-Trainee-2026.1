@@ -19,7 +19,7 @@
 
       <div id="search">
         <form method="GET" action="/lista-posts" id="form-search">
-          
+
           <ion-icon name="search-sharp"></ion-icon>
 
           <input type="text" id="search-text" placeholder="SEARCH" value="<?= $searchText ?? '' ?>" name="search" />
