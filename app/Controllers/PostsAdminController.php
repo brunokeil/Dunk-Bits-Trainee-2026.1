@@ -73,19 +73,19 @@ class PostsAdminController
     {
 
         if (empty($_POST['tituloDoPost'])) {
-            $_SESSION['semTitulo'] = "Não foi possível criar, post sem título.";
+            $_SESSION['error_message'] = "Não foi possível criar, post sem título.";
             header('Location: /postsadmin');
             exit();
         } else if (empty($_POST['descricaoDoPost'])) {
-            $_SESSION['semDescricao'] = "Não foi possível criar, post sem descrição.";
+            $_SESSION['error_message'] = "Não foi possível criar, post sem descrição.";
             header('Location: /postsadmin');
             exit();
         } else if (empty($_FILES['cover_image']['tmp_name'])) {
-            $_SESSION['semImagem'] = "Não foi possível criar, post sem imagem.";
+            $_SESSION['error_message'] = "Não foi possível criar, post sem imagem.";
             header('Location: /postsadmin');
             exit();
         } else if (empty($_POST['postTipo'])) {
-            $_SESSION['semTipo'] = "Não foi possível criar, post sem tipo.";
+            $_SESSION['error_message'] = "Não foi possível criar, post sem tipo.";
             header('Location: /postsadmin');
             exit();
         }
