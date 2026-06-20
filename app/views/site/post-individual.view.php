@@ -32,7 +32,7 @@
       <div class="conteudo">
         <img
           class="imagem-post-obj imagem-post"
-          src="<?= $post->cover_image ?>" />
+          src="<?= $postCoverImage ?>" />
 
         <h1 class="titulo"><?php echo $post->title ?></h1>
 
