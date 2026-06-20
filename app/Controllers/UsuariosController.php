@@ -77,21 +77,24 @@ class UsuariosController
         if ($_POST['password'] != $_POST['confirm-password']) {
             $_SESSION['error_message'] = "As senhas são diferentes!";
             header('Location: /admin-users');
-            exit;
+            exit();
         }
 
         if ($database->existe($_POST['email'])) {
             $_SESSION['error_message'] = "Não foi possível atualizar: O e-mail informado já está em uso!";
             header('Location: /admin-users');
-            exit;
+            exit();
         }
+
+        $senhaInput = $_POST['password'];
+        $senhaSegura = password_hash($senhaInput, PASSWORD_DEFAULT);
 
         $parameters = [
             'name' => $_POST['name'],
             'email' => $_POST['email'],
-            'password' => $_POST['password'],
+            'password' => $senhaSegura,
             'is_admin' => isset($_POST['is_admin']) ? 1 : 0,
-            'profile_image' => $imgName
+            'profile_image' => $imgName,
         ];
 
         $database->insert('users', $parameters);
@@ -103,8 +106,6 @@ class UsuariosController
 
         $imgName = $this->getFormImage();
 
-
-
         $database = App::get("database");
 
         $id = $_POST['id'];
@@ -112,34 +113,32 @@ class UsuariosController
         $usuario = $database->selectOne('users', $id);
 
         if ($_POST['password'] == "") {
-            $_POST['password'] = $usuario->password;
+            $senhaSegura = $usuario->password;
+        }else{
+            $senhaInput = $_POST['password'];
+            $senhaSegura = password_hash($senhaInput, PASSWORD_DEFAULT);
         }
 
-        if ($database->existe($_POST['email']) && $usuario->email != $_POST['email']) {
+        if($database->existe($_POST['email']) && $usuario->email != $_POST['email']){
             $_SESSION['error_message'] = "Não foi possível atualizar: O e-mail informado já está em uso!";
             header('Location: /admin-users');
-            exit;
+            exit();
         }
 
-
-
-        if ($imgName != null) {
+        if($imgName != null){
             $parameters = [
                 'name' => $_POST['name'],
                 'email' => $_POST['email'],
-                'password' => $_POST['password'],
-                'profile_image' => $imgName
+                'password' => $senhaSegura,
+                'profile_image' => $imgName,
             ];
-        } else {
+        }else{
             $parameters = [
                 'name' => $_POST['name'],
                 'email' => $_POST['email'],
-                'password' => $_POST['password']
+                'password' => $senhaSegura,
             ];
         }
-
-
-
 
         $database->update('users', $id, $parameters);
         header('Location: /admin-users');
