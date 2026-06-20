@@ -19,7 +19,7 @@ class CadastroController
         $senhaInput = $_POST['senha'];
         $confirmarsenha = $_POST['confirmarsenha'];
 
-        $senhaSegura = password_hash($senhaInput, PASSWORD_DEFAULT);
+        $senhaSegura = password_hash($senhaInput, PASSWORD_DEFAULT);    
 
         $parameters = [
             'name' => $_POST['name'],
