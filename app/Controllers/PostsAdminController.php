@@ -195,28 +195,33 @@ class PostsAdminController
 
         $usuario = $database->selectOne('users', $id);
 
-        if ($_POST['password'] == "") {
+        if($_POST['password'] == "") {
             $_POST['password'] = $usuario->password;
+            $senhaEditada = $_POST['password'];
+        }else{
+            $senhaInput = $_POST['password'];
+            $senhaSegura = password_hash($senhaInput, PASSWORD_DEFAULT);
+            $senhaEditada = $senhaSegura;
         }
 
         if ($database->existe($_POST['email']) && $usuario->email != $_POST['email']) {
             $_SESSION['emailEmUso'] = "Não foi possível atualizar: O e-mail informado já está em uso!";
             header('Location: /postsadmin');
-            exit;
+            exit();
         }
-
+        
         if ($imgName != null) {
             $parameters = [
                 'name' => $_POST['name'],
                 'email' => $_POST['email'],
-                'password' => $_POST['password'],
+                'password' => $senhaEditada,
                 'profile_image' => $imgName
             ];
-        } else {
+        } else{
             $parameters = [
                 'name' => $_POST['name'],
                 'email' => $_POST['email'],
-                'password' => $_POST['password']
+                'password' => $senhaEditada,
             ];
         }
 
