@@ -11,7 +11,7 @@
             <p id="user-name"><?php echo $usuarioLogado->name ?></p>
             <p id="cargo">
               <?php
-              if ($usuarioLogado->is_admin) {
+              if ($usuarioLogado->is_admin){
                 echo "Admin";
               } else {
                 echo "Membro";
