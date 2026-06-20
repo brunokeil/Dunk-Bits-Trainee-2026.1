@@ -32,8 +32,8 @@
       </div>
     </section>
 
-  
-    <?php 
+
+    <?php
     require("app/views/site/api-nba.php");
     ?>
 
@@ -43,17 +43,17 @@
         <button class="chevette left-arrow" id="carroLeftArrow">
           <ion-icon name="chevron-back-outline"></ion-icon>
         </button>
-        
+
         <div class="slider-content">
           <!-- php foreach start -->
           <?php foreach ($posts as $p): ?>
-            <a class="card" href="/post-individual?post=<?= $p->id ?>">
+            <a class="card" href="/post-individual?post=<?= $p->id ?>&page=landingpage">
               <img src="<?= $p->imagem_exibicao ?>" alt="<?= $p->title ?>" class="card-imagem">
-  
+
               <div class="card-footer">
                 <h2 class="card-titulo-fixo"><?php echo $p->title; ?></h2>
               </div>
-  
+
               <div class="card-overlay">
                 <h2 class="card-titulo-overlay"><?php echo $p->title; ?></h2>
                 <p class="card-autor"><?php echo $p->authorData->name; ?></p>
@@ -61,7 +61,7 @@
               </div>
             </a>
           <?php endforeach ?>
-          
+
           <!-- php foreach end -->
         </div>
 
