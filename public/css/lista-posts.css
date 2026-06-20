@@ -8,6 +8,7 @@
 html, body {
     max-width: 100vw;
     overflow-x: hidden;
+	max-height: 100vh;
 }
 
 main {
@@ -54,6 +55,8 @@ ion-icon {
 	flex: 1;
 	gap: 15px;
 	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 #form-search {
@@ -278,7 +281,7 @@ ion-icon {
 	aspect-ratio: 16 / 9;
 	width: 100%;
 	height: 100%;
-	object-fit: contain;
+	object-fit: cover;
 }
 
 
