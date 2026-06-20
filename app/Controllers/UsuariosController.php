@@ -74,20 +74,30 @@ class UsuariosController
         $database = App::get("database");
         $imgName = $this->getFormImage();
 
-        if ($_POST['password'] != $_POST['confirm-password']) {
+        $senhaInput = $_POST['password'];
+        $senhaSegura = password_hash($senhaInput, PASSWORD_DEFAULT);
+
+        if(empty($_POST['name'])){
+            $_SESSION['error_message'] = "Não foi possível criar usuário: Usuário sem nome.";
+            header('Location: /admin-users');
+            exit();
+        }else if(empty($_POST['email'])){
+            $_SESSION['error_message'] = "Não foi possível criar usuário: Usuário sem email.";
+            header('Location: /admin-users');
+            exit();
+        }else if(empty($_POST['password'])){
+            $_SESSION['error_message'] = "Não foi possível criar usuário: Usuário sem senha.";
+            header('Location: /admin-users');
+            exit();
+        }else if ($_POST['password'] != $_POST['confirm-password']) {
             $_SESSION['error_message'] = "As senhas são diferentes!";
             header('Location: /admin-users');
             exit();
-        }
-
-        if ($database->existe($_POST['email'])) {
-            $_SESSION['error_message'] = "Não foi possível atualizar: O e-mail informado já está em uso!";
+        }else if ($database->existe($_POST['email'])) {
+            $_SESSION['error_message'] = "Não foi possível criar: O e-mail informado já está em uso!";
             header('Location: /admin-users');
             exit();
         }
-
-        $senhaInput = $_POST['password'];
-        $senhaSegura = password_hash($senhaInput, PASSWORD_DEFAULT);
 
         $parameters = [
             'name' => $_POST['name'],
@@ -112,15 +122,23 @@ class UsuariosController
 
         $usuario = $database->selectOne('users', $id);
 
-        if ($_POST['password'] == "") {
+        if(empty($_POST['password'])) {
             $senhaSegura = $usuario->password;
         }else{
             $senhaInput = $_POST['password'];
             $senhaSegura = password_hash($senhaInput, PASSWORD_DEFAULT);
         }
 
-        if($database->existe($_POST['email']) && $usuario->email != $_POST['email']){
-            $_SESSION['error_message'] = "Não foi possível atualizar: O e-mail informado já está em uso!";
+        if(empty($_POST['name'])){
+            $_SESSION['error_message'] = "Não foi possível editar usuário: Usuário sem nome.";
+            header('Location: /admin-users');
+            exit();
+        }else if(empty($_POST['email'])){
+            $_SESSION['error_message'] = "Não foi possível editar usuário: Usuário sem email.";
+            header('Location: /admin-users');
+            exit();
+        }else if($database->existe($_POST['email']) && $usuario->email != $_POST['email']){
+            $_SESSION['error_message'] = "Não foi possível editar: O e-mail informado já está em uso!";
             header('Location: /admin-users');
             exit();
         }
