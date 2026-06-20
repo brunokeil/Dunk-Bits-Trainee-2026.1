@@ -94,14 +94,8 @@ class LandingPageController
     {
         $imagemPadrao = "/public/assets/post_featured_pics/padrao.png";
 
-        if (empty($imageName)) {
-            return $imagemPadrao;
-        }
-
-        $caminhoFisico = "public/assets/post_featured_pics/" . $imageName;
-
-        if (file_exists($caminhoFisico)) {
-            return $caminhoFisico;
+        if (file_exists($imageName)) {
+            return $imageName;
         }
 
         return $imagemPadrao;
