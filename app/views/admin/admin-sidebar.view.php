@@ -3,29 +3,32 @@
 <aside class="closed-sidebar " id="sidebar">
   <div class="top-sidebar">
     <div class="top-top-sidebar">
-      <div class="user-space-sidebar">
-        <button class="edit-user" data-profPic="<?php echo $usuarioLogado->profile_image; ?>" data-id="<?php echo $usuarioLogado->id; ?>" data-name="<?php echo htmlspecialchars($usuarioLogado->name, ENT_QUOTES, 'UTF-8'); ?>" data-email="<?php echo htmlspecialchars($usuarioLogado->email, ENT_QUOTES, 'UTF-8'); ?>" data-senha="<?php echo htmlspecialchars($usuarioLogado->password, ENT_QUOTES, 'UTF-8'); ?>">
-          <ion-icon id="user-icon" name="person-outline"></ion-icon>
+      <button class="edit-user user-space-sidebar" data-profPic="<?php echo $usuarioLogado->profile_image; ?>" data-id="<?php echo $usuarioLogado->id; ?>" data-name="<?php echo htmlspecialchars($usuarioLogado->name, ENT_QUOTES, 'UTF-8'); ?>" data-email="<?php echo htmlspecialchars($usuarioLogado->email, ENT_QUOTES, 'UTF-8'); ?>" data-senha="<?php echo htmlspecialchars($usuarioLogado->password, ENT_QUOTES, 'UTF-8'); ?>">
 
-          <div>
-            <p id="user-name"><?php echo $usuarioLogado->name ?></p>
-            <p id="cargo">
-              <?php
-              if ($usuarioLogado->is_admin){
-                echo "Admin";
-              } else {
-                echo "Membro";
-              }
-              ?>
-            </p>
-          </div>
-        </button>
-      </div>
-      <div class="setinha">
-        <button id="toggle-sidebar-btn">
+        <?php
+        if (!empty($usuarioLogado->profile_image)):
+        ?>
+
+          <img id="user-img" src="/public/assets/user_profile_pics/<?php echo $usuarioLogado->profile_image; ?>">
+        <?php else: ?>
+          <ion-icon id="user-icon" name="person"></ion-icon>
+        <?php endif; ?>
+        <div>
+          <p id="user-name"><?php echo $usuarioLogado->name ?></p>
+          <p id="cargo">
+            <?php
+            if ($usuarioLogado->is_admin) {
+              echo "Admin";
+            } else {
+              echo "Membro";
+            }
+            ?>
+          </p>
+        </div>
+      </button>
+        <button class="setinha" id="toggle-sidebar-btn">
           <ion-icon id="setinha" name="chevron-back-outline"></ion-icon>
         </button>
-      </div>
     </div>
     <div class="admin-sidebar">
       <p>Admin</p>

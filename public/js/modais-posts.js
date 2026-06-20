@@ -45,7 +45,6 @@ function toggleModal(idModal) {
 		modalContainer.classList.remove("open");
 		modalContainer.classList.add("close");
 	}
-
 }
 
 function closeAll() {
@@ -55,6 +54,9 @@ function closeAll() {
 			modais[i].classList.add("close");
 		modais[i].classList.remove("open");
 	}
+	const modalContainer = document.querySelector(".modalContainer");
+	if (modalContainer.contains != "close")
+		modalContainer.classList.add("close");
 	// console.log(modais);
 }
 closeAll();
@@ -70,8 +72,9 @@ function setAllEventListeners() {
 
 	viewPost.forEach((btn) => {
 		btn.addEventListener("click", () => {
-
-			const mudancaID = btn.getAttribute("data-bs-target").replace("#", "");
+			const mudancaID = btn
+				.getAttribute("data-bs-target")
+				.replace("#", "");
 
 			toggleModal(mudancaID);
 		});
@@ -85,8 +88,9 @@ function setAllEventListeners() {
 
 	editPost.forEach((btn) => {
 		btn.addEventListener("click", () => {
-			
-			const mudancaID = btn.getAttribute("data-bs-target").replace("#", "");
+			const mudancaID = btn
+				.getAttribute("data-bs-target")
+				.replace("#", "");
 
 			toggleModal(mudancaID);
 		});
@@ -94,8 +98,9 @@ function setAllEventListeners() {
 
 	deletePost.forEach((btn) => {
 		btn.addEventListener("click", () => {
-			
-			const mudancaID = btn.getAttribute("data-bs-target").replace("#", "");
+			const mudancaID = btn
+				.getAttribute("data-bs-target")
+				.replace("#", "");
 
 			toggleModal(mudancaID);
 		});
@@ -111,6 +116,12 @@ function setAllEventListeners() {
 		});
 		// console.log(closeBtn[i].parentNode.parentNode);
 	}
+
+	// fechar modal quando clicar fora
+	const modalContainer = document.querySelector(".modalContainer");
+	modalContainer.addEventListener("click", (e) => {
+		if (e.target === e.currentTarget) closeAll();
+	});
 }
 
 const modalErro = document.getElementById('modalErrorPost');

@@ -73,13 +73,13 @@
 
 .modalPost {
     /* visibility: hidden; */
-    box-sizing: content-box;
+    /* box-sizing: content-box; */
     max-width: 80vw;
     max-height: 90vh;
     width: 55ch;
 
-    position: absolute;
-    z-index: 4;
+    position: fixed;
+    z-index: 8;
 
     display: flex;
     flex-direction: column;

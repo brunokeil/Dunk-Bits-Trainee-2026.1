@@ -67,7 +67,7 @@ function toggleModal(idModal) {
     }    
 }
 
-function closeAll() {
+function closeAllUser() {
     let modais = document.querySelectorAll(".modalUser");
     for (let i = 0; i < modais.length; i++) {
         if (modais[i].classList.contains != "close")
@@ -76,7 +76,7 @@ function closeAll() {
     }
     console.log(modais);
 }
-closeAll();
+closeAllUser();
 
 const errorModal = document.getElementById("errorModal");
 

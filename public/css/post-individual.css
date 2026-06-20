@@ -203,7 +203,8 @@ section {
 
 .img-prof-picture {
 	display: flex;
-	width: 40px;
+	width: 2rem;
+	aspect-ratio: 1/1;
 	border-radius: 100%;
 }
 
