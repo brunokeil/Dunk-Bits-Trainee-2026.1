@@ -22,9 +22,12 @@
 							echo $_SESSION['senhas-diferentes'];
 						}else if(isset($_SESSION['email-usado'])){
 							echo $_SESSION['email-usado'];
+						}else if(isset($_SESSION['semEmail'])){
+							echo $_SESSION['semEmail'];
 						}
 						unset($_SESSION['senhas-diferentes']);
 						unset($_SESSION['email-usado']);
+						unset($_SESSION['semEmail']);
 					?>
 				</p>
 			</div>
