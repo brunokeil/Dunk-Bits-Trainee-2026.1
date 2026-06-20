@@ -54,7 +54,7 @@
       <?php foreach ($posts as $p):  ?>
         <a class="card" href="/post-individual?post=<?= $p->id ?>&page=<?= $currentPage ?>">
 
-          <img src="<?= $p->imagem_exibicao ?>" alt="<?= $p->title ?>" class="card-imagem">
+          <img src="<?= $p->cover_image ?>" alt="<?= $p->title ?>" class="card-imagem">
 
           <div class="card-footer">
             <h2 class="card-titulo-fixo"><?php echo $p->title; ?></h2>

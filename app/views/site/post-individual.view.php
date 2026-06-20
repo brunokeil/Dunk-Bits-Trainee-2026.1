@@ -32,7 +32,7 @@
       <div class="conteudo">
         <img
           class="imagem-post-obj imagem-post"
-          src="<?= $postCoverImage ?>" />
+          src="<?= $post->cover_image ?>" />
 
         <h1 class="titulo"><?php echo $post->title ?></h1>
 
@@ -49,7 +49,7 @@
 
                 ?>
           </span>
-          <span><?php echo $post->created_at; ?></span>
+          <span><?= $post->dataFormatada ?></span>
         </div>
 
         <div class="botoes-de-compartilhar">
@@ -124,7 +124,7 @@
 
             <div class="user-infos">
               <img
-                src="<?php echo $c->authorData->profile_image ? "/public/assets/user_profile_pics/" . $c->authorData->profile_image : '/public/assets/placeholder/blank-prof-pic.png'; ?>"
+                src="<?= $c->authorData->foto_exibicao; ?>"
                 class="img-prof-picture foto-de-perfil" />
 
               <?php if ($userEhAdmin || (isset($_SESSION['id']) && $_SESSION['id'] == $c->author)): ?>

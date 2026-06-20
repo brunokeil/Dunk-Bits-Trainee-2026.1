@@ -18,19 +18,25 @@
     <div class="mensagemErro">
         <p class="mensagemErroA">
             <?php
-            if (isset($_SESSION['semTitulo'])) {
-                echo $_SESSION['semTitulo'];
+
+            $mensagemErro = null;
+                     
+            if(isset($_SESSION['semTitulo'])) {
+                $mensagemErro = $_SESSION['semTitulo'];
             } else if (isset($_SESSION['semDescricao'])) {
-                echo $_SESSION['semDescricao'];
+                $mensagemErro = $_SESSION['semDescricao'];
             } else if (isset($_SESSION['semImagem'])) {
-                echo $_SESSION['semImagem'];
+                $mensagemErro = $_SESSION['semImagem'];
             } else if (isset($_SESSION['semTipo'])) {
-                echo $_SESSION['semTipo'];
+                $mensagemErro = $_SESSION['semTipo'];
+            } else if(isset($_SESSION['emailEmUso'])){
+                $mensagemErro = $_SESSION['emailEmUso'];
             }
             unset($_SESSION['semTitulo']);
             unset($_SESSION['semImagem']);
             unset($_SESSION['semDescricao']);
             unset($_SESSION['semTipo']);
+            unset($_SESSION['emailEmUso']);
             ?>
         </p>
     </div>
@@ -120,14 +126,15 @@
     <div class="modalContainer close">
         <?php
         require("app/views/admin/modais/modalCriarPost.php");
-
+        require("app/views/admin/modais/modal-editar-usuarioPosts.php");
         foreach ($posts as $post) {
             require("app/views/admin/modais/modalViewPost.php");
             require("app/views/admin/modais/modalEditPost.php");
             require("app/views/admin/modais/modalDeletePost.php");
+        }
+        if($mensagemErro){
             require("app/views/admin/modais/modalErrorPost.php");
         }
-        require("app/views/admin/modais/modal-editar-usuarioPosts.php");
         ?>
     </div>
 
