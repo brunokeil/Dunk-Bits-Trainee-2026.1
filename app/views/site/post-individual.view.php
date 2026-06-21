@@ -44,7 +44,7 @@
         <h1 class="titulo"><?php echo $post->title ?></h1>
 
         <p class="descricao">
-          <?php echo $post->content; ?>
+          <?php echo nl2br(htmlspecialchars($post->content)); ?>
 
         </p>
       </div>
