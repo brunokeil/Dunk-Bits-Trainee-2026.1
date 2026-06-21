@@ -196,16 +196,14 @@ td {
 
 .dropdownMenuPosts {
     display: none;
-    position: absolute;
-    top: 52px;
-    right: 10px;
+    position: fixed;
 
     background-color: var(--white-100);
 
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 
-    z-index: 999;
+    z-index: 999999;
 }
 
 .dropdownMenuPosts.ativo {

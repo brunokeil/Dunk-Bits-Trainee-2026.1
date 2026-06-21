@@ -7,24 +7,34 @@ const btnOpts = document.querySelectorAll(".trespontos")
 let linhas = document.querySelectorAll(".row-tabela")
 
 
+const dropdown = document.getElementById("dropdownGlobal");
+let linhaAtual = null;
+
 btnOpts.forEach((botao) => {
-    botao.addEventListener('click', () => {
-        const container = botao.parentElement;
-        const menu = container.querySelector(".dropdownMenuPosts");
-        console.log(container);
-        console.log(menu);
-        menu.classList.toggle("ativo");
-    })
-})
+    botao.addEventListener("click", () => {
+        linhaAtual = botao.closest(".row-tabela");
 
+        const rect = botao.getBoundingClientRect();
 
-document.addEventListener('click', (event) => {
-    const dropdownsAbertos = document.querySelectorAll(".dropdownMenuPosts.ativo");
+        dropdown.style.left = `${rect.left}px`;
+        dropdown.style.top = `${rect.bottom + 5}px`;
 
-    dropdownsAbertos.forEach((menu) => {
-        const containerAcoes = menu.closest(".acoes");
-        if (!containerAcoes.contains(event.target)) {
-            menu.classList.remove("ativo");
-        }
+        console.log("Clique detectado");
+        dropdown.classList.toggle("ativo");
     });
+});
+
+document.querySelector(".dropdown-view").addEventListener("click", () => {
+    linhaAtual.querySelector(".view-user").click();
+    dropdown.classList.remove("ativo");
+});
+
+document.querySelector(".dropdown-edit").addEventListener("click", () => {
+    linhaAtual.querySelector(".edit-user").click();
+    dropdown.classList.remove("ativo");
+});
+
+document.querySelector(".dropdown-delete").addEventListener("click", () => {
+    linhaAtual.querySelector(".delete-user").click();
+    dropdown.classList.remove("ativo");
 });
