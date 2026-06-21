@@ -18,7 +18,7 @@ class PostIndividualController
             return $imagemPadrao;
         }
 
-        $caminhoFisico = "public/assets/post_featured_pics/" . $imageName;
+        $caminhoFisico = $imageName;
 
         if (file_exists($caminhoFisico)) {
             return '/' . $caminhoFisico;

@@ -19,7 +19,7 @@
 
       <div id="search">
         <form method="GET" action="/lista-posts" id="form-search">
-          
+
           <ion-icon name="search-sharp"></ion-icon>
 
           <input type="text" id="search-text" placeholder="SEARCH" value="<?= $searchText ?? '' ?>" name="search" />
@@ -51,28 +51,27 @@
 
     <section id="container-posts">
 
-      <?php foreach ($posts as $p):  ?>
-        <a class="card" href="/post-individual?post=<?= $p->id ?>&page=<?= $currentPage ?>">
+      <?php if (empty($posts)): ?>
+        <p class="nenhum-post">Nenhum post encontrado.</p>
+      <?php else: ?>
+        <?php foreach ($posts as $p): ?>
+          <a class="card" href="/post-individual?post=<?= $p->id ?>&page=<?= $currentPage ?>">
 
-          <img src="<?= $p->imagem_exibicao ?>" alt="<?= $p->title ?>" class="card-imagem">
+            <img src="<?= $p->imagem_exibicao ?>" alt="<?= $p->title ?>" class="card-imagem">
 
-          <div class="card-footer">
-            <h2 class="card-titulo-fixo"><?php echo $p->title; ?></h2>
-          </div>
+            <div class="card-footer">
+              <h2 class="card-titulo-fixo"><?= $p->title ?></h2>
+            </div>
 
-          <div class="card-overlay">
-            <h2 class="card-titulo-overlay"><?php echo $p->title; ?></h2>
-            <p class="card-autor"><?php
+            <div class="card-overlay">
+              <h2 class="card-titulo-overlay"><?= $p->title ?></h2>
+              <p class="card-autor"><?= $p->authorData->name ?></p>
+              <p class="card-descricao"><?= $p->content ?></p>
+            </div>
 
-                                  echo $p->authorData->name;
-
-                                  ?></p>
-            <p class="card-descricao"><?php echo $p->content; ?></p>
-          </div>
-
-        </a>
-
-      <?php endforeach ?>
+          </a>
+        <?php endforeach; ?>
+      <?php endif; ?>
 
     </section>
 

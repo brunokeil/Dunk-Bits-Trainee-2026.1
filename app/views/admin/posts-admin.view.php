@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Posts</title>
-    <link rel="stylesheet" href="/public/css/modais-usuarios.css"/>
+    <link rel="stylesheet" href="/public/css/modais-usuarios.css" />
     <link rel="stylesheet" href="../../../public/css/admin-posts.css">
     <link rel="stylesheet" href="../../../public/css/modais-posts.css">
     <!-- <link rel="stylesheet" href="../../../public/css/modal-formulario-posts.css"> -->
@@ -20,8 +20,8 @@
             <?php
 
             $mensagemErro = null;
-                     
-            if(isset($_SESSION['error_message'])) {
+
+            if (isset($_SESSION['error_message'])) {
                 $mensagemErro = $_SESSION['error_message'];
             }
             unset($_SESSION['error_message']);
@@ -43,7 +43,7 @@
 
             <form class="searchContainer" method="GET" action="/postsadmin">
                 <input id="PesquisaPostsTabelaADM" type="text" placeholder="Pesquisar por Título" name="search" value="<?= $searchText ?? '' ?>" />
-                
+
                 <ion-icon name="search-outline"></ion-icon>
             </form>
 
@@ -51,58 +51,61 @@
                 + CRIAR POST
             </button>
         </div>
-
-        <table class="postsTable">
-            <thead class="tableHeadContainer">
-                <tr>
-                    <th class="tableHead">ID</th>
-                    <th class="tableHead">Título</th>
-                    <th class="tableHead">Autor</th>
-                    <th class="tableHead">Data</th>
-                    <th class="tableHead">Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($posts as $post): ?>
+        
+        <div class="tableContainer">
+            <table class="postsTable">
+                <thead class="tableHeadContainer">
                     <tr>
-                        <td><?= $post->id ?></td>
-                        <td><?= $post->title ?></td>
-                        <td><?= $post->authorData->name ?></td>
-                        <td><?= $post->created_at ?></td>
-                        <td>
-                            <div class="actionBtn-container">
-                                <button class="actionBtn viewPost" type="button" data-bs-toggle="modais" data-bs-target="#modalViewPost-<?= $post->id ?>">
-                                    <ion-icon name="eye-outline"></ion-icon>
-                                </button>
-                                <?php if ($_SESSION['id'] === $post->author || $_SESSION['is_admin'] === 1): ?>
-                                    <button class="actionBtn editPost" type="button" data-bs-toggle="modais" data-bs-target="#modalEditPost-<?= $post->id ?>">
-                                        <ion-icon name="pencil-outline"></ion-icon>
-                                    </button>
-                                    <button class="actionBtn deletePost" type="button" data-bs-toggle="modais" data-bs-target="#modalDeletePost-<?= $post->id ?>">
-                                        <ion-icon name="trash-bin-outline"></ion-icon>
-                                    </button>
-                                <?php endif; ?>
-                            </div>
-                            <div class="containerMenuPostsAcoes">
-                                <button class="trespontos">
-                                    <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
-                                </button>
-                                <div class="dropdownMenuPosts">
-                                    <ul>
-                                        <li><a class="viewPost btnVisuPostADM" data-bs-target="#modalViewPost-<?= $post->id ?>">Visualizar</a></li>
-                                        <?php if ($_SESSION['id'] === $post->author || $_SESSION['is_admin'] === 1): ?>
-                                            <li><a class="editPost btnEditPostADM" data-bs-target="#modalEditPost-<?= $post->id ?>">Editar</a></li>
-                                            <li><a class="deletePost btnDeletePostADM" data-bs-target="#modalDeletePost-<?= $post->id ?>">Excluir</a></li>
-                                        <?php endif; ?>
-                                    </ul>
-                                </div>
-                            </div>
-                        </td>
+                        <th class="tableHead">ID</th>
+                        <th class="tableHead">Título</th>
+                        <th class="tableHead">Autor</th>
+                        <th class="tableHead hide">Data</th>
+                        <th class="tableHead">Ações</th>
                     </tr>
-                <?php endforeach ?>
+                </thead>
+                <tbody>
+                    <?php foreach ($posts as $post): ?>
+                        <tr>
+                            <td><?= $post->id ?></td>
+                            <td class="titlePost"><?= $post->title ?></td>
+                            <td ><?= $post->authorData->name ?></td>
+                            <td class="hide"><?= $post->dataFormatada ?></td>
+                            <td>
+                                <div class="actionBtn-container">
+                                    <button class="actionBtn viewPost" type="button" data-bs-toggle="modais" data-bs-target="#modalViewPost-<?= $post->id ?>">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </button>
+                                    <?php if ($_SESSION['id'] === $post->author || $_SESSION['is_admin'] === 1): ?>
+                                        <button class="actionBtn editPost" type="button" data-bs-toggle="modais" data-bs-target="#modalEditPost-<?= $post->id ?>">
+                                            <ion-icon name="pencil-outline"></ion-icon>
+                                        </button>
+                                        <button class="actionBtn deletePost" type="button" data-bs-toggle="modais" data-bs-target="#modalDeletePost-<?= $post->id ?>">
+                                            <ion-icon name="trash-bin-outline"></ion-icon>
+                                        </button>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="containerMenuPostsAcoes">
+                                    <button class="trespontos">
+                                        <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
+                                    </button>
+                                    <div class="dropdownMenuPosts">
+                                        <ul>
+                                            <li><a class="viewPost btnVisuPostADM" data-bs-target="#modalViewPost-<?= $post->id ?>">Visualizar</a></li>
+                                            <?php if ($_SESSION['id'] === $post->author || $_SESSION['is_admin'] === 1): ?>
+                                                <li><a class="editPost btnEditPostADM" data-bs-target="#modalEditPost-<?= $post->id ?>">Editar</a></li>
+                                                <li><a class="deletePost btnDeletePostADM" data-bs-target="#modalDeletePost-<?= $post->id ?>">Excluir</a></li>
+                                            <?php endif; ?>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    <?php endforeach ?>
 
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
+
         <?php
 
         require("app/views/admin/paginationCrudPosts.view.php");
@@ -120,7 +123,7 @@
             require("app/views/admin/modais/modalEditPost.php");
             require("app/views/admin/modais/modalDeletePost.php");
         }
-        if($mensagemErro){
+        if ($mensagemErro) {
             require("app/views/admin/modais/modalErrorPost.php");
         }
         ?>
