@@ -37,16 +37,5 @@
         id="view-email" />
     </div>
 
-    <div class="inputGroup">
-      <ion-icon name="lock-closed"></ion-icon>
-
-      <input
-        type="password"
-        class="passwordInput"
-        placeholder="Senha"
-        value="senha"
-        disabled
-        id="view-senha" />
-    </div>
   </div>
 </div>
