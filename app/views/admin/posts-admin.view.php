@@ -57,8 +57,8 @@
                 <tr>
                     <th class="tableHead">ID</th>
                     <th class="tableHead">Título</th>
-                    <th class="tableHead">Autor</th>
-                    <th class="tableHead">Data</th>
+                    <th class="tableHead hide">Autor</th>
+                    <th class="tableHead hide">Data</th>
                     <th class="tableHead">Ações</th>
                 </tr>
             </thead>
@@ -66,9 +66,9 @@
                 <?php foreach ($posts as $post): ?>
                     <tr>
                         <td><?= $post->id ?></td>
-                        <td><?= $post->title ?></td>
-                        <td><?= $post->authorData->name ?></td>
-                        <td><?= $post->created_at ?></td>
+                        <td class="tittlePost"><?= $post->title ?></td>
+                        <td class="hide"><?= $post->authorData->name ?></td>
+                        <td class="hide"><?= $post->created_at ?></td>
                         <td>
                             <div class="actionBtn-container">
                                 <button class="actionBtn viewPost" type="button" data-bs-toggle="modais" data-bs-target="#modalViewPost-<?= $post->id ?>">
