@@ -42,6 +42,8 @@ main {
     border-radius: 16px;
     border: 1px solid var(--white-100);
     padding: 3rem 4rem;
+
+    overflow-x: scroll;
 }
 
 #title {
@@ -355,6 +357,9 @@ ion-icon:hover {
     .btnSalvarModal {
         font-size: 20px;
     }
+
+
+    
 }
 
 .mensagemErroA {
