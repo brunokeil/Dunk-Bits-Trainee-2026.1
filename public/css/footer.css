@@ -1,76 +1,76 @@
 @import "./styles.css";
 
 .rodape {
-	/* min-height: 100vh; */
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	background-color: var(--dark-orange-100);
-	padding: 2rem 4rem;
-	font-family: var(--font-quicksand);
-	/* margin-top: 2rem; */
-	bottom: 0;
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--dark-orange-100);
+  padding: 2rem 4rem;
+  font-family: var(--font-quicksand);
+  /* margin-top: 2rem; */
+  bottom: 0;
 }
 
 .rodape * {
-	color: var(--white-100) !important;
+  color: var(--white-100);
 }
 
 .acima {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .acima h3 {
-	font-size: 20px;
-	font-weight: 700;
-	margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
 /* --- ajustes pra centralizar tudo */
 
 .lilSection {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 .lilSection > p {
-	width: fit-content;
+  width: fit-content;
 }
 
 .logo {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .lilSection.vis {
-	align-items: center;
+  align-items: center;
 }
 .lilSection.val {
-	align-items: flex-end;
+  align-items: flex-end;
 }
 
 /* --- fim da xeretagem --- */
 
 .redes {
-	display: flex;
-	gap: 15px;
-	font-size: 32px;
-	cursor: pointer;
+  display: flex;
+  gap: 15px;
+  font-size: 32px;
+  cursor: pointer;
 }
 
 .redes ion-icon {
-	color: var(--white-100);
+  color: var(--white-100);
 }
 
 .redes ion-icon:hover {
-	color: var(--dark-grey-100);
-	transition: 0.3s;
+  color: var(--white-50);
+  transition: 0.3s;
 }
 
 .contato {
-	text-align: right;
+  text-align: right;
 }
 
 /* .logo {
@@ -80,97 +80,96 @@
 } */
 
 .infoContato p {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	gap: 10px;
-	font-size: 18px;
-	font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .linha {
-	border: none;
-	height: 1px;
-	background-color: var(--white-100);
-	opacity: 0.3;
-	margin: 40px 0;
+  border: none;
+  height: 1px;
+  background-color: var(--white-100);
+  opacity: 0.3;
+  margin: 40px 0;
 }
 
 .abaixo {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .abaixo p {
-	font-size: 20px;
-	font-weight: 500;
-	cursor: pointer;
-	transition: 0.3s;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .abaixo p:hover {
-	color: var(--dark-grey-100);
+  color: var(--white-50);
+  transition: all 120ms ease-in-out;
 }
 
 .textoMissaoHover,
 .textoVisaoHover,
 .textoValoresHover {
-	display: none;
-	color: var(--dark-grey-100);
-	font-size: 1rem;
-	font-weight: 700;
-	text-align: center;
-	max-width: 250px;
-	margin: 0 auto;
+  display: none;
+  color: var(--white-50);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  max-width: 250px;
+  margin: 0 auto;
 }
 
 .rodape:has(.buttonMissao:hover, .buttonVisao:hover, .buttonValores:hover)
-	#logodunk {
-	display: none;
+  #logodunk {
+  display: none;
 }
 
-.rodape:has(.buttonMissao:hover) .textoMissaoHover {
-	display: block;
-}
-.rodape:has(.buttonVisao:hover) .textoVisaoHover {
-	display: block;
-}
-.rodape:has(.buttonValores:hover) .textoValoresHover {
-	display: block;
+.rodape:has(.buttonMissao:hover) .textoMissaoHover, 
+.rodape:has(.buttonVisao:hover) .textoVisaoHover, 
+.rodape:has(.buttonValores:hover) .textoValoresHover  {
+  display: block;
+  color: var(--white-100);
+  transition: all 120ms ease-in-out;
 }
 
 @media (max-width: 768px) {
-	.rodape {
-		position: relative;
-        padding-bottom: 8vh 0;
-	}
-	.acima {
-		flex-direction: column;
-		gap: 1.4rem;
-		text-align: center;
-	}
+  .rodape {
+    position: relative;
+    padding-bottom: 8vh 0;
+  }
+  .acima {
+    flex-direction: column;
+    gap: 1.4rem;
+    text-align: center;
+  }
 
-	.redes,
-	.infoContato p {
-		justify-content: center;
-	}
+  .redes,
+  .infoContato p {
+    justify-content: center;
+  }
 
-	.contato {
-		text-align: center;
-	}
+  .contato {
+    text-align: center;
+  }
 
-	.abaixo {
-		flex-direction: column;
-		align-items: center;
-		gap: 2rem;
-	}
-	.abaixo > .lilSection {
-		align-items: center;
-	}
+  .abaixo {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .abaixo > .lilSection {
+    align-items: center;
+  }
 
-	.textoMissaoHover,
-    .textoVisaoHover,
-    .textoValoresHover {
-        font-size: 1rem;
-    }
+  .textoMissaoHover,
+  .textoVisaoHover,
+  .textoValoresHover {
+    font-size: 1rem;
+  }
 }
