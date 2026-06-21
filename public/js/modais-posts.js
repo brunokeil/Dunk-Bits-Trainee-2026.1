@@ -49,14 +49,23 @@ function toggleModal(idModal) {
 
 function closeAll() {
 	let modais = document.querySelectorAll(".modalPost");
+	//especifico pra sidebar
+	const modalUser = document.querySelector(".modalUser");
+	if (modalUser.classList.contains != "close")
+		modalUser.classList.add("close");
+	modalUser.classList.remove("open");
+	//fim especifico
+
 	for (let i = 0; i < modais.length; i++) {
 		if (modais[i].classList.contains != "close")
 			modais[i].classList.add("close");
 		modais[i].classList.remove("open");
 	}
 	const modalContainer = document.querySelector(".modalContainer");
-	if (modalContainer.contains != "close")
+	if (modalContainer.contains != "close") {
 		modalContainer.classList.add("close");
+		modalContainer.classList.remove("open");
+	}
 	// console.log(modais);
 }
 closeAll();
@@ -124,9 +133,9 @@ function setAllEventListeners() {
 	});
 }
 
-const modalErro = document.getElementById('modalErrorPost');
+const modalErro = document.getElementById("modalErrorPost");
 
-if(modalErro){
+if (modalErro) {
 	toggleModal("modalErrorPost");
 }
 

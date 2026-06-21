@@ -123,17 +123,18 @@ class PostsAdminController
 
         $conteudo = App::get(key: 'database')->selectOne('posts', $id);
 
-        if (!empty($_POST['tituloDoPost'])) {
-            $titulo = $_POST['tituloDoPost'];
-        } else {
-            $titulo = $conteudo->title;
+        if(empty($_POST['tituloDoPost'])) {
+            $_SESSION['error_message'] = "Não foi possível editar, post sem descrição.";
+            header('Location: /postsadmin');
+            exit();
+        }else if (empty($_POST['descricaoDoPost'])) {
+            $_SESSION['error_message'] = "Não foi possível editar, post sem descrição.";
+            header('Location: /postsadmin');
+            exit();
         }
 
-        if (!empty($_POST['descricaoDoPost'])) {
-            $descricao = $_POST['descricaoDoPost'];
-        } else {
-            $descricao = $conteudo->content;
-        }
+        $titulo = $_POST['tituloDoPost'];
+        $descricao = $_POST['descricaoDoPost'];
 
         if (!empty($_FILES['cover_image']['tmp_name'])) {
             $temporario = $_FILES['cover_image']['tmp_name'];

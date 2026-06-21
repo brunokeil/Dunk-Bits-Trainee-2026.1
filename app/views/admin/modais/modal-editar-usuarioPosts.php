@@ -1,6 +1,7 @@
 <div class="modalUser close" id="editModal">
     <div id="header">
         <h1>EDITAR USUÁRIO</h1>
+        <button class="closeModalBtn terciaryBtn">X</button>
     </div>
 
     <form action="postsadmin/editUser" method="post" enctype="multipart/form-data" id="form-edit">
@@ -9,7 +10,8 @@
 
         <div class="userProfilePicture">
             <img
-                class="imgProfPic" />
+                src=""
+                class="imgProfPic image" />
             <input type="file" name="imagem" class="profileInput" accept="image/*" hidden />
             <ion-icon class="icone-img" name="image-outline"></ion-icon>
             <h4 class="txt-img">

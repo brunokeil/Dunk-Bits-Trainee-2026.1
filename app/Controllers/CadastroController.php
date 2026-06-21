@@ -32,15 +32,19 @@ class CadastroController
         ];
 
         if($confirmarsenha !== $senhaInput){
-            $_SESSION['senhas-diferentes'] = "Senhas diferentes!";
+            $_SESSION['error_message'] = "Senhas diferentes!";
             header('Location: /cadastro');
             exit();
         }else if(!$parameters['email']){
-            $_SESSION['semEmail'] = "Nenhum email digitado!";
+            $_SESSION['error_message'] = "Nenhum email digitado!";
             header('Location: /cadastro');
             exit();
         }else if(App::get(key: 'database')->existe($parameters['email'])){
-            $_SESSION['email-usado'] = "Email já cadastrado!";
+            $_SESSION['error_message'] = "Email já cadastrado!";
+            header('Location: /cadastro');
+            exit();
+        }else if(!$parameters['name']){
+            $_SESSION['error_message'] = "Nenhum nome digitado!";
             header('Location: /cadastro');
             exit();
         }

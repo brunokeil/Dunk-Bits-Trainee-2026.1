@@ -3,7 +3,7 @@
 <aside class="closed-sidebar " id="sidebar">
   <div class="top-sidebar">
     <div class="top-top-sidebar">
-      <button class="edit-user user-space-sidebar" data-profPic="<?php echo $usuarioLogado->profile_image; ?>" data-id="<?php echo $usuarioLogado->id; ?>" data-name="<?php echo htmlspecialchars($usuarioLogado->name, ENT_QUOTES, 'UTF-8'); ?>" data-email="<?php echo htmlspecialchars($usuarioLogado->email, ENT_QUOTES, 'UTF-8'); ?>" data-senha="<?php echo htmlspecialchars($usuarioLogado->password, ENT_QUOTES, 'UTF-8'); ?>">
+      <button class="edit-user user-space-sidebar" data-profpic="<?php echo $usuarioLogado->profile_image; ?>" data-id="<?php echo $usuarioLogado->id; ?>" data-name="<?php echo htmlspecialchars($usuarioLogado->name, ENT_QUOTES, 'UTF-8'); ?>" data-email="<?php echo htmlspecialchars($usuarioLogado->email, ENT_QUOTES, 'UTF-8'); ?>" data-senha="<?php echo htmlspecialchars($usuarioLogado->password, ENT_QUOTES, 'UTF-8'); ?>">
 
         <?php
         if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/public/assets/user_profile_pics/"  . $usuarioLogado->profile_image) && isset($usuarioLogado->profile_image)):

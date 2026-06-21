@@ -1,124 +1,142 @@
 const profPics = document.querySelectorAll(".userProfilePicture");
-const inputSenha2 = document.getElementById('senha2');
-const btnMostrarSenha2 = document.getElementById('olhoSenha2');
+const inputSenha2 = document.getElementById("senha2");
+const btnMostrarSenha2 = document.getElementById("olhoSenha2");
 btnMostrarSenha2.addEventListener("click", mostrarSenhaEditar);
 
 function mostrarSenhaEditar() {
-    if (inputSenha2.type === 'password') {
-        inputSenha2.type = 'text';
-        btnMostrarSenha2.setAttribute('name', 'eye-outline');
-    } else {
-        inputSenha2.type = 'password';
-        btnMostrarSenha2.setAttribute('name', 'eye-off-outline');
-    }
+	if (inputSenha2.type === "password") {
+		inputSenha2.type = "text";
+		btnMostrarSenha2.setAttribute("name", "eye-outline");
+	} else {
+		inputSenha2.type = "password";
+		btnMostrarSenha2.setAttribute("name", "eye-off-outline");
+	}
 }
 
 function alterarImagem() {
-    profPics.forEach((profPic) => {
-        const img = profPic.querySelector("img");
-        const input = profPic.querySelector("input");
-        const icon = profPic.querySelector(".icone-img");
-        const text = profPic.querySelector(".txt-img");
+	profPics.forEach((profPic) => {
+		const img = profPic.querySelector("img");
+		const input = profPic.querySelector("input");
+		const icon = profPic.querySelector(".icone-img");
+		const text = profPic.querySelector(".txt-img");
 
-        profPic.addEventListener("click", () => {
-            input.click();
-            console.log("Imagem clicada");
-        });
+		profPic.addEventListener("click", () => {
+			input.click();
+			console.log("Imagem clicada");
+		});
 
-        input.addEventListener("change", () => {
-            const arquivo = input.files[0];
+		input.addEventListener("change", () => {
+			const arquivo = input.files[0];
 
-            if (arquivo) {
-                const imageURL = URL.createObjectURL(arquivo);
+			if (arquivo) {
+				const imageURL = URL.createObjectURL(arquivo);
 
-                img.style.display = "flex";
+				img.style.display = "flex";
 
-                icon.style.display = "none";
-                text.style.display = "none";
-                img.src = imageURL;
-            }
-        });
-    });
+				icon.style.display = "none";
+				text.style.display = "none";
+				img.src = imageURL;
+			}
+		});
+	});
 }
 
 function toggleModal(idModal) {
+	const modal = document.getElementById(idModal);
+	const modalContainer = document.querySelector(".modalContainer");
 
-    const modal = document.getElementById(idModal);
-    const modalContainer = document.querySelector(".modalContainer");
+	// lógica: ao invés de trocar a classe principal, dá pra adicionar múltiplas classes,
+	// então, no css, configurei classes de abrir e fechar
 
-    // lógica: ao invés de trocar a classe principal, dá pra adicionar múltiplas classes,
-    // então, no css, configurei classes de abrir e fechar
-
-    //verifica se quer abrir ou fechar
-    if (modal.classList.contains("close")) {
-        modal.classList.remove("close");
-        modal.classList.add("open");
-        modalContainer.classList.remove("close");
-        modalContainer.classList.add("open");
-    } else {
-        modal.classList.remove("open");
-        modal.classList.add("close");
-        modalContainer.classList.remove("open");
-        modalContainer.classList.add("close");
-        form = modal.querySelector("form");
-        if(form){
-            form.reset();
-        }
-    }    
+	//verifica se quer abrir ou fechar
+	if (modal.classList.contains("close")) {
+		modal.classList.remove("close");
+		modal.classList.add("open");
+		modalContainer.classList.remove("close");
+		modalContainer.classList.add("open");
+	} else {
+		modal.classList.remove("open");
+		modal.classList.add("close");
+		modalContainer.classList.remove("open");
+		modalContainer.classList.add("close");
+		form = modal.querySelector("form");
+		if (form) {
+			form.reset();
+		}
+	}
 }
 
 function closeAllUser() {
-    let modais = document.querySelectorAll(".modalUser");
-    for (let i = 0; i < modais.length; i++) {
-        if (modais[i].classList.contains != "close")
-            modais[i].classList.add("close");
-        modais[i].classList.remove("open");
-    }
-    console.log(modais);
+	let modais = document.querySelectorAll(".modalUser");
+	for (let i = 0; i < modais.length; i++) {
+		if (modais[i].classList.contains != "close")
+			modais[i].classList.add("close");
+		modais[i].classList.remove("open");
+	}
+	console.log(modais);
 }
 closeAllUser();
 
 const errorModal = document.getElementById("errorModal");
 
 if (errorModal) {
-    toggleModal("errorModal");
+	toggleModal("errorModal");
 }
-
-
 
 function setAllEventListeners() {
-    // todos os eventos de botoes modais aqui
-    // botoes
-    const editUser = document.querySelector(".edit-user");
-    // const errorUser = document.querySelectorAll(".error-user");
-    // const dropdownEdit = document.querySelectorAll(".dropdown-edit");
+	// todos os eventos de botoes modais aqui
+	// botoes
+	const editUser = document.querySelector(".edit-user");
+	// const errorUser = document.querySelectorAll(".error-user");
+	// const dropdownEdit = document.querySelectorAll(".dropdown-edit");
 
-    editUser.addEventListener("click", () => {
+	editUser.addEventListener("click", () => {
+		if (editUser.dataset.profpic && editUser.dataset.profpic.trim() !== "") {
+			const image = document.querySelector(".image");
 
-        console.log(editUser.dataset.profpic)
+			
+            console.log(image);
+			image.src = "/public/assets/user_profile_pics/" + editUser.dataset.profpic;
+			image.style.display = "block";
+
+			const logo = document.querySelector(".icone-img");
+			const txt = document.querySelector(".txt-img");
+			logo.style.display = "none";
+			txt.style.display = "none";
+		} else {
+			const image = document.querySelector(".image");
+			image.style.display = "none";
+			const logo = document.querySelector(".icone-img");
+			const txt = document.querySelector(".txt-img");
+			logo.style.display = "block";
+			txt.style.display = "block";
+		}
+
+		console.log(editUser.dataset.profpic);
+		
         document.getElementById("edit-id").value = editUser.dataset.id;
 
-        document.querySelector(".imgProfPic").src = "/public/assets/user_profile_pics/" + editUser.dataset.profpic;
+		document.querySelector(".imgProfPic").src =
+			"/public/assets/user_profile_pics/" + editUser.dataset.profpic;
 
-        document.getElementById("edit-username").value = editUser.dataset.name;
+		document.getElementById("edit-username").value = editUser.dataset.name;
 
-        document.getElementById("edit-email").value = editUser.dataset.email;
+		document.getElementById("edit-email").value = editUser.dataset.email;
 
-        toggleModal("editModal");
-    });
+		toggleModal("editModal");
+	});
 
-    // cada ".closeModalBtn" vai receber o "toggleModal"
-    const closeBtn = document.querySelectorAll(".cancelBtnPosts");
+	// cada ".closeModalBtn" vai receber o "toggleModal"
+	const closeBtn = document.querySelectorAll(".cancelBtnPosts");
 
-    closeBtn.forEach(btn => {
-        btn.addEventListener("click", () => {
-            const modal = btn.closest(".modalUser");
-            toggleModal(modal.id);
-        });
-    });
-    console.log(document.getElementById('editModal'));
+	closeBtn.forEach((btn) => {
+		btn.addEventListener("click", () => {
+			const modal = btn.closest(".modalUser");
+			toggleModal(modal.id);
+		});
+	});
+	console.log(document.getElementById("editModal"));
 }
-
 
 setAllEventListeners();
 alterarImagem();
