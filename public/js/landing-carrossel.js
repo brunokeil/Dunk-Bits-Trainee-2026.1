@@ -1,36 +1,41 @@
+
 console.log("Carrossel script loaded");
 
 const slider = document.querySelector(".slider");
 const sliderContent = document.querySelector(".slider-content");
-const radioAuto = document.querySelectorAll(".radio-auto");
+const radioAuto = document.querySelector(".radio-auto");
 const leftArrow = document.querySelector(".left-arrow");
 const rightArrow = document.querySelector(".right-arrow");
 
+const ITEMS_PER_PAGE = 2;
+
 let currentIndex = 0;
-let itemsPerPage = 3;
 let totalPages = 1;
 let autoSlideInterval;
 
 function updateSlider() {
-    const sliderWidth = slider.offsetWidth;
-    const itemWidth = sliderContent.children[0].getBoundingClientRect().width;
+    if (!slider || !sliderContent || !radioAuto || sliderContent.children.length === 0) {
+        return;
+    }
 
-    itemsPerPage = Math.floor(sliderWidth / itemWidth);
-    totalPages = Math.ceil((sliderContent.children.length / itemsPerPage) - 2*((sliderWidth/itemWidth) /100));
+    totalPages = Math.ceil(sliderContent.children.length / ITEMS_PER_PAGE);
+    currentIndex = Math.min(currentIndex, totalPages - 1);
 
-    sliderContent.style.transform = `translateX(-${currentIndex * sliderWidth}px)`;
     createRadioButtons();
     updateRadioButtons();
+    scrollToPage(false);
 }
 
 function createRadioButtons() {
-    radioAuto.innerHTML = " ";
+    radioAuto.innerHTML = "";
 
     for (let i = 0; i < totalPages; i++) {
-        const radio = document.createElement("div");
+        const radio = document.createElement("button");
+        radio.type = "button";
         radio.classList.add("radio-label");
+        // radio.setAttribute("aria-label", `Go to slide ${i + 1}`);
 
-        if (i == 0) {
+        if (i === currentIndex) {
             radio.classList.add("active");
         }
 
@@ -38,6 +43,7 @@ function createRadioButtons() {
             currentIndex = i;
             scrollToPage();
         });
+
         radioAuto.appendChild(radio);
     }
 }
@@ -49,58 +55,63 @@ function updateRadioButtons() {
     });
 }
 
-function scrollToPage() {
-    const sliderWidth = slider.offsetWidth * currentIndex;
-    sliderContent.scrollTo({ left: sliderWidth, behavior: "smooth" });
+function scrollToPage(smooth = true) {
+    const startItem = sliderContent.children[currentIndex * ITEMS_PER_PAGE];
+
+    if (!startItem) {
+        return;
+    }
+
+    sliderContent.scrollTo({
+        left: startItem.offsetLeft,
+        behavior: smooth ? "smooth" : "auto",
+    });
+
     updateRadioButtons();
-    resetAutoSlide();
 }
 
 function goToNextSlide() {
     currentIndex = (currentIndex + 1) % totalPages;
     scrollToPage();
-    resetAutoSlide();
 }
 
 function goToPreviousSlide() {
-    currentIndex = (currentIndex - 1 + totalPages) % totalPages;
+    currentIndex = currentIndex - 1;
+    if (currentIndex < 0) {
+        currentIndex = totalPages - 1;
+    }
+
     scrollToPage();
-    resetAutoSlide();
 }
 
-// 
-
 function startAutoSlide() {
-    autoSlideInterval = setInterval(() => {
-        goToNextSlide();
-    }, 3000);
+    stopAutoSlide();
+    autoSlideInterval = setInterval(goToNextSlide, 3000);
 }
 
 function stopAutoSlide() {
     clearInterval(autoSlideInterval);
 }
 
-function resetAutoSlide() {
-    clearInterval(autoSlideInterval);
-    startAutoSlide();
-}
-
-// 
-
-leftArrow.addEventListener("click", () => {
+leftArrow?.addEventListener("click", () => {
     goToPreviousSlide();
+    startAutoSlide();
 });
 
-rightArrow.addEventListener("click", () => {
+rightArrow?.addEventListener("click", () => {
     goToNextSlide();
+    startAutoSlide();
 });
+
+slider?.addEventListener("pointerdown", () => {
+    startAutoSlide();
+});
+
+slider?.addEventListener("wheel", () => {
+    startAutoSlide();
+}, { passive: true });
 
 window.addEventListener("resize", updateSlider);
-
-
-
-// slider.addEventListener("mouseenter", stopAutoSlide);
-// slider.addEventListener("mouseleave", startAutoSlide);
 
 updateSlider();
 startAutoSlide();

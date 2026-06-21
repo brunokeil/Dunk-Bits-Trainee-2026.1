@@ -73,19 +73,19 @@ class PostsAdminController
     {
 
         if (empty($_POST['tituloDoPost'])) {
-            $_SESSION['semTitulo'] = "Não foi possível criar, post sem título.";
+            $_SESSION['error_message'] = "Não foi possível criar, post sem título.";
             header('Location: /postsadmin');
             exit();
         } else if (empty($_POST['descricaoDoPost'])) {
-            $_SESSION['semDescricao'] = "Não foi possível criar, post sem descrição.";
+            $_SESSION['error_message'] = "Não foi possível criar, post sem descrição.";
             header('Location: /postsadmin');
             exit();
         } else if (empty($_FILES['cover_image']['tmp_name'])) {
-            $_SESSION['semImagem'] = "Não foi possível criar, post sem imagem.";
+            $_SESSION['error_message'] = "Não foi possível criar, post sem imagem.";
             header('Location: /postsadmin');
             exit();
         } else if (empty($_POST['postTipo'])) {
-            $_SESSION['semTipo'] = "Não foi possível criar, post sem tipo.";
+            $_SESSION['error_message'] = "Não foi possível criar, post sem tipo.";
             header('Location: /postsadmin');
             exit();
         }
@@ -195,28 +195,41 @@ class PostsAdminController
 
         $usuario = $database->selectOne('users', $id);
 
-        if ($_POST['password'] == "") {
+        if(empty($_POST['password'])) {
             $_POST['password'] = $usuario->password;
+            $senhaEditada = $_POST['password'];
+        }else{
+            $senhaInput = $_POST['password'];
+            $senhaSegura = password_hash($senhaInput, PASSWORD_DEFAULT);
+            $senhaEditada = $senhaSegura;
         }
 
-        if ($database->existe($_POST['email']) && $usuario->email != $_POST['email']) {
-            $_SESSION['emailEmUso'] = "Não foi possível atualizar: O e-mail informado já está em uso!";
+        if(empty($_POST['name'])){
+            $_SESSION['error_message'] = "Não foi possível editar usuário: Usuário sem nome.";
             header('Location: /postsadmin');
-            exit;
+            exit();
+        }else if(empty($_POST['email'])){
+            $_SESSION['error_message'] = "Não foi possível editar usuário: Usuário sem email.";
+            header('Location: /postsadmin');
+            exit();
+        }else if($database->existe($_POST['email']) && $usuario->email != $_POST['email']){
+            $_SESSION['emailEmUso'] = "Não foi possível editar: O e-mail informado já está em uso!";
+            header('Location: /postsadmin');
+            exit();
         }
-
+        
         if ($imgName != null) {
             $parameters = [
                 'name' => $_POST['name'],
                 'email' => $_POST['email'],
-                'password' => $_POST['password'],
+                'password' => $senhaEditada,
                 'profile_image' => $imgName
             ];
-        } else {
+        } else{
             $parameters = [
                 'name' => $_POST['name'],
                 'email' => $_POST['email'],
-                'password' => $_POST['password']
+                'password' => $senhaEditada,
             ];
         }
 

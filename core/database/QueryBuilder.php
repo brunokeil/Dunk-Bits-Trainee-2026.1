@@ -56,6 +56,20 @@ class QueryBuilder
         }
     }
 
+    public function selectOneEmail($table, $email)
+    {
+        $sql = "select * from {$table}  where email = :email";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['email' => $email]);
+
+            return $stmt->fetchObject();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function verificaLogin($email, $senha)
     {
         $sql = sprintf('SELECT * FROM users WHERE email = :email AND password = :password');

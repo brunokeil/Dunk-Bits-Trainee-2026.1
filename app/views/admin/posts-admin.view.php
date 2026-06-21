@@ -21,22 +21,10 @@
 
             $mensagemErro = null;
                      
-            if(isset($_SESSION['semTitulo'])) {
-                $mensagemErro = $_SESSION['semTitulo'];
-            } else if (isset($_SESSION['semDescricao'])) {
-                $mensagemErro = $_SESSION['semDescricao'];
-            } else if (isset($_SESSION['semImagem'])) {
-                $mensagemErro = $_SESSION['semImagem'];
-            } else if (isset($_SESSION['semTipo'])) {
-                $mensagemErro = $_SESSION['semTipo'];
-            } else if(isset($_SESSION['emailEmUso'])){
-                $mensagemErro = $_SESSION['emailEmUso'];
+            if(isset($_SESSION['error_message'])) {
+                $mensagemErro = $_SESSION['error_message'];
             }
-            unset($_SESSION['semTitulo']);
-            unset($_SESSION['semImagem']);
-            unset($_SESSION['semDescricao']);
-            unset($_SESSION['semTipo']);
-            unset($_SESSION['emailEmUso']);
+            unset($_SESSION['error_message']);
             ?>
         </p>
     </div>

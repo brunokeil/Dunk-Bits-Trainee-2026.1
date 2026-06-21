@@ -18,13 +18,10 @@
 			<div class="mensagemErro">
 				<p class="mensagemErroA">
 					<?php
-						if(isset($_SESSION['senhas-diferentes'])){
-							echo $_SESSION['senhas-diferentes'];
-						}else if(isset($_SESSION['email-usado'])){
-							echo $_SESSION['email-usado'];
+						if(isset($_SESSION['error_message'])){
+							echo $_SESSION['error_message'];
 						}
-						unset($_SESSION['senhas-diferentes']);
-						unset($_SESSION['email-usado']);
+						unset($_SESSION['error_message']);
 					?>
 				</p>
 			</div>
