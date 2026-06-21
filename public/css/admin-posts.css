@@ -112,6 +112,7 @@ td {
 .tableContainer {
 	overflow-x: auto;
 	width: 100%;
+	scrollbar-color: white transparent;
 }
 
 .postsTable {
@@ -126,6 +127,22 @@ td {
 .tableHead {
 	background-color: var(--white-25);
 	width: 18%;
+}
+
+td.titlePost {
+	overflow: hidden;
+	/* max-width: 20vw; */
+	max-height: 2ch;
+	/* line-height: 1ch; */
+	padding: 0 1rem;
+
+	/* display: -webkit-box; */
+	text-overflow: ellipsis;
+	-webkit-box-orient: horizontal;
+	-webkit-line-clamp: 2;
+	
+
+	text-wrap: nowrap;
 }
 
 /* paginação */
