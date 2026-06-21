@@ -57,7 +57,7 @@ main {
 th,
 td {
 	text-align: center;
-	padding: 1.5rem;
+	padding: 0.8rem;
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
@@ -83,7 +83,7 @@ td {
 	width: fit-content;
 	border-radius: 1.8rem;
 	gap: 1rem;
-	padding: 0 1rem;
+	padding: 0.4rem 1rem;
 	background: white;
 }
 .searchContainer > * {
@@ -93,7 +93,7 @@ td {
 .searchContainer > input {
 	width: 100%;
 	border: none;
-	padding: 0.4rem;
+	/* padding: 0.4rem; */
 	color: var(--black-100);
 }
 #PesquisaPostsTabelaADM::placeholder {
@@ -109,24 +109,26 @@ td {
 
 /* -------------- TABELA ----------------- */
 
+.tableContainer {
+	overflow-x: auto;
+	width: 100%;
+}
+
+.postsTable {
+	border-collapse: separate;
+	border-spacing: 0;
+
+	/* table-layout: fixed; */
+
+	padding: 0%;
+}
+
 .tableHead {
 	background-color: var(--white-25);
 	width: 18%;
 }
 
-.postsTable {
-	width: 100%;
-	overflow-x: auto;
-
-	border-collapse: separate;
-	border-spacing: 0;
-	width: 100%;
-
-	table-layout: fixed;
-	box-sizing: border-box;
-
-	padding: 0%;
-}
+/* paginação */
 
 .carrossel {
 	display: flex;
@@ -269,14 +271,12 @@ ion-icon:hover {
 
 	main {
 		padding: 1rem;
+		overflow-x: auto;
+		height: fit-content;
 	}
 
 	#BodyTabelaPostsADM {
 		min-height: 100vh;
-	}
-
-	#title {
-		text-align: center;
 	}
 
 	#TituloDePostsADM {
@@ -288,9 +288,26 @@ ion-icon:hover {
 		font-weight: 1000;
 		font-size: 2rem;
 		text-align: center;
+	}
 
+	.titlePost {
+		overflow: hidden;
+		max-width: 28ch;
+
+		/* display: -webkit-box; */
+		text-overflow: ellipsis;
 		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 2;
+		-webkit-line-clamp: 1;
+		text-wrap: nowrap;
+	}
+
+	td {
+		text-wrap: nowrap;
+		padding: 0.4rem 0.8rem;
+	}
+
+	.postsTable {
+		overflow-x: scroll;
 	}
 
 	#PesquisaECriarPostADM {
@@ -309,9 +326,6 @@ ion-icon:hover {
 
 	.hide {
 		display: none;
-	}
-	td {
-		padding: 0;
 	}
 
 	.actionBtn {
@@ -377,6 +391,13 @@ ion-icon:hover {
 	.btnCancelarModal,
 	.btnSalvarModal {
 		font-size: 20px;
+	}
+}
+
+@media (max-width: 600px) {
+	#title {
+		text-align: center;
+		font-size: 1.5rem;
 	}
 }
 

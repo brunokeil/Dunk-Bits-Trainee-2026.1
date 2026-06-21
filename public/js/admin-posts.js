@@ -53,7 +53,9 @@ tresPontos.forEach((botao) => {
 	botao.addEventListener("click", () => {
 		const caixaMae = botao.parentElement;
 		const menu = caixaMae.querySelector(".dropdownMenuPosts");
+		
 		menu.classList.toggle("aparecer");
+		console.log("clicou");
 	});
 });
 
