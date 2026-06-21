@@ -204,7 +204,7 @@ ion-icon:hover {
 	z-index: 1;
 }
 
-.dropdownMenuPosts .aparecer {
+.dropdownMenuPosts.aparecer {
 	display: block;
 }
 
