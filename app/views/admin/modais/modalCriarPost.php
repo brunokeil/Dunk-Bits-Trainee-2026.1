@@ -14,7 +14,7 @@
       <div class="inputGroup">
         <select type="text" class="postTipo" placeholder="Insira tipo do POST" id="postTipo" name="postTipo" required>
           <option value="" disabled selected>Selecione o tipo do POST</option>
-          <option value="highlights">Destaques</option>
+          <option value="destaques">Destaques</option>
           <option value="jogos">Jogos</option>
           <option value="noticias">Notícias</option>
         </select>
