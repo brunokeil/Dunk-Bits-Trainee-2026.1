@@ -16,7 +16,7 @@
                 <input type="text" class="postAuthor" name="postTipo" value="<?= $post->type ?>" id="viewAuthor" readonly/>
             </div>
             <div class="inputGroup">
-                <input name="" type="text" class="postDate" value="<?= $post->created_at ?>" id="viewDate" readonly/>
+                <input name="" type="text" class="postDate" value="<?= $post->dataFormatada ?>" id="viewDate" readonly/>
             </div>
         </div>
     </div>

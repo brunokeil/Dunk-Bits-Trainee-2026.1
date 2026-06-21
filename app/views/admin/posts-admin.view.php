@@ -51,7 +51,7 @@
                 + CRIAR POST
             </button>
         </div>
-        
+
         <div class="tableContainer">
             <table class="postsTable">
                 <thead class="tableHeadContainer">
@@ -65,10 +65,10 @@
                 </thead>
                 <tbody>
                     <?php foreach ($posts as $post): ?>
-                        <tr>
+                        <tr class="row-tabela">
                             <td><?= $post->id ?></td>
                             <td class="titlePost"><?= $post->title ?></td>
-                            <td ><?= $post->authorData->name ?></td>
+                            <td><?= $post->authorData->name ?></td>
                             <td class="hide"><?= $post->dataFormatada ?></td>
                             <td>
                                 <div class="actionBtn-container">
@@ -88,15 +88,7 @@
                                     <button class="trespontos">
                                         <ion-icon name="ellipsis-vertical-circle-outline"></ion-icon>
                                     </button>
-                                    <div class="dropdownMenuPosts">
-                                        <ul>
-                                            <li><a class="viewPost btnVisuPostADM" data-bs-target="#modalViewPost-<?= $post->id ?>">Visualizar</a></li>
-                                            <?php if ($_SESSION['id'] === $post->author || $_SESSION['is_admin'] === 1): ?>
-                                                <li><a class="editPost btnEditPostADM" data-bs-target="#modalEditPost-<?= $post->id ?>">Editar</a></li>
-                                                <li><a class="deletePost btnDeletePostADM" data-bs-target="#modalDeletePost-<?= $post->id ?>">Excluir</a></li>
-                                            <?php endif; ?>
-                                        </ul>
-                                    </div>
+
                                 </div>
                             </td>
                         </tr>
@@ -127,6 +119,16 @@
             require("app/views/admin/modais/modalErrorPost.php");
         }
         ?>
+    </div>
+
+    <div class="dropdownMenuPosts">
+        <ul>
+            <li><a class="viewPost btnVisuPostADM" data-bs-target="#modalViewPost-<?= $post->id ?>">Visualizar</a></li>
+            <?php if ($_SESSION['id'] === $post->author || $_SESSION['is_admin'] === 1): ?>
+                <li><a class="editPost btnEditPostADM" data-bs-target="#modalEditPost-<?= $post->id ?>">Editar</a></li>
+                <li><a class="deletePost btnDeletePostADM" data-bs-target="#modalDeletePost-<?= $post->id ?>">Excluir</a></li>
+            <?php endif; ?>
+        </ul>
     </div>
 
 

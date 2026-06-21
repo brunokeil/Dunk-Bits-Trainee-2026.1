@@ -49,11 +49,17 @@
       </div>
     </section>
 
-    <section id="container-posts">
+    <?php if (empty($posts)): ?>
+      <section class="nenhum-post-section">
 
-      <?php if (empty($posts)): ?>
-        <p class="nenhum-post">Nenhum post encontrado.</p>
-      <?php else: ?>
+          <ion-icon name="images"></ion-icon>
+          <h4>Nenhum post encontrado.</h4>
+
+      </section>
+
+    <?php else: ?>
+      <section id="container-posts">
+
         <?php foreach ($posts as $p): ?>
           <a class="card" href="/post-individual?post=<?= $p->id ?>&page=<?= $currentPage ?>">
 
@@ -71,9 +77,9 @@
 
           </a>
         <?php endforeach; ?>
-      <?php endif; ?>
 
-    </section>
+      </section>
+    <?php endif; ?>
 
     <?php require("app/views/site/pagination-posts-site.view.php") ?>
 
