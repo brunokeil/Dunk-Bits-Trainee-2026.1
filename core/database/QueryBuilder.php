@@ -28,7 +28,7 @@ class QueryBuilder
         }
     }
 
-        public function selectAllAndJoin($table)
+    public function selectAllAndJoin($table)
     {
         $sql = "select {$table}.*, users.name as author_name from {$table} join users on {$table}.author = users.id";
 
@@ -243,5 +243,36 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
-}
 
+    public function paginatePosts($table, $limit, $offset, $searchText, $searchColumn, $filtro)
+    {
+        $parameters = [];
+        $whereClauses = [];
+        $whereSql = '';
+
+        if ($searchColumn && $searchText) {
+            $whereClauses[] = "($searchColumn[0] like :searchText or $searchColumn[1] like :searchText)";
+            $parameters['searchText'] = '%' . $searchText . '%';
+        }
+
+        if ($filtro) {
+            $whereClauses[] = "(type = :filtro)";
+            $parameters['filtro'] = $filtro;
+        }
+
+        if (!empty($whereClauses)) {
+            $whereSql = "WHERE " . implode(' and ', $whereClauses);
+        }
+
+        $sql = "SELECT * FROM {$table} {$whereSql} ORDER BY created_at DESC LIMIT {$limit} OFFSET {$offset}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute($parameters);
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+}

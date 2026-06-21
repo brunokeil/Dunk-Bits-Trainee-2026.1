@@ -47,7 +47,7 @@ class ListaPostsController
         $totalPosts = $database->countAll('posts', $searchText, $searchColumn, $filtro);
         $totalPages = ceil($totalPosts / $limit);
 
-        $posts = $database->paginate('posts', $limit, $offset, $searchText, $searchColumn, $filtro);
+        $posts = $database->paginatePosts('posts', $limit, $offset, $searchText, $searchColumn, $filtro);
 
         foreach ($posts as $p) {
             $p->authorData = $database->selectOne('users', $p->author);
