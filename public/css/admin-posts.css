@@ -293,6 +293,7 @@ ion-icon:hover {
 	.titlePost {
 		overflow: hidden;
 		max-width: 28ch;
+		padding: 0 1rem;
 
 		/* display: -webkit-box; */
 		text-overflow: ellipsis;

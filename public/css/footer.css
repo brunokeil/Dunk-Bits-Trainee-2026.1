@@ -142,7 +142,7 @@
 @media (max-width: 768px) {
 	.rodape {
 		position: relative;
-        padding-bottom: 8vh 0;
+		padding-bottom: 8vh 0;
 	}
 	.acima {
 		flex-direction: column;
@@ -169,8 +169,8 @@
 	}
 
 	.textoMissaoHover,
-    .textoVisaoHover,
-    .textoValoresHover {
-        font-size: 1rem;
-    }
+	.textoVisaoHover,
+	.textoValoresHover {
+		font-size: 1rem;
+	}
 }

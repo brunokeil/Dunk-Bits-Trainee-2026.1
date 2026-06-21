@@ -1,6 +1,7 @@
 <div class="modalUser close" id="createModal">
   <div id="header">
     <h1>CRIAR USUÁRIO</h1>
+    <button class="closeModalBtn terciaryBtn">X</button>
   </div>
 
   <form action="admin-users/create" method="post" enctype="multipart/form-data" id="form-create">
