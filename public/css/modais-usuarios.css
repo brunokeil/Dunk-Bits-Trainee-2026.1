@@ -39,12 +39,12 @@
 	margin-right: 5px;
 }
 
-.cancelBtn {
+.cancelBtn, .cancelBtnPosts {
 	background: none;
-	color: var(--white-100);
+	color: var(--white-50);
 	text-decoration: underline;
 }
-.cancelBtn:hover {
+.cancelBtn:hover, .cancelBtnPosts:hover {
 	background: none;
 	color: var(--white-100);
 }
