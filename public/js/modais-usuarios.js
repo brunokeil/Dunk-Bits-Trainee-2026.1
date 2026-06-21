@@ -149,14 +149,34 @@ function setAllEventListeners() {
 
 			document.getElementById("view-email").value = btn.dataset.email;
 
-
 			toggleModal("viewModal");
 		});
 	});
 
 	editUser.forEach((btn) => {
 		btn.addEventListener("click", () => {
+			if (btn.dataset.profpic && btn.dataset.profpic.trim() !== "") {
+				const img = document.querySelector(".imgProfPic");
+				
+				img.src = "/public/assets/user_profile_pics/" + btn.dataset.profpic;
+				img.style.display = "block";
+				
+				const logo = document.querySelector(".icone-img");
+				const txt = document.querySelector(".txt-img");
+				logo.style.display = "none";
+				txt.style.display = "none";
+			} else {
+				const img = document.querySelector(".imgProfPic");
+				img.style.display = "none";
+				const logo = document.querySelector(".icone-img");
+				const txt = document.querySelector(".txt-img");
+				logo.style.display = "block";
+				txt.style.display = "block";
+
+			}
+
 			console.log(btn.dataset.profpic);
+
 			document.getElementById("edit-id").value = btn.dataset.id;
 
 			document.querySelector(".imgProfPic").src =
@@ -203,8 +223,6 @@ function setAllEventListeners() {
 			toggleModal(modal.id);
 		});
 	});
-
-
 
 	// fechar modais clicando fora
 	const modalContainer = document.querySelector(".modal-container");

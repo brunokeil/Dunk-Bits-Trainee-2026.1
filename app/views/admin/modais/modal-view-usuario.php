@@ -1,6 +1,5 @@
 <div class="modalUser close" id="viewModal">
   <div id="header">
-    <ion-icon class="icone-titulo" name="eye"></ion-icon>
     <h1>PERFIL DE USUÁRIO</h1>
     <button class="closeModalBtn terciaryBtn">X</button>
   </div>

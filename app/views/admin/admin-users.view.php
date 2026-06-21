@@ -93,7 +93,7 @@
                     </button>
 
                     <button class="edit-user"
-                      data-profPic="<?php echo $u->profile_image; ?>"
+                      data-profpic="<?php echo $u->profile_image; ?>"
                       data-id="<?php echo $u->id; ?>"
                       data-name="<?php echo htmlspecialchars($u->name, ENT_QUOTES, 'UTF-8'); ?>"
                       data-email="<?php echo htmlspecialchars($u->email, ENT_QUOTES, 'UTF-8'); ?>"

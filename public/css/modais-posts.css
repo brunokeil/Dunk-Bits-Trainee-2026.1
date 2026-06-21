@@ -40,7 +40,7 @@
 }
 
 .cancelBtn {
-    color: var(--light-orange-100);
+    color: var(--white-50);
     background: none;
 }
 
@@ -127,7 +127,7 @@
     justify-content: center;
     align-items: center;
 
-    border: 0.5rem dashed var(--white-25);
+    border: 0.4rem dashed var(--white-50);
     aspect-ratio: 16/9;
     object-fit: cover;
     /* max-height: 20vh; */
@@ -214,6 +214,14 @@ input {
     transition: background 120ms ease;
 }
 
+.authorData > * {
+    border: none;
+}
+.authorData *:hover {
+    background: none;
+    cursor:default;
+}
+
 textarea {
     border: 1px solid var(--white-25);
     border-radius: 0.6rem;
@@ -260,7 +268,7 @@ textarea:placeholder {
 
 .descriptionInput {
 	font-size: 1rem;
-    min-width: 40ch;
+    /* min-width: 40ch; */
     min-height: 5rem;
 	max-height: 20vh;
 	field-sizing: content;

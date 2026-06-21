@@ -1,6 +1,7 @@
 <div class="modalUser close" id="editModal">
     <div id="header">
         <h1>EDITAR USUÁRIO</h1>
+        <button class="closeModalBtn terciaryBtn">X</button>
     </div>
 
     <form action="admin-users/edit" method="post" enctype="multipart/form-data" id="form-edit">
@@ -47,4 +48,3 @@
         </div>
     </form>
 </div>
-
