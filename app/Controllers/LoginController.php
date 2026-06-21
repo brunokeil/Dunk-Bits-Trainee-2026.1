@@ -36,7 +36,7 @@ class LoginController
 
         if(!$user){
             $_SESSION['mensagem-erro'] = "Usuário e/ou senha incorretos";
-            header('Location: /login');
+            header('Location: /login?redirect=' . $_POST['redirect']);
             exit();
         }
 
@@ -44,7 +44,7 @@ class LoginController
 
         if(!$senhaVerificada){
             $_SESSION['mensagem-erro'] = "Usuário e/ou senha incorretos";
-            header('Location: /login');
+            header('Location: /login?redirect=' . $_POST['redirect']);
             exit();
         }else{
             $_SESSION['id'] = $user->id;

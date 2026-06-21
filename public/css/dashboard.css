@@ -11,17 +11,21 @@ body {
     url(../assets/bg_images/bg_dashboard.webp);
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
+  background-attachment: fixed;
+
   width: 100%;
+  padding: 0 15%;
+  min-height: 100vh;
+  flex: 1;
+
+  display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5% 15%;
-  background-attachment: fixed;
-  flex: 1;
-  min-height: 100vh;
+  justify-content: center;
 
 }
 
+/* ------------------------ Área de Locomoção da Dashboard ------------------------ */
 #locomocao {
   display: flex;
   justify-content: center;
@@ -36,6 +40,7 @@ body {
   backdrop-filter: blur(11.5px);
 }
 
+/* ------------------------ Área de Navegação da Dashboard ------------------------ */
 nav {
   display: flex;
   height: auto;
@@ -95,6 +100,7 @@ ion-icon {
   vertical-align: middle;
 }
 
+/* ------------------------ Área da Dashboard ------------------------ */
 #dashboard {
   display: flex;
   padding-bottom: 50px;
@@ -125,6 +131,7 @@ ion-icon {
   width: 100%;
 }
 
+/* ------------------------ Área dos botões da Dashboard ------------------------ */
 #lista-usuarios,
 #tabela-posts {
   display: flex;

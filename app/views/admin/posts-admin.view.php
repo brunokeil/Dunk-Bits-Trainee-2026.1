@@ -69,7 +69,7 @@
                             <td><?= $post->id ?></td>
                             <td class="titlePost"><?= $post->title ?></td>
                             <td ><?= $post->authorData->name ?></td>
-                            <td class="hide"><?= $post->created_at ?></td>
+                            <td class="hide"><?= $post->dataFormatada ?></td>
                             <td>
                                 <div class="actionBtn-container">
                                     <button class="actionBtn viewPost" type="button" data-bs-toggle="modais" data-bs-target="#modalViewPost-<?= $post->id ?>">

@@ -52,6 +52,12 @@ class PostsAdminController
                 $p->authorData = $database->selectOne('users', $p->author);
 
                 $p->imagem_exibicao = $this->existPhotoPost($p->cover_image);
+                
+                if (!empty($p->created_at)) {
+                    $p->dataFormatada = (new \DateTime($p->created_at))->format('d/m/Y H:i');
+                } else {
+                    $p->dataFormatada = "Data indisponível";
+                }
             }
 
             $usuarioLogado = $database->selectOne('users', $_SESSION['id']);
