@@ -127,7 +127,11 @@
       <div class="lista-de-comentarios">
         <?php foreach ($comments as $c): ?>
 
-          <div class="comentario" x-data="{ editando: false, texto: '<?= htmlspecialchars($c->content, ENT_QUOTES, 'UTF-8') ?>', textoOriginal: '<?= htmlspecialchars($c->content, ENT_QUOTES, 'UTF-8') ?>' }">
+          <div class="comentario" x-data="{ 
+            editando: false, 
+            texto: <?= htmlspecialchars(json_encode($c->content), ENT_QUOTES, 'UTF-8') ?>, 
+            textoOriginal: <?= htmlspecialchars(json_encode($c->content), ENT_QUOTES, 'UTF-8') ?> 
+          }">
 
             <div class="user-infos">
               <img
