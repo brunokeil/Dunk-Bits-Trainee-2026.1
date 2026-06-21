@@ -72,6 +72,7 @@ main * {
     border-radius: 20px;
 
     padding-inline: 10px;
+    padding: 0.4rem 0.8rem;
 
     width: 100%;
     max-width: 400px;
@@ -84,7 +85,6 @@ main * {
     background: transparent;
 
     width: 100%;
-    padding: 0.4rem;
 
     font-size: 1rem;
     font-weight: 600;
@@ -324,6 +324,10 @@ ion-icon:hover {
 
     .resumo {
         display: flex;
+    }
+
+    td {
+        padding: 0.2rem;
     }
 }
 

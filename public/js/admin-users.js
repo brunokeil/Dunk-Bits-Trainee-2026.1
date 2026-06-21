@@ -38,3 +38,15 @@ document.querySelector(".dropdown-delete").addEventListener("click", () => {
     linhaAtual.querySelector(".delete-user").click();
     dropdown.classList.remove("ativo");
 });
+
+document.addEventListener("click", (event) => {
+    if (dropdown.classList.contains("ativo")) {
+        
+        const clicouNoDropdown = dropdown.contains(event.target);
+        const clicouNoBotao = event.target.closest(".trespontos");
+
+        if (!clicouNoDropdown && !clicouNoBotao) {
+            dropdown.classList.remove("ativo");
+        }
+    }
+});

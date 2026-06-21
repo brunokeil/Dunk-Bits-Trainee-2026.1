@@ -132,9 +132,6 @@ function setAllEventListeners() {
 	const deleteUser = document.querySelectorAll(".delete-user");
 	const discardUser = document.querySelectorAll(".discard-user");
 	const errorUser = document.querySelectorAll(".error-user");
-	const dropdownView = document.querySelectorAll(".dropdown-view");
-	const dropdownEdit = document.querySelectorAll(".dropdown-edit");
-	const dropdownDelete = document.querySelectorAll(".dropdown-delete");
 
 	viewUser.forEach((btn) => {
 		btn.addEventListener("click", () => {
@@ -152,7 +149,6 @@ function setAllEventListeners() {
 
 			document.getElementById("view-email").value = btn.dataset.email;
 
-			document.getElementById("view-senha").value = btn.dataset.senha;
 
 			toggleModal("viewModal");
 		});
@@ -208,35 +204,7 @@ function setAllEventListeners() {
 		});
 	});
 
-	dropdownView.forEach((link) => {
-		link.addEventListener("click", (e) => {
-			e.preventDefault();
-			const row = link.closest(".row-tabela");
-			const botaoPrincipal = row.querySelector(".view-user");
-			if (botaoPrincipal) botaoPrincipal.click();
-			link.closest(".dropdownMenuPosts").classList.remove("ativo");
-		});
-	});
 
-	dropdownEdit.forEach((link) => {
-		link.addEventListener("click", (e) => {
-			e.preventDefault();
-			const row = link.closest(".row-tabela");
-			const botaoPrincipal = row.querySelector(".edit-user");
-			if (botaoPrincipal) botaoPrincipal.click();
-			link.closest(".dropdownMenuPosts").classList.remove("ativo");
-		});
-	});
-
-	dropdownDelete.forEach((link) => {
-		link.addEventListener("click", (e) => {
-			e.preventDefault();
-			const row = link.closest(".row-tabela");
-			const botaoPrincipal = row.querySelector(".delete-user");
-			if (botaoPrincipal) botaoPrincipal.click();
-			link.closest(".dropdownMenuPosts").classList.remove("ativo");
-		});
-	});
 
 	// fechar modais clicando fora
 	const modalContainer = document.querySelector(".modal-container");
