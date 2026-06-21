@@ -312,10 +312,6 @@ ion-icon:hover {
 		width: 100%;
 		justify-content: center;
 	}
-	.texto-criar-usuario {
-		display: none;
-	}
-
 	.botoesdeacao {
 		display: none;
 	}
@@ -373,9 +369,6 @@ ion-icon:hover {
 		width: 100%;
 	}
 
-	.texto-criar-usuario {
-		display: none;
-	}
 
 	table {
 		min-width: 650px;
