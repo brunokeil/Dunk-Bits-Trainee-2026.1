@@ -11,14 +11,12 @@
         <div class="logo lilSection">
             <img id="logodunk" src="../../../public/assets/logo_dunkbits.png" alt="Logo do Site" class="logo_dunkbits" />
             <span class="textoMissaoHover">
-                Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry.</span>
+                Conectar fãs e alimentar a paixão pelo basquete com análises ágeis e histórias autênticas.</span>
             <span class="textoVisaoHover">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Ser o principal ponto de encontro da cultura do basquete, unindo as quadras, as ruas e os games.
             </span>
             <span class="textoValoresHover">
-                Morbi feugiat felis nec turpis laoreet euismod. Donec
-                rutrum leo vitae massa cursus</span>
+                Paixão pelo jogo, precisão no conteúdo, cultura 360º e uma comunidade onde todo fã tem voz.</span>
         </div>
 
         <div class="contato lilSection">

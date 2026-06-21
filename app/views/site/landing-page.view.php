@@ -21,9 +21,9 @@
       <div class="text">
         <h1>DUNK BIT'S</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit.
+          O universo do basquete em um só lugar.
           <br />
-          Dolor sit amet consectetur adipiscing elit quisque faucibus.
+          Das quadras às telas.
         </p>
       </div>
       <div id="call-to-action">
@@ -79,16 +79,16 @@
       <div class="text">
         <h1>QUEM SOMOS?</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-          faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
-          pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
-          tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+          O Dunk Bit's é a arquibancada virtual para quem não tira a cabeça do jogo. 
+          Nascemos da paixão pelo barulho da bola quicando no asfalto e pelo som perfeito 
+          da rede no estouro do cronômetro. Nosso espaço foi criado para conectar fanáticos 
+          que vivem o basquete em todas as suas formas: seja estudando as táticas da NBA, 
+          acompanhando a cultura de rua ou amassando o aro nos videogames.
           <br />
           <br />
-          Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
-          hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
-          per conubia nostra inceptos himenaeos.
-        </p>
+          Com análises dinâmicas e histórias que mostram a verdadeira alma do jogo, 
+          construímos um espaço para quem vibra a cada lance, a cada enterrada e a cada 
+          pixel da tela.
       </div>
     </section>
     <img src="/public/assets/landing-page-images/circulo-fundo-landing.webp" id="bg-ball" />
