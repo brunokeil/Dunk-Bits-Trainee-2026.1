@@ -52,15 +52,15 @@
     <?php if (empty($posts)): ?>
       <section class="nenhum-post-section">
 
-          <ion-icon name="images"></ion-icon>
-          <h4>Nenhum post encontrado.</h4>
+        <ion-icon name="images"></ion-icon>
+        <h4>Nenhum post encontrado.</h4>
 
       </section>
 
     <?php else: ?>
       <section id="container-posts">
 
-        <?php foreach ($posts as $p): ?>
+        <?php foreach (array_reverse($posts) as $p): ?>
           <a class="card" href="/post-individual?post=<?= $p->id ?>&page=<?= $currentPage ?>">
 
             <img src="<?= $p->imagem_exibicao ?>" alt="<?= $p->title ?>" class="card-imagem">

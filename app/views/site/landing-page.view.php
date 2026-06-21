@@ -46,7 +46,7 @@
 
         <div class="slider-content">
           <!-- php foreach start -->
-          <?php foreach ($posts as $p): ?>
+          <?php foreach (array_reverse($posts) as $p): ?>
             <a class="card" href="/post-individual?post=<?= $p->id ?>&page=landingpage">
               <img src="<?= $p->imagem_exibicao ?>" alt="<?= $p->title ?>" class="card-imagem">
 
@@ -79,15 +79,15 @@
       <div class="text">
         <h1>QUEM SOMOS?</h1>
         <p>
-          O Dunk Bit's é a arquibancada virtual para quem não tira a cabeça do jogo. 
-          Nascemos da paixão pelo barulho da bola quicando no asfalto e pelo som perfeito 
-          da rede no estouro do cronômetro. Nosso espaço foi criado para conectar fanáticos 
-          que vivem o basquete em todas as suas formas: seja estudando as táticas da NBA, 
+          O Dunk Bit's é a arquibancada virtual para quem não tira a cabeça do jogo.
+          Nascemos da paixão pelo barulho da bola quicando no asfalto e pelo som perfeito
+          da rede no estouro do cronômetro. Nosso espaço foi criado para conectar fanáticos
+          que vivem o basquete em todas as suas formas: seja estudando as táticas da NBA,
           acompanhando a cultura de rua ou amassando o aro nos videogames.
           <br />
           <br />
-          Com análises dinâmicas e histórias que mostram a verdadeira alma do jogo, 
-          construímos um espaço para quem vibra a cada lance, a cada enterrada e a cada 
+          Com análises dinâmicas e histórias que mostram a verdadeira alma do jogo,
+          construímos um espaço para quem vibra a cada lance, a cada enterrada e a cada
           pixel da tela.
       </div>
     </section>
