@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/public/css/admin-users.css" />
-  <link rel="stylesheet" href="/public/css/modais-usuarios.css"/>
+  <link rel="stylesheet" href="/public/css/modais-usuarios.css" />
   <title>Admin - Usuários</title>
 
   <link rel="sc" />
@@ -115,13 +115,6 @@
                         name="ellipsis-vertical-circle-outline"></ion-icon>
                     </button>
 
-                    <div class="dropdownMenuPosts">
-                      <ul>
-                        <li><a class="dropdown-view">Visualizar</a></li>
-                        <li><a class="dropdown-edit">Editar</a></li>
-                        <li><a class="dropdown-delete">Excluir</a></li>
-                      </ul>
-                    </div>
                   </div>
                 </td>
               </tr>
@@ -157,11 +150,19 @@
   </div>
   </div>
 
+  <div id="dropdownGlobal" class="dropdownMenuPosts">
+    <ul>
+      <li><a class="dropdown-view">Visualizar</a></li>
+      <li><a class="dropdown-edit">Editar</a></li>
+      <li><a class="dropdown-delete">Excluir</a></li>
+    </ul>
+  </div>
 
 
 
-<script src="/public/js/admin-users.js"></script>
-<script src="/public/js/modais-usuarios.js"></script>
+
+  <script src="/public/js/admin-users.js"></script>
+  <script src="/public/js/modais-usuarios.js"></script>
 
 
 </body>

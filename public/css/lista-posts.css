@@ -6,9 +6,10 @@
 	/* outline: 1px solid purple; */
 }
 html, body {
+	width: 100%;
     max-width: 100vw;
     overflow-x: hidden;
-	max-height: 100vh;
+	min-height: 100vh;
 }
 
 main {
@@ -20,6 +21,7 @@ main {
 	background: var(--bg-lista-posts);
 	background-attachment: fixed;
 	background-size: cover;
+	flex: 1;
 }
 
 section {
@@ -171,16 +173,29 @@ ion-icon {
 }
 
 @media (max-width: 1000px) {
+
+	#filtros-opcoes {
+		flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 100;
+        max-width: 250px;
+        border-radius: 20px;
+        
+        opacity: 0;
+        transform: translateY(-10px); 
+        pointer-events: none;
+        transition: all 150ms ease-in-out;
+    }
+
 	#filtros-opcoes.active {
 		flex-direction: column;
-		position: absolute;
-		top: 100%;
-		right: 0;
-		/* background-color: var(--bg-lista-posts); */
-		padding: 10px;
-		border-radius: 20px;
-		z-index: 100;
-		max-width: 250px;
+		display: flex;
+        padding: 10px;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
 	}
 }
 

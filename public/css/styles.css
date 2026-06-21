@@ -18,11 +18,14 @@
 
 	--offwhite-100: #f5eee9;
 
+	--orange-25: #ff660040;
 	--orange-50: #ff660080;
 	--orange-80: #ff6600CC;
 	--orange-100: #ff6600;
 	--dark-orange-100: #d35400;
+	--dark-orange-50: #d3540080;
 	--light-orange-100: #ff954f;
+	--light-orange-75: #ff954fbf;
 
 	--blue-100: #0066cc;
 	--dark-blue-100: #000080;
@@ -40,7 +43,6 @@
 	--light-grey: #b4b4b4;
 
 	--black-100: #000000;
-	--light-orange-75: #ff954fbf;
 
 	/* GRADIENTESSSSS */
 	--linear-orange-gradient1: linear-gradient(
@@ -108,7 +110,7 @@
 	--bg-error: linear-gradient(-150deg, #830000 34%, #b43c00 87%);
 	--bg-success: linear-gradient(45deg, #11113acc, #0e0e2dcc);
 
-	--bg-jogo: linear-gradient(90deg, #00000000, var(--orange-50), #00000000);
+	--bg-jogo: linear-gradient(90deg, #00000000, var(--orange-25), var(--orange-50) , var(--orange-25), #00000000);
 
 	/* VARIAVEIS PARA TEXTOS */
 	--color-light-text: var(--white-100);

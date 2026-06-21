@@ -21,10 +21,17 @@
 
 
     <div class="sair-pagina">
-      <a href="/lista-posts?page=<?= $currentPage ?>">
-        <ion-icon class="icone-sair" name="arrow-back-outline"></ion-icon>
-        <p>Retornar à Lista de Posts</p>
-      </a>
+      <?php if ($currentPage == 'landingpage'): ?>
+        <a href="/">
+          <ion-icon class="icone-sair" name="arrow-back-outline"></ion-icon>
+          <p>Retornar à Pagina Inicial</p>
+        </a>
+      <?php else: ?>
+        <a href="/lista-posts?page=<?= $currentPage ?>">
+          <ion-icon class="icone-sair" name="arrow-back-outline"></ion-icon>
+          <p>Retornar à Lista de Posts</p>
+        </a>
+      <?php endif; ?>
     </div>
 
     <section class="post">

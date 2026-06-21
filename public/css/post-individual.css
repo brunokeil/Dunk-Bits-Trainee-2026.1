@@ -333,6 +333,14 @@ section {
 /* ------- responsividade ------- */
 
 @media (max-width: 820px) {
+	main {
+		padding: 2rem 1.6rem;
+	}
+
+	.titulo {
+		font-size: 3rem;
+	}
+
 	.post {
 		display: flex;
 		flex-direction: column;
@@ -344,13 +352,13 @@ section {
 	}
 
 	.conteudo .texto {
-		font-size: 120%;
+		font-size: 1rem;
 	}
 
 	.post {
 		display: flex;
-		padding: 20px;
-		margin-top: 20px;
+		/* padding: 20px; */
+		/* margin-top: 20px; */
 		align-items: center;
 	}
 

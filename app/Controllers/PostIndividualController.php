@@ -78,7 +78,11 @@ class PostIndividualController
             $userEhAdmin = $usuarioLogado ? (bool)$usuarioLogado->is_admin : false;
         }
 
-        $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+        $currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
+
+        if (is_numeric($currentPage) && (int)$currentPage < 1) {
+            $currentPage = 1;
+        }
 
         return view('site/post-individual', [
             'post' => $post,
