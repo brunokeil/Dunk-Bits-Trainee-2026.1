@@ -2,25 +2,31 @@
 
 /*----- Lista-De-Posts ----*/
 
-*{
+* {
 	/* outline: 1px solid purple; */
 }
-html, body {
+html,
+body {
 	width: 100%;
-    max-width: 100vw;
-    overflow-x: hidden;
-	min-height: 100vh;
+	max-width: 100vw;
+	overflow-x: hidden;
 }
 
 main {
-	display: flex;
+	min-height: 80vh;
 	width: 100%;
+	height: 100%;
+
+	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 10px;
+	/* justify-content: space-between; */
+	gap: 1rem;
+
 	background: var(--bg-lista-posts);
 	background-attachment: fixed;
 	background-size: cover;
+
 	flex: 1;
 }
 
@@ -41,8 +47,10 @@ ion-icon {
 
 /* -----------------------------Local de Pesquisar----------------------------- */
 #secao-barra {
-	margin-top: 10px;
+	/* margin-top: 10px; */
+	padding: 1rem;
 	justify-content: space-between;
+	border-bottom: solid 0.4rem var(--black-100);
 }
 
 #search {
@@ -121,7 +129,7 @@ ion-icon {
 	color: var(--white-100);
 }
 
-#botao-filtro ion-icon:hover{
+#botao-filtro ion-icon:hover {
 	color: var(--white-50);
 	transition: all 120ms ease-in-out;
 }
@@ -173,74 +181,73 @@ ion-icon {
 }
 
 @media (max-width: 1000px) {
-
 	#filtros-opcoes {
 		flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        z-index: 100;
-        max-width: 250px;
-        border-radius: 20px;
-        
-        opacity: 0;
-        transform: translateY(-10px); 
-        pointer-events: none;
-        transition: all 150ms ease-in-out;
-    }
+		position: absolute;
+		top: 100%;
+		right: 0;
+		z-index: 100;
+		max-width: 250px;
+		border-radius: 20px;
+
+		opacity: 0;
+		transform: translateY(-10px);
+		pointer-events: none;
+		transition: all 150ms ease-in-out;
+	}
 
 	#filtros-opcoes.active {
 		flex-direction: column;
 		display: flex;
-        padding: 10px;
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
+		padding: 10px;
+		opacity: 1;
+		transform: translateY(0);
+		pointer-events: auto;
 	}
 }
 
-@media(max-width: 490px) {
-    #search {
-        padding: 0 0.8em;
-        gap: 5px;
-        height: 3.5em;
+@media (max-width: 490px) {
+	#search {
+		padding: 0 0.8em;
+		gap: 5px;
+		height: 3.5em;
 		width: 200px;
-    }
+	}
 
-    #form-search {
-        gap: 5px;
-    }
+	#form-search {
+		gap: 5px;
+	}
 
-    #search-text::placeholder, #search-text {
-        font-size: 0.9rem;
-    }
+	#search-text::placeholder,
+	#search-text {
+		font-size: 0.9rem;
+	}
 
-    .divisor-vertical {
-        font-size: 1.2rem;
-    }
-	
-    #icone-busca {
-        height: 4em;
+	.divisor-vertical {
+		font-size: 1.2rem;
+	}
+
+	#icone-busca {
+		height: 4em;
 		margin-right: -50px;
-    }
+	}
 
-    #botao-filtro {
-        margin-left: 8px;
-    }
+	#botao-filtro {
+		margin-left: 8px;
+	}
 
-    #botao-filtro ion-icon {
-        font-size: 2.8rem;
-    }
+	#botao-filtro ion-icon {
+		font-size: 2.8rem;
+	}
 }
 
-.form_filtros{
- 	flex-shrink: 0;
-    display: flex;
+.form_filtros {
+	flex-shrink: 0;
+	display: flex;
 }
 
 /* -----------------------------Local de Título----------------------------- */
 #container-titulo {
-	border-top: solid 0.4rem var(--black-100);
 	padding: 20px 40px 0 40px;
 	align-items: center;
 }
@@ -277,7 +284,7 @@ ion-icon {
 	/* height: 375px; */
 	aspect-ratio: 16 / 12;
 
-    background-color: var(--pearl-grey-100);
+	background-color: var(--pearl-grey-100);
 	border-radius: 16px;
 	box-shadow: 6px 5px 4px 0 rgba(88, 46, 5, 0.29);
 
@@ -292,13 +299,12 @@ ion-icon {
 }
 
 .card-imagem {
-    min-width: 350px;
+	min-width: 350px;
 	aspect-ratio: 16 / 9;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
-
 
 .card.mostrar {
 	opacity: 1;
@@ -309,7 +315,7 @@ ion-icon {
 .card-footer {
 	position: absolute;
 	bottom: 0;
-	
+
 	width: 100%;
 	height: 100%;
 
@@ -324,10 +330,9 @@ ion-icon {
 .card-titulo-fixo {
 	color: var(--white-100);
 	font-size: 3em;
-    max-height: 2.5em;
+	max-height: 2.5em;
 	overflow: hidden;
 	width: 100%;
-
 
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
@@ -373,48 +378,80 @@ ion-icon {
 	color: var(--white-100);
 	font-size: 1em;
 	overflow: hidden;
-    max-height: 120px;
+	max-height: 120px;
 
 	display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 5;
 }
+
+/* --------- NENHUM POST ------------- */
+
+.nenhum-post-section {
+	padding: 4rem 0;
+
+	flex: 1;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	gap: 2rem;
+}
+
+/* .nenhum-post {
+	display:flex;
+	flex-direction: column;
+	justify-self: center;
+	align-items: center;
+} */
+
+.nenhum-post-section * {
+	color: white;
+}
+.nenhum-post-section ion-icon {
+	font-size: 8rem;
+	border: 2px solid var(--white-100);
+	border-radius: 100%;
+	padding: 4rem;
+}
+
+/* FIM */
 
 @media (max-width: 540px) {
 	#container-posts {
 		grid-template-columns: repeat(1, 310px);
 	}
-	#secao-titulo h1{
+	#secao-titulo h1 {
 		font-size: 5em;
 	}
 
-    .card-titulo-fixo{
-
-    max-height: 2.5em;
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 2;
+	.card-titulo-fixo {
+		max-height: 2.5em;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
 	}
 
-	.card-titulo-overlay{
-	max-height: 2.5em;
+	.card-titulo-overlay {
+		max-height: 2.5em;
 
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 2;
-
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
 	}
-	.card-autor{
+	.card-autor {
 		font-size: 1.2em;
 	}
 
-	.card-descricao{
-    max-height: 4rem;
-	font-size: 0.8em;
+	.card-descricao {
+		max-height: 4rem;
+		font-size: 0.8em;
 
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 3;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
 	}
 }
 
@@ -449,12 +486,12 @@ ion-icon {
 	justify-content: center;
 }
 
-.seta ion-icon{
+.seta ion-icon {
 	color: var(--white-100);
 	font-size: 2rem;
 }
 
-.seta ion-icon:hover{
+.seta ion-icon:hover {
 	color: var(--white-50);
 	transition: all 120ms ease-in-out;
 }
@@ -464,7 +501,7 @@ ion-icon {
 	font-size: 1.5em;
 }
 
-#pagina-atual p:hover{
+#pagina-atual p:hover {
 	color: var(--white-50);
 	transition: all 120ms ease-in-out;
 }
