@@ -10,10 +10,13 @@ class CadastroController
 
     public function index()
     {
+        if (isset($_SESSION['id'])) {
+            header(header: 'Location: /dashboard');
+            exit();
+        }
         return view('site/cadastro');
     }
 
-    
     public function criar()
     {
         $senhaInput = $_POST['senha'];
