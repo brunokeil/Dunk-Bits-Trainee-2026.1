@@ -147,7 +147,7 @@
 @media (max-width: 410px) {
     #createModal,
     #editModal {
-        width: min(80vw, 230px);
+        width: min(80vw, 400px);
     }
 }
 
@@ -225,7 +225,7 @@
     width: 100%;
     height: 100%;
     max-width: 800px;
-
+    min-width: 100px;
     object-fit: cover;
 
     border-radius: 10px;
