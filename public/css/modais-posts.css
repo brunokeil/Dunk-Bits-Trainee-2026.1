@@ -255,7 +255,7 @@ textarea:placeholder {
 }
 
 .titleInput {
-    font-family: var(--font-bebas-neue);
+    /* font-family: var(--font-bebas-neue); */
     font-size: 2rem;
     height: 4rem;
     resize: none;
