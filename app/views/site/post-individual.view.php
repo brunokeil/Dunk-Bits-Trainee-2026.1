@@ -42,7 +42,7 @@
           class="imagem-post-obj imagem-post"
           src="<?= $postCoverImage ?>" />
 
-        <h1 class="titulo"><?php echo $post->title ?></h1>
+        <h1 class="titulo"><?php echo htmlspecialchars($post->title) ?></h1>
 
         <p class="descricao">
           <?php echo nl2br(htmlspecialchars($post->content)); ?>
