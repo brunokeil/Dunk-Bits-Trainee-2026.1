@@ -28,6 +28,8 @@
 #### Links Úteis:
 * [Trello do Projeto](https://trello.com/b/BmwkVDu4/261-dunkbits)
 
+* [Manual de Uso](manual-de-uso.pdf)
+
 ---
 
 ## Descrição do Projeto
@@ -95,3 +97,5 @@ Não é necessário executar o build após a primeira vez, sendo assim execute a
 ```bash
 docker-compose up -d
 ```
+
+
