@@ -14,7 +14,7 @@
       <div class="authorData">
         <div class="inputGroup">
           <ion-icon name="person"></ion-icon>
-          <input type="text" class="postAuthor" placeholder="Username" value="<?= $post->authorData->name ?>" readonly id="viewAuthor" />
+          <input type="text" class="postAuthor" placeholder="Username" value="<?= htmlspecialchars($post->authorData->name) ?>" readonly id="viewAuthor" />
         </div>
         <div class="inputGroup">
           <input type="text" class="postDate" placeholder="Data" value="<?= $post->dataFormatada ?>" readonly id="viewDate" />
@@ -22,8 +22,8 @@
       </div>
     </div>
     <div class="postContent">
-      <textarea class="titleInput" id="viewTitle"><?= $post->title ?></textarea>
-      <textarea class="descriptionInput" id="viewDescription"><?= $post->content ?></textarea>
+      <textarea class="titleInput" id="viewTitle"><?= htmlspecialchars($post->title) ?></textarea>
+      <textarea class="descriptionInput" id="viewDescription"><?= htmlspecialchars($post->content) ?></textarea>
     </div>
   </div>
   <div class="footerButtons">

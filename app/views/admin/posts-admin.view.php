@@ -67,8 +67,8 @@
                     <?php foreach ($posts as $post): ?>
                         <tr class="row-tabela">
                             <td><?= $post->id ?></td>
-                            <td class="titlePost"><?= $post->title ?></td>
-                            <td><?= $post->authorData->name ?></td>
+                            <td class="titlePost"><?= htmlspecialchars($post->title) ?></td>
+                            <td><?= htmlspecialchars($post->authorData->name) ?></td>
                             <td class="hide"><?= $post->dataFormatada ?></td>
                             <td>
                                 <div class="actionBtn-container">
