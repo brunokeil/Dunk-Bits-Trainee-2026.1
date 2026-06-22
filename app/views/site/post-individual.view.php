@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Post Individual</title>
+  <link rel="icon" href="/public/assets/logo_zoom.png" />
   <link rel="stylesheet" href="/public/css/modais-usuarios.css" />
   <link rel="stylesheet" href="../../../public/css/footer.css" />
   <link rel="stylesheet" href="../../../public/css/navbar.css" />
