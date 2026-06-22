@@ -77,6 +77,21 @@ document.addEventListener("click", (event) => {
     }
 });
 
+document.querySelector(".btnVisuPostADM").addEventListener("click", () => {
+    linhaAtual.querySelector(".viewPost").click();
+    dropdown.classList.remove("aparecer");
+});
+
+document.querySelector(".btnEditPostADM").addEventListener("click", () => {
+    linhaAtual.querySelector(".editPost").click();
+    dropdown.classList.remove("aparecer");
+});
+
+document.querySelector(".btnDeletePostADM").addEventListener("click", () => {
+    linhaAtual.querySelector(".deletePost").click();
+    dropdown.classList.remove("aparecer");
+});
+
 // console.log(tresPontos);
 
 // document.getElementById("btnVoltarPagina").onclick = voltar;

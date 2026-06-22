@@ -42,7 +42,7 @@
         <div id="PesquisaECriarPostADM">
 
             <form class="searchContainer" method="GET" action="/postsadmin">
-                <input id="PesquisaPostsTabelaADM" type="text" placeholder="Pesquisar por Título" name="search" value="<?= $searchText ?? '' ?>" />
+                <input id="PesquisaPostsTabelaADM" type="text" placeholder="Pesquisar por Post" name="search" value="<?= $searchText ?? '' ?>" />
 
                 <ion-icon name="search-outline"></ion-icon>
             </form>
@@ -123,10 +123,10 @@
 
     <div class="dropdownMenuPosts">
         <ul>
-            <li><a class="viewPost btnVisuPostADM" data-bs-target="#modalViewPost-<?= $post->id ?>">Visualizar</a></li>
+            <li><a class=" btnVisuPostADM" data-bs-target="#modalViewPost-<?= $post->id ?>">Visualizar</a></li>
             <?php if ($_SESSION['id'] === $post->author || $_SESSION['is_admin'] === 1): ?>
-                <li><a class="editPost btnEditPostADM" data-bs-target="#modalEditPost-<?= $post->id ?>">Editar</a></li>
-                <li><a class="deletePost btnDeletePostADM" data-bs-target="#modalDeletePost-<?= $post->id ?>">Excluir</a></li>
+                <li><a class=" btnEditPostADM" data-bs-target="#modalEditPost-<?= $post->id ?>">Editar</a></li>
+                <li><a class=" btnDeletePostADM" data-bs-target="#modalDeletePost-<?= $post->id ?>">Excluir</a></li>
             <?php endif; ?>
         </ul>
     </div>

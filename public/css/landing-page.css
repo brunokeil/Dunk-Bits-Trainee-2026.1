@@ -19,7 +19,7 @@ main {
 	position: relative;
 
 	width: 100%;
-	gap: 13vw;
+	gap: 10vw;
 	/* padding-bottom: 20%; */
 	background: var(--bg-landing-page);
 	/* background-color: var(--orange-100); */
@@ -213,7 +213,7 @@ h1 {
 
 .card {
 	/* width: 400px; */
-	height: 20rem;
+	height: 20vw;
 	aspect-ratio: 16 / 9;
 	position: relative;
 

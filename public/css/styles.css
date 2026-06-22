@@ -120,7 +120,7 @@
 	--font-quicksand: "Quicksand", sans-serif;
 }
 
-html {
+html, body {
 	overflow-x: hidden;
 }
 

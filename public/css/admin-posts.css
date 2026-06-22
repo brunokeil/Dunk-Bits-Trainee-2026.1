@@ -131,7 +131,7 @@ td {
 
 td.titlePost {
 	overflow: hidden;
-	/* max-width: 20vw; */
+	max-width: 20vw;
 	max-height: 2ch;
 	/* line-height: 1ch; */
 	padding: 0 1rem;

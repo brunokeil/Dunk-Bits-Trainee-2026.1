@@ -15,7 +15,7 @@
             <h1>Vamos Dunk Bits</h1>
         </div>
         <div id="foto"> 
-            <img src="https://lncimg.lance.com.br/uploads/2024/08/Equipe-de-basquete-masculina-2-aspect-ratio-512-320.jpeg" alt="Imagem-Familia">
+            <img src="/public/assets/VAMOSDUNKAR.png" alt="Imagem-Familia">
         </div>
     </main>
 
